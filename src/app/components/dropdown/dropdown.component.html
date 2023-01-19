@@ -1,0 +1,55 @@
+<div>
+  <!--<span class="flex">-->
+  <!--  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
+  <!--    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />-->
+  <!--  </svg>-->
+  <!--  <span>&caron;</span>-->
+  <!--</span>-->
+
+  <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative inline-block text-left">
+  <div>
+    <button (click)="toggled = !toggled" type="button" class="flex" id="menu-button" aria-expanded="true" aria-haspopup="true">
+      <!--globe icon-->
+      <span class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+        </svg>
+        <span class="uppercase text-xs px-1">{{ selectedItem ? selectedItem.key : ''}}</span>
+      </span>
+      <!-- Heroicon name: solid/chevron-down -->
+      <svg [ngClass]="[
+        toggled ? 'transform rotate-180' : ''
+      ]" class="ml-1 h-5 w-5 transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+
+  <!--
+    Dropdown menu, show/hide based on menu state.
+
+    Entering: "transition ease-out duration-100"
+      From: "transform opacity-0 scale-95"
+      To: "transform opacity-100 scale-100"
+    Leaving: "transition ease-in duration-75"
+      From: "transform opacity-100 scale-100"
+      To: "transform opacity-0 scale-95"
+  -->
+  <div [ngClass]="[
+      toggled ? 'transform opacity-100 duration-75 scale-95' : 'hidden'
+    ]"
+   (blur)="toggled = false"
+    class="transition-all origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-70" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+    <div class="py-1" role="none">
+      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+      <span (click)="selectItem(country)" *ngFor="let country of countries; index as i" class="cursor-pointer transition-all text-gray-700 block px-4 py-2 text-sm font-medium hover:bg-amber-500 hover:text-brand-green flex space-x-2" role="menuitem" tabindex="-1" id="menu-item-0">
+        <img [src]="country.flag" class="h-5 w-5 shrink-0 grow-0 rounded-full border-1 border-brand-green" [alt]="country.name" />
+        <span>{{country.name}}</span>
+
+      </span>
+    </div>
+  </div>
+</div>
+
+</div>

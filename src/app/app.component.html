@@ -1,0 +1,50 @@
+<div class="relative bg-brand-green sticky top-0 z-20 text-green-100">
+  <div class="absolute inset-0 shadow z-30 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative z-20">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+      <div>
+        <a href="#" class="flex">
+          <!--<span class="font-bold text-lg text-amber-400">CSquared</span>-->
+          <img src="/assets/images/c_squared_horizontal_logo.png" class="h-8" alt="c_squared_horizontal_logo">
+        </a>
+      </div>
+      <div class="-mr-2 -my-2 md:hidden">
+        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <span class="sr-only">menu</span>
+          <!-- Heroicon name: outline/menu -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div class="hidden bg-brand-green text-white shadow-2xl text-gray-500 p-2 absolute w-32 h-auto inset-0 min-h-screen h-screen z-50">
+          <div class="p-4 font-bold text-lg">LOGO</div>
+          <div class="relative h-full mt-8">
+            <nav class="flex flex-col space-y-5">
+            <a *ngFor="let link of links; index as i" routerLink="/"
+               class="text-xs font-medium hover:text-green-200">
+              {{ link.name.toUpperCase() }} </a>
+            <button class="bg-brand-yellow text-[9px] uppercase font-bold md:font-normal md:text-sm py-1 px-2 rounded text-brand-green focus:ring-1 focus:ring-offset-1 focus:ring-offset-brand-green focus:bg-amber-500 focus:ring-brand-yellow absolute bottom-0">Check Coverage</button>
+          </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex-1 md:flex md:justify-end">
+        <div class="flex space-x-4 items-center">
+          <nav class="flex items-center space-x-10">
+            <a *ngFor="let link of links; index as i" routerLink="link.route"
+               class="text-xs font-medium hover:text-green-200">
+              {{ link.name.toUpperCase() }} </a>
+
+            <button class="bg-brand-yellow text-sm py-1 px-2 rounded text-brand-green focus:ring-1 focus:ring-offset-1 focus:ring-offset-brand-green focus:bg-amber-500 focus:ring-brand-yellow">Check Coverage</button>
+          </nav>
+          <app-dropdown></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The routed views render in the <router-outlet>-->
+  <main class="">
+    <router-outlet></router-outlet>
+  </main>

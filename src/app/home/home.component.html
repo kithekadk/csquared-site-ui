@@ -1,0 +1,180 @@
+<!--<app-hero-general></app-hero-general>-->
+<app-hero-main></app-hero-main>
+
+
+<!--logo-->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-5 py-5 px-20 mt-[500px]">
+  <img *ngFor="let i of [].constructor(12)" src="/assets/images/logos/acrevis.svg" class="h-20" alt="">
+</section>
+<!--end logo section-->
+
+<section class="px-20">
+  <div class="py-20 flex justify-between">
+    <h2 class="text-5xl tracking-wide font-bold max-w-[600px]">Offering a variety of high-end services</h2>
+    <p class="text-gray-500 text-lg max-w-[500px]">
+      In a professional context it often happens that private or corporate clients corder a publication to be made and presented .
+    </p>
+  </div>
+  <div class="flex justify-center border-spacing-0.5">
+    <h3 class="font-bold text-xl">Who is Csquared For?</h3>
+  </div>
+
+  <div class="columns-3 mb-5">
+    <div class="relative h-[300px] w-fit" *ngFor="let target of targets">
+      <img src="{{target.image}}" class="h-[500px] rounded shadow-xl overflow-hidden" alt="">
+      <div class="absolute bottom-0 px-4 w-full  bg-gradient-to-b from-black/70 to-slate-900 text-white py-6">{{target.title}}</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Map section -->
+<section class="pt-64 md:pt-48 grid grid-cols-1 lg:grid-cols-12 gap-5">
+  <div class="col-span-7 relative mr-20 top-52 md:top-0">
+      <svg class="h-28 md:h-32 opacity-30 absolute ml-10 z-[-1]" viewBox="0 0 77 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="4" cy="4" r="4" fill="#42806B"/>
+        <circle cx="4" cy="27" r="4" fill="#42806B"/>
+        <circle cx="4" cy="50" r="4" fill="#42806B"/>
+        <circle cx="4" cy="73" r="4" fill="#42806B"/>
+        <circle cx="4" cy="96" r="4" fill="#42806B"/>
+        <circle cx="4" cy="119" r="4" fill="#42806B"/>
+        <circle cx="50" cy="4" r="4" fill="#42806B"/>
+        <circle cx="50" cy="27" r="4" fill="#42806B"/>
+        <circle cx="50" cy="50" r="4" fill="#42806B"/>
+        <circle cx="50" cy="73" r="4" fill="#42806B"/>
+        <circle cx="50" cy="96" r="4" fill="#42806B"/>
+        <circle cx="50" cy="119" r="4" fill="#42806B"/>
+        <circle cx="27" cy="4" r="4" fill="#42806B"/>
+        <circle cx="27" cy="27" r="4" fill="#42806B"/>
+        <circle cx="27" cy="50" r="4" fill="#42806B"/>
+        <circle cx="27" cy="73" r="4" fill="#42806B"/>
+        <circle cx="27" cy="96" r="4" fill="#42806B"/>
+        <circle cx="27" cy="119" r="4" fill="#42806B"/>
+        <circle cx="73" cy="4" r="4" fill="#42806B"/>
+        <circle cx="73" cy="27" r="4" fill="#42806B"/>
+        <circle cx="73" cy="50" r="4" fill="#42806B"/>
+        <circle cx="73" cy="73" r="4" fill="#42806B"/>
+        <circle cx="73" cy="96" r="4" fill="#42806B"/>
+        <circle cx="73" cy="119" r="4" fill="#42806B"/>
+        </svg>
+      <img src="/assets/images/africa.svg" alt="africa-map" />
+  </div>
+  <div class="col-span-5 relative">
+    <span class="absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-50 md:-top-32 right-4 rounded-full z-[-1]"></span>
+
+    <div class="mt-56 md:mt-0 px-5">
+      <h3 class="text-sm text-green-900">// About US</h3>
+      <h4 class="text-3xl font-medium text-green-900"># FibeRising Africa</h4>
+      <h5 class="text-3xl font-medium text-green-900"># GROWTH</h5>
+
+      <p class="text-md text-slate-500 mt-4 pr-20">
+        We are <b>‘Fiberising’</b> Africa through affordable broadband internet connectivity.
+        We are making the internet accessible to everyone in Kenya, Uganda, Ghana, Liberia, DRC and Togo.
+        We are harnessing the power of Public-Private Partnerships to build value through data delocalization.
+      </p>
+
+      <button class="text-xl bg-brand-green py-2 px-16 mt-16 text-green-100 rounded">
+        Learn More
+      </button>
+    </div>
+
+    <div class="border-t-2 px-20 md:px-0 pt-8 mt-10 md:mr-20 flex space-x-20">
+      <div class="text-center">
+        <h4 class="font-bold text-brand-green text-3xl">50K+</h4>
+        <small>Subscribers</small>
+      </div>
+      <div class="text-center">
+        <h4 class="font-bold text-brand-green text-3xl">27M+</h4>
+        <small>Connections</small>
+      </div>
+      <div class="text-center">
+        <h4 class="font-bold text-brand-green text-3xl">3K+</h4>
+        <small>Satisfied Clients</small>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- end Map section -->
+
+<!-- why us section -->
+<section class="grid gap-5 grid-cols-1 lg:grid-cols-12 bg-emerald-400/20 py-20 px-16 mt-10">
+  <div class="col-span-5">
+    <div>
+      <h3 class="text-sm text-green-900">// Why Us?</h3>
+      <h4 class="text-3xl font-medium text-green-900">Today, anyone can get Lightspeed Network.</h4>
+
+      <p class="mt-5 text-slate-500">
+        Currently present in 6 countries, we are helping drive digital transformation in Kenya, Uganda, Ghana. Liberia, DRC and Togo through affordable broadband technology.
+      </p>
+    </div>
+
+    <div class="mt-16">
+      <a href="#" class="text-green-800 text-lg underline font-medium">See our plan</a>
+    </div>
+
+  </div>
+  <div class="col-span-7 mx-8 flex flex-col md:flex-row items-end space-y-20 md:space-x-5">
+    <div class="md:w-[300px]">
+        <h5 class="border-b-2 text-3xl md:text-5xl font-bold text-brand-green border-yellow-500">70%</h5>
+        <p class="mt-5">
+          We have seen how connecting metros in Africa to existing long-distance fiber lines has helped to provide these cities .
+        </p>
+    </div>
+      <div class="flex items-end space-x-14">
+        <div class="text-center">
+          <div class="w-20 h-[100px] bg-brand-yellow"></div>
+          <span class="text-sm font-bold text-green-800">Reliability</span>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-[180px] bg-brand-yellow"></div>
+          <span class="text-sm font-bold text-green-800">Efficiency</span>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-[250px] bg-brand-yellow"></div>
+          <span class="text-sm font-bold text-green-800">Compatibility</span>
+        </div>
+      </div>
+  </div>
+</section>
+<!-- end why us section -->
+
+<!-- What we provide section -->
+<section class="py-20 relative">
+  <div class="text-center">
+    <h3 class="text-3xl font-bold text-brand-green">What We Provide</h3>
+    <small class="text-slate-500">Lorem ipsum dolor sit amet, consectetur adipis.</small>
+  </div>
+
+  <div class="mx-auto flex space-x-5 w-[86%] mt-12 overflow-x-hidden">
+    <div class="w-64 flex flex-col transition-all items-center hover:bg-slate-200 p-4 rounded hover:shadow" *ngFor="let i of [2,3,4,5,6,7,7,8,9]">
+        <span class="h-14 w-14 p-1 rounded-full flex justify-center items-center bg-slate-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-12 w-12 stroke-brand-green">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
+          </svg>
+        </span>
+       <div class="text-center">
+          <h3 class="font-bold text-brand-green">More Coverage</h3>
+          <p class="text-xs text-slate-400 w-[200px]">We cover 13,000+ houses and businesses in our featured countries</p>
+       </div>
+    </div>
+  </div>
+    <div class="absolute right-20 flex space-x-5 -bottom-0 mr-20">
+      <button class="flex h-10 w-10 rounded-full items-center justify-center bg-slate-200 shadow">
+        &lsaquo;
+      </button>
+      <button class="flex h-10 w-10 rounded-full items-center justify-center bg-slate-200 shadow">
+        &rsaquo;
+      </button>
+    </div>
+</section>
+<!-- end What we provide section -->
+
+<app-latest-news></app-latest-news>
+
+<app-testimonials></app-testimonials>
+
+<app-footer></app-footer>
+
