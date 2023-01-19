@@ -13,6 +13,9 @@ import { HeroGeneralComponent } from './components/hero-general/hero-general.com
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { HeroMainComponent } from "./components/hero-main/hero-main.component";
+import { ProductsComponent } from './products/products.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProductCategoryComponent } from './product-category/product-category.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HeroMainComponent } from "./components/hero-main/hero-main.component";
     HeroGeneralComponent,
     LatestNewsComponent,
     TestimonialsComponent,
-    HeroMainComponent
+    HeroMainComponent,
+    ProductsComponent,
+    NavbarComponent,
+    ProductCategoryComponent
   ],
   imports: [
     BrowserModule,

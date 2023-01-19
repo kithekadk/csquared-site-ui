@@ -1,0 +1,53 @@
+.bg-container{
+    width: 100%;
+    height: 45vh;
+    background-image: url("https://media.istockphoto.com/id/183885533/photo/network-hub-and-cable.jpg?b=1&s=170667a&w=0&k=20&c=wH9Juq1M47o6jaBDVXz-lp1Ok8-K0hFgXKoZsffRfEA=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+    font-size: 250%;
+}
+h2{
+    color: green;
+    font-size: 250%;
+}
+.products{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    width:100%;
+}
+.products-text{
+    width: 40%;
+    text-align: center;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    cursor: pointer;
+    margin-bottom: 70px;
+}
+.wholesale, .cloudsolutions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wholesale > img, .cloudsolutions > img{
+    width: 250px;
+    height: 280px;
+    border-radius: 10px;
+    margin-top: 50px;
+}

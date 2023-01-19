@@ -1,0 +1,10 @@
+<!-- <div [ngStyle]="category=='wholesale'?{'background-color':'red'}:{'background-color':'yellow'}">
+baba
+</div> -->
+
+<div *ngIf ="category !== 'wholesale'">
+    baba
+    </div>
+    <div *ngIf ="category == 'wholesale'">
+        mama
+    </div>
