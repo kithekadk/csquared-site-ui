@@ -13,23 +13,28 @@ export class ProductCategoryComponent implements OnInit {
 
 
 
-services!:services[];
+fiberservices!:services[];
 cloudservices!:services[];
   constructor(private router:Router, private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.categoryRoute=this.router.url;
-    this.services=this.apiService.getCloudServices();
-    console.log(this.services);
+    this.fiberservices=this.apiService.getFiberServices();
+    // console.log(this.services);
     
-    this.cloudservices=this.apiService.getFiberServices();
+    this.cloudservices=this.apiService.getCloudServices();
   }
 
-  oneitem!:services
-  viewProduct(index: number){
-    this.oneitem=this.apiService.getOneItem(index);
-    console.log(this.oneitem);
-     
+  oneClouditem!:services;
+  viewCloudProduct(index: number){
+    this.oneClouditem=this.apiService.getOneCloudItem(index);
+    console.log(this.oneClouditem);
+  }
+
+  oneFiberitem!:services;
+  viewFiberProduct(index: number){
+    this.oneFiberitem=this.apiService.getOneFiberItem(index);
+    console.log(this.oneFiberitem);
   }
 
 }
