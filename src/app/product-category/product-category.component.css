@@ -1,0 +1,58 @@
+.body{
+   padding: 0;
+   margin: 0;
+   overflow-x: hidden; 
+}
+.fiber-bg{
+    width: 100%;
+    height: 45vh;
+    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cloudsolutions-bg{
+    width: 100%;
+    height: 45vh;
+    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.single-service{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.service-img{
+    display: flex;
+    justify-content: center;
+}
+.service-img > img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+.service-info{
+    width:35%;
+}
+
+h2{
+    font-weight: bold;
+}
