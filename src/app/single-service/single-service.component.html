@@ -1,18 +1,39 @@
-<!-- <div class="body">
-    <div class="cloudsolutions-bg">
-
+<div class="body" *ngIf="fiberservices">
+    <div class="fiber-bg">
+        {{fiberservices.title}}
     </div>
     <div class="service-container">
-        <div class="single-service" *ngFor="let service of fiberservices; let i = index">
+        <div class="single-service">
             <div class="service-img">
-                <img src="{{service.image}}" alt="Specialist">
+                <img src="{{fiberservices.image}}" alt="Specialist">
             </div>
             <div class="service-info">
-                <h2>{{service.title}}</h2><br>
-                {{service.description}}<br><br>
-                <button class="btn btn-warning" (click)="viewFiberProduct(i)">Explore More</button>
+                <h2>{{fiberservices.title}}</h2><br>
+                {{fiberservices.description}}<br><br>
+                <button class="btn btn-warning">Learn More on Cloud Security</button>
             </div>
         </div>
     </div>
+    <app-footer></app-footer>
     
-</div> -->
+</div>
+<!-- Display cloud services if available -->
+<div class="body" *ngIf="cloudservices">
+    <div class="cloudservices-bg">
+        {{cloudservices.title}}
+    </div>
+    <div class="service-container">
+        <div class="single-service">
+            <div class="service-img">
+                <img src="{{cloudservices.image}}" alt="Specialist">
+            </div>
+            <div class="service-info">
+                <h2>{{cloudservices.title}}</h2><br>
+                {{cloudservices.description}}<br><br>
+                <button class="btn btn-warning">Learn More on Cloud Security</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    
+</div>

@@ -41,16 +41,24 @@
     flex-wrap: wrap;
 }
 .service-img{
+    width: 43%;
     display: flex;
     justify-content: center;
 }
 .service-img > img{
     width: 80%;
+    max-height: 270px;
     border-radius: 10px;
 }
 
 .service-info{
     width:35%;
+    text-align: justify;
+}
+.service-info2{
+    width:35%;
+    margin-left:90px ;
+    text-align: justify;
 }
 
 h2{

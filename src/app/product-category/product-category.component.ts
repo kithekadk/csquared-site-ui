@@ -34,7 +34,6 @@ cloudservices!:services[];
   oneFiberitem!:services;
   viewFiberProduct(index: number){
     this.oneFiberitem=this.apiService.getOneFiberItem(index);
-    console.log(this.oneFiberitem);
   }
 
 }
