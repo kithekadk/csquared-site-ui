@@ -19,4 +19,8 @@ export class ApiService {
   getCloudServices(){
     return this.cloudservices;
   }
+
+  getOneItem(index:number){
+    return this.services[index];
+  }
 }

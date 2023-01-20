@@ -16,6 +16,7 @@ import { HeroMainComponent } from "./components/hero-main/hero-main.component";
 import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
+import { SingleServiceComponent } from './single-service/single-service.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     HeroMainComponent,
     ProductsComponent,
     NavbarComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    SingleServiceComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,16 @@ cloudservices!:services[];
   ngOnInit(): void {
     this.categoryRoute=this.router.url;
     this.services=this.apiService.getCloudServices();
+    console.log(this.services);
+    
     this.cloudservices=this.apiService.getFiberServices();
+  }
+
+  oneitem!:services
+  viewProduct(index: number){
+    this.oneitem=this.apiService.getOneItem(index);
+    console.log(this.oneitem);
+     
   }
 
 }

@@ -1,26 +1,8 @@
 <!-- <div [ngStyle]="category=='wholesale'?{'background-color':'red'}:{'background-color':'yellow'}">
 baba
 </div> -->
-<!-- Renders fiber products -->
-<div class="body" *ngIf ="categoryRoute == '/services/cloud-solutions'">
-    <div class="fiber-bg">
-    </div>
-    <div class="service-container">
-        <div class="single-service" *ngFor="let service of cloudservices">
-            <div class="service-img">
-                <img src="{{service.image}}" alt="Specialist">
-            </div>
-            <div class="service-info">
-                <h2>{{service.title}}</h2><br>
-                {{service.description}}<br><br>
-                <button class="btn btn-warning">Explore More</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-<!-- Renders cloud solutions background -->
+<!-- Renders wholesale fiber background -->
 <div class="body" *ngIf ="categoryRoute == '/services/wholesale-fiber'">
     <div class="cloudsolutions-bg">
 
@@ -38,6 +20,24 @@ baba
         </div>
     </div>
     
+</div>
+
+<!-- Renders cloud solutions -->
+<div class="body" *ngIf ="categoryRoute == '/services/cloud-solutions'">
+    <div class="fiber-bg">
+    </div>
+    <div class="service-container">
+        <div class="single-service" *ngFor="let service of cloudservices; let i=index">
+            <div class="service-img">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+            <div class="service-info">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewProduct(i)">Explore More</button>
+            </div>
+        </div>
+    </div>
 </div>
 <app-footer></app-footer>
 
