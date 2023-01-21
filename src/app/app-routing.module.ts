@@ -7,9 +7,10 @@ import { ProductCategoryComponent } from './product-category/product-category.co
 import { SingleServiceComponent } from './single-service/single-service.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent  },
-    { path: 'about', component: AboutComponent  },
-    { path: 'services', component: ProductsComponent},
+    {path: '', component: HomeComponent},
+    {path: 'about', component: AboutComponent},
+    {path: 'team', component: AboutComponent},
+    {path: 'services', component: ProductsComponent},
     {path: 'services/wholesale-fiber', component:ProductCategoryComponent},
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},
     {path:'services/wholesale-fiber/view/:id', component: SingleServiceComponent},

@@ -71,18 +71,12 @@
 </section>
 
 <div class="team">
-	<div class="members">
-		<img src="https://cdn.pixabay.com/photo/2019/11/03/23/28/black-businessman-4599847__340.jpg" alt="Manager" width="130%">
+	<div class="members" *ngFor="let manager of managers">
+		<img src="{{manager.image}}" alt="Manager" width="130%">
 		<div class="rank">
-			<b><h2>Lanre Kolade</h2></b>
-			<b>CEO</b>
+			<h3>{{manager.name}}</h3>
+			{{manager.rank}}
 		</div>
-	</div>
-	<div class="members">
-		<img src="https://cdn.pixabay.com/photo/2019/11/03/23/28/black-businessman-4599847__340.jpg" alt="Manager" width="130%">
-	</div>
-	<div class="members">
-		<img src="https://cdn.pixabay.com/photo/2019/11/03/23/28/black-businessman-4599847__340.jpg" alt="Manager" width="130%">
 	</div>
 </div>
 

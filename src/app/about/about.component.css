@@ -64,7 +64,7 @@ h2{
 }
 .section-img > img{
     width: 80%;
-    min-height: 270px;
+    height: 270px;
     border-radius: 10px;
 }
 
@@ -85,7 +85,8 @@ h2{
 .team{
     display: flex;
     justify-content: center;
-    gap:40px;
+    gap:31px;
+    flex-wrap: wrap;
 }
 
 .members{
@@ -98,7 +99,12 @@ h2{
 }
 
 .rank{
-    margin-top: -70px;
+    margin-top: -80px;
     margin-left: 10px;
     color: white;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
 }
