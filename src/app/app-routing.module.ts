@@ -5,11 +5,13 @@ import { AboutComponent } from './about/about.component'
 import { ProductsComponent } from './products/products.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'team', component: AboutComponent},
+    {path: 'team/:id', component: TeamComponent},
     {path: 'services', component: ProductsComponent},
     {path: 'services/wholesale-fiber', component:ProductCategoryComponent},
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},

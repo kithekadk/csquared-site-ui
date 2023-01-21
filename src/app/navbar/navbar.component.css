@@ -3,6 +3,9 @@
     justify-content: space-around;
     background-color: rgb(3, 31, 3);
     align-items: center;
+    position: fixed;
+    width:100%;
+    
 }
 .menu-container{
     display: flex;

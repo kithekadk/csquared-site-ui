@@ -14,7 +14,6 @@ managers!: authorities[];
   constructor(private apiService:ApiService, private router:Router) { }
 
   ngOnInit(): void {
-    console.log(this.router.url)
     if (this.router.url == '/about'){
       this.getSections();
     }else if(this.router.url == '/team'){
@@ -30,5 +29,11 @@ managers!: authorities[];
     this.managers = this.apiService.getManagement();
   }
 
+  teamMember!: authorities;
+  viewTeamMember(index:number){
+    this.teamMember=this.apiService.getTeamMember(index);
+    console.log(this.teamMember);
+    
+  }
 
 }

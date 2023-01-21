@@ -42,4 +42,8 @@ export class ApiService {
   getManagement(){
     return this.management;
   }
+
+  getTeamMember(index:number){
+    return this.management[index];
+  }
 }
