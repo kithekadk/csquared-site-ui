@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
 import { TeamComponent } from './team/team.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -17,10 +18,12 @@ const routes: Routes = [
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},
     {path:'services/wholesale-fiber/view/:id', component: SingleServiceComponent},
     {path:'services/cloud-solutions/view/:id', component: SingleServiceComponent},
+    {path: 'blog', component: BlogComponent}
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  //Next page begins at top but previous page loads at last users location
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
