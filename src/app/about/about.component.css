@@ -1,0 +1,104 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+/* .about{
+    width: 100%;
+    height: 55vh;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    width:80%;
+    margin-top: -120px;
+    border-radius: 10px;
+    box-shadow: rgb(240, 239, 239) 2px 2px;
+}
+.singlecard{
+    display: flex;
+    padding:40px;
+    align-items: center;
+    gap:15px;
+}
+h2{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.cardtext{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.section-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.single-section{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.section-img{
+    width: 43%;
+    display: flex;
+    justify-content: center;
+}
+.section-img > img{
+    width: 80%;
+    min-height: 270px;
+    border-radius: 10px;
+}
+
+.section-info{
+    width:35%;
+    text-align: justify;
+}
+.section-info2{
+    width:35%;
+    margin-left:90px ;
+    text-align: justify;
+}
+
+h2{
+    font-weight: bold;
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+
+.members{
+    padding-bottom: 50px;
+    width: 23vw;
+}
+.members > img{
+    border-radius: 10px;
+    height: 55vh;
+}
+
+.rank{
+    margin-top: -70px;
+    margin-left: 10px;
+    color: white;
+}

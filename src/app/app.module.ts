@@ -17,6 +17,7 @@ import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SingleServiceComponent } from './single-service/single-service.componen
     ProductsComponent,
     NavbarComponent,
     ProductCategoryComponent,
-    SingleServiceComponent
+    SingleServiceComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
