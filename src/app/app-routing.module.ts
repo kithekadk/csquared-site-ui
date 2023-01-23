@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component'
 import { ProductsComponent } from './products/products.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
+<<<<<<< HEAD
 import { CountryHeaderComponent } from './components/country-header/country-header.component';
 import { DRCComponent } from './components/drc/drc.component';
 import { UgandaComponent } from './uganda/uganda.component';
@@ -13,15 +14,22 @@ import { LiberiaComponent } from './liberia/liberia.component';
 import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 
+=======
+import { TeamComponent } from './team/team.component';
+import { BlogComponent } from './blog/blog.component';
+>>>>>>> 4d194269726595658fd93cdd83525ef97fb4ba6d
 
 const routes: Routes = [
-    { path: '', component: HomeComponent  },
-    { path: 'about', component: AboutComponent  },
-    { path: 'services', component: ProductsComponent},
+    {path: '', component: HomeComponent},
+    {path: 'about', component: AboutComponent},
+    {path: 'team', component: AboutComponent},
+    {path: 'team/:id', component: TeamComponent},
+    {path: 'services', component: ProductsComponent},
     {path: 'services/wholesale-fiber', component:ProductCategoryComponent},
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},
     {path:'services/wholesale-fiber/view/:id', component: SingleServiceComponent},
     {path:'services/cloud-solutions/view/:id', component: SingleServiceComponent},
+<<<<<<< HEAD
     // {path:"country/:code", component:CountryHeaderComponent},
     {path:"country/drc", component:DRCComponent},
     {path:"country/uganda", component:UgandaComponent},
@@ -29,10 +37,14 @@ const routes: Routes = [
     {path:"country/liberia", component:LiberiaComponent},
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent}
+=======
+    {path: 'blog', component: BlogComponent}
+>>>>>>> 4d194269726595658fd93cdd83525ef97fb4ba6d
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  //Next page begins at top but previous page loads at last users location
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

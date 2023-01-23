@@ -34,3 +34,10 @@ export interface Offer{
     image:string
     title:string
 }
+export interface authorities{
+    name:string;
+    image:string;
+    rank: string;
+    description: string;
+
+}
