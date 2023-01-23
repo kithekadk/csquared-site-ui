@@ -26,13 +26,14 @@
           <a class="nav-link" href="#">Blog</a>
         </li>
     </ul>
-    <select name="" id="select-country">
-        <option value="kenya">Africa</option>
-        <option value="kenya"><img src="./../../assets/images/flags/kenya.png" alt="Ke">Kenya</option>
-        <option value="kenya">Uganda</option>
+  
+    <select name="" id="select-country"   (change)="navigateTo($event)">
+        <option *ngFor="let country of countries" value={{country.code}} > {{country.name}}</option>
+        <!-- <option value="kenya"><img src="./../../assets/images/flags/kenya.png" alt="Ke">Kenya</option>
+        <option value="kenya" routerLink="/country/ug">Uganda</option>
         <option value="kenya">Ghana</option>
         <option value="kenya">DRC</option>
         <option value="kenya">Togo</option>
-        <option value="kenya">Liberia</option>
+        <option value="kenya">Liberia</option> -->
     </select>
 </nav>

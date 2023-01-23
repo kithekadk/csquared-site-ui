@@ -1,0 +1,53 @@
+.offer-container{
+    width: 100%;
+    height: 40vh; 
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin-top: 20px; 
+    margin-bottom: 30px;
+ 
+}
+
+ h1{
+    text-align: center;
+    color:#345C5A ;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.offer-content{
+    width: 95%;
+    height: 100%;
+    display: flex;
+
+    justify-content:space-evenly;
+}
+
+.offer-content-body{
+    width: 24%;
+    height: 100%;
+    position: relative;
+}
+.offer-text {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.offer-text h1{
+    color: white;
+}
+.offer-content-body img{
+    width: 100%;
+    height: 100%;
+}
+
+.offer-text button{
+   background-color:#e7b022;
+    color:#345C5A ;
+    font-weight: bolder;
+    border-style: none;
+    padding: 10px 20px;
+    
+}

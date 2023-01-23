@@ -17,6 +17,19 @@ import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
+import { CountryHeaderComponent } from './components/country-header/country-header.component';
+import { CountryCoverageComponent } from './components/country-coverage/country-coverage.component';
+import { CountryAboutComponent } from './components/country-about/country-about.component';
+
+import { CountryLatestnewsComponent } from './components/country-latestnews/country-latestnews.component';
+import { WhatWeOfferFlexComponent } from './components/what-we-offer-flex/what-we-offer-flex.component';
+import { WhatWeOfferGridComponent } from './components/what-we-offer-grid/what-we-offer-grid.component';
+import { DRCComponent } from './components/drc/drc.component';
+import { UgandaComponent } from './uganda/uganda.component';
+import { GhanaComponent } from './ghana/ghana.component';
+import { LiberiaComponent } from './liberia/liberia.component';
+import { TogoComponent } from './togo/togo.component';
+import { KenyaComponent } from './kenya/kenya.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +45,19 @@ import { SingleServiceComponent } from './single-service/single-service.componen
     ProductsComponent,
     NavbarComponent,
     ProductCategoryComponent,
-    SingleServiceComponent
+    SingleServiceComponent,
+    CountryHeaderComponent,
+    CountryCoverageComponent,
+    CountryAboutComponent,
+    CountryLatestnewsComponent,
+    WhatWeOfferFlexComponent,
+    WhatWeOfferGridComponent,
+    DRCComponent,
+    UgandaComponent,
+    GhanaComponent,
+    LiberiaComponent,
+    TogoComponent,
+    KenyaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,79 @@
+
+.container-grid{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.content{
+      width: 85%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 10px;
+    grid-template-areas:
+    "one two three three"
+    "four five five six";
+}
+.divone{
+    grid-area:  one;
+    position: relative;
+}
+
+.btn{
+    position: absolute;
+    bottom: 0;
+}
+
+.btn button{
+     background-color:#e7b022;
+    color:#345C5A ;
+    font-weight: bolder;
+    border-style: none;
+    padding: 10px 20px;
+}
+
+.text{
+    position: absolute;
+    top: 0;
+}
+.text h1{
+    color: white;
+    font-size: 25px;
+}
+.divtwo{
+    grid-area:  two;
+    position: relative;
+}
+
+
+.divthree{
+    grid-area:  three;
+    position: relative;
+}
+
+
+.divfour{
+    grid-area:  four;
+    position: relative;
+}
+
+
+.divfive{
+    grid-area:  five;
+    position: relative;
+}
+
+
+.divsix{
+    grid-area:  six;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,31 @@
+<div *ngIf="countries" class="ch-container">
+<img src={{countries.header.image}} alt="">
+<div class="ch-content">
+    <h1>{{countries.header.title}}</h1>
+    <p>{{countries.header.content}}</p>
+
+    <div *ngIf="countries.search" class="ch-input">
+        <input type="text">
+        <button>Check</button>
+    </div>
+
+    <div *ngIf="countries.button" class="ch-input">
+        <button>Get Started</button>
+    </div>
+
+     <div *ngIf="countries.link" class="ch-input">
+        <a href="#">Read More...</a>
+    </div>
+</div>
+</div>
+
+<!-- 
+ <app-country-coverage></app-country-coverage>
+
+ <app-country-about [content]="content" [image]="image"></app-country-about>
+
+ <app-country-latestnews></app-country-latestnews>
+
+ <app-what-we-offer-flex></app-what-we-offer-flex>
+
+ <app-what-we-offer-grid></app-what-we-offer-grid> -->
