@@ -12,14 +12,14 @@ import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';
 import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
-import { TeamComponent } from './team/team.component';
+import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'team', component: AboutComponent},
-    {path: 'team/:id', component: TeamComponent},
+    {path: 'team/:id', component: SingleMemberComponent},
     {path: 'services', component: ProductsComponent},
     {path: 'services/-', component: ProductsComponent},
     {path: 'services/wholesale-fiber', component:ProductCategoryComponent},
@@ -38,7 +38,7 @@ const routes: Routes = [
   ];
 
 @NgModule({
-  //Next page begins at top but previous page loads at last users location
+  //Next page begins at top but previous page loads
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })

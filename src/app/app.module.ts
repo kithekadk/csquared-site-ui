@@ -28,7 +28,7 @@ import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';
 import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
-import { TeamComponent } from './team/team.component';
+import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
 
 
@@ -59,7 +59,7 @@ import { BlogComponent } from './blog/blog.component';
     LiberiaComponent,
     TogoComponent,
     KenyaComponent,
-    TeamComponent,
+    SingleMemberComponent,
     BlogComponent
   ],
   imports: [
