@@ -1,0 +1,68 @@
+<app-country-header></app-country-header>
+<h1>INSIGHTS</h1>
+<h2>More About Uganda Impact</h2>
+<div class="offer-container">
+
+
+<div class="offer-content" >
+    <div class="offer-content-body" *ngFor="let content of offers" >
+        <img src={{content.image}} alt="">
+        <div class="offer-text">
+            <h1>{{content.title}}</h1>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<app-country-about [content]="content" [image]="image"></app-country-about>
+
+<h1>What We?</h1>
+
+
+<div class="container-grid">
+   <div class="content">
+    <div class="divtwo">
+        <img src={{imageTwo}} alt="">
+         <div class="text">
+            <h1>Dark Fiber</h1>
+        </div>
+         <div class="btn">
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="divthree">
+        <img src={{imageThree}} alt="">
+         <div class="text">
+            <h1>Capacity Pool</h1>
+        </div>
+         <div class="btn">
+            <button>Learn More</button>
+        </div>
+    </div>
+   
+    <div class="divfive">
+        <img src={{imageFive}} alt="">
+         <div class="text">
+            <h1>Backbone</h1>
+        </div>
+         <div class="btn">
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="divsix">
+       <img src={{imageSix}} alt=""> 
+        <div class="text">
+            <h1>FTTX</h1>
+        </div>
+         <div class="btn">
+            <button>Learn More</button>
+        </div>
+    </div>
+   </div>
+</div>
+
+<app-country-latestnews></app-country-latestnews>
+
+<app-footer></app-footer>

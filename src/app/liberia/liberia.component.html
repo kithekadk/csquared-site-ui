@@ -1,0 +1,23 @@
+<app-country-header></app-country-header>
+
+<app-country-about [content]="text" [image]="image"></app-country-about>
+
+<div class="cv-container">
+   <div class="main-content">
+    <div class="cv-content" *ngFor="let cnt of content ">
+    <img src={{cnt.image}} alt="">
+    <div >
+        <h1>{{cnt.title}}</h1>
+        <p>{{cnt.content}}</p>
+    </div>
+   </div>
+   </div>
+</div>
+
+
+<app-what-we-offer-flex></app-what-we-offer-flex>
+
+<app-country-latestnews></app-country-latestnews>
+
+
+<app-footer></app-footer>
