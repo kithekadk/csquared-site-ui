@@ -3,15 +3,16 @@
     justify-content: space-around;
     background-color: #073937;
     align-items: center;
-    position: fixed;
+    /* position: absolute; */
     width:100%;
+
     
 }
 .menu-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap:20px;
+    gap:40px;
     color:white;
 }
 #select-country{
@@ -24,7 +25,8 @@ option{
     margin:5px 20px 5px 20px;
 }
 
-select{
+.services-options{
+    text-align: center;
     background-color: transparent;
     color: white;
     border: none;

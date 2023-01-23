@@ -73,10 +73,10 @@
 <div class="team">
 	<div class="members" *ngFor="let manager of managers; let i = index" >
 		<img src="{{manager.image}}" alt="Manager" width="130%" (click)="viewTeamMember(i)" routerLink='/team/{{i}}'>
-		<div class="rank">
+		<!-- <div class="rank">
 			<h3>{{manager.name}}</h3>
 			{{manager.rank}}
-		</div>
+		</div> -->
 	</div>
 </div>
 

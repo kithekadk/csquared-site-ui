@@ -6,10 +6,10 @@
         <div class="single-member">
             <div class="member-img">
                 <img src="{{teammember.image}}" alt="Specialist"><br>
-                <div class="rank">
+                <!-- <div class="rank">
                     <h3>{{teammember.name}}</h3>
                     {{teammember.rank}}
-                </div>
+                </div> -->
             </div>
             <div class="member-info">
                 <h2>{{teammember.rank}}</h2><br>
@@ -20,6 +20,8 @@
     </div>
     <br>
     <hr>
+
+    <!-- Bottom carousel -->
     <div class="m-carousel">
         <div class="leftitem" [routerLink]="['/team', leftIndex]" (click)="getPreviousMember()" *ngIf="previousmember">
             <div>
