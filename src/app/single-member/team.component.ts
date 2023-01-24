@@ -4,11 +4,11 @@ import { authorities } from '../interfaces/interfaces';
 import { ApiService } from '../services/api.service';
 
 @Component({
-  selector: 'app-team',
+  selector: 'app-single-member',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.css']
 })
-export class TeamComponent implements OnInit {
+export class SingleMemberComponent implements OnInit {
   personId!:string;
 
 previousmember!: authorities;
