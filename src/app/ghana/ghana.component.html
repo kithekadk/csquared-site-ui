@@ -1,95 +1,108 @@
-
 <div *ngIf="countries" class="ch-container">
-<img src={{countries.header.image}} alt="">
-<div class="ch-content">
-    <h1>{{countries.header.title}}</h1>
-    <p>{{countries.header.content}}</p>
+  <img src="{{ countries.header.image }}" alt="" />
+  <div class="ch-content">
+    <h1>{{ countries.header.title }}</h1>
+    <p>{{ countries.header.content }}</p>
 
     <div *ngIf="countries.search" class="ch-input">
-        <input type="text">
-        <button>Check</button>
+      <input type="text" />
+      <button>Check</button>
     </div>
 
     <div *ngIf="countries.button" class="ch-input">
-        <button>Get Started</button>
+      <button>Get Started</button>
     </div>
 
-     <div *ngIf="countries.link" class="ch-input">
-        <a href="#">Read More...</a>
+    <div *ngIf="countries.link" class="ch-input">
+      <a href="#">Read More...</a>
     </div>
+  </div>
 </div>
-</div>
-
 
 <div class="cv-container">
-   <div class="cv-content" *ngFor="let cnt of content ">
-    <img src={{cnt.image}} alt="">
-    <div >
-        <h1>{{cnt.title}}</h1>
-        <p>{{cnt.content}}</p>
+  <div class="cv-content" *ngFor="let cnt of content">
+    <img src="{{ cnt.image }}" alt="" />
+    <div>
+      <h1>{{ cnt.title }}</h1>
+      <p>{{ cnt.content }}</p>
     </div>
-   </div>
+  </div>
 </div>
 
-
 <div class="cabout-container">
-    <div class="cabout-content">
-         <div class="cabout-text">
-            <h1>About us</h1>
-            <p>{{text}}</p>
-            <button>Learn more</button>
-        </div>
-
-        <div class="cabout-image">
-              <img src={{image}} alt="country">  
-        </div>
+  <div class="cabout-content">
+    <div class="cabout-text">
+      <h1>About us</h1>
+      <p>{{ text }}</p>
+      <button>Learn more</button>
     </div>
 
-         <div class="overlay">
-            <img src="https://uchealth-wp-uploads.s3.amazonaws.com/wp-content/uploads/sites/6/2018/02/06033645/cell-phones-1024x683.webp" alt="">
-        </div>
-  
- </div>  
+    <div class="cabout-image">
+      <img src="{{ image }}" alt="country" />
+    </div>
+  </div>
 
- <app-what-we-offer-flex></app-what-we-offer-flex>
+  <div class="overlay">
+    <img
+      src="https://uchealth-wp-uploads.s3.amazonaws.com/wp-content/uploads/sites/6/2018/02/06033645/cell-phones-1024x683.webp"
+      alt=""
+    />
+  </div>
+</div>
 
-     <section class="grid gap-5 grid-cols-1 lg:grid-cols-10 justify-center bg-emerald-400/20  mt-10 mydiv">
+<app-what-we-offer-flex></app-what-we-offer-flex>
+
+<section
+  class="grid gap-5 grid-cols-1 lg:grid-cols-10 justify-center bg-emerald-400/20 mt-10 mydiv"
+>
   <div class="col-span-4 px-10">
     <div>
       <h3 class="text-sm text-green-900">// Why Us?</h3>
-      <h4 class="text-3xl font-medium text-green-900">Today, anyone can get Lightspeed Network.</h4>
+      <h4 class="text-3xl font-medium text-green-900">
+        Today, anyone can get Lightspeed Network.
+      </h4>
 
       <p class="mt-5 text-slate-500">
-        Currently present in 6 countries, we are helping drive digital transformation in Kenya, Uganda, Ghana. Liberia, DRC and Togo through affordable broadband technology.
+        Currently present in 6 countries, we are helping drive digital
+        transformation in Kenya, Uganda, Ghana. Liberia, DRC and Togo through
+        affordable broadband technology.
       </p>
     </div>
 
     <div class="mt-16">
-      <a href="#" class="text-green-800 text-lg underline font-medium">See our plan</a>
+      <a href="#" class="text-green-800 text-lg underline font-medium"
+        >See our plan</a
+      >
     </div>
-
   </div>
-  <div class="col-span-6 mx-8 flex flex-col md:flex-row items-end space-y-20 md:space-x-5">
+  <div
+    class="col-span-6 mx-8 flex flex-col md:flex-row items-end space-y-20 md:space-x-5"
+  >
     <div class="md:w-[300px]">
-        <h5 class="border-b-2 text-3xl md:text-5xl font-bold text-brand-green border-yellow-500">70%</h5>
-        <p class="mt-5">
-          We have seen how connecting metros in Africa to existing long-distance fiber lines has helped to provide these cities .
-        </p>
+      <h5
+        class="border-b-2 text-3xl md:text-5xl font-bold text-brand-green border-yellow-500"
+      >
+        70%
+      </h5>
+      <p class="mt-5">
+        We have seen how connecting metros in Africa to existing long-distance
+        fiber lines has helped to provide these cities .
+      </p>
     </div>
-      <div class="flex items-end space-x-14">
-        <div class="text-center">
-          <div class="w-20 h-[100px] bg-brand-yellow"></div>
-          <span class="text-sm font-bold text-green-800">Reliability</span>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-[180px] bg-brand-yellow"></div>
-          <span class="text-sm font-bold text-green-800">Efficiency</span>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-[250px] bg-brand-yellow"></div>
-          <span class="text-sm font-bold text-green-800">Compatibility</span>
-        </div>
+    <div class="flex items-end space-x-14">
+      <div class="text-center">
+        <div class="w-20 h-[100px] bg-brand-yellow"></div>
+        <span class="text-sm font-bold text-green-800">Reliability</span>
       </div>
+      <div class="text-center">
+        <div class="w-20 h-[180px] bg-brand-yellow"></div>
+        <span class="text-sm font-bold text-green-800">Efficiency</span>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-[250px] bg-brand-yellow"></div>
+        <span class="text-sm font-bold text-green-800">Compatibility</span>
+      </div>
+    </div>
   </div>
 </section>
 
