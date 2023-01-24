@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Insights</a>
         </li>
-        <li>
+        <li class="nav-item">
           <select (change)="redirectServices($event)" class="services-options">
             <option *ngFor="let service of services" value="{{service.code}}" >{{service.name}}</option>
           </select>
