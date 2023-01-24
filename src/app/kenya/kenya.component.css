@@ -105,8 +105,6 @@
   
 }
 @media only screen and (max-width: 600px) {
-    body {
-    }
     .kenya-container{
         width: 100%;
         /* height: 30vh; */
@@ -114,9 +112,6 @@
     }
     .kenya-content {
         width: 100%;
-
-    }
-    .kenya-image{
 
     }
     .kenya-text{
