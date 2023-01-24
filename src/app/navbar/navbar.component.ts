@@ -7,16 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  toggled: Boolean = false
+  selectedItem: {name:string,code:string, flag:string} | null = null
 countries:{name:string,code:string, flag:string}[]=[
   {
     name :"Global",
     code:'hybrid',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/earth-1681722__340.png'
   },
   {
     name :"Uganda",
     code:'uganda',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/Flag_of_Uganda.svg.png'
   },
   {
     name :"Kenya",
@@ -26,22 +28,22 @@ countries:{name:string,code:string, flag:string}[]=[
    {
     name :"Ghana",
     code:'ghana',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/255px-Flag_of_Ghana.svg.png'
   },
     {
     name :"DRC Congo",
     code:'drc',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/drc_flag.jpg'
   },
     {
     name :"Liberia",
     code:'liberia',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/Flag_of_Liberia.svg'
   },
    {
     name :"Togo",
     code:'togo',
-    flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    flag:'./../../assets/images/flags/Flag_of_Togo.svg.png'
   }
 ]
 
@@ -56,7 +58,9 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
 
 
   navigateTo(event :any){
-    this.router.navigate(['country',event.target.value])
+     this.router.navigate(['country',event])
+    console.log(event);
+    
   }
 
   redirectServices(event: any){

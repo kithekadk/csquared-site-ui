@@ -3,10 +3,10 @@
    margin: 0;
    overflow-x: hidden; 
 }
-.fiber-bg{
+.cloudsolutions-bg{
     width: 100%;
-    height: 25vh;
-    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
+    height: 55vh;
+    background-image: url("./../../assets/Csquared/pexels-photo-6193563.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -14,9 +14,9 @@
     justify-content: center;
     align-items: center;
 }
-.cloudsolutions-bg{
+.fiber-bg{
     width: 100%;
-    height: 45vh;
+    height: 55vh;
     background-image: url("./../../assets/Csquared/pexels-photo-6193563.jpeg");
     background-repeat: no-repeat;
     background-size: cover;

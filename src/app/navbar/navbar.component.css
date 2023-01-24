@@ -3,10 +3,10 @@
     justify-content: space-around;
     background-color: #073937;
     align-items: center;
-    /* position: absolute; */
+    position: fixed;
     width:100%;
-
-    
+    z-index: 9999;
+    top: 0;
 }
 .menu-container{
     display: flex;
@@ -23,6 +23,7 @@
 option{
     color:black;
     margin:5px 20px 5px 20px;
+    padding:50px;
 }
 
 .services-options{
@@ -30,4 +31,10 @@ option{
     background-color: transparent;
     color: white;
     border: none;
+}
+select{
+    background-color: white;
+}
+option:hover{
+    background-color:orangered;
 }
