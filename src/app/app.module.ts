@@ -31,7 +31,8 @@ import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
 import { CoverageComponent } from './coverage/coverage.component';
-
+import { CareersComponent } from './careers/careers.component';
+import { CareerDescriptionComponent } from './career-description/career-description.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,9 @@ import { CoverageComponent } from './coverage/coverage.component';
     KenyaComponent,
     SingleMemberComponent,
     BlogComponent,
-    CoverageComponent
+    CoverageComponent,
+    CareersComponent,
+    CareerDescriptionComponent
   ],
   imports: [
     BrowserModule,
