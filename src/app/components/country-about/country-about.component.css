@@ -71,4 +71,25 @@ height: 300px;
 top:-1;
 left: 26%;
 }
-
+@media only screen and (max-width: 600px) {
+   .cabout-container{
+    width: 100%;
+    height:37vh;
+   }
+   .cabout-content{
+    width: 100%;
+    height: 100%;
+   }
+   .cabout-image img{
+    /* height: 100%; */
+   }
+   .cabout-text h1{
+    font-size: 20px;
+   }
+   .cabout-text p{
+    font-size: 9px;
+   }
+   .cabout-text button{
+    width: fit-content;
+   }
+  }

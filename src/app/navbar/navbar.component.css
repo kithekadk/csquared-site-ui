@@ -1,33 +1,74 @@
-.navbar{
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #073937;
+  align-items: center;
+  /* position: absolute; */
+  width: 100%;
+}
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  color: white;
+}
+#select-country {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+option {
+  color: black;
+  margin: 5px 20px 5px 20px;
+}
+
+.services-options {
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    justify-content: flex-start;
+    border: 1px solid red;
+
+    /* align-items: flex-start; */
+    /* grid-template-columns: auto auto auto; */
+  }
+  .navbar-brand {
+    border: 1px solid red;
+    padding: 0;
+  }
+  .navbar img {
+    /* width: 100%; */
+    border: 1px solid red;
+  }
+  .menu-container {
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  .nav-item {
+    height: 1.5rem;
     display: flex;
-    justify-content: space-around;
-    background-color: #073937;
     align-items: center;
-    /* position: absolute; */
-    width:100%;
-
-    
-}
-.menu-container{
+  }
+  .nav-item a,
+  .nav-item select,
+  select {
+    font-size: 9px;
+  }
+  .nav-item select {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:40px;
-    color:white;
-}
-#select-country{
-    background-color: transparent;
-    color:white;
-    border: none;
-}
-option{
-    color:black;
-    margin:5px 20px 5px 20px;
-}
-
-.services-options{
-    text-align: center;
-    background-color: transparent;
-    color: white;
-    border: none;
+    justify-content: flex-start;
+    width: 3.4rem;
+    height: fit-content;
+  }
+  option {
+    margin: 0;
+  }
+  #select-country {
+    /* border: 1px solid red; */
+  }
 }
