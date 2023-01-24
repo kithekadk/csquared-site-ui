@@ -14,6 +14,8 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
+import { CareersComponent } from './careers/careers.component';
+import { CareerDescriptionComponent } from './career-description/career-description.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -34,7 +36,9 @@ const routes: Routes = [
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
     {path:"country/hybrid", component:HomeComponent},
-    {path: 'blog', component: BlogComponent}
+    {path: 'blog', component: BlogComponent},
+    {path:'career', component:CareersComponent},
+    {path:'careerdescription', component:CareerDescriptionComponent}
   ];
 
 @NgModule({
