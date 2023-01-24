@@ -7,18 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  targets: {title: String, image: String}[] = [
-      {title:'MNO\'s', image:'/assets/images/home/rolling-wire.png'},
+  targets: {title: string, image: string}[] = [
+      {title:"MNO's", image:'/assets/images/home/MNO.jpg'},
       {title:'Data Centers', image:'/assets/images/home/country.png'},
-      {title:'SMEs', image:'/assets/images/home/line-man.png'},
-      {title:'ISPs', image:'/assets/images/home/isp.png'},
-      {title:'Public - Point to Point Connection', image:'/assets/images/home/rolling-wire.png'},
-      {title:'Cloud Centers', image:'/assets/images/home/servers.png'},
+      {title:'SMEs', image:'/assets/images/home/rolling_wire.jpg'},
+      {title:'ISPs', image:'/assets/images/home/data_center.jpg'},
+      {title:'Public - Point to Point Connection', image:'/assets/images/home/rolling_wire.jpg'},
+      {title:'Cloud Centers', image:'/assets/images/home/country.png'},
     ]
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    console.log(this.targets[0].image);
+    
   }
 
 

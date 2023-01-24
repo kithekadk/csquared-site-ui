@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	<div class="section-container">
+	<div class="section-container" >
         <div class="single-section" *ngFor="let section of sections; let i = index">
             <div class="section-img" *ngIf="(i%2==0)">
                 <img src="{{section.image}}" alt="Specialist">
@@ -65,11 +65,12 @@
                 <img src="{{section.image}}" alt="Specialist">
             </div>
         </div>
-        <button class="btn btn-success pl-10 pr-10 m-10"><b>Learn More About Us</b></button>
+        <button *ngIf="active" class="btn btn-success pl-10 pr-10 m-10"><b>Learn More About Us</b></button>
     </div>
 
 </section>
 
+<!-- Displays the team members and  -->
 <div class="team">
 	<div class="members" *ngFor="let manager of managers; let i = index" >
 		<img src="{{manager.image}}" alt="Manager" width="130%" (click)="viewTeamMember(i)" routerLink='/team/{{i}}'>

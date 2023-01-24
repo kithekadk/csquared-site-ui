@@ -14,6 +14,7 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
+import { CoverageComponent } from './coverage/coverage.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
     {path:"country/hybrid", component:HomeComponent},
+    {path: 'coverage', component: CoverageComponent},
     {path: 'blog', component: BlogComponent}
   ];
 

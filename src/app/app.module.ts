@@ -30,6 +30,7 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
+import { CoverageComponent } from './coverage/coverage.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { BlogComponent } from './blog/blog.component';
     TogoComponent,
     KenyaComponent,
     SingleMemberComponent,
-    BlogComponent
+    BlogComponent,
+    CoverageComponent
   ],
   imports: [
     BrowserModule,

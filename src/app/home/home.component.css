@@ -1,0 +1,54 @@
+.grid-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-section{
+    width: 90vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: repeat(2, 1fr);
+    gap:20px;
+    display: grid;
+    grid-template-areas: 
+    'a b c c'
+    'd e e f';
+}
+
+.grid-section > div > img{
+    width: 100%;
+    height: 100%;
+}
+.mnos{
+    grid-area: a;
+    height:40vh;
+}
+.datacenters{
+    grid-area: b;
+    height:40vh;
+}
+
+.smes{
+    grid-area: c;
+    height:40vh;
+    
+}
+.isps{
+    grid-area: d;
+    height:40vh;
+}
+.p2p{
+    grid-area: e;
+    height:40vh;
+}
+.cloudcenters{
+    grid-area: f;
+    height:40vh;
+}
+.grid-title{
+    border: red solid 2px;
+    margin-top: -60px;
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
