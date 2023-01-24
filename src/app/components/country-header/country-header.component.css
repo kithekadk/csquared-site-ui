@@ -44,3 +44,24 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+@media only screen and (max-width: 600px) {
+.ch-container{
+    width: 100%;
+}
+.ch-content{
+    width: 60%;
+    top: 30%;
+}
+.ch-content h1{
+
+}
+.ch-content p{
+    font-size: 10px;
+}
+.ch-input input{
+    width: 60%;
+}
+.ch-input button{
+    width: fit-content;
+}
+}

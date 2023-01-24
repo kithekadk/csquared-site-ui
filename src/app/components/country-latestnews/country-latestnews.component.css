@@ -44,3 +44,12 @@ margin-bottom: 50px;
     height: 80%;
     border-radius: 10px;
 }
+@media only screen and (max-width: 600px) {
+    .title{
+        margin-bottom: 2rem;
+    }
+    .content{
+        margin-top: 3rem;
+        letter-spacing: normal;
+    }
+  }
