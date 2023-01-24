@@ -11,6 +11,7 @@ import { ApiService } from '../services/api.service';
 export class AboutComponent implements OnInit {
 sections!: services[];
 managers!: authorities[];
+active:boolean=false;
   constructor(private apiService:ApiService, private router:Router) { }
 
   ngOnInit(): void {
@@ -23,6 +24,7 @@ managers!: authorities[];
 
   getSections(){
     this.sections=this.apiService.getAboutSection();
+    this.active=true
   }
 
   getManagers(){

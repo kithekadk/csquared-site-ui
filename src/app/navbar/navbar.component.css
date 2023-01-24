@@ -1,33 +1,42 @@
-.navbar {
+.navbar{
   display: flex;
   justify-content: space-around;
   background-color: #073937;
   align-items: center;
-  /* position: absolute; */
-  width: 100%;
+  position: fixed;
+  width:100%;
+  z-index: 9999;
+  top: 0;
 }
-.menu-container {
+.menu-container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  color: white;
+  gap:40px;
+  color:white;
 }
-#select-country {
+#select-country{
   background-color: transparent;
-  color: white;
+  color:white;
   border: none;
 }
-option {
-  color: black;
-  margin: 5px 20px 5px 20px;
+option{
+  color:black;
+  margin:5px 20px 5px 20px;
+  padding:50px;
 }
 
-.services-options {
+.services-options{
   text-align: center;
   background-color: transparent;
   color: white;
   border: none;
+}
+select{
+  background-color: white;
+}
+option:hover{
+  background-color:orangered;
 }
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -54,12 +63,21 @@ option {
     display: flex;
     align-items: center;
   }
+  /*  */
   .nav-item a,
   .nav-item select,
   select {
     font-size: 9px;
   }
+  /*  */
   .nav-item select {
+    position: fixed;
+    width:100%;
+    z-index: 9999;
+    top: 0;
+}
+/*  */
+.menu-container{
     display: flex;
     justify-content: flex-start;
     width: 3.4rem;
