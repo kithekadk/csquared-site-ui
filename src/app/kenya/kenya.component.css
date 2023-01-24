@@ -6,7 +6,8 @@
 
 .kenya-container{
     width: 98vw;
-    height: 40vh;
+    /* height: 40vh; */
+    height: fit-content;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -52,7 +53,8 @@
     font-weight: bolder;
     border-style: none;
     padding: 12px 15px;
-    width: 40%;
+    /* width: 40%; */
+    /* width: fit-content; */
     border-radius: 10px;
   
 }
