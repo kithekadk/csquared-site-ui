@@ -43,3 +43,15 @@ h1{
     font-weight: bolder;
     
 }
+@media only screen and (max-width: 600px) {
+  
+  .main-content{
+    width: 100%;
+  }
+  .cv-content{
+    flex-direction: column;
+  }
+  p{
+    font-size: 10px;
+  }
+  }
