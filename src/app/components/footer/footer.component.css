@@ -2,4 +2,7 @@
   .twitter div{
     width: 100%;
   }
+  div input{
+    font-size: 10px;
+  }
 }
