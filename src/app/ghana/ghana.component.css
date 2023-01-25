@@ -170,11 +170,19 @@ h1 {
     width: 100%;
   }
   .cv-container {
-     height: fit-content;
+    flex-direction: column;
+     /* height: fit-content; */
     gap: 2%;
   }
   .cv-content {
+    /* flex-direction: column; */
     width: 100%;
+  }
+  .cv-content div{
+    gap: 5px;
+  }
+  .cv-content img{
+    height: 2rem;
   }
   .cv-content p{
     font-size: 10px;
@@ -202,5 +210,12 @@ h1 {
   }
   .cabout-text button {
     padding: 5px 10px;
+  }
+  .cabout-image{
+    margin-top: 0.5rem;
+  }
+  .graph{
+    width: 100%;
+    justify-content: center;
   }
 }
