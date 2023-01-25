@@ -35,9 +35,6 @@ option{
 select{
   background-color: white;
 }
-option:hover{
-  background-color:orangered;
-}
 @media only screen and (max-width: 600px) {
   .navbar {
     justify-content: flex-start;
@@ -50,6 +47,7 @@ option:hover{
     /* border: 1px solid red; */
     padding: 0;
   }
+
   .menu-container {
     gap: 5px;
     flex-wrap: nowrap;
