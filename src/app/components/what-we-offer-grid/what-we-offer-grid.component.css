@@ -80,6 +80,8 @@ img {
     /* padding: 0.5rem; */
   }
   .content {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     width: 100%;
     gap: 2px;
