@@ -26,9 +26,7 @@
 .ch-container h1{
     font-weight: bolder;
 }
-.ch-input {
-   
-}
+
 .ch-input button{
     background-color:#e7b022;
     color: white;
@@ -164,11 +162,12 @@ height: 90%;
 
 
 .overlay{
-position: absolute;
+/* position: absolute; */
 width: 15%;
-height:35vh; 
-bottom:-70%;
-left:48%;
+height:35%; 
+margin-top:45vh;
+margin-left:-3vw;
+/* left:48%; */
 }
 
 .overlay img{

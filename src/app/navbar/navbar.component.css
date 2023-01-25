@@ -3,7 +3,7 @@
   justify-content: space-around;
   background-color: #073937;
   align-items: center;
-  /* position: fixed; */
+  position: fixed;
   width:100%;
   z-index: 9999;
   top: 0;
