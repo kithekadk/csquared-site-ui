@@ -53,6 +53,7 @@ img{
       width: 100%;
     }
     .cv-content{
+        height: fit-content;
       flex-direction: column;
     }
     p{

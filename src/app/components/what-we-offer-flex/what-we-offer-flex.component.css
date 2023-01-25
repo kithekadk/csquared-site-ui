@@ -53,7 +53,14 @@
 }
 @media only screen and (max-width: 600px) {
    .offer-container{
-    height: 30vh;
+    height: fit-content;
+   }
+   .offer-content{
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+   .offer-content-body{
+    width: 100%;
    }
    .offer-text h1{
     font-size: 15px;
