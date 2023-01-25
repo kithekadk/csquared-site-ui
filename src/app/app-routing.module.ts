@@ -38,7 +38,7 @@ const routes: Routes = [
     {path:"country/kenya", component:KenyaComponent},
     {path:"country/hybrid", component:HomeComponent},
     {path: 'coverage', component: CoverageComponent},
-    {path: 'blog', component: BlogComponent},
+    {path: 'insights', component: BlogComponent},
     {path:'career', component:CareersComponent},
     {path:'careerdescription', component:CareerDescriptionComponent}
   ];

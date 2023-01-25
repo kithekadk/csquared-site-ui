@@ -35,9 +35,6 @@ option{
 select{
   background-color: white;
 }
-option:hover{
-  /* background-color:orangered; */
-}
 @media only screen and (max-width: 600px) {
   .navbar {
     justify-content: flex-start;
@@ -50,10 +47,7 @@ option:hover{
     /* border: 1px solid red; */
     padding: 0;
   }
-  .navbar img {
-    /* width: 100%; */
-    /* border: 1px solid red; */
-  }
+
   .menu-container {
     gap: 5px;
     flex-wrap: nowrap;
@@ -85,8 +79,5 @@ option:hover{
   }
   option {
     margin: 0;
-  }
-  #select-country {
-    /* border: 1px solid red; */
   }
 }

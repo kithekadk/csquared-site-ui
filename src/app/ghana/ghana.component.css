@@ -26,8 +26,7 @@
 .ch-container h1 {
   font-weight: bolder;
 }
-.ch-input {
-}
+
 .ch-input button {
   background-color: #e7b022;
   color: white;
@@ -148,11 +147,12 @@ h1 {
 }
 
 .overlay {
-  position: absolute;
+  /* position: absolute; */
   width: 15%;
-  height: 35vh;
-  bottom: -70%;
-  left: 48%;
+  height: 35%;
+  margin-top: 45vh;
+  margin-left: -3vw;
+  /* left:48%; */
 }
 
 .overlay img {
@@ -171,24 +171,24 @@ h1 {
   }
   .cv-container {
     flex-direction: column;
-     /* height: fit-content; */
+    height: fit-content;
     gap: 2%;
   }
   .cv-content {
-    /* flex-direction: column; */
     width: 100%;
   }
-  .cv-content div{
+  .cv-content div {
     gap: 5px;
   }
-  .cv-content img{
-    height: 2rem;
+  .cv-content img {
+    height: 1.5rem;
+    width: auto;
   }
-  .cv-content p{
+  .cv-content p {
     font-size: 10px;
   }
   .cabout-container {
-    padding: 1rem;
+    padding: 2rem 1rem;
     height: 100%;
     flex-direction: column;
   }
@@ -211,10 +211,10 @@ h1 {
   .cabout-text button {
     padding: 5px 10px;
   }
-  .cabout-image{
+  .cabout-image {
     margin-top: 0.5rem;
   }
-  .graph{
+  .graph {
     width: 100%;
     justify-content: center;
   }

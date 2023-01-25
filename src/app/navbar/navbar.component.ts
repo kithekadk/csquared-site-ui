@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  toggled: Boolean = false
+  toggled: boolean = false;
   selectedItem: {name:string,code:string, flag:string} | null = null
 countries:{name:string,code:string, flag:string}[]=[
   {
@@ -59,8 +59,9 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
 
   navigateTo(event :any){
      this.router.navigate(['country',event])
-    console.log(event);
-    
+     setTimeout(() => {
+       this.toggled = false
+     }, 100)   
   }
 
   redirectServices(event: any){
