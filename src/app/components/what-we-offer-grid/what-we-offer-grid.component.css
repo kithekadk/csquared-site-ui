@@ -8,12 +8,12 @@
 }
 
 .content {
-  width: 85%;
+  width: 90%;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 300px);
-  gap: 10px;
+  gap: 20px;
   grid-template-areas:
     "one two three three"
     "four five five six";
@@ -24,8 +24,8 @@
 }
 
 .btn {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  margin-top: -10vh;
 }
 
 .btn button {
@@ -81,20 +81,28 @@ img {
   }
   .content {
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
     width: 100%;
-    gap: 2px;
+    gap: 0;
   }
   .text h1 {
-    font-size: 20px;
+    font-size: 15px;
+    background-color: rgb(180, 180, 180);
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: black;
+  }
+  .btn{
+    margin-top: -10vh;
   }
   .btn button {
     width: fit-content;
     padding: 5px 10px;
-
   }
+
   .content div {
-    /* height: 50%; */
+    width:80vw;
+    height: 12%;
   }
 }

@@ -10,7 +10,7 @@
           <a class="nav-link" routerLink="/coverage">Coverage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Insights</a>
+          <a class="nav-link" routerLink="/insights">Insights</a>
         </li>
         <li class="nav-item">
           <select (change)="redirectServices($event)" class="services-options">
@@ -22,9 +22,9 @@
             <option *ngFor="let submenu of Aboutsubmenus" value="{{submenu.code}}">{{submenu.name}}</option>
           </select>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/blog">Blog</a>
-        </li>
+        </li> -->
     </ul>
 
     <!-- Countries drop down -->

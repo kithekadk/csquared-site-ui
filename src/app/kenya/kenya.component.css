@@ -99,43 +99,38 @@ h1 {
   border-radius: 10px;
 }
 @media only screen and (max-width: 600px) {
-  body {
+    .kenya-container{
+        width: 100%;
+        /* height: 30vh; */
+        padding: 1rem;
+    }
+    .kenya-content {
+        width: 100%;
+
+    }
+    .kenya-text{
+        font-size: 6px;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .kenya-image img{
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+    /*  */
+    .it-services{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .it-services h1{
+        font-size: 20px;
+
+    }
+    .it-services h2{
+        font-size: 9px;
+        color: black;
+    }
+
   }
-  .kenya-container {
-    width: 100%;
-    /* height: 30vh; */
-    padding: 1rem;
-  }
-  .kenya-content {
-    flex-direction: column;
-    width: 100%;
-  }
-  .kenya-image {
-    width: 100%;
-  }
-  .kenya-text {
-    width: 100%;
-    font-size: 10px;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .kenya-image img {
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-  }
-  /*  */
-  .it-services {
-    width: 100%;
-    justify-content: space-around;
-  }
-  .it-services h1 {
-    font-size: 20px;
-  }
-  .it-services h2 {
-    font-size: 9px;
-    color: black;
-  }
-  .btn{
-  }
-}

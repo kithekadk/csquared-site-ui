@@ -26,15 +26,14 @@
 .ch-container h1 {
   font-weight: bolder;
 }
-.ch-input {
-}
-.ch-input button {
-  background-color: #e7b022;
-  color: white;
-  font-weight: bolder;
-  border-style: none;
-  padding: 10px 20px;
-  width: 20%;
+
+.ch-input button{
+    background-color:#e7b022;
+    color: white;
+    font-weight: bolder;
+    border-style: none;
+    padding: 10px 20px;
+    width: 20%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -147,12 +146,14 @@ h1 {
   font-size: 20px;
 }
 
-.overlay {
-  position: absolute;
-  width: 15%;
-  height: 35vh;
-  bottom: -70%;
-  left: 48%;
+
+.overlay{
+/* position: absolute; */
+width: 15%;
+height:35%; 
+margin-top:45vh;
+margin-left:-3vw;
+/* left:48%; */
 }
 
 .overlay img {
