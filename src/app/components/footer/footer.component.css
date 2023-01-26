@@ -3,7 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .tweet{

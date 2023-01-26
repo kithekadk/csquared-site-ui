@@ -15,7 +15,7 @@ CSquared in Uganda was launched in 2013 and has since set up more than 1000 KM F
 Partner with us to enhance your internet access and accelerate your productivity and growth. We understand the market dynamics and have the right products and solutions for your internet needs.
   `
 
-  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRz0WBiT92FpJyNpEk9U0XK2KeNg0szW95co2VcJc1r7rukICAE4zHuCvo12d3FmLeSZk&usqp=CAU"
+  image="./../../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg"
   offers:Offer[]=[
   {
     image:"https://askleo.com/wp-content/uploads/2018/10/internet.jpg",

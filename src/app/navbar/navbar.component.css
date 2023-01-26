@@ -35,6 +35,9 @@ option{
 select{
   background-color: white;
 }
+select:hover option.dropdown{
+  display: block;
+}
 @media only screen and (max-width: 600px) {
   .navbar {
     justify-content: flex-start;

@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+.body{
+  overflow-x: hidden;
+}
 .cv-container {
   width: 100%;
   height: 15%;
@@ -47,8 +50,6 @@ img {
   .main-content {
     width: 100%;
     flex-direction: column;
-  }
-  .cv-container {
   }
   .cv-content {
     height: fit-content;

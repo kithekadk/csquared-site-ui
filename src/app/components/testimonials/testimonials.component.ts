@@ -13,13 +13,13 @@ export class TestimonialsComponent implements OnInit {
       company: 'Company 1',
       name: 'John Doe',
       position: 'C.E.O',
-      content:'ajg sjhasbjhas sahbas jasyas kasjas kuas skhgygahh sjgsa sjbiusagiydgiygdigiy'
+      content:'This company has changed the lives of Netizens'
     },
     {
       company: 'Another Company',
       name: 'Moses Kamau',
       position: 'C.E.O',
-      content:'ajg sjhasbjhas sahbas jasyas kasjas kuas skhgygahh sjgsa sjbiusagiydgiygdigiy'
+      content:'We are happy for the services you provide'
     },
   ]
 

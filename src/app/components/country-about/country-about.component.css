@@ -16,7 +16,7 @@
   display: flex;
   width: 80%;
   height: 90%;
-  align-content: center;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -56,6 +56,7 @@
 }
 
 .cabout-text p {
+  width:40vw;
   color: #345c5a;
   font-size: 20px;
 }
@@ -80,8 +81,6 @@
     flex-direction: column;
     width: 100%;
   }
-  .cabout-image img {
-  }
   .cabout-content .cabout-image{
     width: 100%;
   }
@@ -92,6 +91,7 @@
     font-size: 20px;
   }
   .cabout-text p {
+    width: 90vw;
     font-size: 9px;
   }
   .cabout-text button {

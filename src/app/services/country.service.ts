@@ -26,7 +26,7 @@ export class CountryService {
       header:{
       title:"Join our amazing Network in Ghana",
       content:"Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
-      image:'https://images.adsttc.com/media/images/619d/4b60/f91c/818c/6e00/0006/large_jpg/shutterstock_728342668.jpg?1637698337  '
+      image:'./../../assets/Csquared/accra.jpg'
     },
      search:true,
      button:false,
