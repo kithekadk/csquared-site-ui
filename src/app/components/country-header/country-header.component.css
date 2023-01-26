@@ -50,6 +50,7 @@
     width: 100%;
 }
 .ch-content{
+    justify-content: space-evenly;
     width: 90%;
     top: 30%;
 }

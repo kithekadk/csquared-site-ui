@@ -11,9 +11,11 @@
 }
 
 .ch-content {
+  border: 1px solid red;
+  justify-content: center;
   width: 50%;
-  /* height: 60%; */
-  height: fit-content;
+  height: 60%;
+  /* height: fit-content; */
   position: absolute;
   top: 25%;
   color: white;
@@ -166,8 +168,26 @@ h1 {
 
 /* 600px */
 @media only screen and (max-width: 600px) {
-  .ch-content {
+  .ch-container {
     width: 100%;
+  }
+  
+  .ch-content {
+    gap: 10px;
+    padding: 1rem;
+    width: 100%;
+  }
+  .ch-content p {
+    font-size: 10px;
+  }
+  .ch-input {
+    width: fit-content;
+  }
+  .ch-input input{
+    width: 70%;
+  }
+  .ch-input button{
+    width: 30%;
   }
   .cv-container {
     flex-direction: column;
