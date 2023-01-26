@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgOptimizedImage } from '@angular/common';
-import { NgxTwitterWidgetsModule } from 'ngx-twitter-widgets';
+import { NgTwitterTimelineModule } from 'ng-twitter-timeline';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -66,14 +66,14 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     BlogComponent,
     CoverageComponent,
     CareersComponent,
-    CareerDescriptionComponent
+    CareerDescriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-    NgxTwitterWidgetsModule
+    NgTwitterTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
