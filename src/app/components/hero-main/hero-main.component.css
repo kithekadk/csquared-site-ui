@@ -1,0 +1,36 @@
+
+
+@media screen and (max-width:768px){
+    .hero-main{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+    svg{
+        display: none;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .hero-text{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .hero-paragraph{
+        font-size: 15px;
+    }
+    
+    .hero-images{
+        display: none;
+        flex-direction: column;
+    }
+    
+    .hero-images > img{
+        width:100%;
+        height:100%;
+        margin-bottom: 20px;
+    }
+}
