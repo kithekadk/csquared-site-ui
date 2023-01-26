@@ -93,7 +93,7 @@ h1 {
   color: white;
   font-weight: bolder;
   border-style: none;
-  width: 150px;
+  /* width: 150px; */
   padding: 12px 15px;
   text-align: center;
   border-radius: 10px;

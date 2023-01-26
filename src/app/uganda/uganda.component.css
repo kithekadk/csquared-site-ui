@@ -7,11 +7,14 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.offer-text >h1{
+  font-size: 20px;
+}
 
 h1 {
   text-align: center;
   color: #345c5a;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
   margin-top: 50px;
 }
