@@ -203,6 +203,9 @@ h1 {
     height: 1.5rem;
     width: auto;
   }
+  .cv-content h1{
+    font-size: 10px;
+  }
   .cv-content p {
     font-size: 10px;
   }
