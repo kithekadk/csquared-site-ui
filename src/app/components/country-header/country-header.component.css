@@ -1,40 +1,40 @@
 .ch-container{
     width: 98.9vw;
-    height: 70vh;
+    height: 85vh;
     position: relative;
 }
 
 .ch-container img{
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.9.5;
 }
 
 .ch-content{
-    width: 40%;
+    width: 45%;
     height: 60%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     color: white;
     display: flex;
     flex-direction: column;
     gap:20px;
-    padding-left: 5%;
+    padding-left: 10%;
 }
 
 .ch-container h1{
     font-weight: bolder;
+    font-size: 150%;
 }
-.ch-input {
-   
-}
+
 .ch-input button{
     background-color:#e7b022;
     color: white;
     font-weight: bolder;
     border-style: none;
     padding: 10px 20px;
-    width: 20%;
+    /* width: 20%; */
+    width: fit-content;
   border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -44,4 +44,38 @@
     width: 80%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+.ch-container{
+    width: 100%;
+}
+.ch-content{
+    width: 90%;
+    top: 30%;
+}
+
+.ch-content p{
+    font-size: 12px;
+}
+.ch-input input{
+    width: 55%;
+}
+.ch-input button{
+    width: 25%;
+    padding: 10px 10px;
+}
+}
+
+/* Made changes to country header */
+@media only screen and (min-width:601px ) and (max-width: 1120px) {
+    .ch-content{
+        width:75vw;
+    }
+    .ch-input input{
+        width: 65%;
+        font-size: 14px;
+    }
+    .ch-content button{
+        font-size: 14px;
+    }
 }

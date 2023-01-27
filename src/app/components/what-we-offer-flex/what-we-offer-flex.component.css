@@ -51,3 +51,22 @@
     padding: 10px 20px;
     
 }
+@media only screen and (max-width: 600px) {
+   .offer-container{
+    height: fit-content;
+   }
+   .offer-content{
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+   .offer-content-body{
+    width: 100%;
+   }
+   .offer-text h1{
+    font-size: 15px;
+   }
+   .offer-text button{
+    width: fit-content;
+    padding: 5px 10px;
+   }
+  }

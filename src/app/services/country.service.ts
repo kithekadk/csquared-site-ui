@@ -14,7 +14,7 @@ export class CountryService {
       header:{
       title:"Join our amazing Network in Uganda",
       content:"Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall."
-,     image:'https://c8.alamy.com/comp/T7M5P2/westminster-may7th-2019-ugandans-demonstrate-against-the-government-of-president-museveni-m7-a-woman-waves-a-ugandan-flag-in-front-of-downing-stre-T7M5P2.jpg'
+,     image:'./../../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg'
     },
     search:true,
     button:false,
