@@ -12,14 +12,11 @@ import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';
 import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
-<<<<<<< HEAD
-import { TeamComponent } from './team/team.component';
-import { BlogComponent } from './blog/blog.component';
-=======
+
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
-
->>>>>>> 66f2f4547a6fbd15e0e7ec7132d5bd6d7aba78a4
+import { CareerComponent } from './career/career.component';
+import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
@@ -31,10 +28,6 @@ const routes: Routes = [
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},
     {path:'services/wholesale-fiber/view/:id', component: SingleServiceComponent},
     {path:'services/cloud-solutions/view/:id', component: SingleServiceComponent},
-<<<<<<< HEAD
-
-=======
->>>>>>> 66f2f4547a6fbd15e0e7ec7132d5bd6d7aba78a4
     // {path:"country/:code", component:CountryHeaderComponent},
     {path:"country/drc", component:DRCComponent},
     {path:"country/uganda", component:UgandaComponent},
@@ -42,12 +35,9 @@ const routes: Routes = [
     {path:"country/liberia", component:LiberiaComponent},
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
-<<<<<<< HEAD
-
-=======
-    {path:"country/hybrid", component:HomeComponent},
->>>>>>> 66f2f4547a6fbd15e0e7ec7132d5bd6d7aba78a4
-    {path: 'blog', component: BlogComponent}
+    {path: 'blog', component: BlogComponent},
+    {path:'career', component:CareerComponent},
+    {path:'contact', component:ContactComponent}
   ];
 
 @NgModule({

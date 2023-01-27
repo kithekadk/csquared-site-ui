@@ -28,12 +28,11 @@ import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';
 import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
-<<<<<<< HEAD
-import { TeamComponent } from './team/team.component';
-=======
 import { SingleMemberComponent } from './single-member/team.component';
->>>>>>> 66f2f4547a6fbd15e0e7ec7132d5bd6d7aba78a4
 import { BlogComponent } from './blog/blog.component';
+import { CareerComponent } from './career/career.component';
+import { ContactComponent } from './contact/contact.component';
+import {NgTwitterTimelineModule} from "ng-twitter-timeline"
 
 
 @NgModule({
@@ -63,18 +62,18 @@ import { BlogComponent } from './blog/blog.component';
     LiberiaComponent,
     TogoComponent,
     KenyaComponent,
-<<<<<<< HEAD
-    TeamComponent,
-=======
     SingleMemberComponent,
->>>>>>> 66f2f4547a6fbd15e0e7ec7132d5bd6d7aba78a4
-    BlogComponent
+    BlogComponent,
+    CareerComponent,
+    ContactComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+     NgTwitterTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
