@@ -25,18 +25,23 @@ h2 {
   width: 100%;
 }
 
-.countries {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  cursor: pointer;
-  margin-bottom: 70px;
+
+.countries{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    cursor: pointer;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
 }
-.country {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+.country{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+
 }
 
 .country > img {
@@ -45,6 +50,7 @@ h2 {
   border-radius: 10px;
   margin-top: 50px;
 }
+
 .search {
   width: 30vw;
   display: flex;
@@ -88,3 +94,21 @@ h2 {
     padding: 0 1rem;
   }
 }
+
+.search-btn:hover{
+    background-color:#318a09
+}
+@media screen and (max-width:768px) {
+    .search{
+        width:80vw;
+        display: flex;
+        margin-top:20vh;
+    }
+    .search-text{
+        width:50vw;
+    }
+    .countries{
+        gap:0;
+    }
+}
+
