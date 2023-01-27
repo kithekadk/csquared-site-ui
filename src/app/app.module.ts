@@ -31,9 +31,16 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
+<<<<<<< HEAD
+import { CareerComponent } from './career/career.component';
+import { ContactComponent } from './contact/contact.component';
+import {NgTwitterTimelineModule} from "ng-twitter-timeline"
+
+=======
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
+>>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
 
 @NgModule({
   declarations: [
@@ -64,16 +71,26 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     KenyaComponent,
     SingleMemberComponent,
     BlogComponent,
+<<<<<<< HEAD
+    CareerComponent,
+    ContactComponent,
+   
+=======
     CoverageComponent,
     CareersComponent,
     CareerDescriptionComponent,
+>>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
+<<<<<<< HEAD
+     NgTwitterTimelineModule
+=======
     NgTwitterTimelineModule
+>>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
   ],
   providers: [],
   bootstrap: [AppComponent]
