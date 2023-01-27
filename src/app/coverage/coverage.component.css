@@ -1,29 +1,30 @@
-.bg-container{
-    width: 100%;
-    height: 85vh;
-    background-image: url("./../../assets/Csquared/world-map-coverage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    display: flex;
+.bg-container {
+  width: 100%;
+  height: 85vh;
+  background-image: url("./../../assets/Csquared/world-map-coverage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  display: flex;
 }
-h1{
-    color: white;
-    font-size: 250%;
+h1 {
+  color: white;
+  font-size: 250%;
 }
-h2{
-    color: black;
-    font-size: 250%;
+h2 {
+  color: black;
+  font-size: 250%;
 }
-.title{
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: green;
-    width:100%;
+.title {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  width: 100%;
 }
+
 
 .countries{
     display: flex;
@@ -40,41 +41,60 @@ h2{
     align-items: center;
     justify-content: center;
     width: 300px;
+
 }
 
-.country > img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    margin-top: 50px;
+.country > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 50px;
 }
 
-.search{
-    width:30vw;
-    display: flex;
-    margin-top:15vh;
+.search {
+  width: 30vw;
+  display: flex;
+  margin-top: 15vh;
 }
 
-.search-text{
-    width: 20vw;
-    height: 7vh;
-    left: 40px;
-    top: 185px;
-    background: #FFFFFF;
-    border-radius: 12px 0px 0px 12px;
-    padding-left: 10px;
-    border: gray solid 1px;
-    margin-left: 20px;
+.search-text {
+  width: 20vw;
+  height: 7vh;
+  left: 40px;
+  top: 185px;
+  background: #ffffff;
+  border-radius: 12px 0px 0px 12px;
+  padding-left: 10px;
+  border: gray solid 1px;
+  margin-left: 20px;
 }
-.search-btn{
-    background-color:#277402;
-    width: 142px;
-    height: 7vh;
-    left: 393px;
-    top: 185px;
-    border-radius: 0px 12px 12px 0px;
-    color: white;
+.search-btn {
+  background-color: #277402;
+  width: 142px;
+  height: 7vh;
+  left: 393px;
+  top: 185px;
+  border-radius: 0px 12px 12px 0px;
+  color: white;
 }
+.search-btn:hover {
+  background-color: #318a09;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    padding: 0 1rem;
+  }
+  .countries {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 10px;
+  }
+  .countries:first-child {
+    padding: 0 1rem;
+  }
+}
+
 .search-btn:hover{
     background-color:#318a09
 }
@@ -91,3 +111,4 @@ h2{
         gap:0;
     }
 }
+
