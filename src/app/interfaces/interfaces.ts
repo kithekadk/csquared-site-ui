@@ -41,3 +41,4 @@ export interface authorities{
     description: string;
 
 }
+

@@ -1,3 +1,42 @@
+<div class="modal fade"
+            id="myModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="staticBackdropLabel"
+                    style="color: black"
+                  >
+                   Dark Fiber
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >X</button>
+                </div>
+                <div class="body" style="color: black; padding: 40px 10px;">
+                  <p>Dark fiber solution is an unrestricted connectivity solution designed to connect MNO Base Transceiver Stations (BTS) and Point to Point connections to large enterprises. As a business owner dark fiber provides you with complete control of your network as well as allowing a virtually unlimited capacity expansion.
+                    Dark fiber also accords you the highest level of security as dark fiber solutions are 100% dedicated for your use only</p> 
+                </div>
+                <div class="modal-footer" style="display:flex;">
+                  <!-- <button
+                    class="btn btn-warning"
+                  >
+                    Learn More
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
 <div class="body">
   <app-country-header></app-country-header>
 <h1>INSIGHTS</h1>
@@ -17,7 +56,6 @@
 <app-country-about [content]="content" [image]="image"></app-country-about>
 
 <h1>What We Offer?</h1>
-
 <div class="container-grid">
   <div class="content">
     <div class="divtwo">
@@ -26,7 +64,9 @@
         <h1>Dark Fiber</h1>
       </div>
       <div class="btn">
-        <button>Learn More</button>
+        <button (click)="popModal('imageTwo')"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
       </div>
     </div>
     <div class="divthree">

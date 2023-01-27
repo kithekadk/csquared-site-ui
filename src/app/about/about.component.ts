@@ -29,13 +29,12 @@ active:boolean=false;
 
   getManagers(){
     this.managers = this.apiService.getManagement();
+    console.log(this.managers);
   }
 
   teamMember!: authorities;
   viewTeamMember(index:number){
     this.teamMember=this.apiService.getTeamMember(index);
-    console.log(this.teamMember);
-    
   }
 
 }

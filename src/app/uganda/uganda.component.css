@@ -1,6 +1,9 @@
 .body{
   overflow-x: hidden;
 }
+.modal-body{
+  display: none;
+}
 .offer-container {
   width: 100%;
   height: 40vh;

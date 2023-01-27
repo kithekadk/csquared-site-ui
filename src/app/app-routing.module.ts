@@ -15,15 +15,14 @@ import { KenyaComponent } from './kenya/kenya.component';
 
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
-<<<<<<< HEAD
+
 import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
-=======
+
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
 
->>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
@@ -42,17 +41,17 @@ const routes: Routes = [
     {path:"country/liberia", component:LiberiaComponent},
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
-<<<<<<< HEAD
+
     {path: 'blog', component: BlogComponent},
     {path:'career', component:CareerComponent},
-    {path:'contact', component:ContactComponent}
-=======
+    {path:'contact', component:ContactComponent},
+
     {path:"country/hybrid", component:HomeComponent},
     {path: 'coverage', component: CoverageComponent},
     {path: 'insights', component: BlogComponent},
     {path:'career', component:CareersComponent},
     {path:'careerdescription', component:CareerDescriptionComponent}
->>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
+
   ];
 
 @NgModule({

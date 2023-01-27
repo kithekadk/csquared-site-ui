@@ -19,10 +19,6 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "ng-twitter-timeline": "^1.0.0",
-<<<<<<< HEAD
-=======
-    "ngx-twitter-widgets": "^1.0.3",
->>>>>>> 688acb6cd526ecb1b9b9c7aebbab4b8238b390e6
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

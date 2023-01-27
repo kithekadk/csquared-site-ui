@@ -35,6 +35,7 @@ Partner with us to enhance your internet access and accelerate your productivity
   }
 ]
 
+
   imageTwo="https://www.atlantech.net/hubfs/Blog_images/Featured%20Images/ATL_Fiber-Optic-Install-Publishing%20%281%29.png"
   imageThree="https://www.aceee.org/sites/default/files/images/smart-manufacturing_web_size.jpg"
   imageFour="https://www.atlantech.net/hubfs/Blog_images/Featured%20Images/ATL_Fiber-Optic-Install-Publishing%20%281%29.png"
@@ -45,6 +46,11 @@ Partner with us to enhance your internet access and accelerate your productivity
   ngOnInit(): void {
 
     this.countryService.setCountry('uganda')
+  }
+
+
+  popModal($div: string){
+    
   }
 
 }

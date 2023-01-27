@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.body{
+    overflow-x: hidden;
+}
 .contact-container{
     width: 98.9vw;
     display: flex;
@@ -12,7 +15,7 @@
 
 .contact-header{
     width: 100%;
-    height: 30vh;
+    height: 45vh;
     position: relative;
 }
 
