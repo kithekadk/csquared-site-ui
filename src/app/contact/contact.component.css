@@ -4,6 +4,7 @@
 }
 .body{
     overflow-x: hidden;
+    margin-top: 8vh;
 }
 .contact-container{
     width: 98.9vw;

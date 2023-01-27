@@ -1,8 +1,8 @@
 .ch-container{
     width: 98.9vw;
-    height: calc(100vh - 8vh);
+    height: calc(100vh - 10vh);
     position: relative;
-    margin-top: 8vh;
+    margin-top: 10vh;
 }
 
 .ch-container img{

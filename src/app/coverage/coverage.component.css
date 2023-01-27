@@ -1,7 +1,12 @@
+.body{
+    margin-top: 10vh;
+}
+
 .bg-container{
     width: 100%;
-    height: 85vh;
+    height: calc(100vh - 25vh);
     background-image: url("./../../assets/Csquared/world-map-coverage.jpg");
+    object-fit:cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

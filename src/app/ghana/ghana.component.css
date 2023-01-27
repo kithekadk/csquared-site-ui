@@ -1,10 +1,11 @@
 .body{
+  margin-top: 10vh;
   overflow-x: hidden;
 }
 
 .ch-container {
   width: 98.9vw;
-  height: 70vh;
+  height: calc(100vh - 10vh);
   position: relative;
 }
 
@@ -56,16 +57,12 @@
 .cv-container {
   width: 90%;
   height: 15%;
-  /* height: fit-content; */
   display: flex;
   justify-content: center;
   gap: 8%;
   margin-bottom: 50px;
   color: #345c5a;
   position: absolute;
-  top: 70%;
-  left: 3%;
-  right: 3%;
   background-color: white;
 }
 .main-content {
@@ -79,8 +76,8 @@
   padding: 10px;
 }
 .cv-content img {
-  width: 20%;
-  height: 100%;
+  width: 25%;
+  background-size: contain;
 }
 
 .cv-content div {

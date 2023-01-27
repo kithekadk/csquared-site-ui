@@ -45,7 +45,7 @@
 <div class="offer-container">
   <div class="offer-content">
     <div class="offer-content-body" *ngFor="let content of offers">
-      <img src="{{ content.image }}" alt="" />
+      <img style="object-fit:cover;" src="{{ content.image }}" alt="" />
       <div class="offer-text">
         <h1>{{ content.title }}</h1>
       </div>
@@ -59,7 +59,7 @@
 <div class="container-grid">
   <div class="content">
     <div class="divtwo">
-      <img src="{{ imageTwo }}" alt="" />
+      <img style="object-fit:cover;" src="{{ imageTwo }}" alt="" />
       <div class="text">
         <h1>Dark Fiber</h1>
       </div>
