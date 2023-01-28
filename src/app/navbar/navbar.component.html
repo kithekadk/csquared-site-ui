@@ -12,26 +12,29 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/insights">Insights</a>
         </li>
-        <li class="nav-item">
-          <select (change)="redirectServices($event)" class="services-options">
-            <option *ngFor="let service of services" value="{{service.code}}" >{{service.name}}</option>
-          </select>
-        </li>
-        <li class="nav-item">
-          <select (change)="redirectAbout($event)" class="services-options">
-            <option *ngFor="let submenu of Aboutsubmenus" value="{{submenu.code}}">{{submenu.name}}</option>
-          </select>
-        </li>
+        <!-- Services drop down -->
+        <ul class="btn-group">
+          <li type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            What We Offer
+          <li>
+          <ul class="dropdown-menu" (click)="getService($event)">
+            <li class="dropdown-item cursor-pointer transition-all text-gray-700 block px-4 py-2 text-sm font-medium hover:bg-amber-500 hover:text-brand-green flex space-x-2" role="menuitem" tabindex="-1" id="menu-item-0" *ngFor="let service of services" >{{service.name}}</li>        
+          </ul>
+        </ul>
+        <!-- About Us drop Down -->
+        <ul class="btn-group">
+          <li type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          <li>
+          <ul class="dropdown-menu" (click)="getAbout($event)">
+            <li class="dropdown-item cursor-pointer transition-all text-gray-700 block px-4 py-2 text-sm font-medium hover:bg-amber-500 hover:text-brand-green flex space-x-2" role="menuitem" tabindex="-1" id="menu-item-0" *ngFor="let about of Aboutsubmenus" >{{about.name}}</li>        
+          </ul>
+        </ul>
+        <!-- End of About Us Drop down -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact Us</a>
         </li>
     </ul>
-  
-    <!-- <select name="" id="select-country"   (change)="navigateTo($event)">
-        <option *ngFor="let country of countries" value={{country.code}}>
-          <img src={{country.flag}} class="h-5 w-5 shrink-0 grow-0 rounded-full border-1 border-brand-green" alt="{{country.name}}" />
-          {{country.name}}</option>
-    </select> -->
 
     <!-- Countries drop down -->
     <div>
@@ -83,3 +86,6 @@
     </div>
     
 </nav>
+<div class="services-dropdown">
+  DSSDSDGGDSGDSGdvsvsfvfsfsvfsvfs
+</div>

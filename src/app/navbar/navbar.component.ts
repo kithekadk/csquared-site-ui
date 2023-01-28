@@ -64,12 +64,36 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
      }, 100)   
   }
 
-  redirectServices(event: any){
-    this.router.navigate(['services', event.target.value])
+  getService(event: any) {
+    console.log(event.target.innerHTML);
+    if (event.target.innerHTML=='Our Services'){
+      setTimeout(() => {
+        this.router.navigate(['services', '-'])
+      }, 200)
+      
+    }else if(event.target.innerHTML=='WholeSale Fiber'){  
+      setTimeout(() => {
+        this.router.navigate(['services', 'wholesale-fiber'])
+      }, 200)    
+    }else if(event.target.innerHTML=='Cloud Solutions'){
+      setTimeout(() => {
+        this.router.navigate(['services', 'cloud-solutions']) 
+      }, 200)
+    }else{
+      console.log(event.target.innerHTML);
+    }
   }
-
-  redirectAbout(event:any){
-    this.router.navigate(['/' ,event.target.value])
+  getAbout(event: any) {
+    console.log(event.target.innerHTML);
+    if (event.target.innerHTML=='About'){
+      this.router.navigate(['/', 'about'])
+    }else if(event.target.innerHTML=='Team'){      
+      this.router.navigate(['/', 'team'])
+    }else if(event.target.innerHTML=='Careers'){
+      this.router.navigate(['/', 'career'])
+    }else{
+      console.log(event.target.innerHTML);
+    }
   }
   
 }

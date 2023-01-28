@@ -9,6 +9,21 @@
   top: 0;
   height: 10vh;
 }
+
+.dropdown-toggle{
+  color: white;
+  padding: 0;
+}
+.services-dropdown{
+  width: 100vw;
+  margin-top: calc(100vh - 90vh);
+  background-color: #073937;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  z-index: 9999;
+  color: white;
+}
 .menu-container{
   display: flex;
   justify-content: center;
@@ -28,6 +43,12 @@ option{
 }
 
 .services-options{
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.about-options{
   text-align: center;
   background-color: transparent;
   color: white;
