@@ -37,6 +37,7 @@
   .cl-content-body h1{
       font-size: 20px;
       text-align: start;
+      font-weight: 500;
   }
   
   .cl-content-body img{

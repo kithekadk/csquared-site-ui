@@ -10,18 +10,18 @@ export class CountryLatestnewsComponent implements OnInit {
   latestNews:LatestNewsContent[]=[
    {  
     image:"https://www.icf-events.org/wp-content/uploads/2021/07/Ella-Jaczynska_Importance-of-the-3-new-Cs-%E2%80%94-connection-communication-and-clarity.jpeg",
-     title:"CSquared Sets on ‘Fiberising’ Africa Affordably",
-      content:"ZPA applies the principles of least privilege to give users secure, direct connectivity to private applications running on-prem or in the public cloud while eliminating unauthorized access and lateral movement. ZPA is a cloud-native service built on a holistic security service edge (SSE)"
+     title:"Google’s CSquared to enhance affordable broadband connectivity in Africa  ",
+      content:"CSquared, a pan-African broadband infrastructure provider owned by Google and other partners, has said that…"
    },
    {  
     image:"https://www.icf-events.org/wp-content/uploads/2021/07/Ella-Jaczynska_Importance-of-the-3-new-Cs-%E2%80%94-connection-communication-and-clarity.jpeg",
      title:"CSquared Sets on ‘Fiberising’ Africa Affordably",
-      content:"ZPA applies the principles of least privilege to give users secure, direct connectivity to private applications running on-prem or in the public cloud while eliminating unauthorized access and lateral movement. ZPA is a cloud-native service built on a holistic security service edge (SSE)"
+      content:"CSquared, a pan-african broadband infrastructure provider announced its plans of ‘Fiberising’ Africa through affordable broadband…"
    },
    {  
     image:"https://www.icf-events.org/wp-content/uploads/2021/07/Ella-Jaczynska_Importance-of-the-3-new-Cs-%E2%80%94-connection-communication-and-clarity.jpeg",
-     title:"CSquared Sets on ‘Fiberising’ Africa Affordably",
-      content:"ZPA applies the principles of least privilege to give users secure, direct connectivity to private applications running on-prem or in the public cloud while eliminating unauthorized access and lateral movement. ZPA is a cloud-native service built on a holistic security service edge (SSE)"
+     title:"GRIDCo & CSquared Partner To Promote #FiberForAll",
+      content:"Accra, April 19, 2021 – The GHANA GRID COMPANY LIMITED (GRIDCo) has today signed a partnership with CSQUARED"
    }
   ]
   constructor() { }
