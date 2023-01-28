@@ -1,3 +1,13 @@
+.body{
+  overflow-x: hidden;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-body{
+  display: none;
+}
 .offer-container {
   width: 100%;
   height: 40vh;
@@ -10,7 +20,34 @@
 .offer-text >h1{
   font-size: 20px;
 }
-
+.cabout{
+  display: flex;
+  width:100vw;
+  justify-content: center;
+}
+.cabout-button {
+  background-color: #e7b022;
+  color: #345c5a;
+  font-weight: bolder;
+  border-style: none;
+  padding: 10px 20px;
+  width: 15%;
+  margin-left: 16%;
+}
+.cabout-button:hover{
+  border-radius: 0px;
+  background-color: #836007;
+  color: white;
+}
+.cabout-learn-more{
+  background-color: whitesmoke;
+  width: 80vw;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 20px;
+  text-align: justify;
+  color: #345c5a;
+}
 h1 {
   text-align: center;
   color: #345c5a;
@@ -29,12 +66,11 @@ h2 {
   width: 75%;
   height: 100%;
   display: flex;
-
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .offer-content-body {
-  width: 24%;
+  width: 22%;
   height: 100%;
   position: relative;
 }
@@ -71,7 +107,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 180px;
+  margin-bottom: 50px;
 }
 
 .content {
@@ -134,10 +170,13 @@ img {
 /* 600px */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   h2 {
     font-size: 10px;
+  }
+  .cabout-button {
+    width: fit-content;
   }
   .offer-container {
     display: block;

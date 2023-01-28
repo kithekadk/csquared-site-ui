@@ -47,10 +47,10 @@ countries:{name:string,code:string, flag:string}[]=[
   }
 ]
 
-services:{name:string, code:string}[]=[{name:'Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
+services:{name:string, code:string}[]=[{name:'Our Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
-Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'}];
+Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
   constructor(private router:Router) { }
 
   ngOnInit(): void {

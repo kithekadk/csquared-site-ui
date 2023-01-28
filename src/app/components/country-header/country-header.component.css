@@ -1,7 +1,8 @@
 .ch-container{
     width: 98.9vw;
-    height: 85vh;
+    height: calc(100vh - 10vh);
     position: relative;
+    margin-top: 10vh;
 }
 
 .ch-container img{
@@ -50,6 +51,7 @@
     width: 100%;
 }
 .ch-content{
+    justify-content: space-evenly;
     width: 90%;
     top: 30%;
 }
@@ -66,7 +68,6 @@
 }
 }
 
-/* Made changes to country header */
 @media only screen and (min-width:601px ) and (max-width: 1120px) {
     .ch-content{
         width:75vw;

@@ -51,7 +51,9 @@
     margin-left: 10px;
     font-weight: bold;
 }
-
+.company-logos{
+    visibility:hidden;
+}
 @media screen and (max-width:768px) {
     .grid-section{
         display: flex;
@@ -69,7 +71,8 @@
         margin-bottom: 20px;
     }
     .company-logos{
-        display:flex;
+        
+        display:none;
         flex-wrap: wrap;
         margin-top: -3vh;
         margin-left: 7vw;

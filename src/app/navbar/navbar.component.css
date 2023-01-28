@@ -7,6 +7,7 @@
   width:100%;
   z-index: 9999;
   top: 0;
+  height: 10vh;
 }
 .menu-container{
   display: flex;
@@ -34,6 +35,9 @@ option{
 }
 select{
   background-color: white;
+}
+select:hover option.dropdown{
+  display: block;
 }
 @media only screen and (max-width: 600px) {
   .navbar {

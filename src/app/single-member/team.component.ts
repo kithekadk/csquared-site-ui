@@ -47,18 +47,15 @@ getPreviousMember(){
   this.index = (Number(this.id.replace('/team/','')));
   if(this.index!==0){
     this.previousmember = this.apiService.getTeamMember((this.index-1));
-
-    console.log(this.previousmember.name);
   }
 } 
 
 
 getNextMember(){
   this.index = (Number(this.id.replace('/team/','')));
-  if(this.index < this.apiService.management.length){
+  if(this.index+1 < this.apiService.management.length){
     this.nextmember = this.apiService.getTeamMember((this.index+1));
     console.log(this.nextmember.name);
-    
   }
 }
 }

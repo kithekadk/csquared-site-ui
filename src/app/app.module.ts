@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgOptimizedImage } from '@angular/common';
-import { NgxTwitterWidgetsModule } from 'ngx-twitter-widgets';
+import { NgTwitterTimelineModule } from 'ng-twitter-timeline';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -31,6 +31,8 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
+import { CareerComponent } from './career/career.component';
+import { ContactComponent } from './contact/contact.component';
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
@@ -64,16 +66,18 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     KenyaComponent,
     SingleMemberComponent,
     BlogComponent,
+    CareerComponent,
+    ContactComponent,
     CoverageComponent,
     CareersComponent,
-    CareerDescriptionComponent
+    CareerDescriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-    NgxTwitterWidgetsModule
+     NgTwitterTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

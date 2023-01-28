@@ -1,11 +1,12 @@
-<app-country-header></app-country-header>
+<div class="body">
+  <app-country-header></app-country-header>
 <h1>INSIGHTS</h1>
 <h2>More About Uganda Impact</h2>
 
 <div class="offer-container">
   <div class="offer-content">
     <div class="offer-content-body" *ngFor="let content of offers">
-      <img src="{{ content.image }}" alt="" />
+      <img style="object-fit:cover;" src="{{ content.image }}" alt="" />
       <div class="offer-text">
         <h1>{{ content.title }}</h1>
       </div>
@@ -13,47 +14,61 @@
   </div>
 </div>
 
-<app-country-about [content]="content" [image]="image"></app-country-about>
+<app-country-about [content]="content" [image]="image" >
+</app-country-about>
+<div class="cabout">
+  <button class="cabout-button" (click)="AboutUsClick()">{{learnMoreBtntext}}</button>
+</div>
+<div class="cabout-learn-more">
+  <p id="learnmore" *ngIf="toggle">{{about_leran_more}}</p>
+</div>
 
 <h1>What We Offer?</h1>
-
 <div class="container-grid">
   <div class="content">
     <div class="divtwo">
-      <img src="{{ imageTwo }}" alt="" />
+      <img style="object-fit:cover;" src="{{ grids[0].image }}" alt="" />
       <div class="text">
-        <h1>Dark Fiber</h1>
+        <h1>{{grids[0].title}}</h1>
       </div>
       <div class="btn">
-        <button>Learn More</button>
+        <button (click)="popModal(0)"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
       </div>
     </div>
     <div class="divthree">
-      <img src="{{ imageThree }}" alt="" />
+      <img src="{{ grids[1].image }}" alt="" />
       <div class="text">
-        <h1>Capacity Pool</h1>
+        <h1>{{grids[1].title}}</h1>
       </div>
       <div class="btn">
-        <button>Learn More</button>
+        <button (click)="popModal(1)"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
       </div>
     </div>
 
     <div class="divfive">
-      <img src="{{ imageFive }}" alt="" />
+      <img src="{{ grids[2].image }}" alt="" />
       <div class="text">
-        <h1>Backbone</h1>
+        <h1>{{grids[2].title}}</h1>
       </div>
       <div class="btn">
-        <button>Learn More</button>
+        <button (click)="popModal(2)"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
       </div>
     </div>
     <div class="divsix">
-      <img src="{{ imageSix }}" alt="" />
+      <img src="{{ grids[3].image }}" alt="" />
       <div class="text">
-        <h1>FTTX</h1>
+        <h1>{{grids[3].title}}</h1>
       </div>
       <div class="btn">
-        <button>Learn More</button>
+        <button (click)="popModal(3)"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
       </div>
     </div>
   </div>
@@ -61,4 +76,45 @@
 
 <app-country-latestnews></app-country-latestnews>
 
+</div>
 <app-footer></app-footer>
+
+<!-- Start of modal -->
+<div class="modal fade"
+            id="myModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header flex">
+                  <h5
+                    class="modal-title"
+                    id="staticBackdropLabel"
+                    style="color: black"
+                  >
+                  {{grids[index].title}}
+                  </h5>
+                  <button
+                    class="btn-close d-flex"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="body" style="color: black; padding: 40px 10px;">
+                  <p>{{grids[index].text}}</p> 
+                </div>
+                <div class="modal-footer" style="display:flex;">
+                  <!-- <button
+                    class="btn btn-warning"
+                  >
+                    Learn More
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- End of modal -->
