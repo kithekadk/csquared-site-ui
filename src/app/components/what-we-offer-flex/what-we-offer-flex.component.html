@@ -2,12 +2,62 @@
 
 <div class="offer-container">
   <div class="offer-content">
-    <div class="offer-content-body" *ngFor="let content of offers">
+    <div class="offer-content-body" *ngFor="let content of offers ; let i=index">
       <img src="{{ content.image }}" alt="" />
       <div class="offer-text">
         <h1>{{ content.title }}</h1>
-        <button>learn More</button>
+        <!-- <button>learn More</button>
+        
+        -->
+
+         <div class="btn">
+        <button (click)="popModal(i)"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">Learn More</button>
+      </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+<!-- Start of modal -->
+<div class="modal fade"
+            id="myModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header flex">
+                  <h5
+                    class="modal-title"
+                    id="staticBackdropLabel"
+                    style="color: black"
+                  >
+                  {{selectedoffer.title}}
+                  </h5>
+                  <button
+                    class="btn-close d-flex"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="body" style="color: black; padding: 40px 10px;">
+                  <p>{{selectedoffer.content}}</p> 
+                </div>
+                <div class="modal-footer" style="display:flex;">
+                  <!-- <button
+                    class="btn btn-warning"
+                  >
+                    Learn More
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- End of modal -->

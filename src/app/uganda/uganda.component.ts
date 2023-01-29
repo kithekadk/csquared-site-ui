@@ -16,10 +16,11 @@ Partner with us to enhance your internet access and accelerate your productivity
   `
 
   image="./../../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg"
-  offers:Offer[]=[
+  offers=[
   {
     image:"https://askleo.com/wp-content/uploads/2018/10/internet.jpg",
     title:"Impactful"
+  
   },
    {
     image:"https://shoppingranch.com/wp-content/uploads/2019/01/Online-Computer.jpg",
