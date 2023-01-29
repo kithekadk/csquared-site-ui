@@ -45,9 +45,10 @@ textarea{
 
 .form{
     display: flex;
-    width: 60%;
+    width: 90%;
     flex-wrap: wrap;
     gap:50px;
+    justify-content: center;
 }
 
 .form-left{
@@ -101,6 +102,8 @@ textarea{
     width: 100%;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    
 }
 .footer-div{
     display: flex;
