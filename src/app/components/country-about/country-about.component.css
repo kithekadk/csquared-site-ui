@@ -51,11 +51,20 @@
 .cabout-text p {
   width:40vw;
   color: #345c5a;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .cabout-image {
   position: relative;
+  height: 40vh;
+}
+.cabout-image img{
+  object-fit: cover;
+}
+.cabout-image>img:hover{
+  border-radius: 10px;
+  height: 60vh;
+  transition: opacity 0.9s;
 }
 .overlay {
   position: absolute;

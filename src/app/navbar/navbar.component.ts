@@ -85,34 +85,32 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   }
 
   getService(event: any) {
-    console.log(event.target.innerHTML);
-    if (event.target.innerHTML=='Our Services'){
-      setTimeout(() => {
-        this.router.navigate(['services', '-'])
-      }, 200)
-      
-    }else if(event.target.innerHTML=='WholeSale Fiber'){  
+    console.log(event.target.innerText);
+    const variable = event.target.innerText
+    if (variable=='Our Services'){
+        this.router.navigate(['services', '-'])      
+    }else if(event.target.innerText=='WholeSale Fiber'){  
       setTimeout(() => {
         this.router.navigate(['services', 'wholesale-fiber'])
       }, 200)    
-    }else if(event.target.innerHTML=='Cloud Solutions'){
+    }else if(event.target.innerText == 'Cloud Solutions'){
       setTimeout(() => {
         this.router.navigate(['services', 'cloud-solutions']) 
       }, 200)
     }else{
-      console.log(event.target.innerHTML);
+      console.log(event.target.innerText);
     }
   }
   getAbout(event: any) {
-    console.log(event.target.innerHTML);
-    if (event.target.innerHTML=='About'){
+    console.log(event.target.innerText);
+    if (event.target.innerText=='About'){
       this.router.navigate(['/', 'about'])
-    }else if(event.target.innerHTML=='Team'){      
+    }else if(event.target.innerText=='Team'){      
       this.router.navigate(['/', 'team'])
-    }else if(event.target.innerHTML=='Careers'){
+    }else if(event.target.innerText=='Careers'){
       this.router.navigate(['/', 'career'])
     }else{
-      console.log(event.target.innerHTML);
+      console.log(event.target.innerText);
     }
   }
   

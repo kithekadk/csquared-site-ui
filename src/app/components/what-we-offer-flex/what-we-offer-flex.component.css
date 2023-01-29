@@ -26,7 +26,7 @@
 
 .offer-content-body{
     width: 24%;
-    height: 100%;
+    max-height: 100%;
     position: relative;
 }
 .offer-text {
@@ -42,6 +42,12 @@
 .offer-content-body img{
     width: 100%;
     height: 100%;
+    opacity: 0.8;
+}
+.offer-content-body img:hover{
+    height: 105%;
+    border-radius: 0 0 10px 10px;
+    opacity: 1;
 }
 
 .offer-text button{
@@ -50,7 +56,6 @@
     font-weight: bolder;
     border-style: none;
     padding: 10px 20px;
-    
 }
 @media only screen and (max-width: 600px) {
    .offer-container{

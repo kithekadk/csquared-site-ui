@@ -25,6 +25,10 @@
   gap:40px;
   color:white;
 }
+.menu-container >li:hover{
+  text-decoration: underline;
+  color:rgb(124, 124, 4)
+}
 #select-country{
   background-color: transparent;
   color:white;
@@ -85,8 +89,9 @@ select:hover option.dropdown{
     background-color: #073937;
     margin-left: -20vw;
   }
-  .menu-container >li:hover, .menu-container:hover >.btn-group:hover{
+  .menu-container >li:hover, .menu-container >.btn-group:hover{
     text-decoration: underline;
+    color:yellow
   }
 
   .menu-container {

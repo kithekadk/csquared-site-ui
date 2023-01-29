@@ -6,6 +6,12 @@
     overflow-x: hidden;
     margin-top: 8vh;
 }
+input[type="text"], textarea{
+    border-radius: 8px;
+}
+textarea{
+    padding:10px
+}
 .contact-container{
     width: 98.9vw;
     display: flex;
@@ -40,21 +46,22 @@
 .form{
     display: flex;
     width: 60%;
-
+    flex-wrap: wrap;
+    gap:50px;
 }
 
 .form-left{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 50%;
-    
+    width: 500px;
 }
 
 .form-left input{
     border: 1px solid black;
     width: 60%;
     padding: 10px;
+    width: 500px;
 }
 
 .form-left p{
@@ -134,4 +141,28 @@
     display: flex;
     gap: 30px;
     margin-bottom: 50px;
+}
+@media screen and (max-width:600px) {
+    
+    .form{
+        display: flex;
+        width: 90vw;
+        flex-wrap: wrap;
+        gap:50px;
+    }
+    .form-right{
+        width:300px;
+    }
+    .form-left input{
+        width:90vw;
+    }
+    .form-right textarea{
+        width:90vw;
+    }
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
 }
