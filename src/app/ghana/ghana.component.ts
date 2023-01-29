@@ -74,6 +74,29 @@ export class GhanaComponent implements OnInit {
           text:"Our Metro is designed to connect more people to the Internet. With our wholesale open-access fiber-optic networks in Accra, Tema, Kasoa, Kumasi & Takoradi, ISP’s and MNOs can use our managed services by connecting access sites to customer handover points."
         }]
 
+        
+  offer:Offer[]=[
+        {
+          image:"https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5bd1d0545fafd5371c069731_What-is-Dark-Fiber-1.jpg",
+          title:"FTTX",
+          content:"Our shared infrastructure is designed to enable ISPs and MNOs to provide high-quality broadband to enterprises, SMEs and homes  at lower costs to any location."
+        },
+         {
+          image:"https://5g.co.uk/userfiles/images/Network/dark-fibre.jpg",
+          title:"Backbone",
+          content:"With a 99.15% core reliability, with redundancy and a managed ethernet and leased capacity provisioning, our backbone products are all leased capacity circuits delivered over DWDM and IP/MPLS networks. Our backbone ensures that you have stable and resilient network connectivity, with full network control and comprehensive performance monitoring."
+        },
+       {
+          image:"https://www.fon.co.ke/images/channel/pic2.jpg",
+          title:"Managed Ethernet",
+          content:"Designed for enterprises, MNOs and ISPs, this wholesale service by CSquared provides dedicated point to point high quality and guaranteed bandwidth connections. Users get access to high-speed internet connectivity and excellent support service from our network of experienced network engineers. Our managed ethernet comes with a high level of redundancy to ensure high reliability."
+        },
+         {
+          image:"https://www.atlantech.net/hubfs/Blog_images/Atlantech_point-to-point-fiber-optic-network.png",
+          title:"Metro",
+          content:"Our Metro is designed to connect more people to the Internet. With our wholesale open-access fiber-optic networks in Accra, Tema, Kasoa, Kumasi & Takoradi, ISP’s and MNOs can use our managed services by connecting access sites to customer handover points."
+        }]
+
         about_learn_more:string=`Uganda is undergoing rapid digitization. Stay ahead of the curve by connecting to CSquared’s broadband network. With a 1000 KM+ Fiber network in Greater Kampala, CSquared’s  solid and extensive network coverage is the right fit for your business needs. We have been here since 2013 and understand the market dynamics. 
         Whether you are an MNO or ISP, we have developed the right products and solutions for your internet needs. Partner with us to enhance your internet access and accelerate your productivity and growth.`
   constructor(private countryService:CountryService) { }
