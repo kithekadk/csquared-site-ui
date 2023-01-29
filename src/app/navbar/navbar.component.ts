@@ -54,9 +54,29 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    window.onresize = () => this.toggle = window.innerWidth <= 600;
+    if (window.screen.width <= 600) { 
+      this.toggle = true;
+      this.display = false;
+    }else if(window.screen.width >= 601){
+      this.toggle = false
+      this.display= true
+    }
   }
+  toggle!:boolean
+  display!:boolean
 
-
+  setState(){
+    if (window.screen.width <=600){
+      this.toggle = false
+    }
+    this.toggle = true
+  }
+  undoState(){
+    if (window.screen.width <=600){
+    this.toggle= true
+    }this.toggle= false
+  }
   navigateTo(event :any){
      this.router.navigate(['country',event])
      setTimeout(() => {
@@ -64,12 +84,35 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
      }, 100)   
   }
 
-  redirectServices(event: any){
-    this.router.navigate(['services', event.target.value])
+  getService(event: any) {
+    console.log(event.target.innerText);
+    const variable = event.target.innerText
+    if (variable=='Our Services'){
+        this.router.navigate(['services', '-'])      
+    }else if(event.target.innerText=='WholeSale Fiber'){  
+      setTimeout(() => {
+        this.router.navigate(['services', 'wholesale-fiber'])
+      }, 200)    
+    }else if(event.target.innerText == 'Cloud Solutions'){
+      setTimeout(() => {
+        this.router.navigate(['services', 'cloud-solutions']) 
+      }, 200)
+    }else{
+      console.log(event.target.innerText);
+    }
   }
-
-  redirectAbout(event:any){
-    this.router.navigate(['/' ,event.target.value])
+  getAbout(event: any) {
+    console.log(event.target.innerText);
+    if (event.target.innerText=='About'){
+      this.router.navigate(['/', 'about'])
+    }else if(event.target.innerText=='Team'){      
+      this.router.navigate(['/', 'team'])
+    }else if(event.target.innerText=='Careers'){
+      this.router.navigate(['/', 'career'])
+    }else{
+      console.log(event.target.innerText);
+    }
   }
   
+
 }

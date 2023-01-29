@@ -73,35 +73,37 @@
   margin: 0;
 }
 .cv-container {
-  width: 90%;
-  height: 15%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 8%;
   margin-bottom: 50px;
   color: #345c5a;
   position: absolute;
-  background-color: white;
+  background-color: rgb(241, 237, 237);
+  box-shadow: 2px 2px lightgray;
 }
 .main-content {
   width: 90%;
 }
 .cv-content {
-  width: 20%;
-  height: 100%;
   display: flex;
-  gap: 20px;
+  justify-content: center;
   padding: 10px;
 }
 .cv-content img {
-  width: 25%;
+  width: 20%;
   background-size: contain;
+}
+.cabout-text  >p{
+  font-size: 15px;
 }
 
 .cv-content div {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 15px;
+  width:25vw;
 }
 h1 {
   font-weight: bolder;
@@ -122,19 +124,29 @@ h1 {
 .cabout-content {
   display: flex;
   width: 80%;
-  height: 60%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap:100px;
   position: relative;
+  text-align: justify;
+  font-size: 18px;
 }
 
 .cabout-content .cabout-image {
-  width: 40%;
+  width: 45%;
   height: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 .cabout-image img {
+  margin-top: 12%;
   width: 100%;
-  height: 90%;
+  height: 60%;
+  object-fit: cover;
+}
+.cabout-image img:hover{
+  filter: grayscale(100%);
+  border-radius: 20px;
 }
 .cabout-content .cabout-text {
   width: 45%;
@@ -153,7 +165,11 @@ h1 {
   padding: 10px 20px;
   width: 40%;
 }
-
+.cabout-text button:hover{
+  border-radius: 0px;
+  background-color: #836007;
+  color: white;
+}
 .cabout-text h1 {
   color: #345c5a;
   font-weight: bolder;

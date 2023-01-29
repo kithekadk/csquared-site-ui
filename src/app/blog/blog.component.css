@@ -2,6 +2,7 @@
     overflow-x: hidden;
 }
 .blog-bg{
+    margin-top: 10vh;
     width: 100%;
     height: 55vh;
     background-image: url("./../../assets/images/backgrounds/blog.jpg");
@@ -13,6 +14,7 @@
     align-items: center;
     color: white;
     font-size: 30px;
+    object-fit: cover;
 }
 .latest-news{
     padding-top: 30px;
@@ -45,6 +47,7 @@ h2{
 }
 img{
     border-radius: 10px;
+    object-fit: cover;
 }
 .navigate{
     width:97vw;
