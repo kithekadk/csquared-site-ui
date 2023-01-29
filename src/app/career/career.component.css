@@ -1,11 +1,12 @@
-
+.body{
+    overflow: hidden;
+}
 *{
     margin: 0;
     padding: 0;
 }
 .career-container{
     width: 98.9vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
