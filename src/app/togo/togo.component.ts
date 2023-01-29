@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoverageContent } from '../interfaces/interfaces';
+import { CoverageContent, Offer } from '../interfaces/interfaces';
 import { CountryService } from '../services/country.service';
 
 @Component({
@@ -60,6 +60,30 @@ export class TogoComponent implements OnInit {
           `
         }
       ]
+
+      
+  offer:Offer[]=[
+  {
+    image:"https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5bd1d0545fafd5371c069731_What-is-Dark-Fiber-1.jpg",
+    title:"High Capacity Leased",
+    content:'Designed for MNOs to connect to their base station'
+  },
+   {
+    image:"https://5g.co.uk/userfiles/images/Network/dark-fibre.jpg",
+    title:"Dark Fiber Products",
+    content:'Designed for MNOs to connect to their base stations'
+  },
+ {
+    image:"https://www.fon.co.ke/images/channel/pic2.jpg",
+    title:"Managed Ethernet",
+    content:'Designed for enterprise connections including small to medium businesses. '
+  },
+   {
+    image:"https://www.atlantech.net/hubfs/Blog_images/Atlantech_point-to-point-fiber-optic-network.png",
+    title:"Metro",
+    content:'Enables Mobile Network Operators to connect their base stations and provide high-quality broadband at lower costs through shared infrastructure to any location. '
+  }
+  ]
   constructor(private countryService:CountryService) { }
 
   ngOnInit(): void {

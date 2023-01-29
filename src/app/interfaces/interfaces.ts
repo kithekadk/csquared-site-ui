@@ -33,6 +33,7 @@ export interface LatestNewsContent{
 export interface Offer{
     image:string
     title:string
+    content:string
 }
 export interface authorities{
     name:string;
