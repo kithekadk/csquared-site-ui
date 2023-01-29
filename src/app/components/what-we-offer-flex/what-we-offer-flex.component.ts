@@ -10,7 +10,11 @@ export class WhatWeOfferFlexComponent implements OnInit {
 
   @Input() offers!:Offer[]
 
-  selectedoffer!:Offer
+  selectedoffer:Offer={
+    title:'',
+    image:'',
+    content:''
+  }
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +23,6 @@ export class WhatWeOfferFlexComponent implements OnInit {
   popModal(index:number){
     console.log(index);
     this.selectedoffer= this.offers[index]
-    
   }
 
 }
