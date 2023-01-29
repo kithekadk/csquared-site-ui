@@ -6,10 +6,6 @@
       <img src="{{ content.image }}" alt="" />
       <div class="offer-text">
         <h1>{{ content.title }}</h1>
-        <!-- <button>learn More</button>
-        
-        -->
-
          <div class="btn">
         <button (click)="popModal(i)"
         data-bs-toggle="modal"
@@ -29,7 +25,7 @@
             data-bs-keyboard="false"
             tabindex="-1"
             aria-labelledby="staticBackdropLabel"
-            aria-hidden="true">
+            aria-hidden="true" *ngIf="selectedoffer">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header flex">
@@ -50,11 +46,6 @@
                   <p>{{selectedoffer.content}}</p> 
                 </div>
                 <div class="modal-footer" style="display:flex;">
-                  <!-- <button
-                    class="btn btn-warning"
-                  >
-                    Learn More
-                  </button> -->
                 </div>
               </div>
             </div>
