@@ -21,9 +21,13 @@ textarea{
 }
 
 .contact-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 45vh;
     position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/images/backgrounds/cheatahs.jpg');
 }
 
 .contact-header img{
@@ -34,7 +38,7 @@ textarea{
 .contact-header h1{
     position: absolute;
     top: 50%;
-    left: 35%;
+    /* left: 35%; */
     color:white;
     font-size: 50px;
 }
@@ -100,23 +104,73 @@ textarea{
 .footer{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:30px;
     margin-bottom: 20px;
     flex-wrap: wrap;
     
 }
-.footer-div{
+.footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5, .footer-div6{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* margin-bottom:20px ; */
 }
 
-.footer3, .footer2, .footer1{
+.footer1, .footer2, .footer3, .footer4, .footer5, .footer6{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
 }
 
+.footer-div1:hover .overlay, 
+.footer-div2:hover .overlay, 
+.footer-div3:hover .overlay, 
+.footer-div4:hover .overlay,
+.footer-div6:hover .overlay,
+.footer-div5:hover .overlay{
+    bottom: 0;
+    height: 100%;
+    border: 10px;
+}
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3B7360;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+}
+.overlay h3{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.imgcontainer img{
+    height:39vh;
+    border-radius: 10px;
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
 .socials{
     display: flex;
 }

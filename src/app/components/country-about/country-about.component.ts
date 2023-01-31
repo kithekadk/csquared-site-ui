@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-country-about',
@@ -13,6 +14,7 @@ export class CountryAboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

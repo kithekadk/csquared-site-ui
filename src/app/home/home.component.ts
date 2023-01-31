@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    console.log(this.targets[0].image);
+    // console.log(this.targets[0].image);
     
   }
 

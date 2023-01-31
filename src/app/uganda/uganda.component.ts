@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Offer } from '../interfaces/interfaces';
 import { CountryService } from '../services/country.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-uganda',
@@ -45,6 +46,7 @@ Whether you are an MNO or ISP, we have developed the right products and solution
   constructor(private countryService:CountryService) { }
 
   ngOnInit(): void {
+    AOS.init()
 
     this.countryService.setCountry('uganda')
   }

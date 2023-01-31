@@ -8,6 +8,7 @@
 .modal-body{
   display: none;
 }
+
 .offer-container {
   width: 100%;
   height: 40vh;
@@ -102,7 +103,6 @@ h1 {
 }
 .container-grid {
   width: 100%;
-  /* height: 60vh; */
   height: fit-content;
   display: flex;
   justify-content: center;

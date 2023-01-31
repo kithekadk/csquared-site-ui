@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { Offer } from 'src/app/interfaces/interfaces';
 
 @Component({
@@ -18,6 +19,7 @@ export class WhatWeOfferFlexComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init
   }
 
   popModal(index:number){

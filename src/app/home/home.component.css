@@ -19,7 +19,7 @@
     height: 100%;
 }
 .grid-section > div > img:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 .mnos{
     grid-area: a;
