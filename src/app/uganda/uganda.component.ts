@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { Offer } from '../interfaces/interfaces';
 import { CountryService } from '../services/country.service';
-import * as AOS from 'aos';
 
 @Component({
   selector: 'app-uganda',
