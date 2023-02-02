@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-coverage',
@@ -10,6 +11,7 @@ export class CoverageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    Aos.init()
   }
 
 }

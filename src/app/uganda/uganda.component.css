@@ -8,6 +8,7 @@
 .modal-body{
   display: none;
 }
+
 .offer-container {
   width: 100%;
   height: 40vh;
@@ -102,7 +103,6 @@ h1 {
 }
 .container-grid {
   width: 100%;
-  /* height: 60vh; */
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -115,7 +115,7 @@ h1 {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-rows: repeat(2, 250px);
   gap: 10px;
   grid-template-areas:
     "two three three"
@@ -135,6 +135,12 @@ h1 {
   padding: 10px 20px;
 }
 
+.btn button:hover{
+  background-color: #7a5b0c;
+  color: white;
+  border-radius: 10px;
+}
+
 .text {
   position: absolute;
   top: 0;
@@ -142,6 +148,7 @@ h1 {
 .text h1 {
   color: white;
   font-size: 25px;
+  margin-left: 20px;
 }
 .divtwo {
   grid-area: two;

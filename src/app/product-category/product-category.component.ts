@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 import { services } from '../interfaces/interfaces';
 import { ApiService } from '../services/api.service';
 
@@ -19,10 +20,10 @@ cloudservices!:services[];
 
   ngOnInit(): void {
     this.categoryRoute=this.router.url;
-    this.fiberservices=this.apiService.getFiberServices();
-    // console.log(this.services);
-    
+    this.fiberservices=this.apiService.getFiberServices();    
     this.cloudservices=this.apiService.getCloudServices();
+
+    AOS.init();
   }
 
   oneClouditem!:services;

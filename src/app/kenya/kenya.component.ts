@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { CountryService } from '../services/country.service';
 
 @Component({
@@ -44,7 +45,8 @@ Partner with us to enhance your digital transformation through efficient and sec
 
   ngOnInit(): void {
 
-    this.countryService.setCountry('kenya')
+    this.countryService.setCountry('kenya');
+    AOS.init();
   }
 
 }

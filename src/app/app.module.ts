@@ -77,7 +77,8 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-     NgTwitterTimelineModule
+     NgTwitterTimelineModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]

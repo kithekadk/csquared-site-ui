@@ -50,7 +50,7 @@ countries:{name:string,code:string, flag:string}[]=[
 services:{name:string, code:string}[]=[{name:'Our Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
-Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
+Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'},{name: 'Career Description', code:'career-description'}];
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -108,6 +108,8 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
       this.router.navigate(['/', 'team'])
     }else if(event.target.innerText=='Careers'){
       this.router.navigate(['/', 'career'])
+    }else if(event.target.innerText=='Career Description'){
+      this.router.navigate(['/', 'career-description'])
     }else{
       console.log(event.target.innerText);
     }

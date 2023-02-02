@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as Aos from 'aos';
 import { authorities, services } from '../interfaces/interfaces';
 import { ApiService } from '../services/api.service';
 
@@ -20,6 +21,7 @@ active:boolean=false;
     }else if(this.router.url == '/team'){
       this.getManagers();
     } 
+    Aos.init();
   }
 
   getSections(){

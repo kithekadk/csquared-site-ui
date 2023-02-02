@@ -34,23 +34,20 @@ const routes: Routes = [
     {path: 'services/cloud-solutions', component:ProductCategoryComponent},
     {path:'services/wholesale-fiber/view/:id', component: SingleServiceComponent},
     {path:'services/cloud-solutions/view/:id', component: SingleServiceComponent},
-    // {path:"country/:code", component:CountryHeaderComponent},
     {path:"country/drc", component:DRCComponent},
     {path:"country/uganda", component:UgandaComponent},
     {path:"country/ghana", component:GhanaComponent},
     {path:"country/liberia", component:LiberiaComponent},
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
-
     {path: 'blog', component: BlogComponent},
-    {path:'career', component:CareerComponent},
+    {path:'careers', component:CareerComponent},
     {path:'contact', component:ContactComponent},
-
     {path:"country/hybrid", component:HomeComponent},
     {path: 'coverage', component: CoverageComponent},
     {path: 'insights', component: BlogComponent},
     {path:'career', component:CareersComponent},
-    {path:'careerdescription', component:CareerDescriptionComponent}
+    {path:'career-description', component:CareerDescriptionComponent}
 
   ];
 
