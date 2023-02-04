@@ -4,7 +4,7 @@
     align-items: center;
 }
 .grid-section{
-    width: 90vw;
+    width: 80vw;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: repeat(2, 1fr);
     gap:20px;
@@ -23,28 +23,28 @@
 }
 .mnos{
     grid-area: a;
-    height:40vh;
+    height:32vh;
 }
 .datacenters{
     grid-area: b;
-    height:40vh;
+    height:32vh;
 }
 .smes{
     grid-area: c;
-    height:40vh;
+    height:32vh;
     
 }
 .isps{
     grid-area: d;
-    height:40vh;
+    height:32vh;
 }
 .p2p{
     grid-area: e;
-    height:40vh;
+    height:32vh;
 }
 .cloudcenters{
     grid-area: f;
-    height:40vh;
+    height:32vh;
 }
 .grid-title{
     margin-top: -60px;

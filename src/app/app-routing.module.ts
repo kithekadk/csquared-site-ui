@@ -6,7 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
 import { CountryHeaderComponent } from './components/country-header/country-header.component';
-import { DRCComponent } from './components/drc/drc.component';
+import { DRCComponent } from './drc/drc.component';
 import { UgandaComponent } from './uganda/uganda.component';
 import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';

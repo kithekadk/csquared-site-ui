@@ -23,7 +23,7 @@ import { CountryAboutComponent } from './components/country-about/country-about.
 import { CountryLatestnewsComponent } from './components/country-latestnews/country-latestnews.component';
 import { WhatWeOfferFlexComponent } from './components/what-we-offer-flex/what-we-offer-flex.component';
 import { WhatWeOfferGridComponent } from './components/what-we-offer-grid/what-we-offer-grid.component';
-import { DRCComponent } from './components/drc/drc.component';
+import { DRCComponent } from './drc/drc.component';
 import { UgandaComponent } from './uganda/uganda.component';
 import { GhanaComponent } from './ghana/ghana.component';
 import { LiberiaComponent } from './liberia/liberia.component';
