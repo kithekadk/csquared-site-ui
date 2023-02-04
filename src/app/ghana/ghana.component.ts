@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { Countries, CoverageContent, Offer } from '../interfaces/interfaces';
 import { CountryService } from '../services/country.service';
 
@@ -97,11 +98,13 @@ export class GhanaComponent implements OnInit {
           content:"Our Metro is designed to connect more people to the Internet. With our wholesale open-access fiber-optic networks in Accra, Tema, Kasoa, Kumasi & Takoradi, ISP’s and MNOs can use our managed services by connecting access sites to customer handover points."
         }]
 
-        about_learn_more:string=`Uganda is undergoing rapid digitization. Stay ahead of the curve by connecting to CSquared’s broadband network. With a 1000 KM+ Fiber network in Greater Kampala, CSquared’s  solid and extensive network coverage is the right fit for your business needs. We have been here since 2013 and understand the market dynamics. 
+        about_learn_more:string=`Designed for enterprise connections including registered Corporate and small to medium businesses, CSquared currently has 5 metros in Ghana with 1070 KM+ of fiber and 1000+ customer sites.
+        CSquared has embarked on building its West Africa terrestrial backbone in Ghana. We have a partnership with the Ghana Grid Company Limited (GRIDCo) which enables us  to connect major cities within Ghana and neighboring countries. 
         Whether you are an MNO or ISP, we have developed the right products and solutions for your internet needs. Partner with us to enhance your internet access and accelerate your productivity and growth.`
   constructor(private countryService:CountryService) { }
 
   ngOnInit(): void {
+    AOS.init();
     this.countries= this.countryService.getOneCountry('ghana')
   }
 
