@@ -44,10 +44,12 @@
   overflow: hidden;
   height:0;
   transition: .5s ease;
+  width:100%;
 }
 .overlay h3{
+  width:95%;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
   top: 50%;
   left: 50%;

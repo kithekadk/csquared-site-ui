@@ -11,13 +11,13 @@
             <div class="service-img" *ngIf="(i%2==0)" data-aos="fade-down">
                 <img src="{{service.image}}" alt="Specialist">
             </div>
-            <div class="service-info" *ngIf="(i%2==0)" data-aos="flip-left">
+            <div class="service-info" *ngIf="(i%2==0)" data-aos="fade-down">
                 <h2>{{service.title}}</h2><br>
                 {{service.description}}<br><br>
                 <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
             </div>
 
-            <div class="service-info2" *ngIf="(i%2!==0)" data-aos="flip-left">
+            <div class="service-info2" *ngIf="(i%2!==0)" data-aos="fade-down">
                 <h2>{{service.title}}</h2><br>
                 {{service.description}}<br><br>
                 <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
