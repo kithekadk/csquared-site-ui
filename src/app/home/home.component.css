@@ -1,95 +1,118 @@
-.grid-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.grid-section{
-    width: 80vw;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: repeat(2, 1fr);
-    gap:20px;
-    display: grid;
-    grid-template-areas: 
-    'a b c c'
-    'd e e f';
+.grid-section {
+  width: 80vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: repeat(2, 1fr);
+  gap: 20px;
+  display: grid;
+  grid-template-areas:
+    "a b c c"
+    "d e e f";
 }
 
-.grid-section > div > img{
-    width: 100%;
-    height: 100%;
+.grid-section > div > img {
+  width: 100%;
+  height: 100%;
 }
-.grid-section > div > img:hover{
-    transform: scale(1.01);
+.grid-section > div > img:hover {
+  transform: scale(1.01);
 }
-.mnos{
-    grid-area: a;
-    height:32vh;
+.mnos {
+  grid-area: a;
+  height: 32vh;
 }
-.datacenters{
-    grid-area: b;
-    height:32vh;
+.datacenters {
+  grid-area: b;
+  height: 32vh;
 }
-.smes{
-    grid-area: c;
-    height:32vh;
-    
+.smes {
+  grid-area: c;
+  height: 32vh;
 }
-.isps{
-    grid-area: d;
-    height:32vh;
+.isps {
+  grid-area: d;
+  height: 32vh;
 }
-.p2p{
-    grid-area: e;
-    height:32vh;
+.p2p {
+  grid-area: e;
+  height: 32vh;
 }
-.cloudcenters{
-    grid-area: f;
-    height:32vh;
+.cloudcenters {
+  grid-area: f;
+  height: 32vh;
 }
-.grid-title{
+.grid-title {
+  margin-top: -60px;
+  font-size: 25px;
+  color: white;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.company-logos {
+  visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+  .grid-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .variety-services {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin-left: -20px;
+  }
+  .variety-services > h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .company-logos {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: -3vh;
+    margin-left: 7vw;
+  }
+  .grid-title {
     margin-top: -60px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     margin-left: 10px;
     font-weight: bold;
-}
-.company-logos{
-    visibility:hidden;
-}
-@media screen and (max-width:768px) {
-    .grid-section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .variety-services{
-        display: flex;
-        flex-direction: column;
-        width: 75vw;
-        margin-left: -20px;
-    }
-    .variety-services > h1{
-        font-size: 22px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .company-logos{
-        
-        display:none;
-        flex-wrap: wrap;
-        margin-top: -3vh;
-        margin-left: 7vw;
-    }
-    .grid-title{
-        margin-top: -60px;
-        font-size: 20px;
-        color: white;
-        margin-left: 10px;
-        font-weight: bold;
-    }
-    .about-us{
-        width: 100vw;
-    }
-    .about-us>p{
-        width: 90vw;
-    }
+  }
+  .about-us {
+    width: 100vw;
+  }
+  .about-us > p {
+    width: 90vw;
+  }
+ 
+  .subcons {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .subcons div {
+    margin: 0 !important;
+    padding: 1rem;
+  }
+  .why-us {
+    padding: 0.5rem;
+    width: fit-content;
+  }
+  .why-us-sect-1 {
+    width: 92vw;
+  }
+  .seeourplan {
+    margin: 0;
+  }
+  .yellowbars {
+    width: fit-content;
+  }
+ 
 }

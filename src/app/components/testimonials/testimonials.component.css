@@ -2,4 +2,16 @@
     .flex{
         flex-direction: column;
     }
+  
+    .testimonials div{
+        width: fit-content;
+    }
+    .grey-border{
+        margin: 1rem;
+
+    }
+    .testimonial-name{
+        margin: 0;
+        padding: 0;
+    }
 }
