@@ -1,110 +1,90 @@
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
   background-color: #073937;
   align-items: center;
   position: fixed;
-  width:100%;
+  width: 100%;
   z-index: 9999;
   top: 0;
   height: 10vh;
 }
 
-.navbar-brand{
-  padding-left: 60px
+.navbar-brand {
+  padding-left: 60px;
 }
-.dropdown-toggle{
+.dropdown-toggle {
   color: white;
   padding: 0;
 }
 
-.menu-container{
+.menu-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap:40px;
-  color:white;
+  gap: 40px;
+  color: white;
 }
-.menu-container >li:hover{
+.menu-container > li:hover {
   text-decoration: underline;
-  color:rgb(124, 124, 4)
+  color: rgb(124, 124, 4);
 }
-#select-country{
+#select-country {
   background-color: transparent;
-  color:white;
+  color: white;
   border: none;
 }
-option{
-  color:black;
-  margin:5px 20px 5px 20px;
-  padding:50px;
+option {
+  color: black;
+  margin: 5px 20px 5px 20px;
+  padding: 50px;
 }
 
-.services-options{
+.services-options {
   text-align: center;
   background-color: transparent;
   color: white;
   border: none;
 }
-.about-options{
+.about-options {
   text-align: center;
   background-color: transparent;
   color: white;
   border: none;
 }
-select{
+select {
   background-color: white;
 }
-select:hover option.dropdown{
+select:hover option.dropdown {
   display: block;
 }
 
-
 @media only screen and (max-width: 903px) {
-  .navbar{
-    height:20vh;
-  }
 }
 @media only screen and (max-width: 600px) {
   .navbar {
-    min-height:22vh;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 0;
-    gap:20px;
-    margin-top: 0px;
-    padding-top: 0;
-    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    padding: 0 1rem;
   }
-  .navbar>a>img{
-    width: 100px;
-    margin-right: 10px;
+  .navbar-brand {
+    padding: 0;
   }
-  .navbar > a{
-    padding-left: 10px;
-    margin-top: 2vh;
-  }
-  .menu-container >li, .menu-container >.btn-group{
-    background-color: #073937;
-    margin-left: -20vw;
-  }
-  .menu-container >li:hover, .menu-container >.btn-group:hover{
-    text-decoration: underline;
-    color:yellow
-  }
-
+  
   .menu-container {
-    display: flex;
-    flex-direction: column;
-    gap:0px;
-    align-items: flex-start;
-    margin-top: 5vh;
-    z-index: 9999;
-    width:40vw;
+    justify-content: flex-end;
+  }
+  .menu-container > li,
+  .menu-container > .btn-group {
+    background-color: #073937;
+  }
+  .menu-container > li:hover,
+  .menu-container > .btn-group:hover {
+    text-decoration: underline;
+    color: yellow;
   }
   .nav-item {
-    height: 1.5rem;
     display: flex;
     align-items: center;
   }
@@ -117,40 +97,32 @@ select:hover option.dropdown{
 
   .nav-item select {
     position: fixed;
-    width:100%;
+    width: 100%;
     z-index: 9999;
     top: 0;
-}
-
-.menu-container{
-    display: flex;
-    justify-content: flex-start;
-    width: 3.4rem;
-    height: fit-content;
-    padding-left: 20px;
   }
-  .dropdown-toggle{
+
+  .dropdown-toggle {
     font-size: 12px;
   }
   option {
     margin: 0;
   }
-  .toggle{
-    margin-top: -2vh;
+  .toggle {
+    /* margin-top: -2vh; */
     /* background-color: green; */
-    margin-left: 15vw;
+    /* margin-left: 15vw; */
     z-index: 0;
   }
-  .countries{
+  .countries {
     width: 25vw;
     /* background-color: yellow; */
-    height:6vh;
+    height: 6vh;
     display: flex;
     justify-content: flex-end;
-    padding-top:10px
+    /* padding-top:10px */
   }
-  #country{
+  #country {
     z-index: 9999;
   }
-
 }
