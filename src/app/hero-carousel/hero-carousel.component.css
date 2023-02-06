@@ -1,0 +1,14 @@
+.carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+}
+.body{
+        height: 90vh;
+}
+.carousel-body{
+        height:80vh;
+        margin-top: 10vh;
+}

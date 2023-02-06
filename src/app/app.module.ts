@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+
+import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +37,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,7 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     CoverageComponent,
     CareersComponent,
     CareerDescriptionComponent,
+    HeroCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,9 +82,13 @@ import { CareerDescriptionComponent } from './career-description/career-descript
     HttpClientModule,
     NgOptimizedImage,
      NgTwitterTimelineModule,
-     
+     NgbModule     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class AppModule { }

@@ -24,140 +24,137 @@
     <p id="learnmore" *ngIf="toggle">{{ about_leran_more }}</p>
   </div>
 
+  <!-- <h1 style="font-size: 25px">What We Offer?</h1> -->
   <h1 style="font-size: 25px">What We Offer?</h1>
+  <div class="container-grid mx-auto p-5">
+    <div class="container-grid footer">
+      <div class="footer1 content">
+        <div class="divtwo footer-div1">
+          <div class="imgcontainer" data-aos="flip-right">
+            <img style="object-fit: cover" src="{{ grids[0].image }}" alt="" />
+            <div class="text centered">
+              <h1>{{ grids[0].title }}</h1>
+            </div>
+            <div class="btn">
+              <button
+                (click)="popModal(0)"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div class="overlay">
+            <h3>
+              <h4>{{ grids[0].text }}</h4>
+            </h3>
+          </div>
+        </div>
 
-  <div class="container-grid footer">
-    <div class="footer1 content">
-      <div class="divtwo footer-div1">
-        <div class="imgcontainer" data-aos="flip-right" >
-          <img
-            style="object-fit: cover"
-            src="{{ grids[0].image }}"
-            alt=""
-            
-          />
-          <div class="text centered">
-            <h1>{{ grids[0].title }}</h1>
+        <div class="divthree footer-div1">
+          <div class="imgcontainer" data-aos="flip-right">
+            <img src="{{ grids[1].image }}" alt="" />
+            <div class="text centered">
+              <h1>{{ grids[1].title }}</h1>
+            </div>
           </div>
           <div class="btn">
             <button
-              (click)="popModal(0)"
+              (click)="popModal(1)"
               data-bs-toggle="modal"
               data-bs-target="#myModal"
             >
               Learn More
             </button>
           </div>
+          <div class="overlay">
+            <h3>
+              <h4>{{ grids[1].text }}</h4>
+            </h3>
+          </div>
         </div>
-        <div class="overlay">
-          <h3>
-            <h4>{{ grids[0].text }}</h4>
-          </h3>
-        </div>
-      </div>
 
-      <div class="divthree footer-div1">
-        <div class="imgcontainer" data-aos="flip-right">
-          <img src="{{ grids[1].image }}" alt=""  />
-          <div class="text centered">
-            <h1>{{ grids[1].title }}</h1>
+        <div class="divfive footer-div1">
+          <div class="imgcontainer" data-aos="flip-right">
+            <img src="{{ grids[2].image }}" alt="" />
+            <div class="text">
+              <h1>{{ grids[2].title }}</h1>
+            </div>
+            <div class="btn">
+              <button
+                (click)="popModal(2)"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div class="overlay">
+            <h3>
+              <h4>{{ grids[2].text }}</h4>
+            </h3>
           </div>
         </div>
-        <div class="btn">
-          <button
-            (click)="popModal(1)"
-            data-bs-toggle="modal"
-            data-bs-target="#myModal"
-          >
-            Learn More
-          </button>
-        </div>
-        <div class="overlay">
-          <h3>
-            <h4>{{ grids[1].text }}</h4>
-          </h3>
-        </div>
-      </div>
-
-      <div class="divfive footer-div1">
-        <div class="imgcontainer" data-aos="flip-right">
-          <img src="{{ grids[2].image }}" alt=""  />
-          <div class="text">
-            <h1>{{ grids[2].title }}</h1>
+        <div class="divsix footer-div1">
+          <div class="imgcontainer" data-aos="flip-right">
+            <img src="{{ grids[3].image }}" alt="" />
+            <div class="text">
+              <h1>{{ grids[3].title }}</h1>
+            </div>
+            <div class="btn">
+              <button
+                (click)="popModal(3)"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Learn More
+              </button>
+            </div>
           </div>
-          <div class="btn">
-            <button
-              (click)="popModal(2)"
-              data-bs-toggle="modal"
-              data-bs-target="#myModal"
-            >
-              Learn More
-            </button>
+          <div class="overlay">
+            <h3>
+              <h4>{{ grids[3].text }}</h4>
+            </h3>
           </div>
-        </div>
-        <div class="overlay">
-          <h3>
-            <h4>{{ grids[2].text }}</h4>
-          </h3>
-        </div>
-      </div>
-      <div class="divsix footer-div1">
-        <div class="imgcontainer" data-aos="flip-right">
-          <img src="{{ grids[3].image }}" alt=""  />
-          <div class="text">
-            <h1>{{ grids[3].title }}</h1>
-          </div>
-          <div class="btn">
-            <button
-              (click)="popModal(3)"
-              data-bs-toggle="modal"
-              data-bs-target="#myModal">
-              Learn More
-            </button>
-          </div>
-        </div>
-        <div class="overlay">
-          <h3>
-            <h4>{{ grids[3].text }}</h4>
-          </h3>
         </div>
       </div>
     </div>
   </div>
-
   <app-country-latestnews></app-country-latestnews>
+  
+
+  <!-- Start of modal -->
+  <div
+    class="modal fade"
+    id="myModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex">
+          <h5 class="modal-title" id="staticBackdropLabel" style="color: black">
+            {{ grids[index].title }}
+          </h5>
+          <button
+            class="btn-close d-flex"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="body" style="color: black; padding: 40px 10px">
+          <p>{{ grids[index].text }}</p>
+        </div>
+        <div class="modal-footer" style="display: flex"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of modal -->
 </div>
 <app-footer></app-footer>
-
-<!-- Start of modal -->
-<div
-  class="modal fade"
-  id="myModal"
-  data-bs-backdrop="static"
-  data-bs-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header flex">
-        <h5 class="modal-title" id="staticBackdropLabel" style="color: black">
-          {{ grids[index].title }}
-        </h5>
-        <button
-          class="btn-close d-flex"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="body" style="color: black; padding: 40px 10px">
-        <p>{{ grids[index].text }}</p>
-      </div>
-      <div class="modal-footer" style="display: flex">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- End of modal -->

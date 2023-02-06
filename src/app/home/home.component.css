@@ -7,7 +7,7 @@
     width: 80vw;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: repeat(2, 1fr);
-    gap:20px;
+    gap: 10px;
     display: grid;
     grid-template-areas: 
     'a b c c'
@@ -21,37 +21,47 @@
 .grid-section > div > img:hover{
     transform: scale(1.01);
 }
+.grid-section > div > div .grid-title:hover{
+    color: red;
+}
 .mnos{
+    position: relative;
     grid-area: a;
     height:32vh;
 }
 .datacenters{
+    position: relative;
     grid-area: b;
     height:32vh;
 }
 .smes{
+    position: relative;
     grid-area: c;
     height:32vh;
     
 }
 .isps{
+    position: relative;
     grid-area: d;
     height:32vh;
 }
 .p2p{
+    position: relative;
     grid-area: e;
     height:32vh;
 }
 .cloudcenters{
+    position: relative;
     grid-area: f;
     height:32vh;
 }
 .grid-title{
-    margin-top: -60px;
-    font-size: 25px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
     color: white;
-    margin-left: 10px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .company-logos{
     visibility:hidden;
