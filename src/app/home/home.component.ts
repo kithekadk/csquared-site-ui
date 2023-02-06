@@ -17,11 +17,25 @@ export class HomeComponent implements OnInit {
       {title:'Cloud Centers', image:'/assets/images/home/country.png'},
     ]
 
+    services: any[] = [
+      {  
+      'name': 'Cloud Services'  
+       }, 
+     {  
+      'name': 'Network'  
+     }, 
+    {  
+      'name': 'Wifi'  
+    },
+    {  
+      'name': 'Cloud Security'  
+   }
+];
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     AOS.init()
-    
   }
 
 
