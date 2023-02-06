@@ -110,12 +110,10 @@
     .container-grid {
       height: fit-content;
       padding: 1rem;
-      /* padding: 0.5rem; */
     }
     .content {
       display: flex;
       flex-wrap: wrap;
-      /* overflow: hidden; */
       width: 100%;
       gap: 0;
     }

@@ -3,6 +3,8 @@ import * as AOS from 'aos';
 import { Offer } from '../interfaces/interfaces';
 import { CountryService } from '../services/country.service';
 
+AOS.init();
+
 @Component({
   selector: 'app-uganda',
   templateUrl: './uganda.component.html',
