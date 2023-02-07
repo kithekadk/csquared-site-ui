@@ -1,110 +1,135 @@
-.grid-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.grid-section{
-    width: 80vw;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: repeat(2, 1fr);
-    gap: 10px;
-    display: grid;
-    grid-template-areas: 
-    'a b c c'
-    'd e e f';
+.grid-section {
+  width: 80vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: repeat(2, 1fr);
+  gap: 10px;
+  display: grid;
+  grid-template-areas:
+    "a b c c"
+    "d e e f";
 }
 
-.grid-section > div > img{
-    width: 100%;
-    height: 100%;
+.grid-section > div > img {
+  width: 100%;
+  height: 100%;
 }
-.grid-section > div > img:hover{
-    transform: scale(1.01);
+.grid-section > div > img:hover {
+  transform: scale(1.01);
 }
-.grid-section > div > div .grid-title:hover{
-    color: red;
+.grid-section > div > div .grid-title:hover {
+  color: red;
 }
-.mnos{
-    position: relative;
-    grid-area: a;
-    height:32vh;
+.mnos {
+  position: relative;
+  grid-area: a;
+  height: 32vh;
 }
-.datacenters{
-    position: relative;
-    grid-area: b;
-    height:32vh;
+.datacenters {
+  position: relative;
+  grid-area: b;
+  height: 32vh;
 }
-.smes{
-    position: relative;
-    grid-area: c;
-    height:32vh;
-    
+.smes {
+  position: relative;
+  grid-area: c;
+  height: 32vh;
 }
-.isps{
-    position: relative;
-    grid-area: d;
-    height:32vh;
+.isps {
+  position: relative;
+  grid-area: d;
+  height: 32vh;
 }
-.p2p{
-    position: relative;
-    grid-area: e;
-    height:32vh;
+.p2p {
+  position: relative;
+  grid-area: e;
+  height: 32vh;
 }
-.cloudcenters{
-    position: relative;
-    grid-area: f;
-    height:32vh;
+.cloudcenters {
+  position: relative;
+  grid-area: f;
+  height: 32vh;
 }
-.grid-title{
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-size: 18px;
+.grid-title {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: white;
+  font-weight: normal;
+}
+.company-logos {
+  visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .grid-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .variety-services {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin-left: -20px;
+  }
+  .variety-services > h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .company-logos {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: -3vh;
+    margin-left: 7vw;
+  }
+  .grid-title {
+    margin-top: -60px;
+    font-size: 20px;
     color: white;
-    font-weight: normal;
-}
-.company-logos{
-    visibility:hidden;
-}
-@media screen and (max-width:768px) {
-    .home{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-    }
-    .grid-section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .variety-services{
-        display: flex;
-        flex-direction: column;
-        width: 75vw;
-        margin-left: -20px;
-    }
-    .variety-services > h1{
-        font-size: 22px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .company-logos{
-        
-        display:none;
-        flex-wrap: wrap;
-        margin-top: -3vh;
-        margin-left: 7vw;
-    }
-    .grid-title{
-        margin-top: -60px;
-        font-size: 20px;
-        color: white;
-        margin-left: 10px;
-        font-weight: bold;
-    }
-    .about-us{
-        width: 100vw;
-    }
-    .about-us>p{
-        width: 90vw;
-    }
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .map-africa-container {
+    height: fit-content;
+    padding: 0;
+  }
+  .map-africa {
+    width: 100%;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  .about-us > p {
+    padding: 0 1rem;
+    width: 100vw;
+  }
+  .sub-con-clients {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-con-clients .text-center {
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .why-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .why-us-first-child {
+  }
 }

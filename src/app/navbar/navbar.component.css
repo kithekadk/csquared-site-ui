@@ -74,8 +74,6 @@ select:hover option.dropdown {
   }
   
   .menu-container {
-    border: 1px solid red;
-    /* width: 100vw; */
     padding-top:20px;
     display: flex;
     flex-direction: column;

@@ -50,7 +50,7 @@ countries:{name:string,code:string, flag:string}[]=[
 services:{name:string, code:string}[]=[{name:'Our Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
-Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'},{name: 'Career Description', code:'career-description'}];
+Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -73,12 +73,14 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
     // this.toggle = true
   }
   viewMobileMenu(){
-    this.view = !this.view;
+    if(window.innerWidth <= 768){
+      this.view = !this.view;
+    } 
   }
   undoState(){
     if(window.innerWidth <= 768){
       this.view = !this.view;
-    }   
+    }    
   }
   navigateTo(event :any){
      this.router.navigate(['country',event])
@@ -119,6 +121,4 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
       console.log(event.target.innerText);
     }
   }
-  
-
 }
