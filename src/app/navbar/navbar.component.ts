@@ -54,31 +54,34 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    window.onresize = () => this.toggle = window.innerWidth <= 600;
-    if (window.screen.width <= 600) { 
-      this.toggle = true;
-    }else if(window.screen.width >= 601){
-      this.toggle = false
+    window.onresize = () => this.view = window.innerWidth <= 768;
+    if (window.screen.width <= 768) { 
+      this.view = true;
+    }else if(window.screen.width >= 769){
+      this.view = false
     }
   }
   toggle!:boolean
+  view!:boolean
 
   setState(){
-    console.log(this.toggle);
+    // console.log(this.toggle);
     
-    if (window.screen.width <= 600){
-      this.toggle = false
-    }
-    this.toggle = true
+    // if (window.screen.width <= 600){
+    //   this.toggle = true
+    // }
+    // this.toggle = true
+  }
+  viewMobileMenu(){
+    this.view = !this.view;
   }
   undoState(){
-    if (window.screen.width <=600){
-    this.toggle= true
-    }this.toggle= false
+    this.view = !this.view;
   }
   navigateTo(event :any){
      this.router.navigate(['country',event])
      setTimeout(() => {
+      this.view = !this.view;
        this.toggled = false
      }, 100)   
   }
