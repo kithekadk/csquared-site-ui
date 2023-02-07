@@ -76,7 +76,9 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
     this.view = !this.view;
   }
   undoState(){
-    this.view = !this.view;
+    if(window.innerWidth <= 768){
+      this.view = !this.view;
+    }   
   }
   navigateTo(event :any){
      this.router.navigate(['country',event])
