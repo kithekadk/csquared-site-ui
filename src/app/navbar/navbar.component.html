@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-lg navigation" data-bs-theme="dark">
-  <a
+  <div>
+    <a
     class="navbar-brand"
     href="#"
-    style="padding-top: 15px; padding-bottom: 15px;"
+    style="padding-top: 15px; padding-bottom: 15px"
   >
     <img
       src="./../../assets/images/c_squared_horizontal_logo.png"
@@ -12,18 +13,39 @@
       class="d-inline-block align-text-top"
     />
   </a>
-  <ul class="menu-container " *ngIf="toggle">
-    <li class="nav-item" style="color: white;" (click)="setState()"><img src="./../../assets/Csquared/menu.png" width="50px" alt="MENU" class="toggle"></li>
-  </ul>
-  <ul class="menu-container" *ngIf="!toggle">
+  </div>
+  <div>
+    <ul class="mobile-menu" *ngIf="view">
+      <li class="nav-item" style="color: white; padding-left: 25vw;" (click)="viewMobileMenu()">
+        <img
+          src="./../../assets/Csquared/menu.png"
+          width="50px"
+          alt="MENU"
+          class="toggle"
+        />
+      </li>
+    </ul>
+  </div>
+  
+  <ul class="menu-container" *ngIf="!view">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" (click)="undoState()" routerLink="/">Home</a>
+      <a
+        class="nav-link active"
+        aria-current="page"
+        (click)="undoState()"
+        routerLink="/"
+        >Home</a
+      >
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/coverage" (click)="undoState()">Coverage</a>
+      <a class="nav-link" routerLink="/coverage" (click)="undoState()"
+        >Coverage</a
+      >
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/insights" (click)="undoState()">Insights</a>
+      <a class="nav-link" routerLink="/insights" (click)="undoState()"
+        >Insights</a
+      >
     </li>
     <!-- Services drop down -->
     <ul class="btn-group">
@@ -43,7 +65,8 @@
             role="menuitem"
             tabindex="-1"
             id="menu-item-0"
-            *ngFor="let service of services" (click)="undoState()"
+            *ngFor="let service of services"
+            (click)="undoState()"
           >
             {{ service.name }}
           </li>
@@ -69,7 +92,8 @@
             role="menuitem"
             tabindex="-1"
             id="menu-item-0"
-            *ngFor="let about of Aboutsubmenus" (click)="undoState()"
+            *ngFor="let about of Aboutsubmenus"
+            (click)="undoState()"
           >
             {{ about.name }}
           </li>
@@ -79,13 +103,15 @@
 
     <!-- End of About Us Drop down -->
     <li class="nav-item">
-      <a class="nav-link" routerLink="/contact" (click)="undoState()">Contact Us</a>
+      <a class="nav-link" routerLink="/contact" (click)="undoState()"
+        >Contact Us</a
+      >
     </li>
   </ul>
 
   <!-- Countries drop down -->
   <div>
-    <div class="relative inline-block text-left countries">
+    <div class="relative inline-block text-left countries" *ngIf="!view">
       <div>
         <button
           (click)="toggled = !toggled"
