@@ -66,10 +66,12 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   setState(){
     console.log(this.toggle);
     
-    if (window.screen.width <= 600){
-      this.toggle = false
-    }
-    this.toggle = true
+    // if (window.screen.width <= 600){
+    //   this.toggle = false
+    // }
+    // this.toggle = true
+
+    this.toggle = !this.toggle
   }
   undoState(){
     if (window.screen.width <=600){

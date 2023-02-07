@@ -59,12 +59,12 @@ select:hover option.dropdown {
   display: block;
 }
 
-@media only screen and (max-width: 903px) {
-}
+
 @media only screen and (max-width: 600px) {
   .navbar {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* height: 7vh; */
     width: 100vw;
     padding: 0 1rem;
   }

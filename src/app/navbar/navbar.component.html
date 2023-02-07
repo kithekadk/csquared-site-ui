@@ -25,6 +25,16 @@
         />
       </li>
     </ul>
+    <ul class="menu-container" *ngIf="!toggle">
+      <li class="nav-item" style="color: white" (click)="setState()">
+        <img
+          src="./../../assets/Csquared/close.png"
+          width="35px"
+          alt="close"
+          class="toggle"
+        />
+      </li>
+    </ul>
   </div>
   
   <ul class="menu-container" *ngIf="!toggle">
