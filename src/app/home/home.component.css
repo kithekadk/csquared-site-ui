@@ -67,6 +67,11 @@
     visibility:hidden;
 }
 @media screen and (max-width:768px) {
+    .home{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
     .grid-section{
         display: flex;
         flex-wrap: wrap;
