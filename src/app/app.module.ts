@@ -39,6 +39,7 @@ import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
     CareersComponent,
     CareerDescriptionComponent,
     HeroCarouselComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

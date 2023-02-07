@@ -22,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -41,13 +42,14 @@ const routes: Routes = [
     {path:"country/togo", component:TogoComponent},
     {path:"country/kenya", component:KenyaComponent},
     {path: 'blog', component: BlogComponent},
-    {path:'careers', component:CareerComponent},
+    // {path:'careers', component:CareerComponent},
     {path:'contact', component:ContactComponent},
     {path:"country/hybrid", component:HomeComponent},
     {path: 'coverage', component: CoverageComponent},
     {path: 'insights', component: BlogComponent},
     {path:'career', component:CareersComponent},
-    {path:'career-description', component:CareerDescriptionComponent}
+    {path:'career-description', component:CareerDescriptionComponent},
+    {path:'**', component:NotfoundComponent}
 
   ];
 
