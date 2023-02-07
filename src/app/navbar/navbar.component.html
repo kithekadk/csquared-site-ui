@@ -15,8 +15,8 @@
   </a>
   </div>
   <div>
-    <ul class="menu-container" *ngIf="toggle">
-      <li class="nav-item" style="color: white" (click)="setState()">
+    <ul class="mobile-menu" *ngIf="view">
+      <li class="nav-item" style="color: white; padding-left: 25vw;" (click)="viewMobileMenu()">
         <img
           src="./../../assets/Csquared/menu.png"
           width="50px"
@@ -37,7 +37,7 @@
     </ul>
   </div>
   
-  <ul class="menu-container" *ngIf="!toggle">
+  <ul class="menu-container" *ngIf="!view">
     <li class="nav-item">
       <a
         class="nav-link active"
@@ -121,7 +121,7 @@
 
   <!-- Countries drop down -->
   <div>
-    <div class="relative inline-block text-left countries" *ngIf="!toggle">
+    <div class="relative inline-block text-left countries" *ngIf="!view">
       <div>
         <button
           (click)="toggled = !toggled"
