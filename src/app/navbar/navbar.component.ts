@@ -68,11 +68,6 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
     // console.log(this.toggle);
     
     // if (window.screen.width <= 600){
-    //   this.toggle = false
-    // }
-    // this.toggle = true
-
-    this.toggle = !this.toggle
     //   this.toggle = true
     // }
     // this.toggle = true
