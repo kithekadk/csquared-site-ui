@@ -12,3 +12,11 @@
         height:80vh;
         margin-top: 10vh;
 }
+@media only screen and (max-width: 768px) {
+        .body{
+                height: fit-content;
+        }
+        .carousel-body{
+                height: fit-content;
+        }
+}

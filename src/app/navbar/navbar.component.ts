@@ -85,7 +85,9 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   navigateTo(event :any){
      this.router.navigate(['country',event])
      setTimeout(() => {
-      this.view = !this.view;
+      if(window.innerWidth <= 768){
+        this.view = !this.view;
+      } 
        this.toggled = false
      }, 100)   
   }

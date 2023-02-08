@@ -1,5 +1,10 @@
-@media only screen and (max-width: 600px){
-    .flex{
-        flex-direction: column;
-    }
+@media only screen and (max-width: 600px) {
+  .customer-testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial {
+    width: 100%;
+    margin: 0.7rem 0;
+  }
 }
