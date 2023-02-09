@@ -40,6 +40,7 @@ import { CareerDescriptionComponent } from './career-description/career-descript
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HttpClientModule,
     NgOptimizedImage,
      NgTwitterTimelineModule,
-     NgbModule     
+     NgbModule,
+     NgImageSliderModule     
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,20 +13,14 @@
     <div class="title">
         <h2>Our Featured Countries</h2><br>
     </div>
-    <div class="countries" data-aos="fade-up">
-        <div class="country" routerLink="/country/kenya">
-            <img style="object-fit:cover;" src="../../assets/Csquared/nairobi.jpg" alt="KENYA"><br>
-            <div class="country-name">Kenya</div>
-        </div>
-        <div class="country" routerLink="/country/uganda">
-            <img style="object-fit:cover;" src="../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg" alt="UGANDA"><br>
-            <div class="country-name">Uganda</div>
-        </div>
-        <div class="country" routerLink="/country/ghana">
-            <img style="object-fit:cover;" src="../../assets/Csquared/pexels-asiama-junior-6567674.jpg" alt="GHANA"><br>
-            <div class="country-name">Ghana</div>
-        </div>
-    </div>
+        <ng-image-slider routerLink="/country/" 
+        [images]="coverage" 
+        [infinite]="true" 
+        [autoSlide]="1"
+        [showArrow]="false"
+        [animationSpeed]=3
+        [imageSize]="{width: '362px', height: 242, space: 20}"
+        #nav></ng-image-slider><br><br>
     
     <app-footer></app-footer>
 </div>

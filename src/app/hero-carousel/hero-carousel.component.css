@@ -6,12 +6,19 @@
         text-align: left;
 }
 .body{
-        height: 90vh;
-}
-.carousel-body{
-        height:80vh;
         margin-top: 10vh;
+        height: 90vh;
+        width: 100vw;
 }
+.carousel {
+        height:80vh;
+      }
+.picsum-img-wrapper>img{
+        width: 100%;
+        height:calc(100vh - 10vh);
+        object-fit:cover;
+}
+
 @media only screen and (max-width: 768px) {
         .body{
                 height: fit-content;

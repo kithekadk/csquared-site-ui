@@ -1,37 +1,47 @@
 <div class="body">
   <section>
     <ngb-carousel *ngIf="images" class="carousel-body">
-       <ng-template ngbSlide class="carousel-body">
-         <div class="picsum-img-wrapper">
-           <img [src]="images[0]" style="height: 30%;"  alt="Random first slide" />
-         </div>
-         <div class="carousel-caption">
-           <h2 class="text-4xl text-white font-bold">A Digital Africa</h2>
-           <br>
-           <p class="text-md text-white font-medium">CSquared enables MNOs and ISPs to provide high-quality broadband at lower 
-               costs through shared infrastructure such as metro fiber and Wi-Fi networks.</p>
-         </div>
-       </ng-template>
-       <ng-template ngbSlide class="carousel-body">
-         <div class="picsum-img-wrapper">
-           <img [src]="images[1]" style="height: 30%;"  alt="Random second slide" />
-         </div>
-         <div class="w-full h-full flex  justify-center items-center backdrop-brightness-50"></div>
-         <div class="carousel-caption">
-           <h2>Second slide label</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-         </div>
-       </ng-template>
-       <ng-template ngbSlide class="carousel-body">
-         <div class="picsum-img-wrapper">
-           <img [src]="images[2]"  style="height: 30%;"  alt="Random third slide" />
-         </div>
-         <div class="carousel-caption">
-           <h2>Third slide label</h2>
-           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-         </div>
-       </ng-template>
-     </ngb-carousel> 
-   </section> 
-   
+      <ng-template ngbSlide >
+        <div class="picsum-img-wrapper">
+          <img [src]="images[0]"  alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h2 class="text-4xl text-white font-bold">A Digital Africa</h2>
+          <br />
+          <p class="text-md text-white font-medium">
+            CSquared enables MNOs and ISPs to provide high-quality broadband at
+            lower costs through shared infrastructure such as metro fiber and
+            Wi-Fi networks.
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img
+            [src]="images[1]"
+            
+            alt="Random second slide"
+          />
+        </div>
+        <div
+          class="w-full h-full flex justify-center items-center backdrop-brightness-50"
+        ></div>
+        <div class="carousel-caption">
+          <h2>Second slide label</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h2>Third slide label</h2>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </section>
 </div>
