@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as Aos from 'aos';
 
 @Component({
@@ -40,13 +41,16 @@ export class CoverageComponent implements OnInit {
     title: 'Togo',
     alt: 'Togo'
   }]
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     Aos.init();
   }
 
-  images:string[]=['../../assets/Csquared/nairobi.jpg','../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg','../../assets/Csquared/pexels-asiama-junior-6567674.jpg']
+  navigate($event:any){
+    const country:string=($event.target.alt).toLowerCase();
+    this.router.navigate(['country/',country])
+  }
 
 
 }

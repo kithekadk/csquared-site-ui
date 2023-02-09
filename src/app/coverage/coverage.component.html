@@ -13,7 +13,8 @@
     <div class="title">
         <h2>Our Featured Countries</h2><br>
     </div>
-        <ng-image-slider routerLink="/country/" 
+        <ng-image-slider 
+        (click)="navigate($event)" 
         [images]="coverage" 
         [infinite]="true" 
         [autoSlide]="1"

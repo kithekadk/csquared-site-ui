@@ -64,14 +64,6 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   toggle!:boolean
   view!:boolean
 
-  setState(){
-    // console.log(this.toggle);
-    
-    // if (window.screen.width <= 600){
-    //   this.toggle = true
-    // }
-    // this.toggle = true
-  }
   viewMobileMenu(){
     if(window.innerWidth <= 768){
       this.view = !this.view;
