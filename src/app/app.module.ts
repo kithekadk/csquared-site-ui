@@ -91,7 +91,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     NgImageSliderModule,
     FormsModule,
     ReactiveFormsModule,
-    GooglePlaceModule
+    GooglePlaceModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
