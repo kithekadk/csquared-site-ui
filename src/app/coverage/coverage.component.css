@@ -116,14 +116,7 @@ section{
   object-fit:cover;
 }
 
-@media only screen and (max-width: 768px) {
-  .body{
-          height: fit-content;
-  }
-  .carousel-body{
-          height: fit-content;
-  }
-}
+
 
 @media only screen and (max-width: 600px) {
   .title {
@@ -143,6 +136,12 @@ section{
     background-color:#318a09
 }
 @media screen and (max-width:768px) {
+  .body{
+    height: fit-content;
+}
+.carousel-body{
+    height: fit-content;
+}
     .search{
         width:80vw;
         display: flex;
