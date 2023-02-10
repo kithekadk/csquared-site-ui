@@ -96,11 +96,8 @@ export class CountryService {
    return country
   }
 
-  setCountry(country:string){
-    console.log(country);
-    
+  setCountry(country:string){    
      this.countrySubject.next(country);
-
   }
 
   getCountryData(){

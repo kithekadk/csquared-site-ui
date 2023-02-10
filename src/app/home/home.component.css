@@ -63,7 +63,13 @@
   font-weight: normal;
 }
 .company-logos {
-  visibility: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding:30px 1px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   .home {
