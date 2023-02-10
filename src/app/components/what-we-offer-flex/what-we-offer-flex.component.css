@@ -136,9 +136,9 @@
 @media only screen and (max-width: 600px) {
    .offer-container{
     height: fit-content;
+    flex-direction: column;
    }
    .offer-content{
-    flex-direction: column;
     gap: 0.5rem;
    }
    .offer-content-body{

@@ -11,18 +11,27 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .cs-footer h3{
+    font-size: 20px;
+  }
+  .cs-footer small{
+    font-size: 15px;
+  }
   .twitter div{
     width: 100%;
   }
-  div input{
-    font-size: 10px;
+  .cs-input-container{
+    margin: 2.5rem 0;
   }
+  .input-btn input{
+    height: 0.5rem;
+    font-size: 15px;
+  }
+
   .dk-footer{
+    margin: 1rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    /* min-height: 50vh; */
   }
   .tweet{
     display: none;
