@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
 
@@ -41,10 +42,17 @@ export class CoverageComponent implements OnInit {
     title: 'Togo',
     alt: 'Togo'
   }]
-  constructor(private router:Router) { }
+  constructor(private router:Router, private fb:FormBuilder) { }
 
+  form!:FormGroup;
   ngOnInit(): void {
     Aos.init();
+    this.form= this.fb.group({
+      receiverLocation: [null, [Validators.required]],
+      Userlat: [null, [Validators.required]],
+      Userlng: [null, [Validators.required]],
+    })
+    this.getUserLocation();  
   }
 
   navigate($event:any){
@@ -52,5 +60,32 @@ export class CoverageComponent implements OnInit {
     this.router.navigate(['country/',country])
   }
 
+  receiverAddress: string = '';
+  receiverLatitude!: number;
+  receiverLongitude!: number;
+  
 
+  AddressChange(address: any) {
+    this.receiverAddress = address.formatted_address;
+    this.receiverLatitude = address.geometry.location.lat();
+    this.receiverLongitude = address.geometry.location.lng();
+  }
+  getUserLocation(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition((position)=>{
+        const longitude = position.coords.longitude;
+        const latitude = position.coords.latitude;
+        console.log(longitude,latitude)
+        this.form.get('Userlat')?.setValue(latitude)
+        this.form.get('Userlng')?.setValue(longitude)
+        this.passCoordinatesToUrl(longitude, latitude);
+      });
+    }else{
+      console.log('No support for geolocation')
+    }
+  }
+  passCoordinatesToUrl(Longitude:number, Latitude:number){
+    const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}`
+    console.log("url=",url);
+  }
 }

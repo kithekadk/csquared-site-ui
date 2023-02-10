@@ -41,6 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 @NgModule({
   declarations: [
@@ -84,9 +86,12 @@ import { NgImageSliderModule } from 'ng-image-slider';
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-     NgTwitterTimelineModule,
-     NgbModule,
-     NgImageSliderModule     
+    NgTwitterTimelineModule,
+    NgbModule,
+    NgImageSliderModule,
+    FormsModule,
+    ReactiveFormsModule,
+    GooglePlaceModule
   ],
   providers: [],
   bootstrap: [AppComponent],
