@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -42,7 +43,7 @@ export class CoverageComponent implements OnInit {
     title: 'Togo',
     alt: 'Togo'
   }]
-  constructor(private router:Router, private fb:FormBuilder) { }
+  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient) { }
 
   form!:FormGroup;
   ngOnInit(): void {
@@ -70,12 +71,25 @@ export class CoverageComponent implements OnInit {
     this.receiverLatitude = address.geometry.location.lat();
     this.receiverLongitude = address.geometry.location.lng();
   }
+/**
+ * Getting users location name if user accepts fetching their coordinates
+ */
+
+  userslocationName:string='';
+  userLocName(lat:number, lng:number){
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBuvVn5bGQtP3kSYSewu9Gb6_jZ7ySO75A`;
+    this.http.get(url).subscribe((data: any) => {
+      this.userslocationName = data.results[0].formatted_address;
+      console.log((this.userslocationName).toLowerCase().includes('kenya'||'uganda'));
+    });
+  }
   getUserLocation(){
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition((position)=>{
         const longitude = position.coords.longitude;
         const latitude = position.coords.latitude;
-        console.log(longitude,latitude)
+        console.log(longitude,latitude);
+        this.userLocName(latitude,longitude);
         this.form.get('Userlat')?.setValue(latitude)
         this.form.get('Userlng')?.setValue(longitude)
         this.passCoordinatesToUrl(longitude, latitude);
@@ -84,8 +98,9 @@ export class CoverageComponent implements OnInit {
       console.log('No support for geolocation')
     }
   }
-  passCoordinatesToUrl(Longitude:number, Latitude:number){
-    const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}`
-    console.log("url=",url);
-  }
+
+passCoordinatesToUrl(Longitude:number, Latitude:number){
+  const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}&type=street`
+}
+  
 }
