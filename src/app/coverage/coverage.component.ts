@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
 
@@ -45,6 +46,7 @@ export class CoverageComponent implements OnInit {
   }]
   constructor(private router:Router, private fb:FormBuilder, private http:HttpClient) { }
 
+  @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   form!:FormGroup;
   ngOnInit(): void {
     Aos.init();
@@ -103,4 +105,29 @@ passCoordinatesToUrl(Longitude:number, Latitude:number){
   const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}&type=street`
 }
   
+
+display: any;
+zoom = 6;
+center: google.maps.LatLngLiteral = {
+  lat: -0.4577,
+  lng: 36.946,
+};
+clickMap(event: any) {
+  if (event.latLng != null) this.center = event.latLng.toJSON();
+}
+move(event: any) {
+  if (event.latLng != null) this.display = event.latLng.toJSON();
+}
+markerOptions: google.maps.MarkerOptions = {
+  draggable: false,
+};
+
+markerPositions: google.maps.LatLngLiteral[] = [{lat: -0.4577,
+  lng: 36.946},{lat: -0.5577,
+    lng: 35.946}];
+
+
+  openInfoWindow(marker: MapMarker) {
+    if (this.infoWindow != undefined) this.infoWindow.open(marker);
+  }
 }
