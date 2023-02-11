@@ -107,10 +107,9 @@ passCoordinatesToUrl(Longitude:number, Latitude:number){
   
 
 display: any;
-zoom = 6;
+zoom = 3.0;
 center: google.maps.LatLngLiteral = {
-  lat: -0.4577,
-  lng: 36.946,
+  lat: 0,lng: 22.2663
 };
 clickMap(event: any) {
   if (event.latLng != null) this.center = event.latLng.toJSON();
@@ -122,9 +121,13 @@ markerOptions: google.maps.MarkerOptions = {
   draggable: false,
 };
 
-markerPositions: google.maps.LatLngLiteral[] = [{lat: -0.4577,
-  lng: 36.946},{lat: -0.5577,
-    lng: 35.946}];
+markerPositions: google.maps.LatLngLiteral[] = [
+  {lat: -0.4577,lng: 36.946},
+  {lat: 0.3476,lng: 32.5825},
+  {lat: -4.4419,lng: 22.2663},
+  {lat: 5.6037,lng: 0.1870},
+  {lat: 6.4281,lng: -9.4295},
+  {lat: 8.6195,lng: 0.8248}];
 
 
   openInfoWindow(marker: MapMarker) {
