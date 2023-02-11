@@ -1,52 +1,62 @@
 <div class="body">
-    <div class="bg-container">
-        <div id="map" class="map"></div>
-        <div class="search">
-            <form class="form" [formGroup]="form">
-            <div class="search-location">
-              <input type="search" name="search" placeholder="Search Location" class="search-text" formControlName="receiverLocation" id="inputSmall" ngx-google-places-autocomplete (onAddressChange)="AddressChange($event)">
-              <button type="button" class="search-btn">
-                <span>Send</span>
-              </button>
-              <div class="maps">
-                <h3 style="padding-left: 20px">Navigation</h3>
-                <div id="map">
-                  <google-map
-                    width="39vw;"
-                    [center]="center"
-                    [zoom]="zoom"
-                    (mapClick)="clickMap($event)"
-                    (mapMousemove)="move($event)"
-                  >
-                    <map-marker
-                      #marker="mapMarker"
-                      *ngFor="let markerPosition of markerPositions"
-                      [position]="markerPosition"
-                      (mapClick)="openInfoWindow(marker)"
-                    >
-                    </map-marker>
-                    <map-info-window>Info Window content</map-info-window>
-                  </google-map>
-            
-                  <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
-                </div>
-              </div>
-            </div>
-            </form>
-        </div>
+  <div class="maps">
+    <div id="map">
+      <google-map
+        width="100vw;"
+        [center]="center"
+        [zoom]="zoom"
+        (mapClick)="clickMap($event)"
+        (mapMousemove)="move($event)"
+      >
+        <map-marker
+          #marker="mapMarker"
+          *ngFor="let markerPosition of markerPositions"
+          [position]="markerPosition"
+          (mapClick)="openInfoWindow(marker)"
+        >
+        </map-marker>
+        <map-info-window>Info Window content</map-info-window>
+      </google-map>
+
+      <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
     </div>
-    <div class="title">
-        <h2>Our Featured Countries</h2><br>
-    </div>
-        <ng-image-slider 
-        (click)="navigate($event)" 
-        [images]="coverage" 
-        [infinite]="true" 
-        [autoSlide]="1"
-        [showArrow]="false"
-        [animationSpeed]=3
-        [imageSize]="{width: '362px', height: 242, space: 20}"
-        #nav></ng-image-slider><br><br>
-    
-    <app-footer></app-footer>
+  </div>
+  
+  <div class="search-container">
+    <form class="form" [formGroup]="form">
+      <div class="search-location">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search Location"
+          class="search-text"
+          formControlName="receiverLocation"
+          id="inputSmall"
+          ngx-google-places-autocomplete
+          (onAddressChange)="AddressChange($event)"
+        />
+        <button type="button" class="search-btn">
+          <span>Send</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="title">
+    <h2>Our Featured Countries</h2>
+    <br />
+  </div>
+  <ng-image-slider
+    (click)="navigate($event)"
+    [images]="coverage"
+    [infinite]="true"
+    [autoSlide]="1"
+    [showArrow]="false"
+    [animationSpeed]="3"
+    [imageSize]="{ width: '362px', height: 242, space: 20 }"
+    #nav
+  ></ng-image-slider
+  ><br /><br />
+
+  <app-footer></app-footer>
 </div>

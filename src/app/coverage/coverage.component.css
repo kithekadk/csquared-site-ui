@@ -1,16 +1,10 @@
 .body{
     margin-top: 10vh;
 }
-
-.bg-container{
-    width: 100%;
-    height: calc(100vh - 35vh);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(51, 51, 51, 0.5)),url("./../../assets/Csquared/world-map-coverage.jpg");
-    object-fit:cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    display: flex;
+.search-container{
+  position:absolute;
+  margin-top: -60vh;
+  margin-left: 5vw;
 }
 h1 {
   color: white;
@@ -63,19 +57,10 @@ h2 {
   font-weight: bold;
 }
 
-.search {
-  width: 100vw;
-  display: flex;
-  margin-top: 10vh;
-  justify-content: center;
-}
-/* .search-location{
-  padding-left: 10vw;
-} */
 .search-text {
   width: 20vw;
   height: 7vh;
-  left: 40px;
+  left: 10vw;
   top: 185px;
   background: #ffffff;
   border-radius: 12px 0px 0px 12px;
@@ -84,16 +69,15 @@ h2 {
   margin-left: 20px;
 }
 .search-btn {
-  background-color: #277402;
-  width: 142px;
+  background-color: #42bd09;
   height: 7vh;
-  left: 393px;
-  top: 185px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 0px 12px 12px 0px;
   color: white;
 }
 .search-btn:hover {
-  background-color: #318a09;
+  background-color: #163b05;
 }
 section{
   display: flex;
@@ -143,6 +127,9 @@ section{
     background-color:#318a09
 }
 @media screen and (max-width:768px) {
+  .search-container{
+    margin-top: -53vh;
+  }
     .search{
         width:80vw;
         display: flex;
@@ -150,9 +137,13 @@ section{
     }
     .search-text{
         width:50vw;
+        height: 5vh;
     }
     .countries{
         gap:0;
+    }
+    .search-btn{
+      height: 5vh;
     }
 }
 
