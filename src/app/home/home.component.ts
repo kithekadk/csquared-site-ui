@@ -52,6 +52,22 @@ form!:FormGroup;
       this.userslocationName = data.results[0].formatted_address;
       if((this.userslocationName).toLowerCase().includes('kenya')){
         this.router.navigate(['/country/kenya'])
+      }else if((this.userslocationName).toLowerCase().includes('uganda')){
+        this.router.navigate(['/country/uganda'])
+      }
+      else if((this.userslocationName).toLowerCase().includes('liberia')){
+        this.router.navigate(['/country/liberia'])
+      }
+      else if((this.userslocationName).toLowerCase().includes('democratic republic of the congo')){
+        this.router.navigate(['/country/drc'])
+      }
+      else if((this.userslocationName).toLowerCase().includes('ghana')){
+        this.router.navigate(['/country/ghana'])
+      }
+      else if((this.userslocationName).toLowerCase().includes('togo')){
+        this.router.navigate(['/country/togo'])
+      }else{
+        this.router.navigate(['/country/hybrid'])
       }
     });
   }
