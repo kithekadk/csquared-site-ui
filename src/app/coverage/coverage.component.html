@@ -8,6 +8,29 @@
               <button type="button" class="search-btn">
                 <span>Send</span>
               </button>
+              <div class="maps">
+                <h3 style="padding-left: 20px">Navigation</h3>
+                <div id="map">
+                  <google-map
+                    width="39vw;"
+                    [center]="center"
+                    [zoom]="zoom"
+                    (mapClick)="clickMap($event)"
+                    (mapMousemove)="move($event)"
+                  >
+                    <map-marker
+                      #marker="mapMarker"
+                      *ngFor="let markerPosition of markerPositions"
+                      [position]="markerPosition"
+                      (mapClick)="openInfoWindow(marker)"
+                    >
+                    </map-marker>
+                    <map-info-window>Info Window content</map-info-window>
+                  </google-map>
+            
+                  <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
+                </div>
+              </div>
             </div>
             </form>
         </div>

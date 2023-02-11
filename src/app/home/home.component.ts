@@ -74,5 +74,4 @@ form!:FormGroup;
 passCoordinatesToUrl(Longitude:number, Latitude:number){
   const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}&type=street`
 }
-
 }

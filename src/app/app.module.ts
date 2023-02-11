@@ -43,6 +43,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     FormsModule,
     ReactiveFormsModule,
     GooglePlaceModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
