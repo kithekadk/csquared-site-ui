@@ -100,14 +100,7 @@ section{
   object-fit:cover;
 }
 
-@media only screen and (max-width: 768px) {
-  .body{
-          height: fit-content;
-  }
-  .carousel-body{
-          height: fit-content;
-  }
-}
+
 
 @media only screen and (max-width: 600px) {
   .title {
