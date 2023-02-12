@@ -72,6 +72,31 @@ export class CoverageComponent implements OnInit {
     this.receiverAddress = address.formatted_address;
     this.receiverLatitude = address.geometry.location.lat();
     this.receiverLongitude = address.geometry.location.lng();
+    console.log(this.receiverAddress.toLowerCase());
+    
+    //Redirecting to searched location homepage if it exists else view global homepage
+    //When in a country that
+    if(this.receiverAddress.toLowerCase().includes('kenya')){
+      this.router.navigate(['country/','kenya'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('uganda')){
+      this.router.navigate(['country/','uganda'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('liberia')){
+      this.router.navigate(['country/','liberia'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('togo')){
+      this.router.navigate(['country/','togo'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('ghana')){
+      this.router.navigate(['country/','ghana'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('democratic republic of the congo')){
+      this.router.navigate(['country/','drc'])
+    }else{
+      this.router.navigate(['country/','hybrid'])
+    }
+    
   }
 /**
  * Getting users location name if user accepts fetching their coordinates
