@@ -3,9 +3,16 @@
     height: calc(100vh - 10vh);
     position: relative;
     margin-top: 10vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-
+.ch-container::after{
+    display: block;
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    margin-top: -90vh;
+    height: 90vh;
+    width: 100%;
+    content: '';
+}
 .ch-container img{
     width: 100%;
     height: 100%;
@@ -13,20 +20,24 @@
 }
 
 .ch-content{
-    width: 45%;
+    width: 55%;
     height: 60%;
     position: absolute;
-    top: 40%;
+    top: 35%;
     color: white;
     display: flex;
     flex-direction: column;
     gap:20px;
     padding-left: 10%;
+    font-weight: bold;
+}
+.ch-content p{
+    font-size: 18px;
 }
 
 .ch-container h1{
     font-weight: bolder;
-    font-size: 150%;
+    font-size: 200%;
 }
 
 .ch-input button{
