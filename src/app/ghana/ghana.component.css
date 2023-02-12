@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .body{
   margin-top: 10vh;
   overflow-x: hidden;
@@ -68,10 +72,7 @@
   border-bottom-left-radius: 5px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
+
 .cv-container {
   width: 100%;
   display: flex;
@@ -330,6 +331,10 @@ h1{
   }
   .cabout-image {
     margin-top: 0.5rem;
+  }
+  .mydiv{
+    border: 1px solid red;
+    height: fit-content;
   }
   .graph {
     width: 100%;
