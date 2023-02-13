@@ -268,7 +268,7 @@ h1{
     width: 100%;
   }
   .ch-content p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .ch-input {
     width: fit-content;
@@ -299,13 +299,13 @@ h1{
     width: auto;
   }
   .cv-content h1{
-    font-size: 12px;
+    font-size: 15px;
   }
   .cv-content p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .cabout-container {
-    margin: 100px 0 0 0;
+    margin: 200px 0 0 0;
     padding: 2rem 1rem;
     height: 100%;
     flex-direction: column;
@@ -323,7 +323,7 @@ h1{
     font-size: 20px;
   }
   .cabout-text p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .cabout-content .cabout-image {
     width: 100%;

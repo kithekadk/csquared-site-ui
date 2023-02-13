@@ -132,12 +132,12 @@ img {
     width: fit-content;
     padding: 5px 10px;
   }
-.cabout{
-  width: 100%;
-  display: flex;
-  padding: 1rem;
-  justify-content: flex-start;
-}
+  .cabout {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-start;
+  }
   .cabout-button {
     background-color: #e7b022;
     color: #345c5a;

@@ -52,9 +52,10 @@ img {
     flex-direction: column;
   }
   .cv-content {
+    border: 1px solid red;
+    gap: 2rem;
     height: fit-content;
     width: 100%;
-    flex-direction: column;
   }
   .cv-content img{
     height: 3rem;
