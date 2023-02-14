@@ -54,6 +54,9 @@ export class CoverageComponent implements OnInit {
       receiverLocation: [null, [Validators.required]],
       Userlat: [null, [Validators.required]],
       Userlng: [null, [Validators.required]],
+      Country: [null, [Validators.required]],
+      Product_Description: [null, [Validators.required]],
+      Description:[null, [Validators.required]]
     })
     this.getUserLocation();  
   }
@@ -75,39 +78,37 @@ export class CoverageComponent implements OnInit {
     console.log(this.receiverAddress.toLowerCase());
     
     //Redirecting to searched location homepage if it exists else view global homepage
-    //When in a country that
-    if(this.receiverAddress.toLowerCase().includes('kenya')){
-      this.router.navigate(['country/','kenya'])
-    }
-    else if(this.receiverAddress.toLowerCase().includes('uganda')){
-      this.router.navigate(['country/','uganda'])
-    }
-    else if(this.receiverAddress.toLowerCase().includes('liberia')){
-      this.router.navigate(['country/','liberia'])
-    }
-    else if(this.receiverAddress.toLowerCase().includes('togo')){
-      this.router.navigate(['country/','togo'])
-    }
-    else if(this.receiverAddress.toLowerCase().includes('ghana')){
-      this.router.navigate(['country/','ghana'])
-    }
-    else if(this.receiverAddress.toLowerCase().includes('democratic republic of the congo')){
-      this.router.navigate(['country/','drc'])
-    }else{
-      this.router.navigate(['country/','hybrid'])
-    }
+    // if(this.receiverAddress.toLowerCase().includes('kenya')){
+    //   this.router.navigate(['country/','kenya'])
+    // }
+    // else if(this.receiverAddress.toLowerCase().includes('uganda')){
+    //   this.router.navigate(['country/','uganda'])
+    // }
+    // else if(this.receiverAddress.toLowerCase().includes('liberia')){
+    //   this.router.navigate(['country/','liberia'])
+    // }
+    // else if(this.receiverAddress.toLowerCase().includes('togo')){
+    //   this.router.navigate(['country/','togo'])
+    // }
+    // else if(this.receiverAddress.toLowerCase().includes('ghana')){
+    //   this.router.navigate(['country/','ghana'])
+    // }
+    // else if(this.receiverAddress.toLowerCase().includes('democratic republic of the congo')){
+    //   this.router.navigate(['country/','drc'])
+    // }else{
+    //   this.router.navigate(['country/','hybrid'])
+    // }
     
   }
+
 /**
  * Getting users location name if user accepts fetching their coordinates
  */
-
   userslocationName:string='';
   userLocName(lat:number, lng:number){
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBuvVn5bGQtP3kSYSewu9Gb6_jZ7ySO75A`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs`;
     this.http.get(url).subscribe((data: any) => {
       this.userslocationName = data.results[0].formatted_address;
-      console.log((this.userslocationName).toLowerCase().includes('kenya'||'uganda'));
     });
   }
   getUserLocation(){
