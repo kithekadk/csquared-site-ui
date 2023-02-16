@@ -92,8 +92,8 @@
 
   <!-- Map section -->
   <h1 class="flex flex-row justify-center pt-10" style="font-size: 250%; font-weight: bold;">About Us</h1>
-  <div data-aos="fade-up" data-aos-duration="1000">
-    <div data-aos="fade-up" data-aos-duration="2000">
+  <div data-aos="fade-up" data-aos-duration="500">
+    <div>
       <section
         class="pt-24 md:pt-18 grid grid-cols-1 lg:grid-cols-12 gap-5 map-africa-container"
       >
@@ -184,8 +184,9 @@
     </div>
     <!-- end Map section -->
 
-  <section
-    class="company-logos pt-18"
+  <div class="row pt-28">
+    <section
+    class="company-logos mt-18"
   >
     <img
       *ngFor="let i of [].constructor(12)"
@@ -194,6 +195,7 @@
       alt=""
     />
   </section>
+  </div>
   <!--end logo section-->
 
   <section class="container mx-auto px-10">
@@ -263,7 +265,7 @@
     >
       <div class="col-span-5">
         <div>
-          <h3 class="text-sm text-green-900">Why Us?</h3>
+          <h3 class="text-lg text-green-900 " style="font-weight:bold;">Why Us?</h3>
           <h4 class="text-3xl font-medium text-green-900">
             Today, anyone can get Lightspeed Network.
           </h4>
@@ -311,7 +313,7 @@
 
     <app-latest-news></app-latest-news>
 
-    <app-testimonials></app-testimonials>
+    <!-- <app-testimonials></app-testimonials> -->
 
     <app-footer></app-footer>
   </div>

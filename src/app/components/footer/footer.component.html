@@ -41,72 +41,6 @@
           alt="c_squared_horizontal_logo"
         />
       </div>
-
-      <div>
-        <h6 class="text-brand-yellow font-bold text-sm">Company</h6>
-        <ul class="text-xs text-slate-300">
-          <li routerLink="/about"
-            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
-          >
-            - About Us
-          </li>
-          <li
-            routerLink="/insights"
-            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
-          >
-            - News
-          </li>
-          <li routerLink="/career"
-            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
-          >
-            - Careers
-          </li>
-          <li routerLink="/contact"
-            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
-          >
-            - Contact Us
-          </li>
-          <li routerLink="/coverage"
-            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
-          >
-            - Coverage
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- <div style="width: 32vw;" class="tweet">
-      <ng-twitter-timeline
-        [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-        [opts]="{ tweetLimit: 1 }"
-      ></ng-twitter-timeline>
-    </div> -->
-    <!-- <div style="color:white">
-      <h1 style="font-size: 40px; color: white;">Our coverage</h1><br>
-      - <a style="font-size: 15px;" routerLink="/country/kenya">Kenya</a><br>
-      - <a style="font-size: 15px;" routerLink="/country/uganda">Uganda</a><br>
-      - <a style="font-size: 15px;" routerLink="/country/liberia">Liberia</a><br>
-      - <a style="font-size: 15px;" routerLink="/country/togo">Togo</a><br>
-      - <a style="font-size: 15px;" routerLink="/country/ghana">Ghana</a><br>
-      - <a style="font-size: 15px;" routerLink="/country/drc">Democratic Republic of Congo</a><br>
-    </div> -->
-
-    <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;">Uganda</h2>
-      <p>1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;">Kenya</h2>
-      <p>14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;">Ghana</h2>
-      <p>7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
-    </div>
-
-    <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;">Liberia</h2>
-      <p>1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Monrovia</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;">Mauritius</h2>
-      <p>Felix House, 24 Dr. Joseph Riviere Street, Port Louis, Mauritius</p><br>
-    </div>
-
-    <div class="footer-icons col-span-4 flex flex-col text-center justify-center">
       <div class="flex space-x-5">
         <a href="https://www.facebook.com/csquaredafricagroup/">
           <svg
@@ -168,10 +102,81 @@
           </span>
         </button>
       </div>
+      
+    </div>
+    <!-- <div style="width: 32vw;" class="tweet">
+      <ng-twitter-timeline
+        [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+        [opts]="{ tweetLimit: 1 }"
+      ></ng-twitter-timeline>
+    </div> -->
+    <!-- <div style="color:white">
+      <h1 style="font-size: 40px; color: white;">Our coverage</h1><br>
+      - <a style="font-size: 15px;" routerLink="/country/kenya">Kenya</a><br>
+      - <a style="font-size: 15px;" routerLink="/country/uganda">Uganda</a><br>
+      - <a style="font-size: 15px;" routerLink="/country/liberia">Liberia</a><br>
+      - <a style="font-size: 15px;" routerLink="/country/togo">Togo</a><br>
+      - <a style="font-size: 15px;" routerLink="/country/ghana">Ghana</a><br>
+      - <a style="font-size: 15px;" routerLink="/country/drc">Democratic Republic of Congo</a><br>
+    </div> -->
+
+    <div class="findus" style="color:white;">
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/uganda" class="hover:cursor-pointer hover:translate-x-0.5">Uganda</h2>
+      <p>1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="hover:cursor-pointer hover:translate-x-0.5">Kenya</h2>
+      <p>14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="hover:cursor-pointer hover:translate-x-0.5">Ghana</h2>
+      <p>7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
+    </div>
+
+    <div class="findus" style="color:white;">
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/liberia" class="hover:cursor-pointer hover:translate-x-0.5">Liberia</h2>
+      <p>1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Monrovia</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/togo" class="hover:cursor-pointer hover:translate-x-0.5">Mauritius</h2>
+      <p>Felix House, 24 Dr. Joseph Riviere Street, Port Louis, Mauritius</p><br>
+    </div>
+
+    <div class="footer-icons col-span-4 flex flex-col text-left justify-center">
+
+      <!-- Quicklinks -->
+      <div>
+        <h6 class="text-brand-yellow font-bold text-2xl pb-2">Company</h6>
+        <ul class="text-sm text-slate-300 ">
+          <li routerLink="/about"
+            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
+          >
+            - About Us
+          </li>
+          <li
+            routerLink="/insights"
+            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
+          >
+            - News
+          </li>
+          <li routerLink="/career"
+            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
+          >
+            - Careers
+          </li>
+          <li routerLink="/contact"
+            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
+          >
+            - Contact Us
+          </li>
+          <li routerLink="/coverage"
+            class="py-0.5 hover:translate-x-0.5 transition-all cursor-pointer"
+          >
+            - Coverage
+          </li>
+        </ul>
+      </div>
+      <!-- End of quick links -->
+
+      
     </div>
   </div>
   <div>
-    <div class="flex justify-center mt-8">
+    <div class="flex justify-center mt-10">
       <div class="text-xs md:text-sm text-brand-yellow flex space-x-8">
         <h5>+1 361-301-0959</h5>
         <h5>Terms of Service</h5>
