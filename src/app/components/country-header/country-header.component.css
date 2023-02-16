@@ -29,7 +29,6 @@
     flex-direction: column;
     gap:20px;
     padding-left: 10%;
-    /* font-weight: bold; */
 }
 .ch-content p{
     font-size: 18px;
