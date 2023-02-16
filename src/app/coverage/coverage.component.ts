@@ -49,6 +49,7 @@ export class CoverageComponent implements OnInit {
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   form!:FormGroup;
   ngOnInit(): void {
+
     Aos.init();
     this.form= this.fb.group({
       receiverLocation: [null, [Validators.required]],

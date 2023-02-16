@@ -20,18 +20,24 @@ export class HomeComponent implements OnInit {
     ]
 
     services: any[] = [
-      {  
-      'name': 'Cloud Services'  
-       }, 
-     {  
-      'name': 'Network'  
-     }, 
+    {  
+    'name': 'Cloud Services'  
+    }, 
+    {  
+    'name': 'Network'  
+    }, 
     {  
       'name': 'Wifi'  
     },
     {  
       'name': 'Cloud Security'  
-   }
+    },
+    {
+      'name':'FTTX'
+    },
+    {
+      'name':'Metro Fiber'
+    }
 ];
 
   constructor(private http: HttpClient, private fb:FormBuilder, private router:Router) { }

@@ -1,21 +1,20 @@
 <div *ngIf="countries" class="ch-container"> 
-  <img style="object-fit: cover;" src="{{ countries.header.image }}" alt="" />
-  <div class="ch-content">
-    <h1>{{ countries.header.title }}</h1>
-    <p>{{ countries.header.content }}</p>
+  <img style="object-fit: cover;" src="{{ countries.header.image }}" alt="" clas="bg-image" />
+</div>
+<div class="ch-content">
+  <h1>{{ countries.header.title }}</h1>
+  <p>{{ countries.header.content }}</p>
 
-    <div *ngIf="countries.search" class="ch-input">
-      <input type="text" placeholder="Search for our coverage" />
-      <button>Check</button>
-    </div>
+  <div *ngIf="countries.search" class="ch-input">
+    <input type="text" placeholder="Search for our coverage" />
+    <button>Check</button>
+  </div>
 
-    <div *ngIf="countries.button" class="ch-input">
-      <button>Get Started</button>
-    </div>
+  <div *ngIf="countries.button" class="ch-input">
+    <button>Get Started</button>
+  </div>
 
-    <div *ngIf="countries.link" class="ch-input">
-      <a href="#">Read More...</a>
-    </div>
+  <div *ngIf="countries.link" class="ch-input">
+    <a href="#">Read More...</a>
   </div>
 </div>
-

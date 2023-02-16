@@ -64,6 +64,9 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   toggle!:boolean
   view!:boolean
 
+  hideMenu(){
+    this.view=false;
+  }
   viewMobileMenu(){
     if(window.innerWidth <= 768){
       this.view = !this.view;
@@ -87,7 +90,8 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   getService(event: any) {
     console.log(event.target.innerText);
     const variable = event.target.innerText
-    if (variable=='Our Services'){
+    console.log(variable);
+    if (variable=='Our Services'){      
         this.router.navigate(['services', '-'])      
     }else if(event.target.innerText=='WholeSale Fiber'){  
       setTimeout(() => {

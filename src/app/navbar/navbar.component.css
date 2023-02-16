@@ -89,8 +89,7 @@ select:hover option.dropdown {
   }
   .menu-container > li:hover,
   .menu-container > .btn-group:hover {
-    text-decoration: underline;
-    color: yellow;
+    text-decoration: none;
   }
   .nav-item {
     display: flex;

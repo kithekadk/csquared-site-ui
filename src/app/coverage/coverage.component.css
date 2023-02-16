@@ -22,7 +22,7 @@ label{
 
 .orderform{
   position:absolute;
-  top: 10vh;
+  top: calc(70vh - 60vh);
   margin-left: 10vw;
   z-index: 99;
 }
@@ -147,7 +147,7 @@ section{
     color: white;
   }
   .form>div>input, .form>div>select{
-    width:55vw;
+    width:60vw;
   }
     .search{
         width:80vw;
@@ -163,6 +163,12 @@ section{
     }
     .search-btn{
       height: 5vh;
+    }
+    .orderform{
+      position:absolute;
+      top: 60vh;
+      margin-left: 10vw;
+      z-index: 99;
     }
 }
 

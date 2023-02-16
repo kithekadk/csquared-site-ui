@@ -1,5 +1,5 @@
 .ch-container{
-    width: 98.9vw;
+    width: 100vw;
     height: calc(100vh - 10vh);
     position: relative;
     margin-top: 10vh;
@@ -29,13 +29,13 @@
     flex-direction: column;
     gap:20px;
     padding-left: 10%;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .ch-content p{
     font-size: 18px;
 }
 
-.ch-container h1{
+.ch-content h1{
     font-weight: bolder;
     font-size: 200%;
 }
@@ -47,12 +47,12 @@
     border-style: none;
     padding: 10px 20px;
     width: fit-content;
-  border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 .ch-input input{
-    padding: 10px;
+    /* padding: 10px; */
     width: 80%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -65,16 +65,17 @@
     justify-content: space-evenly;
     width: 90%;
     top: 30%;
+    text-align: center;
 }
 
 .ch-content p{
-    font-size: 12px;
+    font-size: 14px;
 }
 .ch-input input{
-    width: 55%;
+    width: 70%;
 }
 .ch-input button{
-    width: 25%;
+    border-radius: 5px;
     padding: 10px 10px;
 }
 }
