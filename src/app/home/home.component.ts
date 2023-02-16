@@ -47,7 +47,7 @@ form!:FormGroup;
 
   userslocationName:string='';
   userLocName(lat:number, lng:number){
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBuvVn5bGQtP3kSYSewu9Gb6_jZ7ySO75A`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs`;
     this.http.get(url).subscribe((data: any) => {
       this.userslocationName = data.results[0].formatted_address;
       if((this.userslocationName).toLowerCase().includes('kenya')){

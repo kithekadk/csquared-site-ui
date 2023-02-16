@@ -1,11 +1,33 @@
 .body{
     margin-top: 10vh;
 }
-.search-container{
-  position:absolute;
-  margin-top: -60vh;
-  margin-left: 5vw;
+form{
+  background-color: #073937;
+  padding: 25px;
+  border-radius: 5px;
 }
+label{
+  color: white;
+  margin-top: 5px;
+}
+.form>div>input, .form>div>select{
+  width:18vw;
+}
+
+.mapsection{
+  position:relative;
+  margin-top: 10vh;
+  height:70vh
+}
+
+.orderform{
+  position:absolute;
+  top: 10vh;
+  margin-left: 10vw;
+  z-index: 99;
+}
+
+
 h1 {
   color: white;
   font-size: 250%;
@@ -58,21 +80,12 @@ h2 {
 }
 
 .search-text {
-  width: 20vw;
-  height: 7vh;
-  left: 10vw;
   top: 185px;
   background: #ffffff;
-  border-radius: 12px 0px 0px 12px;
-  padding-left: 10px;
   border: gray solid 1px;
-  margin-left: 20px;
 }
 .search-btn {
   background-color: #42bd09;
-  height: 7vh;
-  padding-left: 20px;
-  padding-right: 20px;
   border-radius: 0px 12px 12px 0px;
   color: white;
 }
@@ -99,7 +112,13 @@ section{
   height:calc(100vh - 70vh);
   object-fit:cover;
 }
-
+/* @media screen and (min-width: 1300px) {
+  .orderform{
+    position:absolute;
+    margin-top: -80vh;
+    margin-left: 10vw;
+  }
+} */
 
 
 @media only screen and (max-width: 600px) {
@@ -116,12 +135,19 @@ section{
   }
 }
 
-.search-btn:hover{
-    background-color:#318a09
-}
 @media screen and (max-width:768px) {
-  .search-container{
+  .orderform{
     margin-top: -53vh;
+  }
+  form{
+    background-color: #073937;
+    padding: 25px;
+  }
+  label{
+    color: white;
+  }
+  .form>div>input, .form>div>select{
+    width:55vw;
   }
     .search{
         width:80vw;

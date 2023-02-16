@@ -1,45 +1,79 @@
 <div class="body">
-  <div class="maps">
-    <div id="map">
-      <google-map
-        width="100vw;"
-        [center]="center"
-        [zoom]="zoom"
-        (mapClick)="clickMap($event)"
-        (mapMousemove)="move($event)"
-      >
-        <map-marker
-          #marker="mapMarker"
-          *ngFor="let markerPosition of markerPositions"
-          [position]="markerPosition"
-          (mapClick)="openInfoWindow(marker)"
+  <div class="mapsection">
+    <div class="maps">
+      <div id="map">
+        <google-map
+          width="100vw;"
+          [center]="center"
+          [zoom]="zoom"
+          (mapClick)="clickMap($event)"
+          (mapMousemove)="move($event)"
         >
-        </map-marker>
-        <map-info-window>Info Window content</map-info-window>
-      </google-map>
-
-      <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
-    </div>
-  </div>
+          <map-marker
+            #marker="mapMarker"
+            *ngFor="let markerPosition of markerPositions"
+            [position]="markerPosition"
+            (mapClick)="openInfoWindow(marker)"
+          >
+          </map-marker>
+          <map-info-window>Info Window content</map-info-window>
+        </google-map>
   
-  <div class="search-container">
-    <form class="form" [formGroup]="form">
-      <div class="search-location">
-        <input
-          type="search"
-          name="search"
-          placeholder="Search Location"
-          class="search-text"
-          formControlName="receiverLocation"
-          id="inputSmall"
-          ngx-google-places-autocomplete
-          (onAddressChange)="AddressChange($event)"
-        />
-        <button type="button" class="search-btn">
-          <span>Send</span>
-        </button>
+        <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
       </div>
-    </form>
+    </div>
+    
+    <div class="orderform">
+      <form class="form" [formGroup]="form">
+        <div class="search-location">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Location"
+            class="search-text"
+            formControlName="receiverLocation"
+            id="inputSmall"
+            ngx-google-places-autocomplete
+            (onAddressChange)="AddressChange($event)"
+          />
+          <!-- <button type="button" class="search-btn">
+            <span>Send</span>
+          </button> -->
+        </div>
+        <div>
+          <label for="country">Country</label><br>
+  
+          <Select>
+            <option value="">Select Country</option>
+            <option>Kenya</option>
+            <option>Uganda</option>
+            <option>Ghana</option>
+            <option>DRC</option>
+            <option>Liberia</option>
+            <option>Togo</option>
+          </Select>
+        </div>
+        
+        <div>
+          <label for="product">Product</label><br>
+          <select name="" id="">
+            <option value="">Select Product</option>
+            <option value="">Dark Fiber</option>
+            <option value="">Leased Capacity</option>
+            <option value="">Port Fiber</option>
+            <option value="">FTTH</option>
+          </select>
+        </div>
+        <div>
+          <label for="email">Email</label><br>
+          <input type="email" name="email" id="" placeholder="Input your Email">
+        </div>
+        <br>
+        <div>
+          <input type="submit" class="btn btn-success" value="Order">
+        </div>
+      </form>
+    </div>
   </div>
   
   <div class="title">
