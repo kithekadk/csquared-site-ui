@@ -47,19 +47,17 @@ countries:{name:string,code:string, flag:string}[]=[
   }
 ]
 
-services:{name:string, code:string}[]=[{name:'Our Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
+
+products:{name:string, code:string}[]=[{name:'Infrastructure',code:'-'},{name:'Fiber', code:'wholesale-fiber'},
+{name:'Cloud Solutions', code: 'cloud-solutions'}]; 
+
+services:{name:string, code:string}[]=[{name:'WholeSale Fiber', code:'wholesale-fiber'},
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
 Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    window.onresize = () => this.view = window.innerWidth <= 768;
-    if (window.screen.width <= 768) { 
-      this.view = true;
-    }else if(window.screen.width >= 769){
-      this.view = false
-    }
   }
   toggle!:boolean
   view!:boolean
@@ -67,16 +65,7 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   hideMenu(){
     this.view=false;
   }
-  viewMobileMenu(){
-    if(window.innerWidth <= 768){
-      this.view = !this.view;
-    } 
-  }
-  undoState(){
-    if(window.innerWidth <= 768){
-      this.view = !this.view;
-    }    
-  }
+  
   navigateTo(event :any){
      this.router.navigate(['country',event])
      setTimeout(() => {
@@ -85,38 +74,5 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
       } 
        this.toggled = false
      }, 100)   
-  }
-
-  getService(event: any) {
-    console.log(event.target.innerText);
-    const variable = event.target.innerText
-    console.log(variable);
-    if (variable=='Our Services'){      
-        this.router.navigate(['services', '-'])      
-    }else if(event.target.innerText=='WholeSale Fiber'){  
-      setTimeout(() => {
-        this.router.navigate(['services', 'wholesale-fiber'])
-      }, 200)    
-    }else if(event.target.innerText == 'Cloud Solutions'){
-      setTimeout(() => {
-        this.router.navigate(['services', 'cloud-solutions']) 
-      }, 200)
-    }else{
-      console.log(event.target.innerText);
-    }
-  }
-  getAbout(event: any) {
-    console.log(event.target.innerText);
-    if (event.target.innerText=='About'){
-      this.router.navigate(['/', 'about'])
-    }else if(event.target.innerText=='Team'){      
-      this.router.navigate(['/', 'team'])
-    }else if(event.target.innerText=='Careers'){
-      this.router.navigate(['/', 'career'])
-    }else if(event.target.innerText=='Career Description'){
-      this.router.navigate(['/', 'career-description'])
-    }else{
-      console.log(event.target.innerText);
-    }
   }
 }

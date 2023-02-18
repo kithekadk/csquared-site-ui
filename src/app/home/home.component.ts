@@ -21,22 +21,28 @@ export class HomeComponent implements OnInit {
 
     services: any[] = [
     {  
-    'name': 'Cloud Services'  
+    'name': 'Cloud Services' ,
+    'describtion': 'CSquared Cloud offers simplified access to and tailored consumption of multi-cloud services to businesses and social enterprises cost-effectively. Our solutions facilitate an enabling environment for digital transformation across Africa.'
     }, 
     {  
-    'name': 'Network'  
+    'name': 'Network',
+    'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'  
     }, 
     {  
-      'name': 'Wifi'  
+      'name': 'Wifi',
+      'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'  
     },
     {  
-      'name': 'Cloud Security'  
+      'name': 'Backbone',
+      'describtion': 'CSquared offers fibre backbone products which connect metros within our operating countries. With tiered capacities from as low as 1Gb and up to 100G+, we offer wholesale dedicated Point-to-Presence (PoP) to and from a predetermined PoP.'  
     },
     {
-      'name':'FTTX'
+      'name':'FTTX',
+      'describtion': 'CSquared has deployed various metros across Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity. In August 2018, CSquared Uganda began building and deploying a broadband access network based on GPON technology and offering FTTH (Fiber To The Home) access to Suburbs in Kampala in an effort to capture the upcoming growth in the fixed data market as the Ugandan economy and ecosystem matures with a rising middle class'
     },
     {
-      'name':'Metro Fiber'
+      'name':'Metro Fiber',
+      'describtion': 'CSquared currently owns and operates 890 km of metropolitan fiber in Kampala and Entebbe in Uganda;  more than 1070 km of fiber in 4 cities in Ghana: Accra, Tema, Kumasi, Kasoa; and more than 180 km in Monrovia, Liberia.'
     }
 ];
 

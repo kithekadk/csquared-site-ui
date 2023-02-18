@@ -10,7 +10,6 @@
 .tweet{
   width:30vw
 }
-
 @media only screen and (max-width: 600px) {
   .cs-footer h3{
     font-size: 20px;

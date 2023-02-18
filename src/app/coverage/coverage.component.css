@@ -1,5 +1,5 @@
 .body{
-    margin-top: 10vh;
+  margin-top: 8.7vh;
 }
 form{
   background-color: #073937;
@@ -16,7 +16,7 @@ label{
 
 .mapsection{
   position:relative;
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
   height:70vh
 }
 
@@ -24,7 +24,7 @@ label{
   position:absolute;
   top: calc(70vh - 60vh);
   margin-left: 10vw;
-  z-index: 99;
+  /* z-index: 10; */
 }
 
 
@@ -37,7 +37,6 @@ h2 {
   font-size: 250%;
 }
 .title {
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,47 +78,10 @@ h2 {
   font-weight: bold;
 }
 
-.search-text {
-  top: 185px;
-  background: #ffffff;
-  border: gray solid 1px;
-}
-.search-btn {
-  background-color: #42bd09;
-  border-radius: 0px 12px 12px 0px;
-  color: white;
-}
-.search-btn:hover {
-  background-color: #163b05;
-}
 section{
   display: flex;
   width:100vw;
 }
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-}
-
-.carousel {
-  height:30vh;
-}
-.picsum-img-wrapper>img{
-  width: 100%;
-  height:calc(100vh - 70vh);
-  object-fit:cover;
-}
-/* @media screen and (min-width: 1300px) {
-  .orderform{
-    position:absolute;
-    margin-top: -80vh;
-    margin-left: 10vw;
-  }
-} */
-
 
 @media only screen and (max-width: 600px) {
   .title {
@@ -168,7 +130,6 @@ section{
       position:absolute;
       top: 60vh;
       margin-left: 10vw;
-      z-index: 99;
     }
 }
 

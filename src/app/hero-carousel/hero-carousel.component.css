@@ -1,18 +1,27 @@
 .carousel-caption {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%, -50%);
         text-align: left;
 }
 .body{
-        margin-top: 10vh;
+        /* margin-top: 10vh; */
         height: 70vh;
         width: 100vw;
 }
 .carousel {
         height:60vh;
 }
+.picsum-img-wrapper::after{
+        display: block;
+        position: relative;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        /* margin-top: -90vh;
+        height: 90vh;
+        width: 100%; */
+        content: '';
+    }
 .picsum-img-wrapper>img{
         width: 100%;
         height:calc(100vh - 30vh);

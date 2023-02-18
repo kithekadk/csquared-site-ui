@@ -1,15 +1,21 @@
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base{
   *{
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     /*outline: green dashed medium;*/
   }
 }
 body{
   overflow-x: hidden;
   width: 100vw !important;
+  /* font-family: Roboto; */
 }
 .footer-div1{
   display: flex;

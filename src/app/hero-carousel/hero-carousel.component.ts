@@ -14,11 +14,10 @@ export class HeroCarouselComponent implements OnInit {
   ngOnInit(): void {
   }
   images = [
-    "https://askleo.com/wp-content/uploads/2018/10/internet.jpg",
+    "../assets/images/home/slide_1.jpg",
+    "../assets/images/home/slide_2.jpg",
+    "../assets/images/home/slide_3.jpg"
 
-    "https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg",
-
-    "https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg"
 
   ];
 }

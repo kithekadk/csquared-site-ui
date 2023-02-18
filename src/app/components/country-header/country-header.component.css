@@ -1,15 +1,15 @@
 .ch-container{
     width: 100vw;
-    height: calc(100vh - 10vh);
+    height: calc(100vh - 8.7vh);
     position: relative;
-    margin-top: 10vh;
+    margin-top: 8.7vh;
 }
 .ch-container::after{
     display: block;
     position: relative;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    margin-top: -90vh;
-    height: 90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+    margin-top: -91.3vh;
+    height: 91.3vh;
     width: 100%;
     content: '';
 }
@@ -31,7 +31,7 @@
     padding-left: 10%;
 }
 .ch-content p{
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .ch-content h1{
@@ -46,10 +46,11 @@
     border-style: none;
     padding: 10px 20px;
     width: fit-content;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
+.ch-input button:hover{
+    background-color:#a87f16;
+}
 .ch-input input{
     /* padding: 10px; */
     width: 80%;

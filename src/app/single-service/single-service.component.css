@@ -68,3 +68,8 @@
 h2{
     font-weight: bold;
 }
+@media screen and (max-width:768px) {
+    .service-info{
+        width:80%;
+    }
+}
