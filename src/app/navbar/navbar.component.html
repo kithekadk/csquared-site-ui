@@ -1,8 +1,8 @@
 <nav
-  class="fixed top-0 left-0 right-0 app-nav bg-green-900 pt-4 pb-4 border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900 z-50;"
+  class="flex items-center fixed top-0 left-0 right-0 app-nav bg-green-900  border-gray-200 md:px-10 md:py-4  dark:bg-gray-900 z-50;"
 >
   <div
-    class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+    class="flex flex-wrap  items-center justify-around max-w-screen-xl mx-auto">
     <a class="flex items-center cursor-pointer">
       <img
         src="./../../assets/images/c_squared_horizontal_logo.png"
@@ -18,8 +18,7 @@
       type="button"
       class="inline-flex items-center p-2 ml-1 text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       aria-controls="mega-menu"
-      aria-expanded="false"
-    >
+      aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg
         aria-hidden="true"
@@ -38,8 +37,7 @@
 
     <div
       id="mega-menu"
-      class="items-center justify-between hidden w-full text-sm md:flex md:w-auto md:order-1"
-    >
+      class="items-center justify-between hidden w-full text-sm md:flex md:w-auto md:order-1">
       <ul class="flex flex-col font-medium md:flex-row md:space-x-8 md:mt-0">
         
 
@@ -269,7 +267,7 @@
       </ul>
       <!-- Countries drop down -->
     
-      <div class="pl-60 relative inline-block text-left countries">
+      <div class="countries relative inline-block text-left countries">
         <div>
           <button
             (click)="toggled = !toggled"

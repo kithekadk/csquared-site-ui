@@ -3,7 +3,7 @@
   margin: 0;
 }
 .body{
-  margin-top: 8.7vh;
+  margin-top: 10vh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 }
 .ch-container {
   width: 100vw;
-  height: calc(100vh - 8.7vh);
+  height: calc(100vh - 10vh);
   position: relative;
 }
 

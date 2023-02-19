@@ -1,3 +1,18 @@
 .app-nav{
   z-index: 9999;
+  min-height: 10vh;
+}
+.justify-around{
+  gap:200px;
+}
+.countries{
+  padding-left: 224px;
+}
+@media screen and (max-width:1282px) {
+  .justify-around{
+    gap:40px;
+  }
+  .countries{
+    padding-left: 180px;
+  }
 }

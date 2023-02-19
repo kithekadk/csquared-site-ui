@@ -1,5 +1,5 @@
 .body{
-  margin-top: 8.7vh;
+  margin-top: 10vh;
 }
 form{
   background-color: #073937;
@@ -17,12 +17,12 @@ label{
 .mapsection{
   position:relative;
   /* margin-top: 10vh; */
-  height:70vh
+  height:60vh
 }
 
 .orderform{
   position:absolute;
-  top: calc(70vh - 60vh);
+  top: 7vh;
   margin-left: 10vw;
   /* z-index: 10; */
 }
