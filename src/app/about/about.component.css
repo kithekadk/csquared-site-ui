@@ -4,7 +4,15 @@ section{
     align-items: center;
     overflow-x: hidden;
 }
-
+.about{
+    max-height: 80vh;
+    
+}
+.about_img>img{
+    width:100vw;
+    object-fit: cover;
+    height: 80vh;
+}
 
 .cards{
     display: flex;

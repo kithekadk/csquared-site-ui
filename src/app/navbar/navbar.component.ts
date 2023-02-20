@@ -65,7 +65,19 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   hideMenu(){
     this.view=false;
   }
-  
+  viewProduct(index:number){
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['services/wholesale-fiber/view',index])
+    })
+  }
+  viewService(index:number){
+    const div2 = document.getElementById('mega-menu-dropdown2') as HTMLDivElement
+    // div2.style.display="visible"
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['services/cloud-solutions/view/',index])
+    })
+    // div2.style.display="none"
+  }
   navigateTo(event :any){
      this.router.navigate(['country',event])
      setTimeout(() => {

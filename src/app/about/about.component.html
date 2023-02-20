@@ -1,6 +1,6 @@
 <section>
 	<div class="about about_img">
-		<img style="width: 100%; height: auto;" src="{{ image }}" alt="" />
+		<img src="{{ image }}" alt="" />
 		<!-- <app-country-header></app-country-header> -->
     </div>
 
@@ -32,7 +32,7 @@
 <!-- Displays the team members and  -->
 <div class="team">
 	<div class="members" *ngFor="let manager of managers; let i = index" >
-		<!-- <img src="{{manager.image}}" alt="Manager" width="130%" (click)="viewTeamMember(i)" routerLink='/team/{{i}}' data-aos="flip-left"> -->
+		<img src="{{manager.image}}" alt="Manager" width="130%" (click)="viewTeamMember(i)" routerLink='/team/{{i}}' data-aos="flip-left">
 		<!-- <div class="rank">
 			<h3>{{manager.name}}</h3>
 			{{manager.rank}}
