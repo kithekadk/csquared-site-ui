@@ -44,6 +44,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CareerDescriptionComponent,
     HeroCarouselComponent,
     NotfoundComponent,
+    PartnersComponent,
   ],
   imports: [
     BrowserModule,
