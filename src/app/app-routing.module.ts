@@ -24,6 +24,8 @@ import { CareersComponent } from './careers/careers.component';
 import { CareerDescriptionComponent } from './career-description/career-description.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PartnersComponent } from './partners/partners.component';
+import { ImpactComponent } from './impact/impact.component';
+import { CountryMapComponent } from './country-map/country-map.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -51,6 +53,8 @@ const routes: Routes = [
     {path:'career', component:CareersComponent},
     {path:'career-description', component:CareerDescriptionComponent},
     {path:'partners', component:PartnersComponent},
+    {path:'impact', component:ImpactComponent},
+    {path:'country-map/:key', component: CountryMapComponent},
     {path:'**', component:NotfoundComponent}
 
   ];

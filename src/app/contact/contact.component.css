@@ -3,7 +3,7 @@
     padding: 0;
 }
 .body{
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     overflow-x: hidden;
 }
 input[type="text"], textarea{

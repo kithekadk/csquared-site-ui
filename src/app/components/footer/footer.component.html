@@ -5,9 +5,9 @@
   <div class="cs-footer">
     <div class="flex justify-center md:pt-16 align-center ">
       <div class="text-center w-[700px]">
-        <h3 class="text-3xl font-bold text-white">Let’s talk</h3>
+        <h3 class="text-3xl font-bold text-white">Let's talk</h3>
         <small class="text-white"
-          >Type your thoughts and submit</small
+          >Share your thoughts</small
         >
         <div class="mt-12 mx-8 md:mx-0 cs-input-container">
           <div class="mt-1 flex rounded-md shadow-sm input-btn">
@@ -17,7 +17,7 @@
               <input
                 type="text"
                 name="search"
-                class="send-email focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-4 sm:text-lg border-gray-300 py-2 p-4"
+                class="send-email p-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-4 sm:text-lg border-gray-300 py-2 p-4"
                 placeholder="Send your email"
               />
             </div>
@@ -25,7 +25,7 @@
               type="button"
               class="btn-send -ml-px relative inline-flex items-center space-x-2 px-16 py-2 font-medium rounded-r-md text-brand-green  bg-brand-yellow hover:bg-brand-yellow/80 focus:outline-none focus:ring-1"
             >
-              <span>Send</span>
+              <span>Subscribe</span>
             </button>
           </div>
         </div>
@@ -33,15 +33,15 @@
     </div>
   </div>
 
-  <div class="dk-footer my-32 grid grid-cols-1 lg:grid-cols-12 gap-8">
-    <div class="col-span-3 flex justify-left flex-col">
-      <div class="h-8 mb-4">
+  <div class="flex flex-wrap justify-center align-center gap-16 pt-20">
+    <div class="findus flex flex-col items-start">
+      <div class="mb-4 items-start">
         <img
           src="/assets/images/c_squared_horizontal_logo.png"
           alt="c_squared_horizontal_logo"
         />
       </div>
-      <div class="flex space-x-5 mx-auto">
+      <div class="flex space-x-5 items-start">
         <a href="https://www.facebook.com/csquaredafricagroup/">
           <i class="bi bi-facebook text-white text-xl hover:text-blue-600"></i>
         </a>
@@ -63,25 +63,37 @@
       ></ng-twitter-timeline>
     </div> -->
     <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/uganda" class="hover:cursor-pointer hover:translate-x-0.5">Uganda</h2>
-      <p>1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="hover:cursor-pointer hover:translate-x-0.5">Kenya</h2>
-      <p>14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="hover:cursor-pointer hover:translate-x-0.5">Ghana</h2>
-      <p>7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/uganda" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Uganda &nbsp;<img data-popover id="popover-right" role="tooltip" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      
+      <p (click)="viewCountryMap('ug')" class="hover:cursor-pointer hover:translate-x-0.5">1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</p><br>
+
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Kenya &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      <p (click)="viewCountryMap('ke')" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Ghana &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      <p (click)="viewCountryMap('gh')" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
     </div>
 
     <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/liberia" class="hover:cursor-pointer hover:translate-x-0.5">Liberia</h2>
-      <p>1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Monrovia</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/togo" class="hover:cursor-pointer hover:translate-x-0.5">Mauritius</h2>
-      <p>Felix House, 24 Dr. Joseph Riviere Street, Port Louis, Mauritius</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/liberia" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Liberia &nbsp; <img data-popover id="popover-right3" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      <p (click)="viewCountryMap('li')" class="hover:cursor-pointer hover:translate-x-0.5">1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Monrovia</p><br>
+      
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Kenya &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      <p (click)="viewCountryMap('ke')" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
+      
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Ghana &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
+      <p (click)="viewCountryMap('gh')" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
+      
     </div>
 
-    <div class="footer-icons col-span-4 flex flex-col text-left justify-center">
+    <div>
 
       <!-- Quicklinks -->
-      <div>
+      <div class="findus">
+        <h6 class="text-2xl text-white">Mission</h6>
+        <br>
+        <p class="flex flex-wrap text-white"> 
+          CSquared is a technology company, making commercially driven investments into broadband-enabling infrastructure throughout Africa.
+        </p><br>
         <h6 class="text-brand-yellow font-bold text-2xl pb-2">More Links</h6>
         <ul class="text-sm text-slate-300 ">
           <li routerLink="/about"

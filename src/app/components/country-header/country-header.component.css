@@ -1,8 +1,7 @@
 .ch-container{
     width: 100vw;
-    height: calc(100vh - 10vh);
+    height: calc(100vh - 40vh);
     position: relative;
-    margin-top:  10vh;
 }
 .ch-container::after{
     display: block;
@@ -52,7 +51,7 @@
     background-color:#a87f16;
 }
 .ch-input input{
-    /* padding: 10px; */
+    color:black;
     width: 80%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

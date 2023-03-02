@@ -48,5 +48,5 @@ Partner with us to enhance your digital transformation through efficient and sec
     this.countryService.setCountry('kenya');
     AOS.init();
   }
-
+  height:string='90vh';
 }

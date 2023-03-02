@@ -8,14 +8,14 @@ export interface services{
           image:string
           content:string 
           title:string   
-
 }
 
 
 export interface Countries {
     header:{
+        height:string,
         title:string,
-        image:string,
+        image:string[],
         content:string
     }
     country:string
@@ -40,6 +40,10 @@ export interface authorities{
     image:string;
     rank: string;
     description: string;
-
 }
 
+export interface order{
+    country_id:string;
+    product_id:string;
+    email:string
+}

@@ -2,17 +2,54 @@
   z-index: 9999;
   min-height: 10vh;
 }
+
 .justify-around{
-  gap:200px;
+  gap: 100px;
 }
 .countries{
-  padding-left: 224px;
+  margin-left: auto;
+  order: 2;
+  position: relative;
+  z-index: 99;
 }
+
 @media screen and (max-width:1282px) {
   .justify-around{
     gap:40px;
   }
   .countries{
     padding-left: 180px;
+  }
+} 
+
+#navbar {
+  padding: 2rem;
+  color: aliceblue;
+  margin-left: 30%;
+  z-index: 5;
+  position: relative;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.dropdown .dropdown-menu {
+  border-radius:0;
+ }
+
+
+/* Medium devices (tablets, 768px and up) 
+The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  border-radius:0;
+ }
+  
+  .kd-on{
+    /* padding: 5px; */
   }
 }

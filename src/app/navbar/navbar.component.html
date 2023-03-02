@@ -1,306 +1,229 @@
-<nav
-  class="flex items-center fixed top-0 left-0 right-0 app-nav bg-green-900  border-gray-200 md:px-10 md:py-4  dark:bg-gray-900 z-50;"
->
-  <div
-    class="flex flex-wrap  items-center justify-around max-w-screen-xl mx-auto">
-    <a class="flex items-center cursor-pointer">
-      <img
-        src="./../../assets/images/c_squared_horizontal_logo.png"
-        alt="Logo"
-        width="120"
-        height="24"
-        class="d-inline-block align-text-top"
-        routerLink="/"
-      />
-    </a>
-    <button
-      data-collapse-toggle="mega-menu"
-      type="button"
-      class="inline-flex items-center p-2 ml-1 text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="mega-menu"
-      aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <svg
-        aria-hidden="true"
-        class="w-6 h-6"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-    </button>
-
-    <div
-      id="mega-menu"
-      class="items-center justify-between hidden w-full text-sm md:flex md:w-auto md:order-1">
-      <ul class="flex flex-col font-medium md:flex-row md:space-x-8 md:mt-0">
-        
-
-        <li>
-          <button
-            id="mega-menu-dropdown-button"
-            data-dropdown-toggle="mega-menu-dropdown"
-            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-            Infrastructure Solutions
-            <svg
-              aria-hidden="true"
-              class="w-5 h-5 ml-1 md:w-4 md:h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <div
-            id="mega-menu-dropdown"
-            class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
-          >
-            <div class="p-4 pb-2 text-gray-900 md:pb-8 dark:text-white">
-              <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-                <li>
-                  <a
-                    (click)="viewProduct(1)"
-                    class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                  Leased Capacity
-                  </a>
-                </li>
-                <li>
-                  <a
-                    (click)="viewProduct(2)"
-                    class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                   Port Fiber
-                  </a>
-                </li>
-                <li>
-                  <a
-                  (click)="viewProduct(3)"
-                    class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                  Data Center Connectivity
-                  </a>
-                </li>
-                <li>
-                  <a
-                  (click)="viewProduct(4)"
-                    class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                  Fiber To The Home (FTTH)
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-              <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-                <li>
-                  <a
-                  (click)="viewProduct(0)"
-                    class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                  Dark/Lit Fiber
-                  </a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li>
-
-          <button
-            id="mega-menu-dropdown-button"
-            data-dropdown-toggle="mega-menu-dropdown2"
-            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-          >
-            Digital Services
-            <svg
-              aria-hidden="true"
-              class="w-5 h-5 ml-1 md:w-4 md:h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <div
-            id="mega-menu-dropdown2"
-            class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
-          >
-          <div class="p-4 pb-2 text-gray-900 md:pb-4 dark:text-white">
-            <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-              <li>
-                <a
-                  (click)="viewService(0)"
-                  class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                >
-                Cloud Security
-                </a>
-              </li>
-              <li>
-                <a
-                (click)="viewService(1)"
-                  class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                >
-                SD-WAN
-                </a>
-              </li>
-              <li>
-                <a
-                (click)="viewService(2)"
-                  class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                >
-                Edge Cloud
-                </a>
-              </li>
-              <li>
-                <a
-                (click)="viewService(3)"
-                  class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                >
-                Data Center Interconnect
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-            <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-              <li>
-                <a
-                (click)="viewService(4)"
-                  class="cursor-pointer text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                >
-                Direct On-ramp
-                </a>
-              </li>
-            </ul>
-          </div>
-          </div>
-        </li>
-        <!-- End of Mega menu -->
-        <li>
-          <a
-            class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:decoration md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-            aria-current="page"
-            routerLink="/coverage"
-            >Coverage</a
-          >
-        </li>
-
-        <li>
-          <a
-            routerLink="/insights"
-            class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-            >Insights</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/contact"
-            class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-            >Contact Us</a
-          >
-        </li>
-        
-      </ul>
-      <!-- Countries drop down -->
-    
-      <div class="countries relative inline-block text-left countries">
-        <div>
-          <button
-            (click)="toggled = !toggled"
-            type="button"
-            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-            id="menu-button"
-            aria-expanded="true"
-            aria-haspopup="true"
-          >
+<!-- KD CODE-->
+<div class="d-flex flex-row items-center justify-end kd-on bg-green-900 h-14">
+  <div class="md:flex-row justify-center mr-6">
+    <!---Language Change -->
+    <span id="language" class="inline-block text-white">EN</span>&nbsp;
+    <!-- <div class="container">            
+      <div class="dropdown">
+       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Language Option
+       <span class="caret"></span></button>
+       <ul class="dropdown-menu">
+         <li><a href="#">English</a></li>
+         <li><a href="#">Korean</a></li>
+       </ul>
+     </div>
+   </div> -->
+    <!-- Countries drop down -->
+    <div class="countries relative inline-block text-left countries">
+      <div>
+        <button (click)="toggled = !toggled" type="button"
+          class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+          id="menu-button" aria-expanded="true" aria-haspopup="true">
+          <span class="flex items-center">
+            <span id="country" class="p-2 text-white">Select Country</span>
             <!--globe icon-->
-            <span class="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="white"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-                />
-              </svg>
-              <span class="uppercase text-xs px-1">{{
-                selectedItem ? selectedItem.code : ""
+            <i class="bi bi-globe-europe-africa text-xl ml-auto"></i>
+            <span class="uppercase text-xs px-1">{{
+              selectedItem ? selectedItem.code : ""
               }}</span>
-            </span>
             <!-- Heroicon name: solid/chevron-down -->
-            <svg
-              [ngClass]="[toggled ? 'transform rotate-180' : '']"
-              class="ml-1 h-5 w-5 transition-all"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="white"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
+            <!-- <i class="bi bi-caret-down text-lg"></i> -->
+          </span>
           </button>
         </div>
 
-        <div
-          [ngClass]="[
-            toggled ? 'transform opacity-100 duration-75 scale-95' : 'hidden'
-          ]"
-          (blur)="toggled = false"
-          class="transition-all origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-30"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabindex="-1"
-        >
-          <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <!-- Drop down for the counties -->
-            <span
-              (click)="navigateTo(country.code)"
-              *ngFor="let country of countries; index as i"
-              class="cursor-pointer transition-all text-gray-700 block px-4 py-2 text-sm font-medium hover:bg-amber-500 hover:text-brand-green flex space-x-2"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-            >
-              <img
-                [src]="country.flag"
-                class="h-5 w-5 shrink-0 grow-0 rounded-full border-1 border-brand-green"
-                [alt]="country.name"
-              />
-              <span id="country">{{ country.name }}</span>
-            </span>
-          </div>
+      <div [ngClass]="[toggled ? 'transform opacity-100 duration-75 scale-95' : 'hidden']" (blur)="toggled = false"
+        class="transition-all origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-30"
+        role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+        <div class="py-1" role="none">
+          <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+          <!-- Drop down for the counties -->
+          <span (click)="navigateTo(country.code)" *ngFor="let country of countries; index as i"
+            class="cursor-pointer transition-all text-gray-700 block px-4 py-2 text-sm font-medium hover:bg-amber-500 hover:text-brand-green flex space-x-2"
+            role="menuitem" tabindex="-1" id="menu-item-0">
+            <img [src]="country.flag" class="h-5 w-5 shrink-0 grow-0 rounded-full border-1 border-brand-green"
+              [alt]="country.name" />
+            <span id="country">{{ country.name }}</span>
+          </span>
         </div>
       </div>
     </div>
   </div>
-</nav>
+</div>
+
+<!-- SNIPPET CODE: 1.NAVBAR TOGLLE BUTTON-->
+<nav class="navbar navbar-expand-md navbar-dark bg-green-700 p-3 gap-0 justify-center ">
+  <!-- Logo -->
+  <a class="flex items-center cursor-pointer ml-4"><!--////////////////////////////////// -->
+    <img src="./../../assets/images/c_squared_horizontal_logo.png" alt="Logo" 
+      class="d-inline-block align-text-top hover:translate-x-0.5 h-10" title="Home" routerLink="/" />
+  </a>
+
+  <div class="flex-row p-2 justify-center" id="navbar">
+    <div class="flex flex-wrap  items-center justify-around max-w-screen-xl mx-auto">
+      <button data-collapse-toggle="mega-menu" type="button"
+        class="inline-flex items-center p-2 ml-1 text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="mega-menu" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div>
+        <div id="mega-menu" class="mx-auto items-center justify-end hidden w-full text-sm md:flex md:w-auto md:order-1">
+          <ul class="flex flex-col font-medium md:flex-row md:space-x-6 md:mt-0"> <!--//////////////////////// -->
+            <li>
+              <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Infrastructure Solutions
+                <svg aria-hidden="true" class="w-5 h-5 ml-1 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown"
+                class="flex absolute z-10 w-full hidden grid-cols-2 text-md bg-green-200 border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2">
+                <div class="p-4 pb-2 m-2 text-dark md:pb-8 dark:text-white rounded-md">
+                  <span class="sr-only p-4">Infrastructure Solutions</span>
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <i class="bi bi-database-fill-gear text-lg"></i>
+                      <a (click)="viewProduct(1)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Leased Capacity
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-ethernet text-lg"></i>
+                      <a (click)="viewProduct(2)"
+                        class="cursor-pointer text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Port Fiber
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-database-fill-gear text-lg"></i>
+                      <a (click)="viewProduct(3)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Data Center Connectivity
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-house-fill text-lg"></i>
+                      <a (click)="viewProduct(4)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Fiber To The Home (FTTH)
+                      </a>
+                      <hr>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 m-2 text-gray-900 md:pb-4 dark:text-white rounded-md">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <i class="bi bi-modem-fill text-lg"></i>
+                      <a (click)="viewProduct(0)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Dark/Lit Fiber
+                      </a>
+                      <hr>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+
+              <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown2"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Digital Services
+                <svg aria-hidden="true" class="w-5 h-5 ml-1 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown2"
+                class="flex absolute pb-4 z-10 w-auto hidden grid-cols-2 text-sm bg-green-200 border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2 dark:bg-gray-700">
+                <div class="p-4 pb-2 text-dark m-4 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <i class="bi bi-cloud tex-lg"></i>
+                      <a (click)="viewService(0)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Cloud Security
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-hdd-network text-lg"></i>
+                      <a (click)="viewService(1)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        SD-WAN
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-cloud-arrow-up-fill text-lg"></i>
+                      <a (click)="viewService(2)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Edge Cloud
+                      </a>
+                      <hr>
+                    </li>
+                    <li>
+                      <i class="bi bi-database-add text-lg"></i>
+                      <a (click)="viewService(3)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Data Center Interconnect
+                      </a>
+                      <hr>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 rounded-md m-4 text-dark md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <i class="bi bi-router-fill text-lg"></i>
+                      <a (click)="viewService(4)"
+                        class="cursor-pointer  text-green-800 hover:text-blue-600 dark:hover:text-blue-500">
+                        Direct On-ramp
+                      </a>
+                      <hr>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- End of Mega menu -->
+            <li>
+              <a class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:decoration md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page" routerLink="/coverage">Coverage</a>
+            </li>
+
+            <li>
+              <a routerLink="/impact"
+                class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Our Impact</a>
+            </li>
+            <li>
+              <a routerLink="/insights"
+                class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Insights</a>
+            </li>
+            <li>
+              <a routerLink="/contact"
+                class="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact
+                Us</a>
+            </li>
+
+          </ul>
+      </div>
+   </div>

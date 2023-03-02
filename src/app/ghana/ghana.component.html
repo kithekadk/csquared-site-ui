@@ -1,8 +1,9 @@
 <div class="body">
   <div *ngIf="countries" class="ch-container">
+    <app-hero-carousel></app-hero-carousel>
     <!-- <app-country-header></app-country-header> -->
-    <img style="object-fit: cover" src="{{ countries.header.image }}" alt="" />
-    <div class="ch-content">
+    <!-- <img style="object-fit: cover" src="{{ countries.header.image }}" alt="" /> -->
+    <!-- <div class="ch-content">
       <h1>{{ countries.header.title }}</h1>
       <p>{{ countries.header.content }}</p>
 
@@ -18,7 +19,7 @@
       <div *ngIf="countries.link" class="ch-input">
         <a href="#">Read More...</a>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="cv-container">
       <div class="cv-content" *ngFor="let cnt of content">
@@ -54,12 +55,8 @@
     </div> -->
     <!-- </div> -->
 
-
-  <app-what-we-offer-flex [offers]="offer" ></app-what-we-offer-flex>
-
-    <app-latest-news></app-latest-news>
+    <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex>
 
     <app-footer></app-footer>
-  </div>
-
+  <!-- </div> -->
 </div>

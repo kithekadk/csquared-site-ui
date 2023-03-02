@@ -1,26 +1,42 @@
-<div class="body">
+<div class="body" [style.height]="height">
   <section>
-    <ngb-carousel *ngIf="images" class="carousel-body">
+    <ngb-carousel *ngIf="countries" class="carousel-body">
       <ng-template ngbSlide >
         <div class="picsum-img-wrapper">
-          <img [src]="images[0]"  alt="Random first slide" />
+          <img [style.height]="height" style="object-fit: cover;" src={{countries.header.image[0]}}  alt="Random first slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">Digital Solutions</h2>
+          <h2 class="text-4xl text-white font-bold">{{ countries.header.title }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
-            The demand for Cloud computing services has grown considerably in 
-            recent years, owing to enterprises’ demand for lower operating 
-            costs and capital expenditure with improved productivity and 
-            greater efficiency and agility. Cloud services offer operational 
-            flexibility, scalability, improved time to market, and cost efficiencies to enterprises
-          </p>
+          <p class="text-xxl">{{ countries.header.content }}</p>
+
+          <form *ngIf="countries.search" class="w-full max-w-sm">
+            <div class="flex items-center border-b border-green-500 py-2">
+              <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full  px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Search for our coverage">
+              &nbsp;
+              <button class="flex-shrink-0 bg-green-700 hover:bg-green-900 border-green-700 hover:border-green-900 text-sm border-4 text-white py-1.5 px-3 rounded" type="button">
+                Check
+              </button>
+            </div>
+          </form>
+
+          <div *ngIf="countries.button" class="ch-input">
+            <button>Get Started</button>
+          </div>
+        
+          <div *ngIf="countries.link" class="ch-input">
+            <a href="#">Read More...</a>
+          </div>
+          <!-- <p class="text-md text-white font-medium"> -->
+
+            <!--  -->
+          <!-- </p> -->
         </div>
       </ng-template>
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-          <img
-            [src]="images[1]"
+          <img [style.height]="height" style="object-fit: cover;" 
+            src="{{countries.header.image[1]}}"
             
             alt="Random second slide"
           />
@@ -43,7 +59,7 @@
       </ng-template>
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-          <img [src]="images[2]" alt="Random third slide" />
+          <img [style.height]="height" style="object-fit: cover;" src="{{countries.header.image[2]}}" alt="Random third slide" />
         </div>
         <div class="carousel-caption">
           <h2 class="text-4xl text-white font-bold">A Super Connectivity</h2>

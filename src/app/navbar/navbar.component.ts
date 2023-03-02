@@ -9,40 +9,47 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   toggled: boolean = false;
   selectedItem: {name:string,code:string, flag:string} | null = null
-countries:{name:string,code:string, flag:string}[]=[
+countries:{name:string,code:string,id:string, flag:string}[]=[
   {
     name :"Global",
     code:'hybrid',
+    id:'',
     flag:'./../../assets/images/flags/earth-1681722__340.png'
   },
   {
     name :"Uganda",
     code:'uganda',
+    id:'78c7d800-85ad-11eb-82e0-71c6f09a2bae',
     flag:'./../../assets/images/flags/Flag_of_Uganda.svg.png'
   },
   {
     name :"Kenya",
     code:'kenya',
+    id:'78ba6f60-85ad-11eb-88f1-39b4763e914c',
     flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
   },
    {
     name :"Ghana",
     code:'ghana',
+    id:'78b6b910-85ad-11eb-8c83-cd8b9be0f4f1',
     flag:'./../../assets/images/flags/255px-Flag_of_Ghana.svg.png'
   },
     {
     name :"DRC Congo",
     code:'drc',
+    id:'78b32a20-85ad-11eb-8ef6-a9906fd1e035',
     flag:'./../../assets/images/flags/drc_flag.jpg'
   },
     {
     name :"Liberia",
     code:'liberia',
+    id:'78bb1f20-85ad-11eb-9ca4-dfa9c20bb376',
     flag:'./../../assets/images/flags/Flag_of_Liberia.svg'
   },
    {
     name :"Togo",
     code:'togo',
+    id:'78c68a50-85ad-11eb-813f-b19440c3cb6a',
     flag:'./../../assets/images/flags/Flag_of_Togo.svg.png'
   }
 ]

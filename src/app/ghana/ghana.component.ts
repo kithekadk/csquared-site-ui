@@ -106,6 +106,7 @@ export class GhanaComponent implements OnInit {
   ngOnInit(): void {
     AOS.init();
     this.countries= this.countryService.getOneCountry('ghana')
+    this.countryService.setCountry('drc')
   }
 
   index:number=0;

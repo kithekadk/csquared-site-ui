@@ -45,6 +45,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PartnersComponent } from './partners/partners.component';
+import { MapComponent } from './map/map.component';
+import { ImpactComponent } from './impact/impact.component';
+import { CountryMapComponent } from './country-map/country-map.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +86,9 @@ import { PartnersComponent } from './partners/partners.component';
     HeroCarouselComponent,
     NotfoundComponent,
     PartnersComponent,
+    MapComponent,
+    ImpactComponent,
+    CountryMapComponent,
   ],
   imports: [
     BrowserModule,
