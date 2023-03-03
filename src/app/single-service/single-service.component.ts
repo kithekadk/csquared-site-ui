@@ -1,0 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { services } from '../interfaces/interfaces';
+import { ApiService } from '../services/api.service';
+
+@Component({
+  selector: 'app-single-service',
+  templateUrl: './single-service.component.html',
+  styleUrls: ['./single-service.component.css']
+})
+export class SingleServiceComponent implements OnInit {
+  fiberservices!:services
+  cloudservices!:services
+  constructor(private apiService:ApiService, private router:Router) { }
+
+  id:string = this.router.url;
+  index!:number 
+  ngOnInit(): void {
+    this.getFiberServiceIndex();
+    this.getCloudServiceIndex();
+  }
+
+  getFiberServiceIndex(){
+    this.index = (Number(this.id.replace('/services/wholesale-fiber/view/','')));
+    this.fiberservices = this.apiService.getOneFiberItem(this.index);
+  }
+  getCloudServiceIndex(){
+    this.index = (Number(this.id.replace('/services/cloud-solutions/view/','')));
+    this.cloudservices = this.apiService.getOneCloudItem(this.index);
+  }
+
+
+}

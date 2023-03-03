@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    /* margin-top: 10vh; */
+    overflow-x: hidden;
+}
+input[type="text"], textarea{
+    border-radius: 8px;
+}
+textarea{
+    padding:10px
+}
+.contact-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/images/backgrounds/cheatahs.jpg');
+}
+
+.contact-header img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-header h1{
+    position: absolute;
+    top: 50%;
+    /* left: 35%; */
+    color:white;
+    font-size: 50px;
+}
+
+.contact-container h1{
+    font-size: 30px;
+}
+
+.form{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap:50px;
+    justify-content: center;
+}
+
+.form-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+}
+
+.form-left input{
+    border: 1px solid black;
+    width: 60%;
+    padding: 10px;
+    width: 500px;
+}
+
+.form-left p{
+    color: #3B7360;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.form-right textarea{
+    border: 2px solid black;
+    color: #3B7360;
+    width: 100%;
+}
+
+.form-right button{
+    background-color: #E7B022;
+    color: #3B7360;
+    font-weight: bolder;
+    padding: 10px 20px;
+    width: 30%;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+
+.footer-header{
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap:30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    
+}
+.footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5, .footer-div6{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-bottom:20px ; */
+}
+
+.footer1, .footer2, .footer3, .footer4, .footer5, .footer6{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.footer-div1:hover .overlay, 
+.footer-div2:hover .overlay, 
+.footer-div3:hover .overlay, 
+.footer-div4:hover .overlay,
+.footer-div6:hover .overlay,
+.footer-div5:hover .overlay{
+    bottom: 0;
+    height: 100%;
+    border: 10px;
+}
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3B7360;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+}
+.overlay h3{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.imgcontainer img{
+    height:39vh;
+    border-radius: 10px;
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+.socials{
+    display: flex;
+}
+
+.socials img{
+    width: 40px;
+    height: 40px;
+}
+
+.social-footer{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-footer h1{
+    color: black;
+    font-size: 40px;
+}
+
+.socials{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:600px) {
+    
+    .form{
+        display: flex;
+        width: 90vw;
+        flex-wrap: wrap;
+        gap:50px;
+    }
+    .form-right{
+        width:300px;
+    }
+    .form-left input{
+        width:90vw;
+    }
+    .form-right textarea{
+        width:90vw;
+    }
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
+}

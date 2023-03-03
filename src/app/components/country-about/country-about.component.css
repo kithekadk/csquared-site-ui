@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.cabout-container {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.cabout-content {
+  display: flex;
+  width: 80%;
+  height: 90%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cabout-content .cabout-image {
+  width: 45%;
+  height: 100%;
+}
+.cabout-image img {
+  width: 100%;
+  height: 100%;
+}
+.cabout-content .cabout-text {
+  width: 45%;
+  height: 100%;
+}
+
+.cabout-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cabout-text h1 {
+  color: #345c5a;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.cabout-text p {
+  width:40vw;
+  color: #345c5a;
+  font-size: 14px;
+}
+
+.cabout-image {
+  position: relative;
+  height: 40vh;
+}
+.cabout-image img{
+  object-fit: cover;
+}
+.cabout-image>img:hover{
+  border-radius: 10px;
+  transition: opacity 0.9s;
+  animation: shake 3s;
+  animation-iteration-count: infinite;
+}
+/* @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} */
+.overlay {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -1;
+  left: 26%;
+}
+@media only screen and (max-width: 600px) {
+  .cabout-container {
+    width: 100%;
+    height: fit-content;
+  }
+  .cabout-content {
+    padding: 1rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cabout-content .cabout-image{
+    width: 100%;
+  }
+  .cabout-content .cabout-text{
+    width: 100%;
+  }
+  .cabout-text h1 {
+    font-size: 20px;
+  }
+  .cabout-text p {
+    width: 90vw;
+    font-size: 12px;
+  }
+
+}

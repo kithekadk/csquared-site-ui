@@ -1,0 +1,66 @@
+<div class="body" *ngIf ="categoryRoute == '/services/wholesale-fiber'">
+    <div class="fiber-bg">
+
+    </div>
+    <div class="service-container">
+        <div class="ws-text">
+            <h2>Wholesale Fiber</h2><br>
+            <p>Our shared network model makes it easy for you to provide reliable and high quality internet to your clients at an affordable fee. With a fiber network spanning 5000+KM, you can be assured that your clients will be well catered for through a seamless and secure network. We know your time and energy is valuable so we have also included service features that ensure maximum uptime and easy control from your end.</p>
+        </div>
+        <div class="single-service" *ngFor="let service of fiberservices; let i = index">
+            <div class="service-img" *ngIf="(i%2==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+            <div class="service-info" *ngIf="(i%2==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
+            </div>
+
+            <div class="service-info2" *ngIf="(i%2!==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
+            </div>
+            <div class="service-img" *ngIf="(i%2!==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+        </div>
+        <button class="btn btn-warning pl-10 pr-10 m-10"><b>More Services</b></button>
+    </div>
+    
+</div>
+
+<!-- Renders cloud solutions -->
+<div class="body" *ngIf ="categoryRoute == '/services/cloud-solutions'">
+    <div class="cloudsolutions-bg">
+    </div>
+    <div class="service-container">
+        <div class="ws-text">
+            <h2>Cloud Solutions</h2><br>
+            <p>Cloud technology is increasingly becoming a must have for businesses across Africa. Our cloud solutions are designed to give you safe, fast and efficient cloud services. As you transact and communicate digitally, take up CSquared’s cloud solutions for increased business productivity and efficiency.</p>
+        </div>
+        <div class="single-service" *ngFor="let service of cloudservices; let i=index">
+            <div class="service-img" *ngIf="!(i%2==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+            <div class="service-info" *ngIf="!(i%2==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewCloudProduct(i)" routerLink='/services/cloud-solutions/view/{{i}}'>Discover Us</button>
+            </div>
+            
+            <div class="service-info2" *ngIf="(i%2==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewCloudProduct(i)" routerLink='/services/cloud-solutions/view/{{i}}'>Discover Us</button>
+            </div>
+            <div class="service-img" *ngIf="(i%2==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+        </div>
+        <button class="btn btn-warning pl-10 pr-10 m-10"><b>More Services</b></button> 
+    </div>
+</div>
+<app-footer></app-footer>
+

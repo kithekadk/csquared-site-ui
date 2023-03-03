@@ -1,0 +1,38 @@
+<div class="body" *ngIf="fiberservices">
+    <div class="fiber-bg">
+        {{fiberservices.title}}
+    </div>
+    <div class="service-container">
+        <div class="single-service">
+            <div class="service-img">
+                <img style="object-fit:cover;" src="{{fiberservices.image}}" alt="Specialist">
+            </div>
+            <div class="service-info">
+                <h2>{{fiberservices.title}}</h2><br>
+                {{fiberservices.description}}<br><br>
+                <button class="btn btn-warning hover:bg-amber-600" onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;">Learn More on Cloud Security</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>   
+</div>
+<!-- Display cloud services if available -->
+<div class="body" *ngIf="cloudservices">
+    <div class="cloudservices-bg">
+        {{cloudservices.title}}
+    </div>
+    <div class="service-container">
+        <div class="single-service">
+            <div class="service-img">
+                <img style="object-fit:cover;" src="{{cloudservices.image}}" alt="Specialist">
+            </div>
+            <div class="service-info">
+                <h2>{{cloudservices.title}}</h2><br>
+                {{cloudservices.description}}<br><br>
+                <button class="btn btn-warning" onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;">Learn More on Cloud Security</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    
+</div>

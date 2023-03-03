@@ -1,0 +1,93 @@
+.ch-container{
+    width: 100vw;
+    height: calc(100vh - 40vh);
+    position: relative;
+}
+.ch-container::after{
+    display: block;
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+    margin-top: -90vh;
+    height: 90vh;
+    width: 100%;
+    content: '';
+}
+.ch-container img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9.5;
+}
+
+.ch-content{
+    width: 55%;
+    height: 60%;
+    position: absolute;
+    top: 35%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-left: 10%;
+}
+.ch-content p{
+    font-size: 15px;
+}
+
+.ch-content h1{
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+.ch-input button{
+    background-color:#e7b022;
+    color: white;
+    font-weight: bolder;
+    border-style: none;
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+.ch-input button:hover{
+    background-color:#a87f16;
+}
+.ch-input input{
+    color:black;
+    width: 80%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+.ch-container{
+    width: 100%;
+}
+.ch-content{
+    justify-content: space-evenly;
+    width: 90%;
+    top: 30%;
+    text-align: center;
+}
+
+.ch-content p{
+    font-size: 14px;
+}
+.ch-input input{
+    width: 70%;
+}
+.ch-input button{
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+}
+
+@media only screen and (min-width:601px ) and (max-width: 1120px) {
+    .ch-content{
+        width:75vw;
+    }
+    .ch-input input{
+        width: 65%;
+        font-size: 14px;
+    }
+    .ch-content button{
+        font-size: 14px;
+    }
+}

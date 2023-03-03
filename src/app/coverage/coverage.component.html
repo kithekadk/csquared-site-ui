@@ -1,0 +1,89 @@
+<div class="body">
+  <div class="orderform">
+    <form class="form" [formGroup]="form" (ngSubmit)="makeOrder()">
+      <!-- Success message -->
+      <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert" *ngIf="view">
+        <div class="flex">
+          <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+          <div>
+            <p class="font-bold">Success</p>
+            <p class="text-sm">Order Placed successfully</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of success messsage -->
+      <div>
+        <label for="country">Country</label><br>
+
+        <select formControlName="country_id">
+          <option value="">Select Country</option>
+          <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">Kenya</option>
+          <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">Uganda</option>
+          <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">Ghana</option>
+          <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">DRC</option>
+          <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">Liberia</option>
+          <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">Togo</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="product">Product</label><br>
+        <select name="" formControlName="product_id">
+          <option  *ngFor="let product of products; let i = index;" value="{{product_id[i]}}">{{product}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="email" >Email</label><br>
+        <input type="email" name="email" id="" placeholder="Input your Email" formControlName="email">
+      </div>
+      <br>
+      <div>
+        <input type="submit" class="btn btn-success" value="Order">
+      </div>
+    </form>
+  </div>
+  <div class="mapsection">
+    <!-- <div class="maps">
+      <div id="map"> -->
+        <app-map></app-map>
+        <!-- <google-map
+          width="100vw;"
+          [center]="center"
+          [zoom]="zoom"
+          (mapClick)="clickMap($event)"
+          (mapMousemove)="move($event)"
+        >
+          <map-marker
+            #marker="mapMarker"
+            *ngFor="let markerPosition of markerPositions"
+            [position]="markerPosition"
+            (mapClick)="openInfoWindow(marker)"
+          >
+          </map-marker>
+          <map-info-window>Info Window content</map-info-window>
+        </google-map> -->
+  
+        <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
+      <!-- </div>
+    </div> -->
+  </div>
+  
+  <div class="title">
+    <h2 class="p-4">Our Featured Countries</h2>
+    <br />
+  </div>
+  <ng-image-slider
+    (click)="navigate($event)"
+    [images]="coverage"
+    [infinite]="true"
+    [autoSlide]="1"
+    [showArrow]="false"
+    [animationSpeed]="3"
+    [imageSize]="{ width: '300px', height: 180, space: 10 }"
+    class="p-2"
+    #nav
+  ></ng-image-slider
+  ><br /><br />
+
+  <app-footer></app-footer>
+</div>
