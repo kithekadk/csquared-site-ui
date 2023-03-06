@@ -33,11 +33,11 @@ export class CountryMapComponent implements OnInit {
   private initMap(): void {
     this.map = L.map('map', {
       center: this.map_center,
-      zoom: 6
+      zoom: 8
     });
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 8,
-      minZoom: 3,
+      minZoom: 4,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
     const drc_marker = L.marker([-4.4419, 22.2663]);
@@ -76,7 +76,6 @@ export class CountryMapComponent implements OnInit {
     this.setMapCenter()
     console.log(this.mapRoute);
     this.initMap();
-
   }
 
 }

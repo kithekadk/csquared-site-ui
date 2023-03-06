@@ -65,6 +65,7 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    
   }
   toggle!:boolean
   view!:boolean

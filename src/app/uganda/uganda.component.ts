@@ -45,12 +45,12 @@ Whether you are an MNO or ISP, we have developed the right products and solution
 
   grids: { image: string, title: string, text: string }[] = 
   [
-    { image: "../assets/images/home/fiber.jpg", 
+    { image: "../assets/images/home/SMEs.jpg", 
       title: "Port fiber", 
       text: "CSquared provides port fiber service targeted at SMEs. This service enables ISPs and MNOs to provide high-quality broadband at lower costs through shared infrastructure to any location. Port fiber is beneficial as it offers a reliable and resilient service, coupled with a variety of packages to suit businesses’ needs and a low latency solution built on end-to-end fiber infrastructure. " 
     }, 
     
-    { image: "../assets/images/home/slide.jpg", 
+    { image: "../assets/images/home/SMEs.jpg", 
       title: "Leased capacity", 
       text: "CSquared offers high-capacity solutions geared towards enterprises, ISPs and MNOs. Leased capacity is advantageous as it provides full redundancy, high capacity ranging from speeds of 100 Mbps to 10 Gbps complete with an extensive network coverage." 
     }, 

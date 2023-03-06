@@ -48,6 +48,7 @@ import { PartnersComponent } from './partners/partners.component';
 import { MapComponent } from './map/map.component';
 import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
+import { CountryProductsComponent } from './country-products/country-products.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { CountryMapComponent } from './country-map/country-map.component';
     MapComponent,
     ImpactComponent,
     CountryMapComponent,
+    CountryProductsComponent,
   ],
   imports: [
     BrowserModule,

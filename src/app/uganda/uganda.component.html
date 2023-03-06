@@ -12,7 +12,8 @@
       </div>
     </div>
   </div> -->
-  <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex>
+  <!-- <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex> -->
+
 
   <app-country-about [content]="content" [image]="image"> </app-country-about>
   <div class="cabout">
@@ -24,9 +25,8 @@
     <p id="learnmore" *ngIf="toggle">{{ about_leran_more }}</p>
   </div>
 
-  <!-- <h1 style="font-size: 25px">What We Offer?</h1> -->
-  <!-- <h2 class="p-3 mt-5">Csquared Impact in Uganda</h2> -->
-  <!-- <div class="container-grid mx-auto offer-main">
+  <!-- <h1 style="font-size: 25px">What We Offer?</h1>
+  <div class="container-grid mx-auto offer-main">
     <div class="container-grid footer">
       <div class="footer1 content">
         <div class="divtwo footer-div1">
@@ -55,7 +55,7 @@
         <div class="divthree footer-div1">
           <div class="imgcontainer" data-aos="flip-right">
             <img src="{{ grids[1].image }}" alt="" />
-            <div class="text centered">
+            <div class="text centered mt-5">
               <h1>{{ grids[1].title }}</h1>
             </div>
           </div>
@@ -78,7 +78,7 @@
         <div class="divfive footer-div1">
           <div class="imgcontainer" data-aos="flip-right">
             <img src="{{ grids[2].image }}" alt="" />
-            <div class="text centered">
+            <div class="text centered mt-5">
               <h1>{{ grids[2].title }}</h1>
             </div>
             <div class="btn">
@@ -100,7 +100,7 @@
         <div class="divsix footer-div1">
           <div class="imgcontainer" data-aos="flip-right">
             <img src="{{ grids[3].image }}" alt="" />
-            <div class="text centered">
+            <div class="text centered mt-5">
               <h1>{{ grids[3].title }}</h1>
             </div>
             <div class="btn">
@@ -122,9 +122,11 @@
       </div>
     </div>
   </div> -->
+
+  <app-country-products [offers]="offer"></app-country-products>
   <app-country-latestnews></app-country-latestnews>
   
-  <div
+  <!-- <div
     class="modal fade"
     id="myModal"
     data-bs-backdrop="static"
@@ -151,7 +153,7 @@
         <div class="modal-footer" style="display: flex"></div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- End of modal -->
 </div>
