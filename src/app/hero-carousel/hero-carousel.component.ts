@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgIf } from '@angular/common';
+import { Countries } from '../interfaces/interfaces';
+import { ActivatedRoute } from '@angular/router';
+import { CountryService } from '../services/country.service';
 
 @Component({
   selector: 'app-hero-carousel',
@@ -8,17 +11,21 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./hero-carousel.component.css'],
 })
 export class HeroCarouselComponent implements OnInit {
-
-  constructor() { }
-
+   code:string="" 
+   countries!:any
+   height:string=''
+  constructor(private route:ActivatedRoute ,private countryservice :CountryService) { }
+  
   ngOnInit(): void {
-  }
-  images = [
-    "https://askleo.com/wp-content/uploads/2018/10/internet.jpg",
+    this.countryservice.setCountry$.subscribe(country_id=>{
+      this.countries = this.countryservice.getOneCountry(country_id)
+      console.log(this.countries);
 
-    "https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg",
+      this.height=this.countries.header.height;
+    })
 
-    "https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg"
-
-  ];
+    this.countryservice.getCountry('78c7d800-85ad-11eb-82e0-71c6f09a2bae').subscribe(val=>{
+      console.log(val);
+    })
+  }  
 }

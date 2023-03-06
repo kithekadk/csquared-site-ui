@@ -1,5 +1,5 @@
 <div class="body">
-  <app-country-header></app-country-header>
+  <app-hero-carousel></app-hero-carousel>
 
   <app-country-coverage></app-country-coverage>
 
@@ -17,7 +17,7 @@
     <p id="learnmore" *ngIf="toggle">{{ about_learn_more }}</p>
   </div>
 
-  <div class="container-grid footer">
+  <!-- <div class="container-grid footer">
     <div class="footer1 content">
       <div class="divone footer-div1">
         <div class="imgcontainer" data-aos="flip-right">
@@ -154,10 +154,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <app-country-latestnews></app-country-latestnews> -->
-  <app-latest-news></app-latest-news>
+  <app-country-products [offers]="grids"></app-country-products>
+  <app-country-latestnews></app-country-latestnews>
+  <!-- <app-latest-news></app-latest-news> -->
 </div>
 <app-footer></app-footer>
 
@@ -184,7 +185,7 @@
         ></button>
       </div>
       <div class="body" style="color: black; padding: 40px 10px">
-        <p>{{ grids[index].text }}</p>
+        <p>{{ grids[index].content }}</p>
       </div>
       <div class="modal-footer" style="display: flex">
         <!-- <button

@@ -1,132 +1,55 @@
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: #073937;
-  align-items: center;
-  position: fixed;
-  width: 100%;
+.app-nav{
   z-index: 9999;
+  min-height: 10vh;
+}
+
+.justify-around{
+  gap: 100px;
+}
+.countries{
+  margin-left: auto;
+  order: 2;
+  position: relative;
+  z-index: 99;
+}
+
+@media screen and (max-width:1282px) {
+  .justify-around{
+    gap:40px;
+  }
+  .countries{
+    padding-left: 180px;
+  }
+} 
+
+#navbar {
+  padding: 2rem;
+  color: aliceblue;
+  margin-left: 30%;
+  z-index: 5;
+  position: relative;
+}
+.navbar {
+  position: sticky;
   top: 0;
-  height: 10vh;
+  z-index: 9;
 }
 
-.navbar-brand {
-  padding-left: 60px;
-}
-.dropdown-toggle {
-  color: white;
-  padding: 0;
-}
-
-.menu-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  color: white;
-}
-.menu-container > li:hover {
-  text-decoration: underline;
-  color: rgb(124, 124, 4);
-}
-#select-country {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-option {
-  color: black;
-  margin: 5px 20px 5px 20px;
-  padding: 50px;
-}
-
-.services-options {
-  text-align: center;
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-.about-options {
-  text-align: center;
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-select {
-  background-color: white;
-}
-select:hover option.dropdown {
-  display: block;
-}
+.dropdown .dropdown-menu {
+  border-radius:0;
+ }
 
 
-@media only screen and (max-width: 768px) {
-  .navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100vw;
-    padding: 20px 1rem;
-    height: 10vh;
-  }
+/* Medium devices (tablets, 768px and up) 
+The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  border-radius:0;
+ }
   
-  .navbar-brand {
-    padding: 20px 20px;
-  }
-  
-  .menu-container {
-    padding-top:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:0;
-    background-color: #073937;
-  }
-  
-  .menu-container > li,
-  .menu-container > .btn-group {
-    background-color: #073937;
-    padding:10px 20px;
-  }
-  .menu-container > li:hover,
-  .menu-container > .btn-group:hover {
-    text-decoration: none;
-  }
-  .nav-item {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-item a,
-  .nav-item select,
-  select {
-    font-size: 14px;
-  }
-
-  .nav-item select {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    top: 0;
-  }
-
-  .dropdown-toggle {
-    font-size: 12px;
-  }
-  option {
-    margin: 0;
-  }
-  .toggle {
-    z-index: 0;
-  }
-  .countries {
-    width: 45vw; 
-    background-color: #073937;
-    display: flex;
-    justify-content: flex-end;
-    padding:120px 30px;
-    border: none;
-  }
-  #country {
-    z-index: 9999;
+  .kd-on{
+    /* padding: 5px; */
   }
 }

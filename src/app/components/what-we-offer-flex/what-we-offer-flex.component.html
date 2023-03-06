@@ -1,30 +1,30 @@
-<h1>What We Offer</h1>
+<h1 class="p-5">What We Offer</h1>
 
-<div class="offer-container footer">
+<div class="offer-container footer p=5">
   <div class="footer1" *ngFor="let content of offers; let i = index">
     <div class="footer-div1">
       <div class="imgcontainer">
         <img src="{{content.image}}" alt="Nairobi" />
         <div class="centered">{{ content.title }}</div>
-        <div class="btn-learnmore">
-          <button
-            (click)="popModal(i)"
-            data-bs-toggle="modal"
-            data-bs-target="#myModal"
-          >
-            Learn More
-          </button>
-        </div>
       </div>
       <div class="overlay">
-        <h3>
-          <h4>{{content.content}}</h4>
-        </h3>
+        <p>
+          {{content.content}}
+        </p>
       </div>
     </div>
   </div>
 </div>
-
+<!-- <div class="btn-learnmore">
+  <button
+    (click)="popModal(i)"
+    data-bs-toggle="modal"
+    data-bs-target="#myModal"
+  >
+    Learn More
+  </button>
+</div> -->
+<!-- <button>Learn More</button> -->
 <!-- Start of modal -->
 <div
   class="modal fade"

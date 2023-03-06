@@ -9,57 +9,63 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   toggled: boolean = false;
   selectedItem: {name:string,code:string, flag:string} | null = null
-countries:{name:string,code:string, flag:string}[]=[
+countries:{name:string,code:string,id:string, flag:string}[]=[
   {
     name :"Global",
     code:'hybrid',
+    id:'',
     flag:'./../../assets/images/flags/earth-1681722__340.png'
   },
   {
     name :"Uganda",
     code:'uganda',
+    id:'78c7d800-85ad-11eb-82e0-71c6f09a2bae',
     flag:'./../../assets/images/flags/Flag_of_Uganda.svg.png'
   },
   {
     name :"Kenya",
     code:'kenya',
+    id:'78ba6f60-85ad-11eb-88f1-39b4763e914c',
     flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
   },
    {
     name :"Ghana",
     code:'ghana',
+    id:'78b6b910-85ad-11eb-8c83-cd8b9be0f4f1',
     flag:'./../../assets/images/flags/255px-Flag_of_Ghana.svg.png'
   },
     {
     name :"DRC Congo",
     code:'drc',
+    id:'78b32a20-85ad-11eb-8ef6-a9906fd1e035',
     flag:'./../../assets/images/flags/drc_flag.jpg'
   },
     {
     name :"Liberia",
     code:'liberia',
+    id:'78bb1f20-85ad-11eb-9ca4-dfa9c20bb376',
     flag:'./../../assets/images/flags/Flag_of_Liberia.svg'
   },
    {
     name :"Togo",
     code:'togo',
+    id:'78c68a50-85ad-11eb-813f-b19440c3cb6a',
     flag:'./../../assets/images/flags/Flag_of_Togo.svg.png'
   }
 ]
 
-services:{name:string, code:string}[]=[{name:'Our Services',code:'-'},{name:'WholeSale Fiber', code:'wholesale-fiber'},
+
+products:{name:string, code:string}[]=[{name:'Infrastructure',code:'-'},{name:'Fiber', code:'wholesale-fiber'},
+{name:'Cloud Solutions', code: 'cloud-solutions'}]; 
+
+services:{name:string, code:string}[]=[{name:'WholeSale Fiber', code:'wholesale-fiber'},
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
 Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    window.onresize = () => this.view = window.innerWidth <= 768;
-    if (window.screen.width <= 768) { 
-      this.view = true;
-    }else if(window.screen.width >= 769){
-      this.view = false
-    }
+    
   }
   toggle!:boolean
   view!:boolean
@@ -67,15 +73,18 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   hideMenu(){
     this.view=false;
   }
-  viewMobileMenu(){
-    if(window.innerWidth <= 768){
-      this.view = !this.view;
-    } 
+  viewProduct(index:number){
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['services/wholesale-fiber/view',index])
+    })
   }
-  undoState(){
-    if(window.innerWidth <= 768){
-      this.view = !this.view;
-    }    
+  viewService(index:number){
+    const div2 = document.getElementById('mega-menu-dropdown2') as HTMLDivElement
+    // div2.style.display="visible"
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['services/cloud-solutions/view/',index])
+    })
+    // div2.style.display="none"
   }
   navigateTo(event :any){
      this.router.navigate(['country',event])
@@ -85,38 +94,5 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
       } 
        this.toggled = false
      }, 100)   
-  }
-
-  getService(event: any) {
-    console.log(event.target.innerText);
-    const variable = event.target.innerText
-    console.log(variable);
-    if (variable=='Our Services'){      
-        this.router.navigate(['services', '-'])      
-    }else if(event.target.innerText=='WholeSale Fiber'){  
-      setTimeout(() => {
-        this.router.navigate(['services', 'wholesale-fiber'])
-      }, 200)    
-    }else if(event.target.innerText == 'Cloud Solutions'){
-      setTimeout(() => {
-        this.router.navigate(['services', 'cloud-solutions']) 
-      }, 200)
-    }else{
-      console.log(event.target.innerText);
-    }
-  }
-  getAbout(event: any) {
-    console.log(event.target.innerText);
-    if (event.target.innerText=='About'){
-      this.router.navigate(['/', 'about'])
-    }else if(event.target.innerText=='Team'){      
-      this.router.navigate(['/', 'team'])
-    }else if(event.target.innerText=='Careers'){
-      this.router.navigate(['/', 'career'])
-    }else if(event.target.innerText=='Career Description'){
-      this.router.navigate(['/', 'career-description'])
-    }else{
-      console.log(event.target.innerText);
-    }
   }
 }

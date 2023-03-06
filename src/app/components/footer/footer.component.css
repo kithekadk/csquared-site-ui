@@ -1,16 +1,9 @@
-.dk-footer{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
 .findus{
-  width:22vw;
+  width:20vw;
 }
 .tweet{
   width:30vw
 }
-
 @media only screen and (max-width: 600px) {
   .cs-footer h3{
     font-size: 20px;

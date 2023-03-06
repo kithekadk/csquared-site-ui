@@ -21,8 +21,8 @@ Partner with us to enhance your internet access and accelerate your productivity
   constructor( private route:ActivatedRoute ,private countryservice :CountryService) { }
  
   ngOnInit(): void {
-    this.countryservice.setCountry$.subscribe(val=>{
-      this.countries = this.countryservice.getOneCountry(val)
+    this.countryservice.setCountry$.subscribe(country_id=>{
+      this.countries = this.countryservice.getOneCountry(country_id)
     })
     
   }

@@ -1,9 +1,9 @@
 <div class="body">
-  <app-country-header></app-country-header>
+  <app-hero-carousel></app-hero-carousel>
 
 <app-country-about [content]="text" [image]="image"></app-country-about>
 
-<div class="cv-container">
+<!-- <div class="cv-container">
   <div class="main-content">
     <div class="cv-content" *ngFor="let cnt of content">
       <img src="{{ cnt.image }}" alt="" />
@@ -13,12 +13,11 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex>
-
-<!-- <app-country-latestnews></app-country-latestnews> -->
-<app-latest-news></app-latest-news>
+<!-- <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex> -->
+<app-country-products [offers]="offer"></app-country-products>
+<app-country-latestnews></app-country-latestnews>
 
 <app-footer></app-footer>
 

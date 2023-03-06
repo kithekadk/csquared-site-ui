@@ -6,8 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-  
+  margin-bottom: 20px;
+  /* background-color: rgb(238, 238, 238); */
+  padding-top: 30px;
+  padding-bottom: 40px;
   }
   
   .cl-container h1{
@@ -17,10 +19,11 @@
   }
   .cl-content{
       width: 90%;
-      gap: 20px;
+      gap: 40px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      
   }
   
   .cl-content-body{
@@ -31,6 +34,8 @@
       padding: 10px;
      border-radius: 10px;
      border-bottom: 5px solid transparent;
+     background-color: white;
+     box-shadow: 10px 10px 10px 20px rgb(212, 212, 212);
   }
   .cl-content-body:hover{
     border-bottom: 5px solid #034725;

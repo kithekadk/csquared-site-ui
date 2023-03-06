@@ -3,7 +3,6 @@
   margin: 0;
 }
 .body{
-  margin-top: 10vh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@
     transform: translate(-50%, -50%);
 }
 .ch-container {
-  width: 98.9vw;
+  width: 100vw;
   height: calc(100vh - 10vh);
   position: relative;
 }
@@ -173,12 +172,11 @@ h1 {
 .cabout-text h1 {
   color: #345c5a;
   font-weight: bolder;
-  font-size: 30px;
 }
 
 .cabout-text p {
   color: #345c5a;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .overlay {

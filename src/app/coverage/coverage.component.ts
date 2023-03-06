@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
+import { CountryService } from '../services/country.service';
 
 @Component({
   selector: 'app-coverage',
@@ -44,7 +45,56 @@ export class CoverageComponent implements OnInit {
     title: 'Togo',
     alt: 'Togo'
   }]
-  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient) { }
+
+
+  countries:{name:string,code:string,id:string, flag:string}[]=[
+    {
+      name :"Global",
+      code:'hybrid',
+      id:'',
+      flag:'./../../assets/images/flags/earth-1681722__340.png'
+    },
+    {
+      name :"Uganda",
+      code:'uganda',
+      id:'78c7d800-85ad-11eb-82e0-71c6f09a2bae',
+      flag:'./../../assets/images/flags/Flag_of_Uganda.svg.png'
+    },
+    {
+      name :"Kenya",
+      code:'kenya',
+      id:'78ba6f60-85ad-11eb-88f1-39b4763e914c',
+      flag:'./../../assets/images/flags/255px-Flag_of_Kenya.svg.png'
+    },
+     {
+      name :"Ghana",
+      code:'ghana',
+      id:'78b6b910-85ad-11eb-8c83-cd8b9be0f4f1',
+      flag:'./../../assets/images/flags/255px-Flag_of_Ghana.svg.png'
+    },
+      {
+      name :"DRC Congo",
+      code:'drc',
+      id:'78b32a20-85ad-11eb-8ef6-a9906fd1e035',
+      flag:'./../../assets/images/flags/drc_flag.jpg'
+    },
+      {
+      name :"Liberia",
+      code:'liberia',
+      id:'78bb1f20-85ad-11eb-9ca4-dfa9c20bb376',
+      flag:'./../../assets/images/flags/Flag_of_Liberia.svg'
+    },
+     {
+      name :"Togo",
+      code:'togo',
+      id:'78c68a50-85ad-11eb-813f-b19440c3cb6a',
+      flag:'./../../assets/images/flags/Flag_of_Togo.svg.png'
+    }
+  ]
+  products:any[]=[]
+  product_id:any[]=[]
+  view= false
+  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient, private countryservice: CountryService) { }
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   form!:FormGroup;
@@ -52,19 +102,59 @@ export class CoverageComponent implements OnInit {
 
     Aos.init();
     this.form= this.fb.group({
-      receiverLocation: [null, [Validators.required]],
-      Userlat: [null, [Validators.required]],
-      Userlng: [null, [Validators.required]],
-      Country: [null, [Validators.required]],
-      Product_Description: [null, [Validators.required]],
-      Description:[null, [Validators.required]]
+      country_id: [null, [Validators.required]],
+      product_id: [null, [Validators.required]],
+      email:[null, [Validators.required]]
     })
+    
+
+    this.form.get('country_id')?.valueChanges.subscribe(country_id=>{
+      if(this.form.get('country_id')?.value !== ''){
+        this.countryservice.getCountry(country_id).subscribe(res=>{
+        // getting into the products array
+        for(let product of res['products']){
+          this.product_id.push(product.id)
+          this.products.push(product.name)
+          console.log(this.product_id);
+          console.log(this.products);
+          
+
+          
+        }
+                    // this.products=[];// resetting values in the array on new option select
+                    // for(let x of res['products'] ){
+                    //   for (let sub_category of x.category.sub_categories){
+                        // this.products.push(sub_category) 
+                        // console.log((this.products));
+                    //   }         
+                    // }     
+        
+      })
+      }
+      
+    })
+    
     this.getUserLocation();  
   }
 
   navigate($event:any){
     const country:string=($event.target.alt).toLowerCase();
     this.router.navigate(['country/',country])
+  }
+
+  makeOrder(){
+    if(this.form){
+   
+      console.log(this.form.value);
+      this.countryservice.createOrder(this.form.value).subscribe(res=>{
+        console.log(res);   
+        this.form.reset();
+        this.view=true; 
+        setTimeout(() => {
+          this.view=false;
+        }, 3000);    
+      })
+    }
   }
 
   receiverAddress: string = '';

@@ -24,6 +24,8 @@ active:boolean=false;
     Aos.init();
   }
 
+  image='../assets/images/home/slide_2.jpg'
+
   getSections(){
     this.sections=this.apiService.getAboutSection();
     this.active=true

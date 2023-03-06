@@ -1,24 +1,42 @@
-<div class="body">
+<div class="body" [style.height]="height">
   <section>
-    <ngb-carousel *ngIf="images" class="carousel-body">
+    <ngb-carousel *ngIf="countries" class="carousel-body">
       <ng-template ngbSlide >
         <div class="picsum-img-wrapper">
-          <img [src]="images[0]"  alt="Random first slide" />
+          <img [style.height]="height" style="object-fit: cover;" src={{countries.header.image[0]}}  alt="Random first slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">A Digital Africa</h2>
+          <h2 class="text-4xl text-white font-bold">{{ countries.header.title }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
-            CSquared enables MNOs and ISPs to provide high-quality broadband at
-            lower costs through shared infrastructure such as metro fiber and
-            Wi-Fi networks.
-          </p>
+          <p class="text-xxl">{{ countries.header.content }}</p>
+
+          <form *ngIf="countries.search" class="w-full max-w-sm">
+            <div class="flex items-center border-b border-green-500 py-2">
+              <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full  px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Search for our coverage">
+              &nbsp;
+              <button class="flex-shrink-0 bg-green-700 hover:bg-green-900 border-green-700 hover:border-green-900 text-sm border-4 text-white py-1.5 px-3 rounded" type="button">
+                Check
+              </button>
+            </div>
+          </form>
+
+          <div *ngIf="countries.button" class="ch-input">
+            <button>Get Started</button>
+          </div>
+        
+          <div *ngIf="countries.link" class="ch-input">
+            <a href="#">Read More...</a>
+          </div>
+          <!-- <p class="text-md text-white font-medium"> -->
+
+            <!--  -->
+          <!-- </p> -->
         </div>
       </ng-template>
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-          <img
-            [src]="images[1]"
+          <img [style.height]="height" style="object-fit: cover;" 
+            src="{{countries.header.image[1]}}"
             
             alt="Random second slide"
           />
@@ -27,18 +45,29 @@
           class="w-full h-full flex justify-center items-center backdrop-brightness-50"
         ></div>
         <div class="carousel-caption">
-          <h2>Second slide label</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 class="text-4xl text-white font-bold">A Digital Africa</h2>
+          <br />
+          <p class="text-md text-white font-medium">
+            While a basic connection is useful when it comes to Internet access, 
+            abundant, affordable broadband can transform communities and 
+            help people make the most of opportunities online. By investing in 
+            internet infrastructure and making it available to 
+            local Internet Service Providers (ISPs) and mobile network operators (MNOs), 
+            CSquared helps bring high-quality broadband access to Africa’s major cities.
+          </p>
         </div>
       </ng-template>
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-          <img [src]="images[2]" alt="Random third slide" />
+          <img [style.height]="height" style="object-fit: cover;" src="{{countries.header.image[2]}}" alt="Random third slide" />
         </div>
         <div class="carousel-caption">
-          <h2>Third slide label</h2>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          <h2 class="text-4xl text-white font-bold">A Super Connectivity</h2>
+          <br />
+          <p class="text-md text-white font-medium">
+            CSquared reach and unique offering of reliable, 
+            high-speed connectivity, state-of-the-art data centres and 
+            innovative digital services, can guide your business towards the digital future.
           </p>
         </div>
       </ng-template>

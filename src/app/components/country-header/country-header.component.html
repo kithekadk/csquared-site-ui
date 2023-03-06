@@ -1,9 +1,9 @@
 <div *ngIf="countries" class="ch-container"> 
-  <img style="object-fit: cover;" src="{{ countries.header.image }}" alt="" clas="bg-image" />
+  <img style="object-fit: cover;" src="{{ countries.header.image }}" alt="" class="bg-image" />
 </div>
 <div class="ch-content">
   <h1>{{ countries.header.title }}</h1>
-  <p>{{ countries.header.content }}</p>
+  <p class="text-xl">{{ countries.header.content }}</p>
 
   <div *ngIf="countries.search" class="ch-input">
     <input type="text" placeholder="Search for our coverage" />
