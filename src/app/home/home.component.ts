@@ -28,20 +28,20 @@ export class HomeComponent implements OnInit {
     },
     {
       'name': 'Metro Fiber',
-      'logo':'/assets/images/icons/ethernet.svg',
+      'logo': '/assets/images/icons/ethernet.svg',
       'describtion': 'Metro fiber networks demand high availability. CSquared provides dedicated, high bandwidth, secure and scalable solutions with virtually unlimited bandwidth to help our customers connect to locations within the metro.'
     },
     {
       'name': 'FTTX',
-      'logo':'/assets/images/icons/house-up-fill.svg',
-      'describtion': 'CSquared has deployed various metros across cities in Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity. In August 2018, CSquared Uganda began building and deploying a broadband access network based on GPON technology and offering FTTH (Fiber To The Home) access to Suburbs in Kampala in an effort to capture the upcoming growth in the fixed data market as the Ugandan economy and ecosystem matures with a rising middle class'
+      'logo': '/assets/images/icons/house-up-fill.svg',
+      'describtion': 'CSquared has deployed various metros across cities in Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity.'
     },
     {
       'name': 'Solutions',
-      'logo':'/assets/images/icons/arrow-repeat.svg',
+      'logo': '/assets/images/icons/arrow-repeat.svg',
       'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'
     },
-    
+
     {
       'name': 'Backbone',
       'logo': '/assets/images/icons/broadcast-pin.svg',
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
       'logo': '/assets/images/icons/wifi.svg',
       'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple tenant public wifi platform that provides end users with various ISP choices.'
     },
-    
+
   ];
 
   logos: { title: string, image: string }[] = [
@@ -72,11 +72,11 @@ export class HomeComponent implements OnInit {
 
 
 
-  constructor(private http: HttpClient, private fb:FormBuilder, private router:Router, private countryService:CountryService) { }
-  
-form!:FormGroup;
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private countryService: CountryService) { }
+
+  form!: FormGroup;
   ngOnInit(): void {
-    this.form= this.fb.group({
+    this.form = this.fb.group({
       Userlat: [null, [Validators.required]],
       Userlng: [null, [Validators.required]],
     })
@@ -87,113 +87,113 @@ form!:FormGroup;
 
   }
 
-  userslocationName:string='';
-  userLocName(lat:number, lng:number){
+  userslocationName: string = '';
+  userLocName(lat: number, lng: number) {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs`;
     this.http.get(url).subscribe((data: any) => {
       this.userslocationName = data.results[0].formatted_address;
-      if((this.userslocationName).toLowerCase().includes('kenya')){
+      if ((this.userslocationName).toLowerCase().includes('kenya')) {
         this.router.navigate(['/country/kenya'])
-      }else if((this.userslocationName).toLowerCase().includes('uganda')){
+      } else if ((this.userslocationName).toLowerCase().includes('uganda')) {
         this.router.navigate(['/country/uganda'])
       }
-      else if((this.userslocationName).toLowerCase().includes('liberia')){
+      else if ((this.userslocationName).toLowerCase().includes('liberia')) {
         this.router.navigate(['/country/liberia'])
       }
-      else if((this.userslocationName).toLowerCase().includes('democratic republic of the congo')){
+      else if ((this.userslocationName).toLowerCase().includes('democratic republic of the congo')) {
         this.router.navigate(['/country/drc'])
       }
-      else if((this.userslocationName).toLowerCase().includes('ghana')){
+      else if ((this.userslocationName).toLowerCase().includes('ghana')) {
         this.router.navigate(['/country/ghana'])
       }
-      else if((this.userslocationName).toLowerCase().includes('togo')){
+      else if ((this.userslocationName).toLowerCase().includes('togo')) {
         this.router.navigate(['/country/togo'])
-      }else{
+      } else {
         this.router.navigate(['/country/hybrid'])
       }
     });
   }
-  getUserLocation(){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition((position)=>{
+  getUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
         const longitude = position.coords.longitude;
         const latitude = position.coords.latitude;
-        console.log(longitude,latitude);
-        this.userLocName(latitude,longitude);
+        console.log(longitude, latitude);
+        this.userLocName(latitude, longitude);
         this.form.get('Userlat')?.setValue(latitude)
         this.form.get('Userlng')?.setValue(longitude)
         this.passCoordinatesToUrl(longitude, latitude);
       });
-    }else{
+    } else {
       console.log('No support for geolocation')
     }
   }
 
-passCoordinatesToUrl(Longitude:number, Latitude:number){
-  const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}&type=street`
-}
+  passCoordinatesToUrl(Longitude: number, Latitude: number) {
+    const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}&type=street`
+  }
 
-coverage:Array<object>=[{
-  image: '/assets/images/logos/mtn_logo.png',
-  thumbImage: '/assets/images/logos/mtn_logo.png',
-  alt: 'MTN',
-  title: 'MTN'
-}, {
-  image: '/assets/images/logos/airtel_logo.png',
-  thumbImage: '/assets/images/logos/airtel_logo.png',
-  title: 'Airtel',
-  alt: 'Airtel'
-}, {
-  image: '/assets/images/logos/mainone_logo.png',
-  thumbImage: '/assets/images/logos/mainone_logo.png',
-  title: 'Main One',
-  alt: 'Main One'
-}, {
-  image: '/assets/images/logos/internets_logo.png',
-  thumbImage: '/assets/images/logos/internets_logo.png',
-  title: 'Internet Solutions',
-  alt: 'Internet Solutions'
-}, {
-  image: '/assets/images/logos/iwayafrica_logo.jpg',
-  thumbImage: '/assets/images/logos/iwayafrica_logo.jpg',
-  title: 'Iway Africa',
-  alt: 'Iway Africa'
-},
-{
-  image: '/assets/images/logos/orange_logo.png',
-  thumbImage: '/assets/images/logos/orange_logo.png',
-  title: 'Orange',
-  alt: 'Orange'
-},
-{
-  image: '/assets/images/logos/gilat_logo.png',
-  thumbImage: '/assets/images/logos/gilat_logo.png',
-  title: 'Gilat',
-  alt: 'Gilat'
-},
-{
-  image: '/assets/images/logos/renu_logo.png',
-  thumbImage: '/assets/images/logos/renu_logo.png',
-  title: 'Renu',
-  alt: 'Renu'
-},
-{
-  image: '/assets/images/logos/google_logo.png',
-  thumbImage: '/assets/images/logos/google_logo.png',
-  title: 'Google',
-  alt: 'Google'
-},
-{
-  image: '/assets/images/logos/seacom_logo.jpg',
-  thumbImage: '/assets/images/logos/seacom_logo.jpg',
-  title: 'Seacom',
-  alt: 'Seacom'
-},
-{
-  image: '/assets/images/logos/simbanet_logo.png',
-  thumbImage: '/assets/images/logos/simbanet_logo.png',
-  title: 'Simbanet',
-  alt: 'Simbanet'
-}
-]
+  coverage: Array<object> = [{
+    image: '/assets/images/logos/mtn_logo.png',
+    thumbImage: '/assets/images/logos/mtn_logo.png',
+    alt: 'MTN',
+    title: 'MTN'
+  }, {
+    image: '/assets/images/logos/airtel_logo.png',
+    thumbImage: '/assets/images/logos/airtel_logo.png',
+    title: 'Airtel',
+    alt: 'Airtel'
+  }, {
+    image: '/assets/images/logos/mainone_logo.png',
+    thumbImage: '/assets/images/logos/mainone_logo.png',
+    title: 'Main One',
+    alt: 'Main One'
+  }, {
+    image: '/assets/images/logos/internets_logo.png',
+    thumbImage: '/assets/images/logos/internets_logo.png',
+    title: 'Internet Solutions',
+    alt: 'Internet Solutions'
+  }, {
+    image: '/assets/images/logos/iwayafrica_logo.jpg',
+    thumbImage: '/assets/images/logos/iwayafrica_logo.jpg',
+    title: 'Iway Africa',
+    alt: 'Iway Africa'
+  },
+  {
+    image: '/assets/images/logos/orange_logo.png',
+    thumbImage: '/assets/images/logos/orange_logo.png',
+    title: 'Orange',
+    alt: 'Orange'
+  },
+  {
+    image: '/assets/images/logos/gilat_logo.png',
+    thumbImage: '/assets/images/logos/gilat_logo.png',
+    title: 'Gilat',
+    alt: 'Gilat'
+  },
+  {
+    image: '/assets/images/logos/renu_logo.png',
+    thumbImage: '/assets/images/logos/renu_logo.png',
+    title: 'Renu',
+    alt: 'Renu'
+  },
+  {
+    image: '/assets/images/logos/google_logo.png',
+    thumbImage: '/assets/images/logos/google_logo.png',
+    title: 'Google',
+    alt: 'Google'
+  },
+  {
+    image: '/assets/images/logos/seacom_logo.jpg',
+    thumbImage: '/assets/images/logos/seacom_logo.jpg',
+    title: 'Seacom',
+    alt: 'Seacom'
+  },
+  {
+    image: '/assets/images/logos/simbanet_logo.png',
+    thumbImage: '/assets/images/logos/simbanet_logo.png',
+    title: 'Simbanet',
+    alt: 'Simbanet'
+  }
+  ]
 }
