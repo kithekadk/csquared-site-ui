@@ -16,18 +16,23 @@ export class SingleServiceComponent implements OnInit {
   id:string = this.router.url;
   index!:number 
   ngOnInit(): void {
-    this.getFiberServiceIndex();
-    this.getCloudServiceIndex();
+    if(this.router.url.includes('/services/wholesale-fiber/view/')){
+      this.getFiberServiceIndex();
+    }else if(this.router.url.includes('/services/cloud-solutions/view/')){
+      this.getCloudServiceIndex();
+    }   
   }
 
   getFiberServiceIndex(){
     this.index = (Number(this.id.replace('/services/wholesale-fiber/view/','')));
     this.fiberservices = this.apiService.getOneFiberItem(this.index);
+    this.image=this.fiberservices.image 
   }
   getCloudServiceIndex(){
     this.index = (Number(this.id.replace('/services/cloud-solutions/view/','')));
     this.cloudservices = this.apiService.getOneCloudItem(this.index);
+    this.image=this.cloudservices.image 
   }
 
-
+  image=''
 }

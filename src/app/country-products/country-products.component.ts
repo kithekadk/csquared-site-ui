@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Offer } from '../interfaces/interfaces';
 
 @Component({
@@ -16,9 +17,13 @@ export class CountryProductsComponent implements OnInit {
   //   content:''
   // }
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    if(this.router.url.includes('impact')){
+      this.imageLoadForImpacts=true
+    }
   }
+  imageLoadForImpacts=false
 
 }

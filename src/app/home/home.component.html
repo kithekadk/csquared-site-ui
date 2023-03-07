@@ -20,28 +20,27 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+        class="grid grid-cols-1 gap-1 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
       >
         <div
           *ngFor="let service of services"
-          class="group p-8 space-y-3 border-2 border-green-400 dark:border-blue-300 rounded-xl hover:bg-green-900 hover:border-transparent"
+          class="group p-8 space-y-3 border-2 border-green-400 bg-green-400 dark:border-blue-300 rounded-xl hover:bg-green-900 hover:border-transparent"
         >
           <p class="flex justify-center h-20 pb-3">
             <img src="{{ service.logo }}" alt="" style="object-fit: contain" />
           </p>
 
           <h1
-            class="text-2xl font-semibold text-center text-gray-700 capitalize dark:text-white group-hover:text-white"
+            class="text-2xl font-semibold text-center text-gray-900 capitalize dark:text-white group-hover:text-white"
           >
             {{ service.name }}
           </h1>
 
-          <p class="text-gray-500 dark:text-gray-300 group-hover:text-white">
-            {{ service.describtion }}
+          <p class="text-gray-700 dark:text-gray-700 group-hover:text-white">
+            {{ service.description }}
           </p>
 
           <a
-            href="#"
             class="inline-flex p-2 text-green-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:green-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500"
           >
           </a>
@@ -109,7 +108,7 @@
 
           <div class="container mx-auto about-us mt-56 md:mt-0 px-5">
             <h4 class="text-md font-medium text-green-900">
-              #FibeRising Africa
+              #FibeRisingAfrica
             </h4>
             <!-- <h5 class="text-3xl font-medium text-green-900">GROWTH</h5> -->
 
@@ -151,9 +150,9 @@
     <!-- end Map section -->
 
     <!-- Start of logo section -->
-    <div class="row mt-8 pt-9 bg-green-100">
+    <div class="row mt-8 p-9">
       <h3 class=" mx-auto text-center text-2xl font-bold text-green-900 pb-12" style="font-size: 250%; font-weight: bold">Who We Work With</h3><br>
-      <section class="flex bg-green-100 w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
+      <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
         <div *ngFor="let logo of logos">
           <img src="{{ logo.image }}" class=" h-20" alt="" />
         </div>
@@ -161,7 +160,28 @@
       </section>
     </div>
 
-    <app-latest-news></app-latest-news>
+    <div class="flex gap-8 news bg-green-100 p-12">
+      <div style="width: 25vw;" class="tweet">
+        <ng-twitter-timeline
+          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+          [opts]="{ tweetLimit: 1}"
+        ></ng-twitter-timeline>
+      </div>
+      <div style="width: 25vw;" class="tweet">
+        <ng-twitter-timeline
+          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+          [opts]="{ tweetLimit: 1}"
+        ></ng-twitter-timeline>
+      </div>
+      <div style="width: 25vw;" class="tweet">
+        <ng-twitter-timeline
+          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+          [opts]="{ tweetLimit: 1}"
+        ></ng-twitter-timeline>
+      </div>
+    </div>
+
+    <!-- <app-latest-news></app-latest-news> -->
 
     <app-footer></app-footer>
   </div>

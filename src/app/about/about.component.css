@@ -5,13 +5,13 @@ section{
     overflow-x: hidden;
 }
 .about{
-    max-height: 80vh;
-    
+    max-height: 50vh;
+    margin-bottom: 5vh;
 }
 .about_img>img{
     width:100vw;
     object-fit: cover;
-    height: 80vh;
+    height: 50vh;
 }
 
 .cards{
