@@ -49,6 +49,7 @@ import { MapComponent } from './map/map.component';
 import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
 import { CountryProductsComponent } from './country-products/country-products.component';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import { CountryProductsComponent } from './country-products/country-products.co
     FormsModule,
     ReactiveFormsModule,
     GooglePlaceModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FacebookModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

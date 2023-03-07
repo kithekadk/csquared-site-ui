@@ -76,7 +76,17 @@
   display:flex;
   width:100vw;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+
+}
+iframe{
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 4px #ccc;
+  -webkit-box-shadow: 2px 2px 4px #ccc;
+  box-shadow: 2px 2px 4px #ccc;
+
 }
 
 

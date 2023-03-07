@@ -150,14 +150,29 @@
     <!-- end Map section -->
 
     <!-- Start of logo section -->
-    <div class="row mt-8 p-9">
-      <h3 class=" mx-auto text-center text-2xl font-bold text-green-900 pb-12" style="font-size: 250%; font-weight: bold">Who We Work With</h3><br>
-      <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
+    <div class="">
+      
+      <!-- <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
         <div *ngFor="let logo of logos">
           <img src="{{ logo.image }}" class=" h-20" alt="" />
         </div>
 
-      </section>
+      </section> -->
+
+      <div class="row mt-8 p-8">
+        <h3 class=" mx-auto text-center text-2xl font-bold text-green-900 pb-12" style="font-size: 250%; font-weight: bold">Who We Work With</h3><br>
+        <ng-image-slider
+          [images]="coverage"
+          [infinite]="true"
+          [autoSlide]="1"
+          [showArrow]="false"
+          [animationSpeed]="4"
+          [imageSize]="{ width: '230px', height: 100, space: 15 }"
+          class="p-4"
+          #nav
+        ></ng-image-slider
+        ><br /><br />
+      </div>
     </div>
 
     <div class="flex gap-8 news bg-green-100 p-12">
@@ -167,18 +182,14 @@
           [opts]="{ tweetLimit: 1}"
         ></ng-twitter-timeline>
       </div>
-      <div style="width: 25vw;" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1}"
-        ></ng-twitter-timeline>
-      </div>
-      <div style="width: 25vw;" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1}"
-        ></ng-twitter-timeline>
-      </div>
+      
+      <!-- embedding facebook post -->
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=350&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483" width="350" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      <!-- end of embedding facebook -->
+      
+      <!-- embedding linked in post -->
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520" height="386" width="350" frameborder="0" style="border:none;overflow:hidden" allowfullscreen="true" title="Embedded post"></iframe>
+      <!-- end of embedding linked inpost -->
     </div>
 
     <!-- <app-latest-news></app-latest-news> -->
