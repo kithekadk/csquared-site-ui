@@ -75,16 +75,11 @@ Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 
   constructor(private router:Router, private elementRef:ElementRef) { }
 
 navbarPosition= this.elementRef.nativeElement.querySelector('.navbar')
-  ngOnInit(): void {
-    console.log(window.innerHeight);
-     
+  ngOnInit(): void {     
   }
   toggle!:boolean
   view!:boolean
 
-  hideMenu(){
-    this.view=false;
-  }
   viewProduct(index:number){
     this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
       this.router.navigate(['services/wholesale-fiber/view',index])
