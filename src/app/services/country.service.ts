@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
-import { Countries, order } from '../interfaces/interfaces';
+import { contactus, Countries, order } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class CountryService {
       {
         country: 'uganda',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Join our amazing Network in Uganda",
           content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall."
           , image: ['./../../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
@@ -48,7 +48,7 @@ export class CountryService {
       {
         country: 'ghana',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Join our amazing Network in Ghana",
           content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
           image: ['./../../assets/Csquared/accra.jpg',
@@ -64,7 +64,7 @@ export class CountryService {
       {
         country: 'liberia',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Join our amazing Network in Liberia",
           content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
           image: ['https://oceandecade.org/wp-content/uploads/2021/08/e-0-j-19-gl-xo-ac-a-fhr@3x-1.png',
@@ -82,7 +82,7 @@ export class CountryService {
       {
         country: 'togo',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Join our amazing Network in Togo",
           content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
           image: ['https://www.colliers.com/-/media/images/colliers/emea/netherlands/research/2019/supermarkt-1536x1040.ashx?bid=76c600addb1840f1af748d14f17a8d34',
@@ -97,7 +97,7 @@ export class CountryService {
       {
         country: 'kenya',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Build hybrid, multicloud, cloud-to-cloud, and disaster recovery solutions ",
           content: "CSquared Cloud offers simplified access to and tailored consumption of multi-cloud services to businesses and social enterprises cost-effectively. Our solutions facilitate an enabling environment for digital transformation across Africa.",
           image: ['https://media.cnn.com/api/v1/images/stellar/prod/131211104520-kenya-photography-contest-7.jpg?q=w_1793,h_1200,x_0,y_0,c_fill/w_1280',
@@ -112,7 +112,7 @@ export class CountryService {
       {
         country: 'drc',
         header: {
-          height:"90vh",
+          height:"70vh",
           title: "Join our amazing Network in the Basin",
           content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
           image: ['https://previews.123rf.com/images/fyletto/fyletto1301/fyletto130100018/17161899-no-s%C3%B3lo-las-dunas-de-arena-monta%C3%B1as-%C3%A1ridas-pero-tambi%C3%A9n-son-una-cara-de-la-poderosa-desierto-del-sah.jpg',
@@ -141,6 +141,10 @@ export class CountryService {
   // headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
   createOrder(neworder:order){
     return this.http.post<order>('https://cms.shiftechafrica.com/api/v1/order', neworder);
+  }
+
+  contactCsquared(issue:contactus){
+    return this.http.post<contactus>('https://cms.shiftechafrica.com/api/v1/contact',issue);
   }
 
 

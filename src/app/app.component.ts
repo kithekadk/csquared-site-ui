@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {Link} from './definitions'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
+
   title = 'test-angular';
   links: Link[] = [
       { name:'home', route:'/'},
@@ -15,4 +16,5 @@ export class AppComponent {
       { name:'about', route:'/about'},
       { name:'blog', route:'/blog'},
     ]
+
 }

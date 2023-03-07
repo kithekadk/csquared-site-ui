@@ -2,36 +2,7 @@
 <footer
   class="bg-[url(/assets/images/backgrounds/footer-bg.svg)] bg-cover bg-center p-8 relative"
 >
-  <div class="cs-footer">
-    <div class="flex justify-center md:pt-16 align-center ">
-      <div class="text-center w-[700px]">
-        <h3 class="text-3xl font-bold text-white">Subscribe</h3>
-        <!-- <small class="text-white"
-          >Share your thoughts</small
-        > -->
-        <div class="mt-12 mx-8 md:mx-0 cs-input-container">
-          <div class="mt-1 flex rounded-md shadow-sm input-btn">
-            <div
-              class="relative flex items-stretch flex-grow focus-within:z-10"
-            >
-              <input
-                type="text"
-                name="search"
-                class="send-email p-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-4 sm:text-lg border-gray-300 py-2 p-4"
-                placeholder="Send your email"
-              />
-            </div>
-            <button
-              type="button"
-              class="btn-send -ml-px relative inline-flex items-center space-x-2 px-16 py-2 font-medium rounded-r-md text-brand-green  bg-brand-yellow hover:bg-brand-yellow/80 focus:outline-none focus:ring-1"
-            >
-              <span>Subscribe</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <div class="flex flex-wrap justify-center align-center gap-16 pt-20">
     <div class="findus flex flex-col items-start">
@@ -63,25 +34,25 @@
       ></ng-twitter-timeline>
     </div> -->
     <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/uganda" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Uganda &nbsp;<img data-popover id="popover-right" role="tooltip" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      
-      <p (click)="viewCountryMap('ug')" class="hover:cursor-pointer hover:translate-x-0.5">1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/uganda" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Uganda &nbsp;<img data-popover id="popover-right" role="tooltip" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a  href="https://www.google.com/maps/place/Kampala,+Uganda/@0.3132008,32.5290845,12z/data=!3m1!4b1!4m6!3m5!1s0x177dbc0f9d74b39b:0x4538903dd96b6fec!8m2!3d0.3475964!4d32.5825197!16zL20vMGZuZ3k" target="_blank" class="mb-4 hover:cursor-pointer hover:translate-x-0.5">1st Floor, Plot 7/11 GT Bank Building, Buganda Road, Kampala</a><br><br>
 
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Kenya &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      <p (click)="viewCountryMap('ke')" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</p><br>
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Ghana &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      <p (click)="viewCountryMap('gh')" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, Acrra</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Kenya &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a href="https://www.google.com/maps/place/Nairobi/@-1.3028618,36.7073089,11z/data=!4m15!1m8!3m7!1s0x182f1172d84d49a7:0xf7cf0254b297924c!2sNairobi!3b1!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk!3m5!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk" target="_blank" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Nairobi</a><br><br>
+
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Ghana &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a href="https://www.google.com/maps/place/Accra,+Ghana/@5.5913754,-0.2497704,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644!16zL20vMGZueWM" target="_blank" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, Acrra</a><br><br>
     </div>
 
     <div class="findus" style="color:white;">
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/liberia" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Liberia &nbsp; <img data-popover id="popover-right3" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      <p (click)="viewCountryMap('li')" class="hover:cursor-pointer hover:translate-x-0.5">1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Monrovia</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/liberia" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Liberia &nbsp; <img data-popover id="popover-right3" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a href="https://www.google.com/maps/place/Liberia/@6.4114302,-11.6973216,7z/data=!3m1!4b1!4m6!3m5!1s0xf09f803d4a9fcc1:0x7fd3286b32d16373!8m2!3d6.428055!4d-9.429499!16zL20vMDRoemo" target="_blank" class="hover:cursor-pointer hover:translate-x-0.5">1st Floor, ICA Building, 6th Street Sinkor, Tubman Boulevard, Liberia</a><br><br>
       
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Togo &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      <p (click)="viewCountryMap('ke')" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Togo</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/kenya" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">Togo &nbsp; <img data-popover id="popover-right1" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a href="https://www.google.com/maps/place/Togo/@8.6093382,-1.4124369,7z/data=!3m1!4b1!4m6!3m5!1s0x1023e1c113185419:0xfaae5b301ad19360!8m2!3d8.619543!4d0.824782!16zL20vMDdmNXg" target="_blank" class="hover:cursor-pointer hover:translate-x-0.5">14th Floor, Dunhill Towers, Waiyaki Way, Togo</a><br><br>
       
-      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">DRC &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/long-arrow-right.png" alt=""></h2>
-      <p (click)="viewCountryMap('gh')" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, DRC</p><br>
+      <h2 style="font-size: 25px; margin-bottom:10px;" routerLink="/country/ghana" class="flex w-fit hover:cursor-pointer hover:translate-x-0.5 hover:text-blue-500">DRC &nbsp; <img data-popover id="popover-right2" src="/assets/images/icons/arrow-up-right.png" alt=""></h2>
+      <a href="https://www.google.com/maps/place/Liberia/@6.4114302,-11.6973216,7z/data=!3m1!4b1!4m6!3m5!1s0xf09f803d4a9fcc1:0x7fd3286b32d16373!8m2!3d6.428055!4d-9.429499!16zL20vMDRoemo" target="_blank" class="hover:cursor-pointer hover:translate-x-0.5">7th Floor, Accra Financial Center, Liberia Road, DRC</a><br><br>
       
     </div>
 
@@ -89,8 +60,7 @@
 
       <!-- Quicklinks -->
       <div class="findus">
-        <h6 class="text-2xl text-white">Mission</h6>
-        <br>
+        <h6 class="text-2xl text-white mb-2">Mission</h6>
         <p class="flex flex-wrap text-white"> 
           CSquared is a technology company, making commercially driven investments into broadband-enabling infrastructure throughout Africa.
         </p><br>
@@ -130,13 +100,44 @@
     </div>
   </div>
   <div>
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center mt-10 items-center">
       <div class="text-xs md:text-sm text-brand-yellow flex space-x-8">
         <h5>+1 361-301-0959</h5>
         <h5>Terms of Service</h5>
         <h5>Privacy Policy</h5>
       </div>
+      <div class="cs-footer">
+        <div class="flex justify-center ml-16 md:pt-0  align-center ">
+          <div class="text-center w-[700px]">
+            <!-- <h3 class="text-3xl font-bold text-white">Subscribe</h3> -->
+            <!-- <small class="text-white"
+              >Share your thoughts</small
+            > -->
+            <div class="mx-8 md:mx-0 cs-input-container">
+              <div class="flex rounded-md shadow-sm input-btn">
+                <div
+                  class="relative flex items-stretch flex-grow focus-within:z-10"
+                >
+                  <input
+                    type="text"
+                    name="search"
+                    class="send-email p-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-4 sm:text-lg border-gray-300 py-2 p-4"
+                    placeholder="Send your email"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn-send -ml-px relative inline-flex items-center space-x-2 px-16 py-2 font-medium rounded-r-md text-brand-green  bg-brand-yellow hover:bg-brand-yellow/80 focus:outline-none focus:ring-1"
+                >
+                  <span>Subscribe</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    
   </div>
 </footer>
 <!--end footer-->

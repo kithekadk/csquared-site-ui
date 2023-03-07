@@ -1,5 +1,5 @@
 <div class="body" *ngIf="fiberservices">
-    <div class="fiber-bg">
+    <div class="fiber-bg" [style.background-image]="'url('+image+')'">
         {{fiberservices.title}}
     </div>
     <div class="service-container">
@@ -18,7 +18,7 @@
 </div>
 <!-- Display cloud services if available -->
 <div class="body" *ngIf="cloudservices">
-    <div class="cloudservices-bg">
+    <div class="cloudservices-bg" [style.background-image]="'url('+image+')'">
         {{cloudservices.title}}
     </div>
     <div class="service-container">

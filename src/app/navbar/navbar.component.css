@@ -46,10 +46,6 @@ The navbar toggle appears at this breakpoint */
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
-  border-radius:0;
+    border-radius:0;
  }
-  
-  .kd-on{
-    /* padding: 5px; */
-  }
 }

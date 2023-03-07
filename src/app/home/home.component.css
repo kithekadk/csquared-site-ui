@@ -72,6 +72,14 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.news{
+  display:flex;
+  width:100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+
 @media screen and (max-width: 768px) {
   .home {
     display: flex;

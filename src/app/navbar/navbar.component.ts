@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,16 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   toggled: boolean = false;
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event){
+    this.isMegamenuOpen=false;
+  } 
+
+isMegamenuOpen=false;
+
+  toggleMegamenu() {
+    this.isMegamenuOpen = !this.isMegamenuOpen;
+  }
+
   selectedItem: {name:string,code:string, flag:string} | null = null
 countries:{name:string,code:string,id:string, flag:string}[]=[
   {
@@ -62,10 +72,12 @@ services:{name:string, code:string}[]=[{name:'WholeSale Fiber', code:'wholesale-
 {name:'Cloud Solutions', code: 'cloud-solutions'}];
 
 Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
-  constructor(private router:Router) { }
+  constructor(private router:Router, private elementRef:ElementRef) { }
 
+navbarPosition= this.elementRef.nativeElement.querySelector('.navbar')
   ngOnInit(): void {
-    
+    console.log(window.innerHeight);
+     
   }
   toggle!:boolean
   view!:boolean

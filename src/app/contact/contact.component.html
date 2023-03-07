@@ -120,32 +120,66 @@
               can also just drop a thank you note if you appreciate our
               services.
             </p>
-            <!--<dl class="mt-8 space-y-6">-->
-            <!--  <dt><span class="sr-only">Phone number</span></dt>-->
-            <!--  <dd class="flex text-base text-indigo-50">-->
-            <!--    &lt;!&ndash; Heroicon name: outline/phone &ndash;&gt;-->
-            <!--    <svg class="flex-shrink-0 w-6 h-6 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">-->
-            <!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />-->
-            <!--    </svg>-->
-            <!--    <span class="ml-3">+1 (555) 123-4567</span>-->
-            <!--  </dd>-->
-            <!--  <dt><span class="sr-only">Email</span></dt>-->
-            <!--  <dd class="flex text-base text-indigo-50">-->
-            <!--    &lt;!&ndash; Heroicon name: outline/mail &ndash;&gt;-->
-            <!--    <svg class="flex-shrink-0 w-6 h-6 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">-->
-            <!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />-->
-            <!--    </svg>-->
-            <!--    <span class="ml-3">support@workcation.com</span>-->
-            <!--  </dd>-->
-            <!--</dl>-->
           </div>
 
           <!-- Contact form -->
-          <div class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12">
+          <form
+            [formGroup]="form"
+            (ngSubmit)="SubmitIssue()"
+            class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12"
+          >
+            <!-- Success message -->
+            <div
+              class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+              role="alert"
+              *ngIf="view"
+            >
+              <div class="flex">
+                <div class="py-1">
+                  <svg
+                    class="fill-current h-6 w-6 text-teal-500 mr-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold">Success</p>
+                  <p class="text-sm">Thank you, message send successfully</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of success messsage -->
             <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
             <div
               class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
             >
+              <div class="sm:col-span-2">
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-900"
+                  >Country</label
+                >
+                <div class="mt-1">
+                  <select
+                    formControlName="country_id"
+                    type="text"
+                    name="country"
+                    id="country"
+                    class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                  >
+                  <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">Kenya</option>
+                  <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">Uganda</option>
+                  <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">Ghana</option>
+                  <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">DRC</option>
+                  <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">Liberia</option>
+                  <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">Togo</option>
+                  </select>
+                </div>
+              </div>
               <div>
                 <label
                   for="first-name"
@@ -154,6 +188,7 @@
                 >
                 <div class="mt-1">
                   <input
+                    formControlName="firstName"
                     type="text"
                     name="first-name"
                     id="first-name"
@@ -170,6 +205,7 @@
                 >
                 <div class="mt-1">
                   <input
+                    formControlName="lastName"
                     type="text"
                     name="last-name"
                     id="last-name"
@@ -186,6 +222,7 @@
                 >
                 <div class="mt-1">
                   <input
+                    formControlName="email"
                     id="email"
                     name="email"
                     type="email"
@@ -207,6 +244,7 @@
                 </div>
                 <div class="mt-1">
                   <input
+                    formControlName="phoneNumber"
                     type="text"
                     name="phone"
                     id="phone"
@@ -224,6 +262,7 @@
                 >
                 <div class="mt-1">
                   <input
+                    formControlName="subject"
                     type="text"
                     name="subject"
                     id="subject"
@@ -244,6 +283,7 @@
                 </div>
                 <div class="mt-1">
                   <textarea
+                    formControlName="description"
                     id="message"
                     name="message"
                     rows="4"
@@ -261,16 +301,18 @@
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
   <div>
-    <h1 class="flex justify-center text-5xl font-bold text-slate-600 !my-5" >Come Visit With Us</h1>
+    <h1 class="flex justify-center text-5xl font-bold text-slate-600 !my-5">
+      Come Visit With Us
+    </h1>
 
     <div class="footer">
-      <div class="footer1">
+      <a class="footer1" href="https://www.google.com/maps/place/Nairobi/@-1.3028618,36.7073089,11z/data=!4m15!1m8!3m7!1s0x182f1172d84d49a7:0xf7cf0254b297924c!2sNairobi!3b1!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk!3m5!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk" target="_blank">
         <div class="footer-div1">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Nairobi" />
@@ -286,9 +328,9 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="footer6">
+      <a class="footer6" href="https://www.google.com/maps/place/Accra,+Ghana/@5.5912087,-0.1797294,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644!16zL20vMGZueWM" target="_blank">
         <div class="footer-div6">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Accra" />
@@ -304,9 +346,9 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="footer2">
+      <a class="footer2" href="https://www.google.com/maps/place/Kampala,+Uganda/@0.3132008,32.5290845,12z/data=!3m1!4b1!4m6!3m5!1s0x177dbc0f9d74b39b:0x4538903dd96b6fec!8m2!3d0.3475964!4d32.5825197!16zL20vMGZuZ3k" target="_blank">
         <div class="footer-div2">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Kampala" />
@@ -322,13 +364,13 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="footer3">
+      <a class="footer3" href="https://www.google.com/maps/place/Democratic+Republic+of+the+Congo/@-0.5006527,13.4644314,4.75z/data=!4m15!1m8!3m7!1s0x1979facf9a7546bd:0x4c63e5eac93f141!2sDemocratic+Republic+of+the+Congo!3b1!8m2!3d-4.038333!4d21.758664!16zL20vMDg4eHA!3m5!1s0x1979facf9a7546bd:0x4c63e5eac93f141!8m2!3d-4.038333!4d21.758664!16zL20vMDg4eHA" target="_blank">
         <div class="footer-div3">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Monrovia" />
-            <div class="centered">MONROVIA</div>
+            <div class="centered">DRC</div>
           </div>
           <div class="overlay">
             <h3>
@@ -340,13 +382,13 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="footer4">
+      <a class="footer4" href="https://www.google.com/maps/place/Togo/@8.6093382,-1.4124369,7z/data=!3m1!4b1!4m6!3m5!1s0x1023e1c113185419:0xfaae5b301ad19360!8m2!3d8.619543!4d0.824782!16zL20vMDdmNXg" target="_blank">
         <div class="footer-div4">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Mauritius" />
-            <div class="centered">MAURITIUS</div>
+            <div class="centered">TOGO</div>
           </div>
           <div class="overlay">
             <h3>
@@ -358,13 +400,13 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="footer5">
+      <a class="footer5" href="https://www.google.com/maps/place/Liberia/@6.4114302,-11.6973216,7z/data=!3m1!4b1!4m6!3m5!1s0xf09f803d4a9fcc1:0x7fd3286b32d16373!8m2!3d6.428055!4d-9.429499!16zL20vMDRoemo" target="_blank">
         <div class="footer-div5">
           <div class="imgcontainer">
             <img src="./../../assets/Csquared/nairobi.jpg" alt="Canada" />
-            <div class="centered">CANADA</div>
+            <div class="centered">LIBERIA</div>
           </div>
           <div class="overlay">
             <h3>
@@ -376,7 +418,7 @@
             </h3>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>

@@ -48,3 +48,13 @@ export interface order{
     product_id:string;
     email:string
 }
+
+export interface contactus{
+    country_id:string;
+    firstname:string;
+    lastname:string;
+    email:string;
+    phone:string;
+    subject:string;
+    message:string;
+}

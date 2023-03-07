@@ -23,34 +23,35 @@ export class HomeComponent implements OnInit {
   services: any[] = [
     {
       'name': 'Cloud Services',
-      'logo': '/assets/images/icons/cloud.svg',
-      'describtion': "CSquared Cloud offers simplified access to multi-cloud services for cooperates and SMEs. Our solutions facilitate an enabling environment for the digital transformation across Africa."
+      'logo': '/assets/images/icons/cloud.png',
+      'description': "CSquared Cloud offers simplified access to multi-cloud services for cooperates and SMEs. Our solutions facilitate an enabling environment for the digital transformation across Africa."
     },
     {
       'name': 'Metro Fiber',
-      'logo': '/assets/images/icons/ethernet.svg',
-      'describtion': 'Metro fiber networks demand high availability. CSquared provides dedicated, high bandwidth, secure and scalable solutions with virtually unlimited bandwidth to help our customers connect to locations within the metro.'
+      'logo': '/assets/images/icons/fiber.png',
+      'description': 'Metro fiber networks demand high availability. CSquared provides dedicated, high bandwidth, secure and scalable solutions with virtually unlimited bandwidth to help our customers connect to locations within the metro.'
     },
     {
       'name': 'FTTX',
-      'logo': '/assets/images/icons/house-up-fill.svg',
-      'describtion': 'CSquared has deployed various metros across cities in Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity.'
+      'logo': '/assets/images/icons/fttx.png',
+      'description': 'CSquared has deployed various metros across cities in Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity.'
+    }, 
+    {
+      'name': 'Backbone',
+      'logo': '/assets/images/icons/backbone.png',
+      'description': 'CSquared offers fibre backbone products which connect metros within our operating countries. With tiered capacities from as low as 1Gb and up to 100G+, we offer wholesale dedicated Point-to-Presence (PoP) to and from a predetermined PoP.'
     },
     {
       'name': 'Solutions',
-      'logo': '/assets/images/icons/arrow-repeat.svg',
-      'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'
+      'logo': '/assets/images/icons/business-icon.png',
+      'description': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'
     },
 
+
     {
-      'name': 'Backbone',
-      'logo': '/assets/images/icons/broadcast-pin.svg',
-      'describtion': 'CSquared offers fibre backbone products which connect metros within our operating countries. With tiered capacities from as low as 1Gb and up to 100G+, we offer wholesale dedicated Point-to-Presence (PoP) to and from a predetermined PoP.'
-    },
-    {
-      'name': 'Wifi',
-      'logo': '/assets/images/icons/wifi.svg',
-      'describtion': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple tenant public wifi platform that provides end users with various ISP choices.'
+      'name': 'Wi-Fi',
+      'logo': '/assets/images/icons/wifi.png',
+      'description': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple tenant public wifi platform that provides end users with various ISP choices.'
     },
 
   ];

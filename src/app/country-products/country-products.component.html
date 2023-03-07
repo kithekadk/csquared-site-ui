@@ -1,6 +1,9 @@
+<h5 class="flex justify-center mt-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white" *ngIf="!imageLoadForImpacts">Products</h5>
 <div class="products">
+    
         <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of offers; let i = index">
-            <a href="#">
+            <img src="{{content.image}}" alt="" *ngIf="imageLoadForImpacts" class="mb-4">
+            <a>
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ content.title }}</h5>
             </a>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ content.content }}</p>
