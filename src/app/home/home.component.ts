@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountryService } from '../services/country.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,36 +25,33 @@ export class HomeComponent implements OnInit {
     {
       'name': 'Cloud Services',
       'logo': '/assets/images/icons/cloud.png',
-      'description': "CSquared Cloud offers simplified access to multi-cloud services for cooperates and SMEs. Our solutions facilitate an enabling environment for the digital transformation across Africa."
+      'description': "Our cloud solutions offer an enabling environment for digital transformation across Africa. CSquared Cloud offers simplified access to multi-cloud services for corporates and SMEs."
     },
     {
       'name': 'Metro Fiber',
       'logo': '/assets/images/icons/fiber.png',
-      'description': 'Metro fiber networks demand high availability. CSquared provides dedicated, high bandwidth, secure and scalable solutions with virtually unlimited bandwidth to help our customers connect to locations within the metro.'
+      'description': 'Our metro fiber is a secure and scalable solution that offers high availability unlimited bandwidth.'
     },
     {
       'name': 'FTTX',
       'logo': '/assets/images/icons/fttx.png',
-      'description': 'CSquared has deployed various metros across cities in Africa enabling last-mile access to mobile towers, large enterprises, SMEs and homes providing a range of services from dark fiber to tiered capacity.'
+      'description': 'CSquared FTTX offering provides a wide range of last mile connectivity solutions for different consumer needs ranging from home to business connectivity across cities in Africa e.g. FFTH, FTTB, FTTT, e.t.c.'
     }, 
     {
-      'name': 'Backbone',
+      'name': 'Backbone Network',
       'logo': '/assets/images/icons/backbone.png',
-      'description': 'CSquared offers fibre backbone products which connect metros within our operating countries. With tiered capacities from as low as 1Gb and up to 100G+, we offer wholesale dedicated Point-to-Presence (PoP) to and from a predetermined PoP.'
+      'description': 'CSquared backbone solutions offer high-capacity open access network infrastructure interconnecting cities and countries across Africa.'
     },
     {
-      'name': 'Solutions',
+      'name': 'IP Transit',
       'logo': '/assets/images/icons/business-icon.png',
-      'description': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple ISP platform that provides end users with various ISP choices.'
+      'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },
-
-
     {
       'name': 'Wi-Fi',
       'logo': '/assets/images/icons/wifi.png',
-      'description': 'CSquared has a public Wi-Fi infrastructure setup to serve end users on-the-go as well as fixed wireless users. It’s a multiple tenant public wifi platform that provides end users with various ISP choices.'
-    },
-
+      'description': 'Our public Wi-Fi infrastructure is set up to serve users on the go through a Multi-ISP platform.'
+    }
   ];
 
   logos: { title: string, image: string }[] = [
@@ -85,7 +83,6 @@ export class HomeComponent implements OnInit {
     this.getUserLocation();
 
     this.countryService.setCountry('global')
-
   }
 
   userslocationName: string = '';
@@ -137,64 +134,64 @@ export class HomeComponent implements OnInit {
   coverage: Array<object> = [{
     image: '/assets/images/logos/mtn_logo.png',
     thumbImage: '/assets/images/logos/mtn_logo.png',
-    alt: 'MTN',
-    title: 'MTN'
+    alt: '',
+    title: ''
   }, {
     image: '/assets/images/logos/airtel_logo.png',
     thumbImage: '/assets/images/logos/airtel_logo.png',
-    title: 'Airtel',
-    alt: 'Airtel'
+    title: '',
+    alt: ''
   }, {
     image: '/assets/images/logos/mainone_logo.png',
     thumbImage: '/assets/images/logos/mainone_logo.png',
-    title: 'Main One',
-    alt: 'Main One'
+    title: '',
+    alt: ''
   }, {
     image: '/assets/images/logos/internets_logo.png',
     thumbImage: '/assets/images/logos/internets_logo.png',
-    title: 'Internet Solutions',
-    alt: 'Internet Solutions'
+    title: '',
+    alt: ''
   }, {
     image: '/assets/images/logos/iwayafrica_logo.jpg',
     thumbImage: '/assets/images/logos/iwayafrica_logo.jpg',
-    title: 'Iway Africa',
-    alt: 'Iway Africa'
+    title: '',
+    alt: ''
   },
   {
     image: '/assets/images/logos/orange_logo.png',
     thumbImage: '/assets/images/logos/orange_logo.png',
-    title: 'Orange',
-    alt: 'Orange'
+    title: '',
+    alt: ''
   },
   {
     image: '/assets/images/logos/gilat_logo.png',
     thumbImage: '/assets/images/logos/gilat_logo.png',
-    title: 'Gilat',
-    alt: 'Gilat'
+    title: '',
+    alt: ''
   },
   {
     image: '/assets/images/logos/renu_logo.png',
     thumbImage: '/assets/images/logos/renu_logo.png',
-    title: 'Renu',
-    alt: 'Renu'
+    title: '',
+    alt: ''
   },
   {
-    image: '/assets/images/logos/google_logo.png',
-    thumbImage: '/assets/images/logos/google_logo.png',
-    title: 'Google',
-    alt: 'Google'
+    image: '/assets/images/logos/google.png',
+    thumbImage: '/assets/images/logos/google.png',
+    title: '',
+    alt: ''
   },
   {
     image: '/assets/images/logos/seacom_logo.jpg',
     thumbImage: '/assets/images/logos/seacom_logo.jpg',
-    title: 'Seacom',
-    alt: 'Seacom'
+    title: '',
+    alt: ''
   },
   {
     image: '/assets/images/logos/simbanet_logo.png',
     thumbImage: '/assets/images/logos/simbanet_logo.png',
-    title: 'Simbanet',
-    alt: 'Simbanet'
+    title: '',
+    alt: ''
   }
   ]
 }

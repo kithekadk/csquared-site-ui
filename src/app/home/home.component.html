@@ -9,12 +9,15 @@
         <div class="w-full px-4">
           <div class="text-center mx-auto mb-2 lg:mb-20 max-w-[510px]">
             <h2
-              class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4"
+              class="font-bold sm:text-4xl md:text-[40px] text-dark mb-4"
+              style="font-size: 22px"
             >
               What We Offer
             </h2>
             <p class="text-base text-body-color">
-              CSquared enables MNOs and ISPs to provide high-quality broadband at lower costs through shared infrastructure such as metro fiber and Wi-Fi networks
+              CSquared enables MNOs and ISPs to provide high-quality broadband
+              at lower costs through shared infrastructure such as metro fiber
+              and Wi-Fi networks
             </p>
           </div>
         </div>
@@ -53,7 +56,7 @@
   <!-- Map section -->
   <h1
     class="flex flex-row justify-center pt-10"
-    style="font-size: 250%; font-weight: bold"
+    style="font-size: 22px; font-weight: bold"
   >
     Who We Are
   </h1>
@@ -103,21 +106,19 @@
         </div>
         <div class="col-span-5 relative mx-auto">
           <span
-            class="absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-50 md:-top-32 right-4 rounded-full z-[-1]"
+            class="absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-100 md:-top-32 right-4 rounded-full z-[-1]"
           ></span>
 
           <div class="container mx-auto about-us mt-56 md:mt-0 px-5">
-            <h4 class="text-md font-medium text-green-900">
-              #FibeRisingAfrica
-            </h4>
+            <h4 class="text-md text-green-900 font-bold">#FibeRisingAfrica</h4>
             <!-- <h5 class="text-3xl font-medium text-green-900">GROWTH</h5> -->
 
-            <p class="text-md text-slate-500 mt-4 pr-20">
+            <p class="text-md text-slate-500 mt-4 pr-20 font-bold">
               We are <b>‘Fiberising’</b> Africa through affordable broadband
               internet connectivity. We are making the internet accessible to
-              everyone across Africa. We are
-              harnessing the power of Public-Private Partnerships to build value
-              through data delocalization.
+              everyone across Africa. We are harnessing the power of
+              Public-Private Partnerships to build value through data
+              delocalization.
             </p>
 
             <button
@@ -150,38 +151,83 @@
     <!-- end Map section -->
 
     <!-- Start of logo section -->
-    <div class="row mt-8 p-9">
-      <h3 class=" mx-auto text-center text-2xl font-bold text-green-900 pb-12" style="font-size: 250%; font-weight: bold">Who We Work With</h3><br>
-      <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
+    <div class="">
+      <!-- <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
         <div *ngFor="let logo of logos">
           <img src="{{ logo.image }}" class=" h-20" alt="" />
         </div>
 
-      </section>
+      </section> -->
+
+      <div class="row mt-8 p-8">
+        <h3
+          class="mx-auto text-center text-2xl font-bold text-green-900 pb-12"
+          style="font-size: 22px; font-weight: bold"
+        >
+          Who We Work With
+        </h3>
+        <br />
+        <ng-image-slider
+          [images]="coverage"
+          [imagePopup]="false"
+          [infinite]="true"
+          [autoSlide]="1"
+          [showArrow]="false"
+          [animationSpeed]="4"
+          [imageSize]="{ width: '220px', height: 100, space: 15 }"
+        ></ng-image-slider>
+
+        <br /><br />
+      </div>
+    </div>
+    <h1
+      class="flex flex-row justify-center pt-20 pb-10"
+      style="font-size: 22px; font-weight: bold"
+    >
+      Our Socials
+    </h1>
+    <div class="flex flex-wrap gap-8 news bg-green-100 p-12">
+      
+
+      <!-- embedding facebook post -->
+      <div>
+        <h1 class="font-bold mb-2 text-[20px]">Facebook Posts</h1>
+        <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
+        width="350"
+        height="550"
+        style="border: none; overflow: hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+      </div>
+      <!-- end of embedding facebook -->
+
+      <div style="width: 350px" class="tweet">
+        <ng-twitter-timeline
+          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+          [opts]="{ tweetLimit: 1 }"
+        ></ng-twitter-timeline>
+      </div>
+
+      <!-- embedding linked in post -->
+      <div>
+        <h1 class="font-bold mb-2 text-[20px]">linkedin Feed</h1>
+        <iframe
+        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520"
+        height="550"
+        width="350"
+        frameborder="0"
+        allowfullscreen=""
+        title="Embedded post"
+      ></iframe>
+      </div>
+      <!-- end of embedding linked inpost -->
     </div>
 
-    <div class="flex gap-8 news bg-green-100 p-12">
-      <div style="width: 25vw;" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1}"
-        ></ng-twitter-timeline>
-      </div>
-      <div style="width: 25vw;" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1}"
-        ></ng-twitter-timeline>
-      </div>
-      <div style="width: 25vw;" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1}"
-        ></ng-twitter-timeline>
-      </div>
-    </div>
-
-    <!-- <app-latest-news></app-latest-news> -->
+    <app-latest-news></app-latest-news>
 
     <app-footer></app-footer>
   </div>

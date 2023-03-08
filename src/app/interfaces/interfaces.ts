@@ -14,9 +14,9 @@ export interface services{
 export interface Countries {
     header:{
         height:string,
-        title:string,
+        title:string[],
         image:string[],
-        content:string
+        content:string[]
     }
     country:string
     search:boolean

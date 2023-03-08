@@ -6,9 +6,9 @@
           <img [style.height]="height" style="object-fit: cover;" src={{countries.header.image[0]}}  alt="Random first slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">{{ countries.header.title }}</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[0] }}</h2>
           <br />
-          <p class="text-xxl">{{ countries.header.content }}</p>
+          <p class="text-2xl font-semibold">{{ countries.header.content[0] }}</p>
 
           <form *ngIf="countries.search" class="w-full max-w-sm">
             <div class="flex items-center border-b border-green-500 py-2">
@@ -45,15 +45,10 @@
           class="w-full h-full flex justify-center items-center backdrop-brightness-50"
         ></div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">A Digital Africa</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[1] }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
-            While a basic connection is useful when it comes to Internet access, 
-            abundant, affordable broadband can transform communities and 
-            help people make the most of opportunities online. By investing in 
-            internet infrastructure and making it available to 
-            local Internet Service Providers (ISPs) and mobile network operators (MNOs), 
-            CSquared helps bring high-quality broadband access to Africa’s major cities.
+          <p class="text-2xl font-semibold">
+            {{ countries.header.content[1] }}
           </p>
         </div>
       </ng-template>
@@ -62,12 +57,10 @@
           <img [style.height]="height" style="object-fit: cover;" src="{{countries.header.image[2]}}" alt="Random third slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">A Super Connectivity</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[2] }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
-            CSquared reach and unique offering of reliable, 
-            high-speed connectivity, state-of-the-art data centres and 
-            innovative digital services, can guide your business towards the digital future.
+          <p class="md:font-medium xl:text-2xl xl:font-semibold">
+            {{ countries.header.content[2] }}
           </p>
         </div>
       </ng-template>

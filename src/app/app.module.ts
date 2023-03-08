@@ -49,6 +49,11 @@ import { MapComponent } from './map/map.component';
 import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
 import { CountryProductsComponent } from './country-products/country-products.component';
+import { FacebookModule } from 'ngx-facebook';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -91,6 +96,8 @@ import { CountryProductsComponent } from './country-products/country-products.co
     ImpactComponent,
     CountryMapComponent,
     CountryProductsComponent,
+    TermsOfServiceComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,7 +110,10 @@ import { CountryProductsComponent } from './country-products/country-products.co
     FormsModule,
     ReactiveFormsModule,
     GooglePlaceModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FacebookModule.forRoot(),
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,38 +1,123 @@
-<div class="body" *ngIf="fiberservices">
-    <div class="fiber-bg" [style.background-image]="'url('+image+')'">
-        {{fiberservices.title}}
+<div class="body bg-green-100" *ngIf="fiberservices">
+  <div
+    class="fiber-bg"
+    [style.background-image]="
+      'linear-gradient(rgba(0, 0, 0, 0.3)' +
+      ',' +
+      'rgba(0, 0, 0, 0.5))' +
+      ',' +
+      'url(' +
+      image +
+      ')'
+    "
+  >
+    <div class="flex flex-wrap justify-center items-center gap-20">
+      <h1 style="font-size: 30px">{{ fiberservices.title }}</h1>
+      <div>
+        <img src="{{ fiberservices.image }}" alt="" />
+      </div>
     </div>
-    <div class="service-container">
-        <div class="single-service">
-            <div class="service-img">
-                <img style="object-fit:cover;" src="{{fiberservices.image}}" alt="Specialist">
-            </div>
-            <div class="service-info">
-                <h2>{{fiberservices.title}}</h2><br>
-                {{fiberservices.description}}<br><br>
-                <button class="btn btn-warning hover:bg-amber-600" onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;">Learn More on Cloud Security</button>
-            </div>
-        </div>
+  </div>
+  <div class="service-container">
+    <div class="single-service">
+      <div class="service-img">
+        <img
+          style="object-fit: cover"
+          src="{{ fiberservices.image }}"
+          alt="Specialist"
+        />
+      </div>
+      <div class="service-info">
+        <h2>{{ fiberservices.title }}</h2>
+        <br />
+        {{ fiberservices.description }}<br /><br />
+        <button
+          class="btn btn-warning hover:bg-amber-600"
+          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
+        >
+          Read More on this solution
+        </button>
+      </div>
     </div>
-    <app-footer></app-footer>   
+  </div>
+  <h1
+    class="flex flex-row justify-center pt-10 pb-10"
+    style="font-size: 22px; font-weight: bold"
+  >
+    All solutions
+  </h1>
+  <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
+    <div *ngFor="let other of Allfiberservices">
+      <div
+        class="flex flex-wrap justify-center items-center w-[18vw] h-[20vh] p-10 bg-green-700 hover:bg-green-900"
+      >
+        <h1 class="text-white text-2xl">{{ other.title }}</h1>
+        <!-- <p>{{other.description}}</p> -->
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>
+
+
 <!-- Display cloud services if available -->
-<div class="body" *ngIf="cloudservices">
-    <div class="cloudservices-bg" [style.background-image]="'url('+image+')'">
-        {{cloudservices.title}}
+<div class="body bg-green-100" *ngIf="cloudservices">
+  <div
+    class="cloudservices-bg"
+    [style.background-image]="
+      'linear-gradient(rgba(0, 0, 0, 0.3)' +
+      ',' +
+      'rgba(0, 0, 0, 0.5))' +
+      ',' +
+      'url(' +
+      image +
+      ')'
+    "
+  >
+    <div class="flex flex-wrap justify-center items-center gap-20">
+      <h1 style="font-size: 30px">{{ cloudservices.title }}</h1>
+      <div>
+        <img src="{{ cloudservices.image }}" alt="" />
+      </div>
     </div>
-    <div class="service-container">
-        <div class="single-service">
-            <div class="service-img">
-                <img style="object-fit:cover;" src="{{cloudservices.image}}" alt="Specialist">
-            </div>
-            <div class="service-info">
-                <h2>{{cloudservices.title}}</h2><br>
-                {{cloudservices.description}}<br><br>
-                <button class="btn btn-warning" onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;">Learn More on Cloud Security</button>
-            </div>
+  </div>
+  <div class="service-container">
+    <div class="single-service">
+      <div class="service-img">
+        <img
+          style="object-fit: cover"
+          src="{{ cloudservices.image }}"
+          alt="Specialist"
+        />
+      </div>
+      <div class="service-info">
+        <h2>{{ cloudservices.title }}</h2>
+        <br />
+        {{ cloudservices.description }}<br /><br />
+        <button
+          class="btn btn-warning"
+          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
+        >
+          Learn More on Cloud Security
+        </button>
+      </div>
+    </div>
+    <h1
+      class="flex flex-row justify-center pt-10 pb-10"
+      style="font-size: 22px; font-weight: bold"
+    >
+      All solutions
+    </h1>
+    <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
+      <div *ngFor="let other of Allcloudservices">
+        <div
+          class="flex flex-wrap justify-center items-center w-[18vw] h-[20vh] p-10 bg-green-700  hover:bg-green-900"
+        >
+          <h1 class="text-white text-2xl">{{ other.title }}</h1>
+          <!-- <p>{{other.description}}</p> -->
         </div>
+      </div>
     </div>
-    <app-footer></app-footer>
-    
+  </div>
+  <app-footer></app-footer>
 </div>

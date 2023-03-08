@@ -14,8 +14,8 @@ export class CountryService {
         country: 'uganda',
         header: {
           height:"70vh",
-          title: "Join our amazing Network in Uganda",
-          content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall."
+          title: ["Join our amazing Network in Uganda", "Join our amazing Network in Uganda","Join our amazing Network in Uganda"],
+          content: ["CSquared’s broadband network is helping increase internet access in Uganda", "CSquared’s broadband network is helping increase internet access in Uganda", "CSquared’s broadband network is helping increase internet access in Uganda"]
           , image: ['./../../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
           "../assets/images/home/slide_2.jpg",
           "../assets/images/home/slide_3.jpg"          
@@ -30,8 +30,8 @@ export class CountryService {
         country: 'global',
         header: {
           height:"70vh",
-          title: "Today, anyone can get Lightspeed Network.",
-          content: "The demand for Cloud computing services has grown considerably in recent years, owing to enterprises’ demand for lower operating costs and capital expenditure with improved productivity and greater efficiency and agility. Cloud services offer operational flexibility, scalability, improved time to market, and cost efficiencies to enterprises"
+          title: ['Hybrid, multi-cloud and cloud-to-cloud recovery solutions', 'A digital Africa', 'Super connectivity'],
+          content: ['CSquared Cloud enables cloud and digital transformation through our extensive cloud network connectivity and solutions across Africa.','We are bringing high-quality broadband to Africa’s major cities by investing in internet infrastructure and enabling  open access to local Internet Service Providers (ISPs) and mobile network operators (MNOs).','Our unique offering of reliable and high-speed connectivity and innovative digital services can unleash your business towards the digital future.']
           , image : [
             "../assets/images/home/slide_1.jpg",
             "../assets/images/home/slide_2.jpg",
@@ -49,11 +49,11 @@ export class CountryService {
         country: 'ghana',
         header: {
           height:"70vh",
-          title: "Join our amazing Network in Ghana",
-          content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
-          image: ['./../../assets/Csquared/accra.jpg',
-                  "../assets/images/home/slide_2.jpg",
-                  "../assets/images/home/slide_3.jpg"
+          title: ["Join our amazing Network in Ghana","Join our amazing Network in Ghana","Join our amazing Network in Ghana","Join our amazing Network in Ghana"],
+          content: ["CSquared currently has 5 metros in Ghana and over 5000 Base Transmission towers largely owned by ATC, Eaton & Helios.","CSquared currently has 5 metros in Ghana and over 5000 Base Transmission towers largely owned by ATC, Eaton & Helios.","CSquared currently has 5 metros in Ghana and over 5000 Base Transmission towers largely owned by ATC, Eaton & Helios."],
+          image: ['/assets/west-african/DSCF5096.jpg',
+                  "/assets/Csquared/accra.jpg",
+                  "/assets/west-african/Photo 2.jpg"
         ]
         },
         search: true,
@@ -65,29 +65,27 @@ export class CountryService {
         country: 'liberia',
         header: {
           height:"70vh",
-          title: "Join our amazing Network in Liberia",
-          content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
-          image: ['https://oceandecade.org/wp-content/uploads/2021/08/e-0-j-19-gl-xo-ac-a-fhr@3x-1.png',
-                  "../assets/images/home/slide_2.jpg",
-                  "../assets/images/home/slide_3.jpg"
+          title: ["Join our amazing Network in Liberia","Join our amazing Network in Liberia","Join our amazing Network in Liberia"],
+          content: ["CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia"],
+          image: ['/assets/liberia/20200215_190135.jpg',
+                  "/assets/liberia/DSC_0004.JPG",
+                  "/assets/liberia/DSC_0021.JPG"
         ]
         },
         search: true,
         button: false,
         link: false,
-
-
       },
 
       {
         country: 'togo',
         header: {
           height:"70vh",
-          title: "Join our amazing Network in Togo",
-          content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
-          image: ['https://www.colliers.com/-/media/images/colliers/emea/netherlands/research/2019/supermarkt-1536x1040.ashx?bid=76c600addb1840f1af748d14f17a8d34',
-                  "../assets/images/home/slide_2.jpg",
-                  "../assets/images/home/slide_3.jpg"
+          title: ["Join our amazing Network in Togo","Join our amazing Network in Togo","Join our amazing Network in Togo","Join our amazing Network in Togo"],
+          content: ["CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia"],
+          image: ["/assets/togo/IMG_1068.jpg",
+                  '/assets/togo/DJI_0047 (1).jpg',
+                  "/assets/togo/DJI_0087.jpg"
         ]
         },
         search: true,
@@ -98,8 +96,8 @@ export class CountryService {
         country: 'kenya',
         header: {
           height:"70vh",
-          title: "Build hybrid, multicloud, cloud-to-cloud, and disaster recovery solutions ",
-          content: "CSquared Cloud offers simplified access to and tailored consumption of multi-cloud services to businesses and social enterprises cost-effectively. Our solutions facilitate an enabling environment for digital transformation across Africa.",
+          title: ["Build hybrid, multicloud, cloud-to-cloud, and disaster recovery solutions ","Build hybrid, multicloud, cloud-to-cloud, and disaster recovery solutions ","Build hybrid, multicloud, cloud-to-cloud, and disaster recovery solutions "],
+          content: ["Work securely anywhere and anytime through an efficient cloud network Business Models are changing", "Work securely anywhere and anytime through an efficient cloud network Business Models are changing", "Work securely anywhere and anytime through an efficient cloud network Business Models are changing"],
           image: ['https://media.cnn.com/api/v1/images/stellar/prod/131211104520-kenya-photography-contest-7.jpg?q=w_1793,h_1200,x_0,y_0,c_fill/w_1280',
                   "../assets/images/home/slide_2.jpg",
                   "../assets/images/home/slide_3.jpg"
@@ -113,8 +111,8 @@ export class CountryService {
         country: 'drc',
         header: {
           height:"70vh",
-          title: "Join our amazing Network in the Basin",
-          content: "Tsagaan Suvarga is an arduous scarp in Olziit soum of Dundgovi province. Once a floor of the ocean, this scarp looks like a white stupa, hence the name Tsagaan Suvarga (white stupa). This scarp is 400 meters long and 60 meters tall with a 90 degree brink. After a rain, the water pouring down the scarp makes it look like a huge waterfall.",
+          title: ["Join our amazing Network in the Basin","Join our amazing Network in the Basin","Join our amazing Network in the Basin"],
+          content: ["Csquared has acquired the National licenses to allow it to deploy, own and operate Metro fiber, FTTx and Long Haul networks in all regions of DRC","Csquared has acquired the National licenses to allow it to deploy, own and operate Metro fiber, FTTx and Long Haul networks in all regions of DRC","Csquared has acquired the National licenses to allow it to deploy, own and operate Metro fiber, FTTx and Long Haul networks in all regions of DRC"],
           image: ['https://previews.123rf.com/images/fyletto/fyletto1301/fyletto130100018/17161899-no-s%C3%B3lo-las-dunas-de-arena-monta%C3%B1as-%C3%A1ridas-pero-tambi%C3%A9n-son-una-cara-de-la-poderosa-desierto-del-sah.jpg',
                   "../assets/images/home/slide_2.jpg",
                   "../assets/images/home/slide_3.jpg"

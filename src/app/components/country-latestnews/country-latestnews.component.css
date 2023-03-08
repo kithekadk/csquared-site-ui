@@ -6,16 +6,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  /* background-color: rgb(238, 238, 238); */
+  background-color: rgb(238, 238, 238);
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   }
   
   .cl-container h1{
       width: 100%;
       text-align: center;
       font-size: 30px;
+      padding: 15px;
+  }
+  .cl-container p{
+    padding: 15px;
   }
   .cl-content{
       width: 90%;
@@ -31,11 +34,11 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 10px;
+      
      border-radius: 10px;
      border-bottom: 5px solid transparent;
      background-color: white;
-     box-shadow: 10px 10px 10px 20px rgb(212, 212, 212);
+     /* box-shadow: 10px 10px 10px 20px rgb(212, 212, 212); */
   }
   .cl-content-body:hover{
     border-bottom: 5px solid #034725;
