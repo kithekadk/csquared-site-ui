@@ -6,9 +6,9 @@
           <img [style.height]="height" style="object-fit: cover;" src={{countries.header.image[0]}}  alt="Random first slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">{{ countries.header.title[0] }}</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[0] }}</h2>
           <br />
-          <p class="text-xxl">{{ countries.header.content[0] }}</p>
+          <p class="text-2xl font-semibold">{{ countries.header.content[0] }}</p>
 
           <form *ngIf="countries.search" class="w-full max-w-sm">
             <div class="flex items-center border-b border-green-500 py-2">
@@ -45,9 +45,9 @@
           class="w-full h-full flex justify-center items-center backdrop-brightness-50"
         ></div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">{{ countries.header.title[1] }}</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[1] }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
+          <p class="text-2xl font-semibold">
             {{ countries.header.content[1] }}
           </p>
         </div>
@@ -57,9 +57,9 @@
           <img [style.height]="height" style="object-fit: cover;" src="{{countries.header.image[2]}}" alt="Random third slide" />
         </div>
         <div class="carousel-caption">
-          <h2 class="text-4xl text-white font-bold">{{ countries.header.title[2] }}</h2>
+          <h2 class="text-4xl text-white font-black">{{ countries.header.title[2] }}</h2>
           <br />
-          <p class="text-md text-white font-medium">
+          <p class="md:font-medium xl:text-2xl xl:font-semibold">
             {{ countries.header.content[2] }}
           </p>
         </div>
