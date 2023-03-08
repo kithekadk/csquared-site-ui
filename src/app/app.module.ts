@@ -50,6 +50,7 @@ import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
 import { CountryProductsComponent } from './country-products/country-products.component';
 import { FacebookModule } from 'ngx-facebook';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { FacebookModule } from 'ngx-facebook';
     ImpactComponent,
     CountryMapComponent,
     CountryProductsComponent,
+    TermsOfServiceComponent,
   ],
   imports: [
     BrowserModule,
