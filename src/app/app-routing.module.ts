@@ -26,6 +26,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { PartnersComponent } from './partners/partners.component';
 import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -55,6 +57,8 @@ const routes: Routes = [
     {path:'partners', component:PartnersComponent},
     {path:'impact', component:ImpactComponent},
     {path:'country-map/:key', component: CountryMapComponent},
+    {path:'terms-of-service', component: TermsOfServiceComponent},
+    {path:'privacy-policy', component: PrivacyPolicyComponent},
     {path:'**', component:NotfoundComponent}
 
   ];
