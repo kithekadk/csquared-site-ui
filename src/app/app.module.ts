@@ -51,6 +51,7 @@ import { CountryMapComponent } from './country-map/country-map.component';
 import { CountryProductsComponent } from './country-products/country-products.component';
 import { FacebookModule } from 'ngx-facebook';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
     CountryMapComponent,
     CountryProductsComponent,
     TermsOfServiceComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
