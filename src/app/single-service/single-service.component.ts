@@ -11,6 +11,8 @@ import { ApiService } from '../services/api.service';
 export class SingleServiceComponent implements OnInit {
   fiberservices!:services
   cloudservices!:services
+  Allfiberservices!:services[];
+  Allcloudservices!:services[];
   constructor(private apiService:ApiService, private router:Router) { }
 
   id:string = this.router.url;
@@ -18,15 +20,19 @@ export class SingleServiceComponent implements OnInit {
   ngOnInit(): void {
     if(this.router.url.includes('/services/wholesale-fiber/view/')){
       this.getFiberServiceIndex();
+      this.Allfiberservices=this.apiService.getFiberServices()
+      
     }else if(this.router.url.includes('/services/cloud-solutions/view/')){
       this.getCloudServiceIndex();
+      this.Allcloudservices=this.apiService.getCloudServices();
     }   
   }
 
   getFiberServiceIndex(){
     this.index = (Number(this.id.replace('/services/wholesale-fiber/view/','')));
     this.fiberservices = this.apiService.getOneFiberItem(this.index);
-    this.image=this.fiberservices.image 
+    this.image=this.fiberservices.image
+    
   }
   getCloudServiceIndex(){
     this.index = (Number(this.id.replace('/services/cloud-solutions/view/','')));

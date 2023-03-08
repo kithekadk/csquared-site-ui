@@ -52,6 +52,8 @@ import { CountryProductsComponent } from './country-products/country-products.co
 import { FacebookModule } from 'ngx-facebook';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -110,6 +112,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     GooglePlaceModule,
     GoogleMapsModule,
     FacebookModule.forRoot(),
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
