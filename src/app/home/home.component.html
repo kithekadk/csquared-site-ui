@@ -187,35 +187,43 @@
       Our Socials
     </h1>
     <div class="flex flex-wrap gap-8 news bg-green-100 p-12">
-      <div style="width: 400px" class="tweet">
-        <ng-twitter-timeline
-          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
-          [opts]="{ tweetLimit: 1 }"
-        ></ng-twitter-timeline>
-      </div>
+      
 
       <!-- embedding facebook post -->
-      <iframe
+      <div>
+        <h1 class="font-bold mb-2 text-[20px]">Facebook Posts</h1>
+        <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
-        width="400"
-        height="600"
+        width="350"
+        height="550"
         style="border: none; overflow: hidden"
         scrolling="no"
         frameborder="0"
         allowfullscreen="true"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
+      </div>
       <!-- end of embedding facebook -->
 
+      <div style="width: 350px" class="tweet">
+        <ng-twitter-timeline
+          [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
+          [opts]="{ tweetLimit: 1 }"
+        ></ng-twitter-timeline>
+      </div>
+
       <!-- embedding linked in post -->
-      <iframe
+      <div>
+        <h1 class="font-bold mb-2 text-[20px]">linkedin Feed</h1>
+        <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520"
-        height="600"
-        width="400"
+        height="550"
+        width="350"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"
       ></iframe>
+      </div>
       <!-- end of embedding linked inpost -->
     </div>
 
