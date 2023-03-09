@@ -1,6 +1,7 @@
 export interface services{
     image:string;
     title: string;
+    subtitle: string;
     description: string;
 }
 

@@ -6,12 +6,12 @@
 .justify-around{
   gap: 100px;
 }
-.countries{
+/* .countries{
   margin-left: auto;
   order: 2;
   position: relative;
   z-index: 99;
-}
+} */
 
 @media screen and (max-width:1282px) {
   .justify-around{
@@ -29,7 +29,7 @@
   z-index: 5;
   position: relative;
 }
-.navbar {
+.sticky-nav {
   position: sticky;
   top: 0;
   z-index: 9;

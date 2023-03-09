@@ -1,20 +1,14 @@
 <div class="body bg-green-100" *ngIf="fiberservices">
   <div
-    class="fiber-bg"
-    [style.background-image]="
-      'linear-gradient(rgba(0, 0, 0, 0.3)' +
-      ',' +
-      'rgba(0, 0, 0, 0.5))' +
-      ',' +
-      'url(' +
-      image +
-      ')'
-    "
+    class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500"
   >
     <div class="flex flex-wrap justify-center items-center gap-20">
-      <h1 style="font-size: 30px">{{ fiberservices.title }}</h1>
-      <div>
-        <img src="{{ fiberservices.image }}" alt="" />
+      <div class="pt-10 pb-10 w-[70vw] md:w-[40vw]">
+        <h1 style="font-size: 30px" class="mb-4">{{ fiberservices.title }}</h1>
+        <h1 style="font-size: 20px">{{ fiberservices.subtitle }}</h1>
+      </div>
+      <div >
+        <img class="hidden md:block" src="{{ fiberservices.image }}" alt="" style="border-radius: 50%;"/>
       </div>
     </div>
   </div>
@@ -35,7 +29,7 @@
           class="btn btn-warning hover:bg-amber-600"
           onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
         >
-          Read More on this solution
+        Read products brochure
         </button>
       </div>
     </div>
@@ -49,7 +43,7 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allfiberservices">
       <div
-        class="flex flex-wrap justify-center items-center w-[18vw] h-[20vh] p-10 bg-green-700 hover:bg-green-900"
+        class="flex flex-wrap justify-center items-center w-[250px] h-[20vh] p-10 bg-green-700 hover:bg-green-900"
       >
         <h1 class="text-white text-2xl">{{ other.title }}</h1>
         <!-- <p>{{other.description}}</p> -->
@@ -63,21 +57,15 @@
 <!-- Display cloud services if available -->
 <div class="body bg-green-100" *ngIf="cloudservices">
   <div
-    class="cloudservices-bg"
-    [style.background-image]="
-      'linear-gradient(rgba(0, 0, 0, 0.3)' +
-      ',' +
-      'rgba(0, 0, 0, 0.5))' +
-      ',' +
-      'url(' +
-      image +
-      ')'
-    "
+    class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500"
   >
-    <div class="flex flex-wrap justify-center items-center gap-20">
-      <h1 style="font-size: 30px">{{ cloudservices.title }}</h1>
-      <div>
-        <img src="{{ cloudservices.image }}" alt="" />
+    <div class="flex flex-wrap justify-center items-center gap-10">
+      <div class="pt-10  w-[65vw] md:w-[40vw]">
+        <h1 style="font-size: 30px" class="mb-4">{{ cloudservices.title }}</h1>
+        <h1 style="font-size: 20px">{{ cloudservices.subtitle }}</h1>
+      </div>
+      <div >
+        <img src="{{ cloudservices.image }}" alt="" style="border-radius: 50%;"/>
       </div>
     </div>
   </div>
@@ -98,7 +86,7 @@
           class="btn btn-warning"
           onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
         >
-          Learn More on Cloud Security
+          Read products brochure
         </button>
       </div>
     </div>
@@ -111,7 +99,7 @@
     <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
       <div *ngFor="let other of Allcloudservices">
         <div
-          class="flex flex-wrap justify-center items-center w-[18vw] h-[20vh] p-10 bg-green-700  hover:bg-green-900"
+          class="flex flex-wrap justify-center items-center w-[250px] h-[20vh] p-10 bg-green-700  hover:bg-green-900"
         >
           <h1 class="text-white text-2xl">{{ other.title }}</h1>
           <!-- <p>{{other.description}}</p> -->
