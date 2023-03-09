@@ -206,6 +206,7 @@
       <!-- end of embedding facebook -->
 
       <div style="width: 350px" class="tweet">
+        <h1 class="font-bold mb-2 text-[20px]">Twitter Feed</h1>
         <ng-twitter-timeline
           [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
           [opts]="{ tweetLimit: 1 }"
@@ -214,7 +215,7 @@
 
       <!-- embedding linked in post -->
       <div>
-        <h1 class="font-bold mb-2 text-[20px]">linkedin Feed</h1>
+        <h1 class="font-bold mb-2 text-[20px]">LinkedIn Feed</h1>
         <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520"
         height="550"
@@ -226,8 +227,6 @@
       </div>
       <!-- end of embedding linked inpost -->
     </div>
-
-    <app-latest-news></app-latest-news>
 
     <app-footer></app-footer>
   </div>
