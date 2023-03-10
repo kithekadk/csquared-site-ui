@@ -100,21 +100,22 @@ element.style {
   margin-right: 15px;
 }
 
+.slide{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .ng-image-slider {
   box-shadow: none;
 }
 .slick-slider {
   width: 88%;
   margin: auto;
-  background: rgb(14, 13, 13);
 }
-
-body .slick-prev, 
-body .slick-next {
-  height: 45px;
-  width: 40px;
-  background: grey !important;
-  z-index: 10;
+.slick-slide {
+  margin: 0 10px;
 }
 
 @media screen and (max-width: 768px) {

@@ -151,53 +151,27 @@
     <!-- end Map section -->
 
     <!-- Start of logo section -->
-    <div class="">
-      <!-- <section class="flex w-10/12  justify-center gap-5 company-logos mt-18 flex-wrap">
-        <div *ngFor="let logo of logos">
-          <img src="{{ logo.image }}" class=" h-20" alt="" />
-        </div>
 
-      </section> -->
-
-      <div class="row mt-8 p-8">
-        <h3
+    <div class="row mt-8 p-8">
+      <h3
           class="mx-auto text-center text-2xl font-bold text-green-900 pb-12"
           style="font-size: 22px; font-weight: bold"
         >
           Who We Work With
         </h3>
-        <br />
-        <ng-image-slider
-          [images]="coverage"
-          [imagePopup]="false"
-          [infinite]="true"
-          [autoSlide]="1"
-          [showArrow]="false"
-          [animationSpeed]="4"
-          [imageSize]="{ width: '220px', height: 100, space: 15 }"
-        ></ng-image-slider>
-
-        <br /><br />
-      </div>
-    </div>
-    <!-- <div>
-      <ngx-slick-carousel class="carousel" 
-                        #slickModal="slick-carousel" 
-                        [config]="slideConfig" 
-                        (init)="slickInit($event)"
-                        (breakpoint)="breakpoint($event)"
-                        (afterChange)="afterChange($event)"
-                        (beforeChange)="beforeChange($event)">
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-              <img src="{{ slide.img }}" alt="" width="20%">
+      <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" 
+                        
+      [config]="{slidesToShow: 5, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '60px',
+      arrows: false,
+      dots: false}" 
+                        >
+        <div ngxSlickItem *ngFor="let slide of logos" class="slide">
+              <img src="{{ slide.image }}" alt="" width="80%">
         </div>
     </ngx-slick-carousel>
-    
-    <button (click)="addSlide()">Add</button>
-    <button (click)="removeSlide()">Remove</button>
-    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-    <button (click)="slickModal.unslick()">unslick</button>
-    </div> -->
+    </div>
+
+    <!-- End of logo section -->
     <h1
       class="flex flex-row justify-center pt-20 pb-10"
       style="font-size: 22px; font-weight: bold"

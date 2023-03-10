@@ -115,7 +115,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FacebookModule.forRoot(),
     CarouselModule,
     BrowserAnimationsModule,
-    SlickCarouselModule
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
