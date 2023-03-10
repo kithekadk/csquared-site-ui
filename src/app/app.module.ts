@@ -54,6 +54,7 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GoogleMapsModule,
     FacebookModule.forRoot(),
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],

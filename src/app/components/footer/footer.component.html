@@ -95,38 +95,20 @@
   </div>
   <hr style="border-color:white;" >
   <div>
-    <div class="flex justify-around flex-wrap-reverse mt-10 items-center">
+    <div class="flex justify-around gap-10 flex-wrap-reverse mt-10 items-center">
       <div class="text-xs md:text-sm text-brand-yellow flex space-x-8">
         <h5>+26-531-218-0500</h5>
         <h5 routerLink="/terms-of-service" class="cursor-pointer hover:translate-x-0.5">Terms of Service</h5>
         <h5 routerLink="/privacy-policy" class="cursor-pointer hover:translate-x-0.5">Privacy Policy</h5>
       </div>
-      <div class="cs-footer">
-        <div class="flex justify-center md:pt-0  align-center ">
-          <div class="text-center w-[350px]">
-            <div class="md:mx-0 cs-input-container">
-              <div class="flex rounded-md shadow-sm input-btn">
-                <div
-                  class=""
-                >
-                  <input
-                    type="email"
-                    name="search"
-                    class="p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-4 md:p-0"
-                    placeholder="Send your email"
-                  />
-                </div>
-                <button
-                  type="button"
-                  class="btn-send -ml-px relative inline-flex items-center space-x-2 px-8 py-2 font-medium rounded-r-md text-brand-green  bg-brand-yellow hover:bg-brand-yellow/80 focus:outline-none focus:ring-1"
-                >
-                  <span>Subscribe</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <small class="text-brand-yellow">&#9400;{{currentYear}}, CSquared.  All rights reserved</small>
       </div>
+      <div class="flex justify-center flex-wrap">
+        <input type="email" name="" id="" class="pl-2 border-none" placeholder="Send your email">
+        <input type="submit" class="bg-brand-yellow p-2 px-4 hover:bg-amber-600 text-white border-none" value="Subscribe">
+      </div>
+     
     </div>
     
   </div>

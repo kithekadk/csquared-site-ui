@@ -22,4 +22,6 @@ export class FooterComponent implements OnInit {
       this.router.navigate(['country-map',key])
     })
   }
+
+  currentYear=new Date().getFullYear()
 }

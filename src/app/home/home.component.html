@@ -106,14 +106,14 @@
         </div>
         <div class="col-span-5 relative mx-auto">
           <span
-            class="absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-100 md:-top-32 right-4 rounded-full z-[-1]"
+            class="hidden md:block absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-100 md:-top-32 right-4 rounded-full z-[-1]"
           ></span>
 
           <div class="container mx-auto about-us mt-56 md:mt-0 px-5">
             <h4 class="text-md text-green-900 font-bold">#FibeRisingAfrica</h4>
             <!-- <h5 class="text-3xl font-medium text-green-900">GROWTH</h5> -->
 
-            <p class="text-md text-slate-500 mt-4 pr-20 font-bold">
+            <p class="text-md text-slate-600 mt-4 pr-20 font-bold">
               We are <b>‘Fiberising’</b> Africa through affordable broadband
               internet connectivity. We are making the internet accessible to
               everyone across Africa. We are harnessing the power of
@@ -180,6 +180,24 @@
         <br /><br />
       </div>
     </div>
+    <!-- <div>
+      <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        (init)="slickInit($event)"
+                        (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="" width="20%">
+        </div>
+    </ngx-slick-carousel>
+    
+    <button (click)="addSlide()">Add</button>
+    <button (click)="removeSlide()">Remove</button>
+    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+    <button (click)="slickModal.unslick()">unslick</button>
+    </div> -->
     <h1
       class="flex flex-row justify-center pt-20 pb-10"
       style="font-size: 22px; font-weight: bold"
