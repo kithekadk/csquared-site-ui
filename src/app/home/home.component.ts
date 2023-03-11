@@ -12,38 +12,6 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
-  ];
-  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
-  
-  addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
-  }
-  
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
-  
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-  
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-  
-  afterChange(e) {
-    console.log('afterChange');
-  }
-  
-  beforeChange(e) {
-    console.log('beforeChange');
-  }
-
   targets: { title: string, image: string }[] = [
     { title: "MNO's", image: '/assets/images/home/MNO.jpg' },
     { title: 'Data Centers', image: '/assets/images/home/country.png' },
@@ -57,31 +25,37 @@ export class HomeComponent implements OnInit {
     {
       'name': 'Cloud Services',
       'logo': '/assets/images/icons/cloud.png',
+      'link':'/services/cloud-solutions',
       'description': "Our cloud solutions offer an enabling environment for digital transformation across Africa. CSquared Cloud offers simplified access to multi-cloud services for corporates and SMEs."
     },
     {
       'name': 'Metro Fiber',
       'logo': '/assets/images/icons/fiber.png',
+      'link':'/services/wholesale-fiber',
       'description': 'Our metro fiber is a secure and scalable solution that offers high availability unlimited bandwidth.'
     },
     {
       'name': 'FTTX',
       'logo': '/assets/images/icons/fttx.png',
+      'link':'/services/wholesale-fiber/view/3',
       'description': 'CSquared FTTX offering provides a wide range of last mile connectivity solutions for different consumer needs ranging from home to business connectivity across cities in Africa e.g. FFTH, FTTB, FTTT, e.t.c.'
     }, 
     {
       'name': 'Backbone Network',
       'logo': '/assets/images/icons/backbone.png',
+      'link':'/services/cloud-solutions/view/3',
       'description': 'CSquared backbone solutions offer high-capacity open access network infrastructure interconnecting cities and countries across Africa.'
     },
     {
       'name': 'IP Transit',
       'logo': '/assets/images/icons/business-icon.png',
+      'link':'/services/cloud-solutions/view/5',
       'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },
     {
       'name': 'Wi-Fi',
       'logo': '/assets/images/icons/wifi.png',
+      'link':'/services/cloud-solutions',
       'description': 'Our public Wi-Fi infrastructure is set up to serve users on the go through a Multi-ISP platform.'
     }
   ];
@@ -95,7 +69,7 @@ export class HomeComponent implements OnInit {
     { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },
     { title: 'Gilat', image: '/assets/images/logos/gilat_logo.png' },
     { title: 'Renu', image: '/assets/images/logos/renu_logo.png' },
-    { title: 'Google', image: '/assets/images/logos/google_logo.png' },
+    { title: 'Google', image: '/assets/images/logos/google.png' },
     { title: 'Seacom', image: '/assets/images/logos/seacom_logo.jpg' },
     { title: 'Simbanet', image: '/assets/images/logos/simbanet_logo.png' },
 

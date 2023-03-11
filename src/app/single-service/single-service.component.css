@@ -34,8 +34,8 @@
     justify-content: center;
     width: 100vw;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-    margin-top: 70px;
+    padding-bottom: 40px;
+    padding-top: 70px;
 }
 .single-service{
     display: flex;

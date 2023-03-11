@@ -7,15 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  toggled: boolean = false;
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    this.isMegamenuOpen=false;
-  } 
+  isMegamenuOpen=false;
 
-isMegamenuOpen=false;
+  toggled: boolean = false;
+  // @HostListener('window:scroll', ['$event']) onScrollEvent($event){
+  //   this.isMegamenuOpen=false;
+  //   console.log(this.isMegamenuOpen)
+  //   setTimeout(() => {
+  //     this.isMegamenuOpen=true
+  //     console.log('After Timeout'+this.isMegamenuOpen)
+  //   }, 1);
+  // } 
 
   toggleMegamenu() {
     this.isMegamenuOpen = !this.isMegamenuOpen;
+    console.log(this.isMegamenuOpen);
+  }
+
+  onMouseLeave(){
+    this.isMegamenuOpen=false;
   }
 
   selectedItem: {name:string,code:string, flag:string} | null = null
