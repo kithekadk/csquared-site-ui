@@ -85,8 +85,7 @@ export class CountryService {
           content: ["CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia","CSquared is the only wholesale infrastructure provider with 180+ Kms of metro fiber in Monrovia, providing services to all MNOs, ISPs and the Government of Liberia"],
           image: ["/assets/togo/IMG_1068.jpg",
                   '/assets/togo/DJI_0047 (1).jpg',
-                  "/assets/togo/DJI_0087.jpg"
-        ]
+                  "/assets/togo/DJI_0087.jpg"]
         },
         search: true,
         button: false,

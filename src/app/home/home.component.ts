@@ -25,31 +25,37 @@ export class HomeComponent implements OnInit {
     {
       'name': 'Cloud Services',
       'logo': '/assets/images/icons/cloud.png',
+      'link':'/services/cloud-solutions',
       'description': "Our cloud solutions offer an enabling environment for digital transformation across Africa. CSquared Cloud offers simplified access to multi-cloud services for corporates and SMEs."
     },
     {
       'name': 'Metro Fiber',
       'logo': '/assets/images/icons/fiber.png',
+      'link':'/services/wholesale-fiber',
       'description': 'Our metro fiber is a secure and scalable solution that offers high availability unlimited bandwidth.'
     },
     {
       'name': 'FTTX',
       'logo': '/assets/images/icons/fttx.png',
+      'link':'/services/wholesale-fiber/view/3',
       'description': 'CSquared FTTX offering provides a wide range of last mile connectivity solutions for different consumer needs ranging from home to business connectivity across cities in Africa e.g. FFTH, FTTB, FTTT, e.t.c.'
     }, 
     {
       'name': 'Backbone Network',
       'logo': '/assets/images/icons/backbone.png',
+      'link':'/services/cloud-solutions/view/3',
       'description': 'CSquared backbone solutions offer high-capacity open access network infrastructure interconnecting cities and countries across Africa.'
     },
     {
       'name': 'IP Transit',
       'logo': '/assets/images/icons/business-icon.png',
+      'link':'/services/cloud-solutions/view/5',
       'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },
     {
       'name': 'Wi-Fi',
       'logo': '/assets/images/icons/wifi.png',
+      'link':'/services/cloud-solutions',
       'description': 'Our public Wi-Fi infrastructure is set up to serve users on the go through a Multi-ISP platform.'
     }
   ];

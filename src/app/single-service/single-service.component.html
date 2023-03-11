@@ -1,4 +1,4 @@
-<div class="body bg-green-100" *ngIf="fiberservices">
+<div class="body bg-white" *ngIf="fiberservices">
   <div
     class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500"
   >
@@ -14,23 +14,214 @@
   </div>
   <div class="service-container">
     <div class="single-service">
-      <div class="service-img">
-        <img
-          style="object-fit: cover"
-          src="{{ fiberservices.image }}"
-          alt="Specialist"
-        />
-      </div>
       <div class="service-info">
-        <h2>{{ fiberservices.title }}</h2>
+        <div class="service-img">
+          <img
+            style="object-fit: cover"
+            src="{{ fiberservices.image }}"
+            alt="Specialist"
+          />
+        </div><br>
+        <h2 class="flex justify-center">{{ fiberservices.title }}</h2>
         <br />
         {{ fiberservices.description }}<br /><br />
         <button
-          class="btn btn-warning hover:bg-amber-600"
+          class="btn btn-warning  hover:bg-amber-600"
           onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
         >
         Read products brochure
         </button>
+      </div>
+      <div>
+        <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
+          <div class="relative bg-white shadow-xl">
+            <!-- <h2 class="sr-only">Contact us</h2> -->
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+    
+              <!-- Contact form -->
+              <form
+                [formGroup]="form"
+                (ngSubmit)="SubmitIssue()"
+                class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12"
+              >
+                <!-- Success message -->
+                <div
+                  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2 py-3 shadow-md"
+                  role="alert"
+                  *ngIf="view"
+                >
+                  <div class="flex">
+                    <div class="py-1">
+                      <svg
+                        class="fill-current h-6 w-6 text-teal-500 mr-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-bold">Success</p>
+                      <p class="text-sm">Thank you, message send successfully</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of success messsage -->
+                <h3 class="text-lg font-bold text-gray-900">Make an Enquiry</h3>
+                <div
+                  class="mt-3 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                >
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Country</label
+                    >
+                    <div class="mt-1">
+                      <select
+                        formControlName="country_id"
+                        type="text"
+                        name="country"
+                        id="country"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      >
+                      <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">Kenya</option>
+                      <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">Uganda</option>
+                      <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">Ghana</option>
+                      <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">DRC</option>
+                      <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">Liberia</option>
+                      <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">Togo</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="first-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >First name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="firstName"
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autocomplete="given-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="last-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >Last name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="lastName"
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        autocomplete="family-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-900"
+                      >Email</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="email"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-900"
+                        >Phone</label
+                      >
+                      <span id="phone-optional" class="text-sm text-gray-500"
+                        >Optional</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <input
+                        formControlName="phoneNumber"
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        autocomplete="tel"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                        aria-describedby="phone-optional"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Subject</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="subject"
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <div class="flex justify-between">
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-900"
+                        >Message</label
+                      >
+                      <span id="message-max" class="text-sm text-gray-500"
+                        >Max. 500 characters</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <textarea
+                        formControlName="description"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
+                        aria-describedby="message-max"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2 sm:flex sm:justify-end">
+                    <button
+                      type="submit"
+                      class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,7 +246,7 @@
 
 
 <!-- Display cloud services if available -->
-<div class="body bg-green-100" *ngIf="cloudservices">
+<div class="body bg-white" *ngIf="cloudservices">
   <div
     class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500"
   >
@@ -69,17 +260,18 @@
       </div>
     </div>
   </div>
-  <div class="service-container">
+  <div class="service-container bg-gray-50">
     <div class="single-service">
-      <div class="service-img">
-        <img
-          style="object-fit: cover"
-          src="{{ cloudservices.image }}"
-          alt="Specialist"
-        />
-      </div>
       <div class="service-info">
-        <h2>{{ cloudservices.title }}</h2>
+        <div class="service-img">
+          <img
+            style="object-fit: cover"
+            src="{{ cloudservices.image }}"
+            alt="Specialist"
+          />
+        </div><br>
+        
+        <h2 class="flex justify-center">{{ cloudservices.title }}</h2>
         <br />
         {{ cloudservices.description }}<br /><br />
         <button
@@ -88,6 +280,197 @@
         >
           Read products brochure
         </button>
+      </div>
+      <div>
+        <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
+          <div class="relative bg-white shadow-xl">
+            <!-- <h2 class="sr-only">Contact us</h2> -->
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+    
+              <!-- Contact form -->
+              <form
+                [formGroup]="form"
+                (ngSubmit)="SubmitIssue()"
+                class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12"
+              >
+                <!-- Success message -->
+                <div
+                  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2 py-3 shadow-md"
+                  role="alert"
+                  *ngIf="view"
+                >
+                  <div class="flex">
+                    <div class="py-1">
+                      <svg
+                        class="fill-current h-6 w-6 text-teal-500 mr-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-bold">Success</p>
+                      <p class="text-sm">Thank you, message send successfully</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of success messsage -->
+                <h3 class="text-lg font-bold text-gray-900">Make an Enquiry</h3>
+                <div
+                  class="mt-3 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                >
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Country</label
+                    >
+                    <div class="mt-1">
+                      <select
+                        formControlName="country_id"
+                        type="text"
+                        name="country"
+                        id="country"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      >
+                      <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">Kenya</option>
+                      <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">Uganda</option>
+                      <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">Ghana</option>
+                      <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">DRC</option>
+                      <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">Liberia</option>
+                      <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">Togo</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="first-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >First name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="firstName"
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autocomplete="given-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="last-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >Last name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="lastName"
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        autocomplete="family-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-900"
+                      >Email</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="email"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-900"
+                        >Phone</label
+                      >
+                      <span id="phone-optional" class="text-sm text-gray-500"
+                        >Optional</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <input
+                        formControlName="phoneNumber"
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        autocomplete="tel"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                        aria-describedby="phone-optional"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Subject</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="subject"
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <div class="flex justify-between">
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-900"
+                        >Message</label
+                      >
+                      <span id="message-max" class="text-sm text-gray-500"
+                        >Max. 500 characters</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <textarea
+                        formControlName="description"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
+                        aria-describedby="message-max"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2 sm:flex sm:justify-end">
+                    <button
+                      type="submit"
+                      class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <h1

@@ -4,30 +4,30 @@
 
   <!-- What we offer section -->
   <section class="pt-5 lg:pt-[120px] pb-12 lg:pb-[90px]">
-    <div class="container">
+    <div class="container flex flex-col items-center">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full px-4">
           <div class="text-center mx-auto mb-2 lg:mb-20 max-w-[510px]">
             <h2
-              class="font-bold sm:text-4xl md:text-[40px] text-dark mb-4"
-              style="font-size: 22px"
+              class="font-extrabold sm:text-4xl mb-4"
+              style="font-size: 26px"
             >
               What We Offer
             </h2>
             <p class="text-base text-body-color">
               CSquared enables MNOs and ISPs to provide high-quality broadband
-              at lower costs through shared infrastructure such as metro fiber
+              at lower costs through open access shared infrastructure such as metro fiber
               and Wi-Fi networks
             </p>
           </div>
         </div>
       </div>
       <div
-        class="grid grid-cols-1 gap-1 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+        class="w-[85vw] grid grid-cols-1 gap-1 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
       >
         <div
           *ngFor="let service of services"
-          class="group p-8 space-y-3 border-2 border-green-400 bg-green-400 dark:border-blue-300 rounded-xl hover:bg-green-900 hover:border-transparent"
+          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent"
         >
           <p class="flex justify-center h-20 pb-3">
             <img src="{{ service.logo }}" alt="" style="object-fit: contain" />
@@ -43,10 +43,10 @@
             {{ service.description }}
           </p>
 
-          <a
-            class="inline-flex p-2 text-green-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:green-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-          >
-          </a>
+          <a routerLink="{{service.link}}" class="inline-flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-800 dark:focus:ring-green-800">
+            Read more
+            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@
 
   <!-- Map section -->
   <h1
-    class="flex flex-row justify-center pt-10"
-    style="font-size: 22px; font-weight: bold"
+    class="flex flex-row justify-center pt-10 font-extrabold"
+    style="font-size: 26px;"
   >
     Who We Are
   </h1>
@@ -152,16 +152,16 @@
 
     <!-- Start of logo section -->
 
-    <div class="row mt-8 p-8">
+    <div class="row mt-12 p-8 ">
       <h3
-          class="mx-auto text-center text-2xl font-bold text-green-900 pb-12"
-          style="font-size: 22px; font-weight: bold"
+          class="mx-auto text-center font-bold text-green-900 pb-12"
+          style="font-size: 26px;"
         >
           Who We Work With
         </h3>
       <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" 
                         
-      [config]="{slidesToShow: 5, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '60px',
+      [config]="{slidesToShow: 5, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
       arrows: false,
       dots: false}" 
                         >
@@ -173,8 +173,8 @@
 
     <!-- End of logo section -->
     <h1
-      class="flex flex-row justify-center pt-20 pb-10"
-      style="font-size: 22px; font-weight: bold"
+      class="flex flex-row justify-center pt-10 pb-2 bg-green-100 font-extrabold"
+      style="font-size: 26px; font-weight: bold"
     >
       Our Socials
     </h1>
@@ -183,7 +183,7 @@
 
       <!-- embedding facebook post -->
       <div>
-        <h1 class="font-bold mb-2 text-[20px]">Facebook Posts</h1>
+        <h1 class="font-bold mb-2 text-[20px] flex justify-center">Facebook Posts</h1>
         <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
         width="350"
@@ -197,8 +197,8 @@
       </div>
       <!-- end of embedding facebook -->
 
-      <div style="width: 350px" class="tweet">
-        <h1 class="font-bold mb-2 text-[20px]">Twitter Feed</h1>
+      <div style="width: 350px; height:550px;"  class="tweet">
+        <h1 class="font-bold mb-2 text-[20px] flex justify-center">Twitter Feed</h1>
         <ng-twitter-timeline
           [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
           [opts]="{ tweetLimit: 1 }"
@@ -207,7 +207,7 @@
 
       <!-- embedding linked in post -->
       <div>
-        <h1 class="font-bold mb-2 text-[20px]">LinkedIn Feed</h1>
+        <h1 class="font-bold mb-2 text-[20px] flex justify-center">LinkedIn Feed</h1>
         <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520"
         height="550"
