@@ -12,6 +12,7 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  hide=false
   targets: { title: string, image: string }[] = [
     { title: "MNO's", image: '/assets/images/home/MNO.jpg' },
     { title: 'Data Centers', image: '/assets/images/home/country.png' },
@@ -88,7 +89,13 @@ export class HomeComponent implements OnInit {
     AOS.init();
     this.getUserLocation();
 
-    this.countryService.setCountry('global')
+    this.countryService.setCountry('global');
+    window.onresize=()=>{
+      this.hide=window.innerWidth<500
+      // console.log(this.hide);
+      
+    }
+    
   }
 
   userslocationName: string = '';
