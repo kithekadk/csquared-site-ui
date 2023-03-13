@@ -38,24 +38,37 @@ getTeamMember(){
   this.teammember = this.apiService.getTeamMember(this.index);
   this.leftIndex = (this.index-1);
   this.rightIndex = (this.index+1);
-  this.getPreviousMember();
-  this.getNextMember();
+  // this.getPreviousMember();
+  // this.getNextMember();
   
   }
   
-getPreviousMember(){
-  this.index = (Number(this.id.replace('/team/','')));
-  if(this.index!==0){
-    this.previousmember = this.apiService.getTeamMember((this.index-1));
+getPreviousMember(index:number){
+  if(index <= this.apiService.management.length-1){
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['team/',index])
+    })
+  }else{
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+      this.router.navigate(['team/',this.apiService.management.length-1])
+    })
   }
 } 
+viewProduct(index:number){
+  this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+    this.router.navigate(['services/wholesale-fiber/view',index])
+  })
+}
 
-
-getNextMember(){
-  this.index = (Number(this.id.replace('/team/','')));
-  if(this.index+1 < this.apiService.management.length){
-    this.nextmember = this.apiService.getTeamMember((this.index+1));
-    console.log(this.nextmember.name);
-  }
+getNextMember(index:number){
+  if(index <= this.apiService.management.length-1){
+  this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+    this.router.navigate(['team/',index])
+  })
+}else{
+  this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+    this.router.navigate(['team/',this.apiService.management.length-1])
+  })
+}
 }
 }
