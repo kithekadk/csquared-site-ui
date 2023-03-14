@@ -12,19 +12,20 @@ export class NavbarComponent implements OnInit {
   toggled: boolean = false;
   FromTop:any
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    // this.FromTop = window.scrollY + document.getElementById('overall-nav')!.getBoundingClientRect().top
-    // if(this.FromTop <= 53){
-    //   this.isMegamenuOpen=true
-    //   console.log(this.FromTop);
-    // }
-    this.isMegamenuOpen=false
+    // var prevScrollpos = window.pageYOffset;
+    this.FromTop = window.scrollY + document.getElementById('overall-nav')!.getBoundingClientRect().top
+    console.log(this.FromTop);
     
-
+    if(this.FromTop){
+      // console.log(this.FromTop);
+      this.toggled=false
+      document.getElementById('overall-nav')?.click()
+    }
+    // this.isMegamenuOpen=false
   } 
 
   toggleMegamenu() {
     this.isMegamenuOpen = !this.isMegamenuOpen;
-    console.log(this.isMegamenuOpen);
   }
 
   // onMouseLeave(){
