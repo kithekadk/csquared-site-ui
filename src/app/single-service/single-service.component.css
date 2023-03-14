@@ -66,6 +66,16 @@
 h2{
     font-weight: bold;
 }
+.description{
+    display:none;
+}
+.service-title:hover{
+    display:none
+}
+.service-title:hover + .description{
+    display:flex;
+    
+}
 @media screen and (max-width:768px) {
     .service-info{
         width:80%;

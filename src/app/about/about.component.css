@@ -14,16 +14,17 @@ section{
     height: 50vh;
 }
 .about-bg{
-    /* margin-top: 10vh; */
     width: 100%;
-    height: 35vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./../../assets/images/backgrounds/blog.jpg");
+    /* height: 35vh; */
+    padding:20px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./../../assets/images/backgrounds/blog.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    gap:30px;
     align-items: center;
     color: white;
     font-size: 30px;
@@ -125,4 +126,16 @@ h2{
 h3{
     font-size: 20px;
     font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    .section-info, .section-info2{
+        width:80vw;
+    }
+    .section-info2{
+        margin-left: 0px;
+    }
+    .section-img{
+        display: none;
+    }
 }

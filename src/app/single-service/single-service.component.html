@@ -394,10 +394,14 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allfiberservices">
       <div
-        class="flex flex-wrap justify-center items-center w-[250px] h-[20vh] p-10 bg-green-700 hover:bg-green-900"
+        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto"
       >
-        <h1 class="text-white text-2xl">{{ other.title }}</h1>
-        <!-- <p>{{other.description}}</p> -->
+        <h1 class="hover:hidden text-white text-2xl cursor-auto">{{ other.title }}</h1>
+      </div>
+      <div
+        class="description flex flex-wrap justify-center items-center w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-900 hover:bg-green-900 cursor-auto"
+      >
+        <p class="text-white text-[12px] overflow-hidden cursor-auto">{{other.description}}</p>
       </div>
     </div>
   </div>
@@ -654,6 +658,7 @@
   </div>
   <!-- Accordion -->
   <details
+  class="mb-4"
   >
     <summary class="marker:content-['']">
       
@@ -786,10 +791,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div> -->
     </div>
   </details>
 
@@ -802,10 +803,14 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allcloudservices">
       <div
-        class="flex flex-wrap justify-center items-center w-[250px] h-[20vh] p-10 bg-green-700 hover:bg-green-900"
+        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto"
       >
-        <h1 class="text-white text-2xl">{{ other.title }}</h1>
-        <!-- <p>{{other.description}}</p> -->
+        <h1 class="hover:hidden text-white text-2xl cursor-auto">{{ other.title }}</h1>
+      </div>
+      <div
+        class="description flex flex-wrap justify-center items-center w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-900 hover:bg-green-900 cursor-auto"
+      >
+        <p class="text-white text-[12px] overflow-hidden cursor-auto">{{other.description}}</p>
       </div>
     </div>
   </div>
