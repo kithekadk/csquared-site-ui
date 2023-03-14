@@ -7,26 +7,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isMegamenuOpen=false;
+  isMegamenuOpen!:boolean;
 
   toggled: boolean = false;
-  // @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-  //   this.isMegamenuOpen=false;
-  //   console.log(this.isMegamenuOpen)
-  //   setTimeout(() => {
-  //     this.isMegamenuOpen=true
-  //     console.log('After Timeout'+this.isMegamenuOpen)
-  //   }, 1);
-  // } 
+  FromTop:any
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event){
+    // this.FromTop = window.scrollY + document.getElementById('overall-nav')!.getBoundingClientRect().top
+    // if(this.FromTop <= 53){
+    //   this.isMegamenuOpen=true
+    //   console.log(this.FromTop);
+    // }
+    this.isMegamenuOpen=false
+    
+
+  } 
 
   toggleMegamenu() {
     this.isMegamenuOpen = !this.isMegamenuOpen;
     console.log(this.isMegamenuOpen);
   }
 
-  onMouseLeave(){
-    this.isMegamenuOpen=false;
-  }
+  // onMouseLeave(){
+  //   this.isMegamenuOpen=false;
+  // }
 
   selectedItem: {name:string,code:string, flag:string} | null = null
 countries:{name:string,code:string,id:string, flag:string}[]=[

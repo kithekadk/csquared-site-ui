@@ -3,17 +3,17 @@
         {{teammember.rank}}
     </div>
     <div class="member-container">
-        <div class="single-member">
-            <div class="member-img">
-                <img src="{{teammember.image}}" alt="Specialist"><br>
+        <div class="single-member ">
+            <div class="member-img min-w-[250px]">
+                <img src="{{teammember.image}}" alt="Specialist">
                 <!-- <div class="rank">
                     <h3>{{teammember.name}}</h3>
                     {{teammember.rank}}
                 </div> -->
             </div>
-            <div class="member-info">
-                <h2>{{teammember.rank}}</h2><br>
-                {{teammember.description}}<br><br>
+            <div class="member-info min-w-[260px]">
+                <h2 >{{teammember.rank}}</h2><br>
+                <p class="text-justify">{{teammember.description}}</p><br><br>
                 <button class="btn btn-success pl-10 pr-10">Contact</button>
             </div>
         </div>
@@ -22,20 +22,20 @@
     <hr>
 
     <!-- Bottom carousel -->
-    <div class="m-carousel">
-        <div class="leftitem" [routerLink]="['/team', leftIndex]" (click)="getPreviousMember()" *ngIf="previousmember">
+    <div class="m-carousel mb-8">
+        <div class="leftitem w-[25vw]" (click)="getPreviousMember(leftIndex)" *ngIf="previousmember">
             <div>
                 <img src="./../../assets/images/icons/left-arrow.png" alt="Previous" width="40px"><br>
                 Prev
             </div>
-            <div>
-                <img src="{{previousmember.image}}" alt="Previous" width="30%" height="50%"><br>
+            <div class="carousel-left">
+                <img src="{{previousmember.image}}" alt="Previous" class="w-[20%] h-[20%]"><br>
                 <b>{{previousmember.name}}</b>
             </div>
         </div>
-        <div class="rightitem"  [routerLink]="['/team', rightIndex]" (click)="getNextMember()">
-            <div>
-                <img src="{{nextmember.image}}" alt="Previous" width="30%" height="50%"><br>
+        <div class="rightitem w-[25vw]"  (click)="getNextMember(rightIndex)" *ngIf="nextmember">
+            <div class="carousel-right">
+                <img src="{{nextmember.image}}" alt="Previous" class="w-[20%] h-[20%]"><br>
                 <b>{{nextmember.name}}</b>
             </div>
             <div>

@@ -65,8 +65,8 @@ h3{
 .m-carousel{
     width: 100vw;
     display: flex;
-    justify-content: center;
-    gap:30%;
+    justify-content: space-around;
+    
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -76,11 +76,19 @@ h3{
     align-items: center;
 }
 .m-carousel >div> div> img{
-    border-radius: 60%;
+    border-radius: 50%;
 }
 .leftitem, .rightitem{
+
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     /* background-color: red; */
+}
+
+@media screen and (max-width:768px){
+    .carousel-right, .carousel-left{
+        visibility: hidden;
+    }
 }

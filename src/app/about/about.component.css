@@ -96,7 +96,7 @@ h2{
 }
 .members > img{
     border-radius: 10px;
-    height: 55vh;
+    /* height: 55vh; */
     cursor: pointer;
 }
 

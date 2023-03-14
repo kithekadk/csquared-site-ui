@@ -165,8 +165,8 @@
         >
           Who We Work With
         </h3>
-      <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" 
-                        
+        <!-- For desktop view -->
+      <ngx-slick-carousel class="md:carousel md:flex md:flex-row md:items-center md:p-[5px]" *ngIf="!hide"            
       [config]="{slidesToShow: 5, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
       arrows: false,
       dots: false}" 
@@ -174,7 +174,18 @@
         <div ngxSlickItem *ngFor="let slide of logos" class="slide">
               <img src="{{ slide.image }}" alt="" width="80%">
         </div>
-    </ngx-slick-carousel>
+
+        <!-- For mobile view -->
+      </ngx-slick-carousel>
+      <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" *ngIf="hide"             
+      [config]="{slidesToShow: 2, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
+      arrows: false,
+      dots: false}" 
+                        >
+        <div ngxSlickItem *ngFor="let slide of logos" class="slide">
+              <img src="{{ slide.image }}" alt="" width="80%">
+        </div>
+      </ngx-slick-carousel>
     </div>
 
     <!-- End of logo section -->
@@ -192,8 +203,7 @@
         <h1 class="font-bold mb-2 text-[20px] flex justify-center">Facebook Posts</h1>
         <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
-        width="350"
-        height="550"
+        class=" w-[250px] h-[450px] md:w-[350px] md:h-[550px]"
         style="border: none; overflow: hidden"
         scrolling="no"
         frameborder="0"
@@ -203,7 +213,7 @@
       </div>
       <!-- end of embedding facebook -->
 
-      <div style="width: 350px; height:550px;"  class="tweet">
+      <div class="tweet  w-[250px] h-[450px] md:w-[350px] md:h-[550px]">
         <h1 class="font-bold mb-2 text-[20px] flex justify-center">Twitter Feed</h1>
         <ng-twitter-timeline
           [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
@@ -212,12 +222,11 @@
       </div>
 
       <!-- embedding linked in post -->
-      <div>
+      <div class="mt-[15vh] md:mt-[0]">
         <h1 class="font-bold mb-2 text-[20px] flex justify-center">LinkedIn Feed</h1>
         <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:share:7038870686903275520"
-        height="550"
-        width="350"
+        class=" w-[250px] h-[450px] md:w-[350px] md:h-[550px]"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"

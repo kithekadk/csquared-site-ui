@@ -26,15 +26,17 @@
 
 @media only screen and (max-width: 768px) {
         h2{
-                font-size: 20px;
+                font-size: 23px;
         }
         p{
-                visibility: hidden;
+                /* visibility: hidden; */
+                font-size: 14px;
         }
         .carousel-caption {
                 position: absolute;
-                top: 40%;
-                left: 40%;
+                width:80vw;
+                top: 25%;
+                left: 28%;
                 transform: translate(-20%, -20%);
                 text-align: left;
         }
