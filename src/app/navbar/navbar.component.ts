@@ -12,24 +12,14 @@ export class NavbarComponent implements OnInit {
   toggled: boolean = false;
   FromTop:any
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    // this.FromTop = window.scrollY + document.getElementById('overall-nav')!.getBoundingClientRect().top
-    // if(this.FromTop <= 53){
-    //   this.isMegamenuOpen=true
-    //   console.log(this.FromTop);
-    // }
-    this.isMegamenuOpen=false
+    this.FromTop = window.scrollY + document.getElementById('overall-nav')!.getBoundingClientRect().top
     
-
+    if(this.FromTop){
+      this.toggled=false
+      document.getElementById('overall-nav')?.click()
+    }
   } 
 
-  toggleMegamenu() {
-    this.isMegamenuOpen = !this.isMegamenuOpen;
-    console.log(this.isMegamenuOpen);
-  }
-
-  // onMouseLeave(){
-  //   this.isMegamenuOpen=false;
-  // }
 
   selectedItem: {name:string,code:string, flag:string} | null = null
 countries:{name:string,code:string,id:string, flag:string}[]=[
