@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
-import { authorities, services } from '../interfaces/interfaces';
+import { about_info, authorities, services } from '../interfaces/interfaces';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-sections!: services[];
+sections!: about_info[];
 managers!: authorities[];
 active:boolean=false;
   constructor(private apiService:ApiService, private router:Router) { }

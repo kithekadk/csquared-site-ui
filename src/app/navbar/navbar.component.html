@@ -8,7 +8,7 @@
         <button
           (click)="toggled = !toggled"
           type="button"
-          class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+          class="flex items-center justify-between w-full py-0 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-green-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -135,10 +135,10 @@
           <div>
             <div 
               id="mega-menu-dropdown"
-              class='flex absolute p-4 z-10 hidden w-auto  grid-cols-2 text-md bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2'
+              class='flex absolute p-2 z-10 hidden w-auto  grid-cols-2 text-md bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2'
             >
               <div 
-                class="p-4 pb-2 m-2 text-dark md:pb-8 dark:text-white rounded-md"
+                class="p-2 pb-2 m-2 text-dark md:pb-8 dark:text-white rounded-md"
               >
                 <span class="sr-only p-4">Infrastructure Solutions</span>
                 <ul
@@ -178,7 +178,7 @@
                 </ul>
               </div>
               <div
-                class="p-4 pb-0 m-2 text-gray-900 md:pb-4 dark:text-white rounded-md"
+                class="p-2 pb-0 m-2 text-gray-900 md:pb-4 dark:text-white rounded-md"
               >
                 <ul
                   class="space-y-4"
@@ -236,10 +236,10 @@
             id="mega-menu-dropdown2"
             class="flex absolute p-2 z-10 hidden w-auto  grid-cols-2 text-md bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2"
           >
-            <div class="p-4 pb-2 text-dark m-4 md:pb-4 dark:text-white">
+            <div class="p-2 pb-2 text-dark m-2 md:pb-2 dark:text-white">
               <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
                 <li>
-                  <i class="bi bi-cloud tex-lg"></i>
+                  <i class="bi bi-cloud text-lg"></i>
                   <a
                     (click)="viewService(0)"
                     class="cursor-pointer text-green-800 hover:text-blue-600 dark:hover:text-blue-500"
@@ -271,7 +271,7 @@
               </ul>
             </div>
             <div 
-              class="p-4 pb-0 rounded-md m-4 text-dark md:pb-4 dark:text-white"
+              class="p-2 pb-0 rounded-md m-2 text-dark md:pb-2 dark:text-white"
             >
               <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
                 <li>

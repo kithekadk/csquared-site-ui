@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     },
     {
       'name': 'IP Transit',
-      'logo': '/assets/images/icons/business-icon.png',
+      'logo': '/assets/images/icons/iptcable.png',
       'link':'/services/cloud-solutions/view/5',
       'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },

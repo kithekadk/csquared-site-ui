@@ -49,7 +49,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin-top: 20px;
 }
 
@@ -57,20 +57,22 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-     width: 48%;
+     width: 90%;
      gap: 20px;
-
 }
 .career-row{
     display: flex;
     gap: 20px;
-    width: 89%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .career-div{
    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 .career-div1{
@@ -89,6 +91,6 @@
 .career-div button{
     background-color: #E7B022;
     color: white;
-    height: 60%;
-    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 5px 20px;
 }
