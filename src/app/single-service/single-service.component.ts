@@ -15,6 +15,9 @@ export class SingleServiceComponent implements OnInit {
   cloudservices!:services
   Allfiberservices!:services[];
   Allcloudservices!:services[];
+  benefits!:any
+  bestfits!:any
+  features!:any
   form!:FormGroup
   constructor(private apiService:ApiService, private router:Router , private fb:FormBuilder, private countryservice:CountryService) { }
 
@@ -44,12 +47,17 @@ export class SingleServiceComponent implements OnInit {
     this.index = (Number(this.id.replace('/services/wholesale-fiber/view/','')));
     this.fiberservices = this.apiService.getOneFiberItem(this.index);
     this.image=this.fiberservices.image
-    
+    this.benefits = this.fiberservices.benefits
+    this.bestfits = this.fiberservices.bestfit
+    this.features = this.fiberservices.features
   }
   getCloudServiceIndex(){
     this.index = (Number(this.id.replace('/services/cloud-solutions/view/','')));
     this.cloudservices = this.apiService.getOneCloudItem(this.index);
     this.image=this.cloudservices.image 
+    this.benefits = this.cloudservices.benefits
+    this.bestfits = this.cloudservices.bestfit
+    this.features = this.cloudservices.features
   }
 
   image=''

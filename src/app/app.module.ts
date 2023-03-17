@@ -32,7 +32,6 @@ import { TogoComponent } from './togo/togo.component';
 import { KenyaComponent } from './kenya/kenya.component';
 import { SingleMemberComponent } from './single-member/team.component';
 import { BlogComponent } from './blog/blog.component';
-import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoverageComponent } from './coverage/coverage.component';
 import { CareersComponent } from './careers/careers.component';
@@ -85,7 +84,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     KenyaComponent,
     SingleMemberComponent,
     BlogComponent,
-    CareerComponent,
     ContactComponent,
     CoverageComponent,
     CareersComponent,

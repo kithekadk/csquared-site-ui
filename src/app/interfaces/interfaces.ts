@@ -3,8 +3,24 @@ export interface services{
     title: string;
     subtitle: string;
     description: string;
+    bestfit:string[];
+    features:string[];
+    benefits:benefits[]
+    support:string;
+    contact:string;
 }
 
+export interface about_info{
+    image:string;
+    title: string;
+    subtitle: string;
+    description: string;
+}
+
+export interface benefits{
+    heading:string;
+    description:string
+}
  export interface CoverageContent{ 
           image:string
           content:string 

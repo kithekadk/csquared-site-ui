@@ -38,6 +38,63 @@
           Read products brochure
         </button>
       </div>
+
+<!-- Read more about the product -->
+<div
+      id="accordion-flush-body-2"
+    >
+      <div class="py-4" *ngIf="fiberservices">
+        <h1
+          class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
+          style="font-size: 22px; font-weight: bold"
+        >
+          {{fiberservices.title}}
+        </h1>
+        <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
+          <div class="w-[35vw] min-w-[250px] md:w-35vw">
+            <p class="text-justify">
+              {{fiberservices.description}}
+            </p>
+            <br />
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4">
+              Best fit for businesses looking for:
+            </h3>
+            <ol class="list-disc" *ngFor="let bestfit of bestfits">
+              <li>{{bestfit}}</li>
+            </ol>
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
+            <ol class="list-disc" *ngFor="let feature of features">
+              <li>{{feature}}</li>
+            </ol>
+          </div>
+          <div class="w-[35vw] min-w-[250px] md:w-35vw">
+            <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
+            <ol class="list-disc" *ngFor="let benefit of benefits">
+              <li class="text-[14px]">
+                <b>{{benefit.heading}}</b> <br />
+                {{benefit.description}}
+              </li>
+            </ol>
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.support !== ''">Support</h3>
+            <p>
+              {{fiberservices.support}}
+            </p>
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.contact !== ''">Contact Us</h3>
+            <p>
+              {{fiberservices.contact}}
+            </p>
+            <br />
+            <div>
+              <img src="./assets/images/logos/zscaler.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <div>
         <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
           <div class="relative bg-white shadow-xl">
@@ -271,111 +328,53 @@
     <div
       id="accordion-flush-body-2"
     >
-      <div class="py-4">
+      <div class="py-4" *ngIf="fiberservices">
         <h1
           class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
           style="font-size: 22px; font-weight: bold"
         >
-          Zscaler Private Access (ZPA)
+          {{fiberservices.title}}
         </h1>
         <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
           <div class="w-[35vw] min-w-[250px] md:w-35vw">
             <p class="text-justify">
-              ZPA applies the principles of least privilege to give users
-              secure, direct connectivity to private applications running
-              on-prem or in the public cloud while eliminating unauthorized
-              access and lateral movement. ZPA is a cloud-native service built
-              on a holistic security service edge (SSE).
+              {{fiberservices.description}}
             </p>
             <br />
-            <p class="text-justify">
-              ZPA is part of the holistic Zero Trust Exchange which enables
-              fast, secure connections and allows employees to work from
-              anywhere using the internet as the corporate network. Based on the
-              zero-trust principle of least-privileged access, it provides
-              comprehensive security using context-based identity and policy
-              enforcement.
-            </p>
 
             <h3 class="font-bold text-[18px] mb-2 mt-4">
               Best fit for businesses looking for:
             </h3>
-            <ol class="list-decimal">
-              <li>A VPN alternative that eliminates VPN traffic backhauling</li>
-              <li>
-                Safe, secure secure access to private apps for their remote
-                workforce
-              </li>
-              <li>
-                Integrated agentless access that allows users to access
-                applications from any browser, on device, without the need to
-                install a client or log into a VPN.
-              </li>
-              <li>
-                A VDI alternative that offers fast, secure, direct connectivity
-                to apps over RDP and SSH.
-              </li>
-              <li>A simplified IT integration during M&As and divestitures</li>
-              <li>
-                Fast, secure, and reliable access to OT and IIoT environments
-                from field locations, the factory floor, or anywhere in the
-                organization.
-              </li>
-              <li>
-                Fast, secure workload-to-workload connectivity across hybrid and
-                multi-cloud environments.
-              </li>
+            <ol class="list-disc" *ngFor="let bestfit of bestfits">
+              <li>{{bestfit}}</li>
             </ol>
 
             <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
-            <ol class="list-decimal">
-              <li>Remote App Access without VPN</li>
-              <li>Zero trust from office to data centre</li>
-              <li>B2B customer app access</li>
+            <ol class="list-disc" *ngFor="let feature of features">
+              <li>{{feature}}</li>
             </ol>
           </div>
           <div class="w-[35vw] min-w-[250px] md:w-35vw">
             <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-            <ol class="list-decimal">
+            <ol class="list-disc" *ngFor="let benefit of benefits">
               <li class="text-[14px]">
-                <b>Boost hybrid workforce productivity</b> <br />
-                Fast, seamless access to private apps whether you’re at home, in
-                the office, or anywhere
-              </li>
-              <li class="text-[14px]">
-                <b>Mitigate the risk of a data breach</b> <br />
-                Minimize the attack surface and eliminate lateral movement by
-                making applications invisible to attackers while enforcing
-                least-privileged access
-              </li>
-              <li class="text-[14px]">
-                <b>Stop the most advanced adversaries</b> <br />
-                First-of-its-kind private app protection minimizes the risk of
-                compromised users and active attackers
-              </li>
-              <li class="text-[14px]">
-                <b>Extend zero trust across apps, workloads, and devices</b>
-                <br />
-                The world’s most complete ZTNA platform brings least-privileged
-                access to private apps, workloads, and OT/IIoT devices
-              </li>
-              <li class="text-[14px]">
-                <b>Reduce operational complexity</b> <br />
-                Cloud-native platform eliminates legacy VPNs that are difficult
-                to scale, manage, and configure.
+                <b>{{benefit.heading}}</b> <br />
+                {{benefit.description}}
               </li>
             </ol>
 
-            <h3 class="font-bold text-[18px] mb-2 mt-4">Support</h3>
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.support !== ''">Support</h3>
             <p>
-              CSquared has technical specialists on the ground who are equipped
-              to walk you through our products and advise on the best product
-              fit for your business.
+              {{fiberservices.support}}
+            </p>
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.contact !== ''">Contact Us</h3>
+            <p>
+              {{fiberservices.contact}}
             </p>
             <br />
-            <div>
+            <!-- <div>
               <img src="./assets/images/logos/zscaler.svg" alt="" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -681,117 +680,63 @@
           
     </summary>
     <div
-      id="accordion-flush-body-2"
-    >
-      <div class="py-4">
-        <h1
-          class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
-          style="font-size: 22px; font-weight: bold"
-        >
-          Zscaler Private Access (ZPA)
-        </h1>
-        <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
-          <div class="w-[35vw] min-w-[250px] md:w-35vw">
-            <p class="text-justify">
-              ZPA applies the principles of least privilege to give users
-              secure, direct connectivity to private applications running
-              on-prem or in the public cloud while eliminating unauthorized
-              access and lateral movement. ZPA is a cloud-native service built
-              on a holistic security service edge (SSE).
-            </p>
-            <br />
-            <p class="text-justify">
-              ZPA is part of the holistic Zero Trust Exchange which enables
-              fast, secure connections and allows employees to work from
-              anywhere using the internet as the corporate network. Based on the
-              zero-trust principle of least-privileged access, it provides
-              comprehensive security using context-based identity and policy
-              enforcement.
-            </p>
+    id="accordion-flush-body-2"
+  >
+    <div class="py-4" *ngIf="cloudservices">
+      <h1
+        class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
+        style="font-size: 22px; font-weight: bold"
+      >
+        {{cloudservices.title}}
+      </h1>
+      <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
+        <div class="w-[35vw] min-w-[250px] md:w-35vw">
+          <p class="text-justify">
+            {{cloudservices.description}}
+          </p>
+          <br />
 
-            <h3 class="font-bold text-[18px] mb-2 mt-4">
-              Best fit for businesses looking for:
-            </h3>
-            <ol class="list-decimal">
-              <li>A VPN alternative that eliminates VPN traffic backhauling</li>
-              <li>
-                Safe, secure secure access to private apps for their remote
-                workforce
-              </li>
-              <li>
-                Integrated agentless access that allows users to access
-                applications from any browser, on device, without the need to
-                install a client or log into a VPN.
-              </li>
-              <li>
-                A VDI alternative that offers fast, secure, direct connectivity
-                to apps over RDP and SSH.
-              </li>
-              <li>A simplified IT integration during M&As and divestitures</li>
-              <li>
-                Fast, secure, and reliable access to OT and IIoT environments
-                from field locations, the factory floor, or anywhere in the
-                organization.
-              </li>
-              <li>
-                Fast, secure workload-to-workload connectivity across hybrid and
-                multi-cloud environments.
-              </li>
-            </ol>
+          <h3 class="font-bold text-[18px] mb-2 mt-4">
+            Best fit for businesses looking for:
+          </h3>
+          <ol class="list-disc" *ngFor="let bestfit of bestfits">
+            <li>{{bestfit}}</li>
+          </ol>
 
-            <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
-            <ol class="list-decimal">
-              <li>Remote App Access without VPN</li>
-              <li>Zero trust from office to data centre</li>
-              <li>B2B customer app access</li>
-            </ol>
-          </div>
-          <div class="w-[35vw] min-w-[250px] md:w-35vw">
-            <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-            <ol class="list-decimal">
-              <li class="text-[14px]">
-                <b>Boost hybrid workforce productivity</b> <br />
-                Fast, seamless access to private apps whether you’re at home, in
-                the office, or anywhere
-              </li>
-              <li class="text-[14px]">
-                <b>Mitigate the risk of a data breach</b> <br />
-                Minimize the attack surface and eliminate lateral movement by
-                making applications invisible to attackers while enforcing
-                least-privileged access
-              </li>
-              <li class="text-[14px]">
-                <b>Stop the most advanced adversaries</b> <br />
-                First-of-its-kind private app protection minimizes the risk of
-                compromised users and active attackers
-              </li>
-              <li class="text-[14px]">
-                <b>Extend zero trust across apps, workloads, and devices</b>
-                <br />
-                The world’s most complete ZTNA platform brings least-privileged
-                access to private apps, workloads, and OT/IIoT devices
-              </li>
-              <li class="text-[14px]">
-                <b>Reduce operational complexity</b> <br />
-                Cloud-native platform eliminates legacy VPNs that are difficult
-                to scale, manage, and configure.
-              </li>
-            </ol>
+          <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
+          <ol class="list-disc" *ngFor="let feature of features">
+            <li>{{feature}}</li>
+          </ol>
+        </div>
+        <div class="w-[35vw] min-w-[250px] md:w-35vw">
+          <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
+          <ol class="list-disc" *ngFor="let benefit of benefits">
+            <li class="text-[14px]">
+              <b>{{benefit.heading}}</b> <br />
+              {{benefit.description}}
+            </li>
+          </ol>
 
-            <h3 class="font-bold text-[18px] mb-2 mt-4">Support</h3>
-            <p>
-              CSquared has technical specialists on the ground who are equipped
-              to walk you through our products and advise on the best product
-              fit for your business.
-            </p>
-            <br />
-            <div>
-              <img src="./assets/images/logos/zscaler.svg" alt="" />
-            </div>
+          <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.support !== ''">Support</h3>
+          <p>
+            {{cloudservices.support}}
+          </p>
+          <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.contact !== ''">Contact Us</h3>
+          <p>
+            {{cloudservices.contact}}
+          </p>
+          <br />
+          <div>
+            <img src="./assets/images/logos/zscaler.svg" alt="" />
           </div>
         </div>
       </div>
     </div>
+    <!-- <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+  <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+  <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+  </div> -->
+  </div>
   </details>
 
   <h1
@@ -803,7 +748,7 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allcloudservices">
       <div
-        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto"
+        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto hover:text-[700px]"
       >
         <h1 class="hover:hidden text-white text-2xl cursor-auto">{{ other.title }}</h1>
       </div>
