@@ -17,35 +17,12 @@
       </div>
     </div>
   </div>
-  <div class="service-container">
-    <div class="single-service">
-      <div class="service-info">
-        <div class="service-img">
-          <img
-            style="object-fit: cover"
-            src="{{ fiberservices.image }}"
-            alt="Specialist"
-          />
-        </div>
-        <br />
-        <h2 class="flex justify-center">{{ fiberservices.title }}</h2>
-        <br />
-        {{ fiberservices.description }}<br /><br />
-        <button
-          class="btn btn-warning hover:bg-amber-600"
-          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
-        >
-          Read products brochure
-        </button>
-      </div>
 
 <!-- Read more about the product -->
-<div
-      id="accordion-flush-body-2"
-    >
-      <div class="py-4" *ngIf="fiberservices">
+<div>
+      <div class="pt-4" *ngIf="fiberservices">
         <h1
-          class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
+          class="flex flex-row justify-center pb-10 text-amber-500"
           style="font-size: 22px; font-weight: bold"
         >
           {{fiberservices.title}}
@@ -86,14 +63,32 @@
             <p>
               {{fiberservices.contact}}
             </p>
-            <br />
-            <div>
-              <img src="./assets/images/logos/zscaler.svg" alt="" />
-            </div>
           </div>
         </div>
       </div>
-    </div>
+</div>
+
+  <div class="service-container">
+    <div class="single-service">
+      <div class="service-info">
+        <div class="service-img">
+          <img
+            style="object-fit: cover"
+            src="{{ fiberservices.image }}"
+            alt="Specialist"
+          />
+        </div>
+        <br />
+        <h2 class="flex justify-center">{{ fiberservices.title }}</h2>
+        <br />
+        {{ fiberservices.description }}<br /><br />
+        <button
+          class="btn btn-warning hover:bg-amber-600"
+          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
+        >
+          Read products brochure
+        </button>
+      </div>
 
       <div>
         <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
@@ -301,91 +296,8 @@
       </div>
     </div>
   </div>
-  <!-- Accordion -->
-
-  <details
-  >
-    <summary class="marker:content-['']">
-      
-          <span class="flex justify-center gap-10 bg-green-500 w-full py-4 font-medium text-left text-black-500 border-b border-black-200 dark:border-black-700 dark:text-black-400 "> Want to Learn More?
-
-            <svg
-          data-accordion-icon
-          class="w-6 h-6 shrink-0"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-          </span>
-          
-    </summary>
-    <div
-      id="accordion-flush-body-2"
-    >
-      <div class="py-4" *ngIf="fiberservices">
-        <h1
-          class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
-          style="font-size: 22px; font-weight: bold"
-        >
-          {{fiberservices.title}}
-        </h1>
-        <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
-          <div class="w-[35vw] min-w-[250px] md:w-35vw">
-            <p class="text-justify">
-              {{fiberservices.description}}
-            </p>
-            <br />
-
-            <h3 class="font-bold text-[18px] mb-2 mt-4">
-              Best fit for businesses looking for:
-            </h3>
-            <ol class="list-disc" *ngFor="let bestfit of bestfits">
-              <li>{{bestfit}}</li>
-            </ol>
-
-            <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
-            <ol class="list-disc" *ngFor="let feature of features">
-              <li>{{feature}}</li>
-            </ol>
-          </div>
-          <div class="w-[35vw] min-w-[250px] md:w-35vw">
-            <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-            <ol class="list-disc" *ngFor="let benefit of benefits">
-              <li class="text-[14px]">
-                <b>{{benefit.heading}}</b> <br />
-                {{benefit.description}}
-              </li>
-            </ol>
-
-            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.support !== ''">Support</h3>
-            <p>
-              {{fiberservices.support}}
-            </p>
-            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.contact !== ''">Contact Us</h3>
-            <p>
-              {{fiberservices.contact}}
-            </p>
-            <br />
-            <!-- <div>
-              <img src="./assets/images/logos/zscaler.svg" alt="" />
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <!-- <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div> -->
-    </div>
-  </details>
   <h1
-    class="flex flex-row justify-center pt-10 pb-10"
+    class="flex flex-row justify-center pt-0 pb-10"
     style="font-size: 22px; font-weight: bold"
   >
     All solutions
@@ -427,6 +339,59 @@
       </div>
     </div>
   </div>
+
+  <div
+  id="accordion-flush-body-2"
+>
+  <div class="py-4" *ngIf="cloudservices">
+    <h1
+      class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
+      style="font-size: 22px; font-weight: bold"
+    >
+      {{cloudservices.title}}
+    </h1>
+    <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
+      <div class="w-[35vw] min-w-[250px] md:w-35vw">
+        <p class="text-justify">
+          {{cloudservices.description}}
+        </p>
+        <br />
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4">
+          Best fit for businesses looking for:
+        </h3>
+        <ol class="list-disc" *ngFor="let bestfit of bestfits">
+          <li>{{bestfit}}</li>
+        </ol>
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
+        <ol class="list-disc" *ngFor="let feature of features">
+          <li>{{feature}}</li>
+        </ol>
+      </div>
+      <div class="w-[35vw] min-w-[250px] md:w-35vw">
+        <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
+        <ol class="list-disc" *ngFor="let benefit of benefits">
+          <li class="text-[14px]">
+            <b>{{benefit.heading}}</b> <br />
+            {{benefit.description}}
+          </li>
+        </ol>
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.support !== ''">Support</h3>
+        <p>
+          {{cloudservices.support}}
+        </p>
+        <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.contact !== ''">Contact Us</h3>
+        <p>
+          {{cloudservices.contact}}
+        </p>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="service-container bg-gray-50">
     <div class="single-service">
       <div class="service-info">
@@ -655,89 +620,6 @@
       </div>
     </div>
   </div>
-  <!-- Accordion -->
-  <details
-  class="mb-4"
-  >
-    <summary class="marker:content-['']">
-      
-          <span class="flex justify-center gap-10 bg-green-500 w-full py-4 font-medium text-left text-black-500 border-b border-black-200 dark:border-black-700 dark:text-black-400 "> Want to Learn More?
-
-            <svg
-          data-accordion-icon
-          class="w-6 h-6 shrink-0"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-          </span>
-          
-    </summary>
-    <div
-    id="accordion-flush-body-2"
-  >
-    <div class="py-4" *ngIf="cloudservices">
-      <h1
-        class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
-        style="font-size: 22px; font-weight: bold"
-      >
-        {{cloudservices.title}}
-      </h1>
-      <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
-        <div class="w-[35vw] min-w-[250px] md:w-35vw">
-          <p class="text-justify">
-            {{cloudservices.description}}
-          </p>
-          <br />
-
-          <h3 class="font-bold text-[18px] mb-2 mt-4">
-            Best fit for businesses looking for:
-          </h3>
-          <ol class="list-disc" *ngFor="let bestfit of bestfits">
-            <li>{{bestfit}}</li>
-          </ol>
-
-          <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
-          <ol class="list-disc" *ngFor="let feature of features">
-            <li>{{feature}}</li>
-          </ol>
-        </div>
-        <div class="w-[35vw] min-w-[250px] md:w-35vw">
-          <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-          <ol class="list-disc" *ngFor="let benefit of benefits">
-            <li class="text-[14px]">
-              <b>{{benefit.heading}}</b> <br />
-              {{benefit.description}}
-            </li>
-          </ol>
-
-          <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.support !== ''">Support</h3>
-          <p>
-            {{cloudservices.support}}
-          </p>
-          <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.contact !== ''">Contact Us</h3>
-          <p>
-            {{cloudservices.contact}}
-          </p>
-          <br />
-          <div>
-            <img src="./assets/images/logos/zscaler.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-  <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-  <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-  </div> -->
-  </div>
-  </details>
 
   <h1
     class="flex flex-row justify-center pt-10 pb-10"

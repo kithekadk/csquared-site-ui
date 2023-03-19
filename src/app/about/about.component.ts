@@ -16,12 +16,14 @@ active:boolean=false;
   constructor(private apiService:ApiService, private router:Router) { }
 
   ngOnInit(): void {
+    // window.location.reload();
     if (this.router.url == '/about'){
       this.getSections();
     }else if(this.router.url == '/team'){
       this.getManagers();
     } 
     Aos.init();
+   
   }
 
   image='../assets/images/home/slide_2.jpg'
@@ -33,12 +35,12 @@ active:boolean=false;
 
   getManagers(){
     this.managers = this.apiService.getManagement();
-    console.log(this.managers);
   }
 
-  teamMember!: authorities;
+  teamMember= this.apiService.getTeamMember(0);
   viewTeamMember(index:number){
     this.teamMember=this.apiService.getTeamMember(index);
+    console.log(this.teamMember);
   }
 
 }
