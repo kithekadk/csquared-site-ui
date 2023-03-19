@@ -115,8 +115,8 @@ export class CoverageComponent implements OnInit {
         for(let product of res['products']){
           this.product_id.push(product.id)
           this.products.push(product.name)
-          console.log(this.product_id);
-          console.log(this.products);
+          // console.log(this.product_id);
+          // console.log(this.products);
           
 
           
