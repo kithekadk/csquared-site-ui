@@ -54,6 +54,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     CountryProductsComponent,
     TermsOfServiceComponent,
     PrivacyPolicyComponent,
+    ShortenPipe,
   ],
   imports: [
     BrowserModule,

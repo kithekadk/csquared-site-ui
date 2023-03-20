@@ -10,13 +10,16 @@ export class LatestNewsComponent implements OnInit {
 
   constructor(private apiService:ApiService) { }
 news:any
+descriptions:any[]=[]
 images:any[]=[]
 users:any[]=[]
 created_at:any[]=[]
   ngOnInit(): void {
     this.apiService.getNews().subscribe(res=>{
+      res['data']
       this.news=res['data']
-      console.log(this.news);
+      // console.log(this.news);
+      
       
       for(let image of res['data']){
         
@@ -26,13 +29,23 @@ created_at:any[]=[]
         }
         this.images.push(imageUrl)  
       }
+      // Returns users and post creation date
       for(let users of res['data']){
         
         let user=users.user?.name
-        let creation_date=users.user?.created_at
+        let creation_date=users.user?.created_at        
         this.users.push(user)  
-        this.created_at.push(new Date(creation_date))  
+        this.created_at.push(new Date(creation_date).toDateString())  
       }
+
+      // Returns content of the post
+      for(let desc of res['data']){
+        
+        let description=desc.description
+        this.descriptions.push(description)          
+      }
+
+
     })
     
   }
