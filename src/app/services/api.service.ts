@@ -119,4 +119,8 @@ export class ApiService {
   getTeamMember(index:number){
     return this.management[index];
   }
+
+  getNews(){
+    return this.http.get('https://cms.shiftechafrica.com/api/v1/posts')
+  }
 }
