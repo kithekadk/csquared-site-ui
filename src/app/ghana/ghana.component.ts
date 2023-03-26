@@ -104,7 +104,7 @@ export class GhanaComponent implements OnInit {
   constructor(private countryService:CountryService) { }
 
   ngOnInit(): void {
-    AOS.init();
+    // AOS.init();
     this.countries= this.countryService.getOneCountry('ghana')
     this.countryService.setCountry('ghana')
   }

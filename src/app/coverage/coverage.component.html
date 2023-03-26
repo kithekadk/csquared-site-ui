@@ -43,11 +43,12 @@
     </form>
   </div>
   <div class="mapsection">
-    <!-- <div class="maps">
-      <div id="map"> -->
-        <app-map></app-map>
-        <!-- <google-map
+    <div class="maps h-[90vh]">
+      <div id="map" class="h-[90vh]">
+        <!-- <app-map></app-map> -->
+        <google-map
           width="100vw;"
+          height="90vh"
           [center]="center"
           [zoom]="zoom"
           (mapClick)="clickMap($event)"
@@ -61,18 +62,19 @@
           >
           </map-marker>
           <map-info-window>Info Window content</map-info-window>
-        </google-map> -->
+        </google-map>
   
         <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
-      <!-- </div>
-    </div> -->
+      </div>
+    </div>
   </div>
   
-  <div class="title">
+  <!-- <div class="title">
     <h2 class="p-4">Our Featured Countries</h2>
     <br />
-  </div>
-  <ng-image-slider
+  </div> -->
+
+  <!-- <ng-image-slider
     (click)="navigate($event)"
     [images]="coverage"
     [infinite]="true"
@@ -82,8 +84,8 @@
     [imageSize]="{ width: '300px', height: 180, space: 10 }"
     class="p-2"
     #nav
-  ></ng-image-slider
-  ><br /><br />
+  ></ng-image-slider -->
+<!-- <br /><br /> -->
 
   <app-footer></app-footer>
 </div>

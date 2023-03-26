@@ -1,12 +1,13 @@
 
 <div class="cl-container">
-<h1>Latest News</h1><br>
+<h1 *ngIf="mergedArray2.length>0">Latest News</h1><br>
 
 <div class="cl-content" data-aos="zoom-in">
-    <div class="cl-content-body" *ngFor="let content of newsPerCountry" >
-        <img src={{content.image}} alt="">
-        <h1 class="title"><b>{{content.title}}</b></h1>
-        <p class="content">{{content.content}}</p>
+    <div class="cl-content-body" *ngFor="let content of mergedArray2; let i = index;" >
+        <img *ngIf="content.image.length>1" src={{content.image}} alt="">
+        <p class="flex justify-center font-bold text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>
+        <h1 class="title" (click)="getSlug(content.slug)" routerLink="/post/{{content.slug}}"><b>{{content.title}}</b></h1>
+        <p class="content" (click)="getSlug(content.slug)" routerLink="/post/{{content.slug}}" [innerHTML]="content.description | shorten"></p>
     </div>
 </div>
 </div>
