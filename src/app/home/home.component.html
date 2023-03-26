@@ -27,7 +27,7 @@
       >
         <div
           *ngFor="let service of services"
-          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent"
+          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent shadow-xl"
         >
           <p class="flex justify-center h-20 pb-3">
             <img src="{{ service.logo }}" alt="" style="object-fit: contain" />
@@ -105,8 +105,8 @@
           />
 
           <div class="ml-20 mb-20 absolute ">
-            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-amber-500"></div> &nbsp; Already established</div>
-            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-blue-500"></div> &nbsp; Planning establishment</div>
+            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-[#f2b426]"></div> &nbsp; Already established</div>
+            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-[#4489f1]"></div> &nbsp; Planning establishment</div>
           </div>
         </div>
         <div class="col-span-5 relative mx-auto">
@@ -159,7 +159,7 @@
 
     <div class="row mt-20 p-8 ">
       <h3
-          class="mx-auto text-center font-bold text-green-900 pb-12"
+          class="mx-auto text-center font-bold text-black pb-12"
           style="font-size: 26px;"
         >
           Who We Work With

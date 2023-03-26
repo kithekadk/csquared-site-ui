@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -8,18 +9,24 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class LatestNewsComponent implements OnInit {
 
-  constructor(private apiService:ApiService) { }
+  constructor(private apiService:ApiService, private router:Router) { }
+pageNumber:number=1
 news:any
 descriptions:any[]=[]
 images:any[]=[]
 users:any[]=[]
 created_at:any[]=[]
+countries:any[]=[]
+mergedArray:any[]=[]
+
+newscomponent!:boolean
   ngOnInit(): void {
+        // GETTING NEWS
     this.apiService.getNews().subscribe(res=>{
       res['data']
-      this.news=res['data']
-      // console.log(this.news);
+      console.log(res['data']);
       
+      this.news=res['data']      
       
       for(let image of res['data']){
         
@@ -45,8 +52,27 @@ created_at:any[]=[]
         this.descriptions.push(description)          
       }
 
+      // Returns news country
+      for(let country of res['data']){
+        
+        let newsCountry=country.country['slug']
+        this.countries.push(newsCountry)          
+      }
+
+      this.mergedArray = this.images.map((img, index) =>({
+        image:img, created_at:this.created_at[index], description: this.descriptions[index], country: this.countries[index]
+      }))
+
+      console.log(this.mergedArray);
+      
+
 
     })
+
+    //CHECKING URL
+    if(this.router.url.includes('insights')){
+      this.newscomponent=true
+    }
     
   }
 

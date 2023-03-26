@@ -50,17 +50,21 @@
     justify-content: center;
 }
 .service-img > img{
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
 }
 .service-img > img:hover{
-    width: 78%;
+    width: 90%;
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 1.5%;
+    /* margin-bottom: 1.5%; */
 }
 .service-info{
     width:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
@@ -69,13 +73,13 @@ h2{
 .description{
     display:none;
 }
-.service-title:hover{
+/* .service-title:hover{
     display:none
 }
 .service-title:hover + .description{
     display:flex;
     
-}
+} */
 @media screen and (max-width:768px) {
     .service-info{
         width:80%;

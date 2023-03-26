@@ -2,7 +2,7 @@
   <div class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500">
     <div class="flex flex-wrap justify-center items-center gap-20">
       <div class="pt-10 pb-10 w-[70vw] md:w-[40vw]">
-        <h1 class="mb-4 text-[18px] md:text-[24px]">
+        <h1 class="mb-4 text-[18px] md:text-[42px] font-bold">
           {{ fiberservices.title }}
         </h1>
         <h1 class="text-[14px] md:text-[20px]">{{ fiberservices.subtitle }}</h1>
@@ -21,13 +21,13 @@
 <!-- Read more about the product -->
 <div>
       <div class="pt-4" *ngIf="fiberservices">
-        <h1
+        <!-- <h1
           class="flex flex-row justify-center pb-10 text-amber-500"
           style="font-size: 22px; font-weight: bold"
         >
           {{fiberservices.title}}
-        </h1>
-        <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
+        </h1> -->
+        <div class="flex flex-wrap justify-center gap-20 w-[100vw] pt-10">
           <div class="w-[35vw] min-w-[250px] md:w-35vw">
             <p class="text-justify">
               {{fiberservices.description}}
@@ -79,14 +79,14 @@
           />
         </div>
         <br />
-        <h2 class="flex justify-center">{{ fiberservices.title }}</h2>
+        <!-- <h2 class="flex justify-center">{{ fiberservices.title }}</h2> -->
         <br />
-        {{ fiberservices.description }}<br /><br />
+        <!-- {{ fiberservices.description }}<br /><br /> -->
         <button
-          class="btn btn-warning hover:bg-amber-600"
+          class="btn btn-warning hover:bg-amber-600 w-[90%] py-2"
           onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
         >
-          Read products brochure
+          <b>Read products brochure</b><i class="bi bi-download ml-4"></i>
         </button>
       </div>
 
@@ -303,16 +303,11 @@
     All solutions
   </h1>
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
-    <div *ngFor="let other of Allfiberservices">
-      <div
-        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto"
+    <div *ngFor="let other of Allfiberservices; let i = index">
+      <div (click)="NavigateByUrl(i)"
+        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 hover:bg-green-500 hover:cursor-pointer shadow-xl cursor-auto"
       >
-        <h1 class="hover:hidden text-white text-2xl cursor-auto">{{ other.title }}</h1>
-      </div>
-      <div
-        class="description flex flex-wrap justify-center items-center w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-900 hover:bg-green-900 cursor-auto"
-      >
-        <p class="text-white text-[12px] overflow-hidden cursor-auto">{{other.description}}</p>
+        <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
       </div>
     </div>
   </div>
@@ -324,7 +319,7 @@
   <div class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500">
     <div class="flex flex-wrap justify-center items-center gap-10">
       <div class="pt-10 pb-10 w-[70vw] md:w-[40vw]">
-        <h1 class="mb-4 text-[18px] md:text-[24px]">
+        <h1 class="mb-4 text-[18px] md:text-[42px] font-bold">
           {{ cloudservices.title }}
         </h1>
         <h1 class="text-[14px] md:text-[20px]">{{ cloudservices.subtitle }}</h1>
@@ -404,14 +399,14 @@
         </div>
         <br />
 
-        <h2 class="flex justify-center">{{ cloudservices.title }}</h2>
+        <!-- <h2 class="flex justify-center">{{ cloudservices.title }}</h2> -->
         <br />
-        {{ cloudservices.description }}<br /><br />
+        <!-- {{ cloudservices.description }}<br /><br /> -->
         <button
-          class="btn btn-warning"
+          class="btn btn-warning pt-2 w-[90%]"
           onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
         >
-          Read products brochure
+        <b>Read products brochure</b><i class="bi bi-download ml-4"></i>
         </button>
       </div>
       <div>
@@ -628,16 +623,11 @@
     All solutions
   </h1>
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
-    <div *ngFor="let other of Allcloudservices">
-      <div
-        class="hover:hidden service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto hover:text-[700px]"
+    <div *ngFor="let other of Allcloudservices; let i = index">
+      <div (click)="NavigateByUrl(i)"
+        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto hover:cursor-pointer hover:bg-green-500 hover:text-[700px]"
       >
-        <h1 class="hover:hidden text-white text-2xl cursor-auto">{{ other.title }}</h1>
-      </div>
-      <div
-        class="description flex flex-wrap justify-center items-center w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-900 hover:bg-green-900 cursor-auto"
-      >
-        <p class="text-white text-[12px] overflow-hidden cursor-auto">{{other.description}}</p>
+        <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
       </div>
     </div>
   </div>

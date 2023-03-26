@@ -8,7 +8,7 @@ import { Offer } from '../interfaces/interfaces';
   styleUrls: ['./country-products.component.css']
 })
 export class CountryProductsComponent implements OnInit {
-
+  pageNumber:number=1
   @Input() offers!:Offer[]
 
   // selectedoffer:Offer={
