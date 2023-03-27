@@ -18,12 +18,12 @@
       </p>
     </div>
 
-    <div class="career-div">
-      <details>
+    <div class="career-div" *ngFor="let career of careers">
+      <details class="w-[90vw] border-2 mb-2">
         <summary class="w-[100vw] marker:content-[''] flex justify-around items-center">
           <div class="career-div1">
-            <h1>Graphic Designer</h1><br>
-            <h3>San Francisco / Full Time</h3>
+            <h1>{{career.name}}</h1><br>
+            <h3 class="mb-2">{{career.country['data']['capital']}}</h3>
           </div>
           <span
             class="h-[40px] flex justify-center items-center gap-2 bg-amber-400 py-1 px-4 font-medium text-left border-b border-black-200 dark:border-black-700 dark:text-black-400 text-[white]"
@@ -47,7 +47,7 @@
         </summary>
 
         <div class="p-4 flex justify-center">
-          <div class="w-[80vw] bg-gray-200" style="padding:20px">
+          <div class="w-[80vw] shadow-md" style="padding:20px">
             <h1>Job description:</h1>
             <p>
               We are looking for highly potential candidate
@@ -87,6 +87,88 @@
               6. Meeting client requirements
               <br />
             </p>
+            <button (click)="toggleForm()">Apply</button>
+            <div *ngIf="toggle" class="mt-4">
+              <form class="w-full max-w-lg shadow-lg p-4">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      First Name
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="">
+                    <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                  </div>
+                  <div class="w-full md:w-1/2 px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                      Last Name
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      Email
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email" placeholder="">
+                    <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                  </div>
+                  <div class="w-full md:w-1/2 px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                      Phone Number
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                      LinkedIn Url
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="text" placeholder="">
+                    <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                      CV
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="file" placeholder="Attach CV">
+                    <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+                  </div>
+                </div>
+                <div class="sm:col-span-2">
+                  <div class="w-full px-3 flex items-center justify-between">
+                    <label
+                      for="message"
+                      class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                      >Cover Letter</label
+                    >
+                    <span id="message-max" class="text-sm text-gray-500 mb-2"
+                      >Max. 500 characters</span
+                    >
+                  </div>
+                  <div class="mt-1">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
+                      aria-describedby="message-max"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="sm:col-span-2 sm:flex sm:justify-end">
+                  <button
+                    type="submit"
+                    class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
+                  >
+                    Submit Application
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </details>

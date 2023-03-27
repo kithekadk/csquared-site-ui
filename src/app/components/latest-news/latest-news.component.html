@@ -23,12 +23,12 @@
       <!-- END OF SPINNER -->
 
       <div
-        class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none latest-news"
+        class="mt-12 max-w-lg mx-auto grid justify-center gap-5 lg:grid-cols-3 lg:max-w-none latest-news"
       >
         <div
-          class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+          class="flex flex-col min-w-[300px] rounded-lg shadow-lg overflow-hidden "
           *ngFor="
-            let news of news
+            let news of mergedArray
               | paginate : { itemsPerPage: 3, currentPage: pageNumber };
             let i = index
           "
@@ -36,7 +36,7 @@
           <div class="flex-shrink-0">
             <img
               class="h-48 w-full object-cover"
-              src="{{ images[i] }}"
+              src="{{ news.image }}"
               alt=""
             />
           </div>
@@ -45,12 +45,12 @@
               <!-- <p class="text-sm font-medium text-indigo-600">
                 <a class="hover:underline"> Article </a>
               </p> -->
-              <a class="block mt-2">
+              <a class="block mt-2" (click)="getSlug(news.slug)" routerLink="/post/{{news.slug}}">
                 <p class="text-xl font-semibold text-gray-900">
-                  {{ news.name | shorten }}
+                  {{ news.title | shorten }}
                 </p>
                 <div class="flex flex-wrap mt-3 text-base text-gray-500">
-                  <span [innerHTML]="descriptions[i] | shorten"></span>
+                  <span [innerHTML]="news.description | shorten"></span>
                 </div>
               </a>
             </div>

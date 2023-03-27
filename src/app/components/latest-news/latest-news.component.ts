@@ -12,11 +12,13 @@ export class LatestNewsComponent implements OnInit {
   constructor(private apiService:ApiService, private router:Router) { }
 pageNumber:number=1
 news:any
+titles:any[]=[]
 descriptions:any[]=[]
 images:any[]=[]
 users:any[]=[]
 created_at:any[]=[]
 countries:any[]=[]
+newsSlug:any[]=[]
 mergedArray:any[]=[]
 
 newscomponent!:boolean
@@ -48,8 +50,11 @@ newscomponent!:boolean
       // Returns content of the post
       for(let desc of res['data']){
         
+        let title=desc.name
         let description=desc.description
-        this.descriptions.push(description)          
+        this.titles.push(title)  
+        this.descriptions.push(description)  
+                
       }
 
       // Returns news country
@@ -58,9 +63,20 @@ newscomponent!:boolean
         let newsCountry=country.country['slug']
         this.countries.push(newsCountry)          
       }
+      // Returns news slug
+      for(let country of res['data']){
+        
+        let slug=country.slug
+        this.newsSlug.push(slug)          
+      }
 
       this.mergedArray = this.images.map((img, index) =>({
-        image:img, created_at:this.created_at[index], description: this.descriptions[index], country: this.countries[index]
+        image:img, 
+        title: this.titles[index], 
+        created_at:this.created_at[index], 
+        description: this.descriptions[index], 
+        country: this.countries[index], 
+        slug: this.newsSlug[index]
       }))
 
       console.log(this.mergedArray);
@@ -76,4 +92,7 @@ newscomponent!:boolean
     
   }
 
+  getSlug(slug:string){
+    console.log(slug);
+  }
 }
