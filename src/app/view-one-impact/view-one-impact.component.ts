@@ -16,6 +16,8 @@ export class ViewOneImpactComponent implements OnInit {
 
   impactTitles:any[]=[]
   impactSlugs:any[]=[]
+  impactImages:any[]=[]
+  impactUsers:any[]=[]
   mergedArray:any[]=[]
 
   constructor(private apiService:ApiService, private router:Router) { }
@@ -30,15 +32,34 @@ export class ViewOneImpactComponent implements OnInit {
 
     // GET MORE NEWS
     this.apiService.getImpacts().subscribe(res=>{
+      console.log(res['data']);
+
+        // GETTING IMPACT IMAGES
+        for(let image of res['data']){
+          let img = image.media?.pathUrls[0]
+          let avatar = image.name[0]
+          if(img == null || undefined){
+            this.impactImages.push(avatar)
+          }else{
+          this.impactImages.push(img)
+          }
+          console.log(this.impactImages);
+                  
+        }
+      
        for(let title of res['data']){
         let titles = title.name
         let slug = title.slug
-        console.log(slug);
+        // let user=title.user?.name
+        
+        // this.impactUsers.push(user)
+        // console.log(this.impactUsers);
+        
         this.impactTitles.push(titles)
         this.impactSlugs.push(slug)
 
         this.mergedArray = this.impactTitles.map((title, index) =>({
-          title:title, slug:this.impactSlugs[index]
+          title:title, slug:this.impactSlugs[index], image: this.impactImages[index]
         }),this.spinneroff=false)
       }
     })
