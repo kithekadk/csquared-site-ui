@@ -21,7 +21,7 @@
     <h1 class="font-bold">More News</h1><br>
     <div class="more-news flex flex-wrap justify-center gap-2 mb-2">
         <div *ngFor="let news of mergedArray | paginate: {itemsPerPage:4, currentPage:pageNumber};" class="shadow-2xl p-4 w-[18vw] min-w-[200px] hover:text-blue-500">
-            <h1 class="cursor-pointer" (click)="navigateToNewNews(news.slug)">{{news.title | titlecase}}</h1>
+            <h1 class="cursor-pointer text-[12px]" (click)="navigateToNewNews(news.slug)">{{news.title | titlecase}}</h1>
         </div>
     </div>
     <div class="flex justify-center pt-16">

@@ -24,15 +24,16 @@ spinneroff=true
     this.slug=this.router.url.replace('/post/','')
     this.apiService.getOneNewsContent(this.slug).subscribe(res=>{
       this.news=res['data']
-
       this.spinneroff=false
     })
 
     this.apiService.getNews().subscribe(res=>{
+      console.log(res['data']);
+      
       for(let title of res['data']){
         let titles = title.name
         let slug = title.slug
-        console.log(slug);
+        // console.log(slug);
         this.impactTitles.push(titles)
         this.impactSlugs.push(slug)
 
