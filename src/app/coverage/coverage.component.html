@@ -1,5 +1,26 @@
 <div class="body">
   <div class="orderform">
+      <!-- Search location field -->
+  <div class="search-container">
+    <form class="form1" [formGroup]="form">
+      <div class="search-location">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search Location"
+          class="search-text"
+          formControlName="receiverLocation"
+          id="inputSmall"
+          ngx-google-places-autocomplete
+          (onAddressChange)="AddressChange($event)"
+        />
+        <button type="submit" class="bg-amber-300 p-2 px-4">
+          <span>Send</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- End of search field -->
     <form class="form" [formGroup]="form" (ngSubmit)="makeOrder()">
       <!-- Success message -->
       <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert" *ngIf="view">

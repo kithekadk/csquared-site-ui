@@ -58,6 +58,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ViewOneImpactComponent } from './view-one-impact/view-one-impact.component';
 import { ViewOneNewsContentComponent } from './view-one-news-content/view-one-news-content.component';
+import { CloudinaryModule } from '@cloudinary/ng';
 
 @NgModule({
   declarations: [
@@ -121,7 +122,8 @@ import { ViewOneNewsContentComponent } from './view-one-news-content/view-one-ne
     CarouselModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    CloudinaryModule
   ],
   providers: [],
   bootstrap: [AppComponent],

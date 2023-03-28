@@ -38,17 +38,17 @@
               Best fit for businesses looking for:
             </h3>
             <ol class="list-disc" *ngFor="let bestfit of bestfits">
-              <li>{{bestfit}}</li>
+              <li class="ml-4">{{bestfit}}</li>
             </ol>
 
             <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
             <ol class="list-disc" *ngFor="let feature of features">
-              <li>{{feature}}</li>
+              <li class="ml-4">{{feature}}</li>
             </ol>
           </div>
           <div class="w-[35vw] min-w-[250px] md:w-35vw">
             <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-            <ol class="list-disc" *ngFor="let benefit of benefits">
+            <ol class="list-none" *ngFor="let benefit of benefits">
               <li class="text-[14px]">
                 <b>{{benefit.heading}}</b> <br />
                 {{benefit.description}}
@@ -305,7 +305,7 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allfiberservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 hover:bg-green-500 hover:cursor-pointer shadow-xl cursor-auto"
+        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-700 hover:bg-green-500 hover:cursor-pointer shadow-xl cursor-auto"
       >
         <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
       </div>
@@ -339,13 +339,13 @@
   id="accordion-flush-body-2"
 >
   <div class="py-4" *ngIf="cloudservices">
-    <h1
+    <!-- <h1
       class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
       style="font-size: 22px; font-weight: bold"
     >
       {{cloudservices.title}}
-    </h1>
-    <div class="flex flex-wrap justify-center gap-20 w-[100vw]">
+    </h1> -->
+    <div class="flex flex-wrap justify-center gap-20 w-[100vw] mt-4">
       <div class="w-[35vw] min-w-[250px] md:w-35vw">
         <p class="text-justify">
           {{cloudservices.description}}
@@ -356,17 +356,17 @@
           Best fit for businesses looking for:
         </h3>
         <ol class="list-disc" *ngFor="let bestfit of bestfits">
-          <li>{{bestfit}}</li>
+          <li class="ml-4">{{bestfit}}</li>
         </ol>
 
         <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
         <ol class="list-disc" *ngFor="let feature of features">
-          <li>{{feature}}</li>
+          <li class="ml-4">{{feature}}</li>
         </ol>
       </div>
       <div class="w-[35vw] min-w-[250px] md:w-35vw">
         <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
-        <ol class="list-disc" *ngFor="let benefit of benefits">
+        <ol class="list-none" *ngFor="let benefit of benefits">
           <li class="text-[14px]">
             <b>{{benefit.heading}}</b> <br />
             {{benefit.description}}
@@ -625,7 +625,7 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allcloudservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[25vw] min-w-[250px] h-[22vh] p-4 bg-green-700 cursor-auto hover:cursor-pointer hover:bg-green-500 hover:text-[700px]"
+        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-700 cursor-auto hover:cursor-pointer hover:bg-green-500 hover:text-[700px]"
       >
         <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
       </div>

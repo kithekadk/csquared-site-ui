@@ -14,8 +14,18 @@
         <h1 class="mb-2">{{news['name'] | titlecase}}</h1>
         <hr >
     </div>
-    <div class="pl-10 pr-10 w-[80vw] pb-10" [innerHTML]="news['description']">
-        
+    <div class="pl-10 pr-10 w-[80vw] pb-10" [innerHTML]="news['description']">   
+    </div>
+
+    <!-- MORE NEWS -->
+    <h1 class="font-bold">More News</h1><br>
+    <div class="more-news flex flex-wrap justify-center gap-2 mb-2">
+        <div *ngFor="let news of mergedArray | paginate: {itemsPerPage:4, currentPage:pageNumber};" class="shadow-2xl p-4 w-[18vw] min-w-[200px] hover:text-blue-500">
+            <h1 class="cursor-pointer" (click)="navigateToNewNews(news.slug)">{{news.title | titlecase}}</h1>
+        </div>
+    </div>
+    <div class="flex justify-center pt-16">
+        <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
     </div>
 </div>
 <app-footer></app-footer>

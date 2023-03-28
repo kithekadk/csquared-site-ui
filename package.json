@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@cloudinary/ng": "^1.11.2",
+    "@cloudinary/url-gen": "^1.9.2",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
     "@tailwindcss/forms": "^0.5.3",

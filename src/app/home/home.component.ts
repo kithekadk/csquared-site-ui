@@ -12,6 +12,7 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   hide=false
   targets: { title: string, image: string }[] = [
     { title: "MNO's", image: '/assets/images/home/MNO.jpg' },
@@ -82,6 +83,12 @@ export class HomeComponent implements OnInit {
 
   form!: FormGroup;
   ngOnInit(): void {
+    // setInterval(function() {
+    //   let iframe = document.getElementById('linkedin-post') as HTMLIFrameElement;
+    //   iframe.src = iframe.src;
+    //   console.log('IFRAME'+iframe.src)
+    // }, 60000);
+
     this.form = this.fb.group({
       Userlat: [null, [Validators.required]],
       Userlng: [null, [Validators.required]],

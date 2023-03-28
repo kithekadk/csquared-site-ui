@@ -172,7 +172,12 @@ export class ApiService {
   getOneNewsContent(slug:string) {
     return this.http.get(`https://cms.shiftechafrica.com/api/v1/post/${slug}`)
   }
+
   getCareers() {
     return this.http.get(`https://cms.shiftechafrica.com/api/v1/careers`)
+  }
+
+  ApplyCareer(details:any) {
+    return this.http.post(`https://cms.shiftechafrica.com/api/v1/job-application`, details)
   }
 }
