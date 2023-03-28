@@ -33,10 +33,15 @@ newscomponent!:boolean
       for(let image of res['data']){
         
         let imageUrl=image.media?.pathUrls[0]
-        if (imageUrl == undefined){
-          imageUrl='https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
+        let avatar = image.name[0]
+        if (imageUrl == undefined || null){
+          this.images.push(avatar) 
+        }else{
+          this.images.push(imageUrl)
         }
-        this.images.push(imageUrl)  
+         
+        console.log(this.images);
+         
       }
       // Returns users and post creation date
       for(let users of res['data']){
@@ -80,9 +85,6 @@ newscomponent!:boolean
       }))
 
       console.log(this.mergedArray);
-      
-
-
     })
 
     //CHECKING URL

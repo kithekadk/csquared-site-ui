@@ -22,29 +22,32 @@ export class ImpactComponent implements OnInit {
   ngOnInit(): void {
     this.apiservice.getImpacts().subscribe(res=>{
       console.log(res['data']);
+
       // GETTING IMPACT IMAGES
       for(let image of res['data']){
-        let images = image.media
+        let img = image.media?.pathUrls[0]
         let avatar = image.name[0]
-        // console.log(avatar);
-        if(images==null){
+        if(img == null || undefined){
           this.impactImages.push(avatar)
         }else{
-        this.impactImages.push(images)
-        }
+        this.impactImages.push(img)
+        }        
       }
+
       // GETTING IMPACT TITLES
       for(let title of res['data']){
         let titles = title.name
         // console.log(titles);
         this.impactTitle.push(titles)
       }
+
       // GETTING IMPACT DESCRIPTION
       for(let desc of res['data']){
         let descriptions = desc.description
         // console.log(descriptions);
         this.impactDescription.push(descriptions)
       }
+
       // IMPACT CATEGORIES
       for(let cat of res['data']){
         let slug = cat.slug
@@ -68,7 +71,6 @@ export class ImpactComponent implements OnInit {
   } 
 
   getIndex(slug:string){
-    console.log(slug);
-    
+    console.log(slug); 
   }
 }

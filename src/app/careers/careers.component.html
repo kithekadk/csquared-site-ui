@@ -87,22 +87,33 @@
               6. Meeting client requirements
               <br />
             </p>
-            <button (click)="toggleForm()">Apply</button>
+            <button (click)="toggleForm(career.id)">Apply</button>
             <div *ngIf="toggle" class="mt-4">
-              <form class="w-full max-w-lg shadow-lg p-4">
+              <form class="w-full max-w-lg shadow-lg p-4" [formGroup]="form" (ngSubmit)="SubmitCareer()">
                 <div class="flex flex-wrap -mx-3 mb-6">
                   <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                       First Name
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="">
-                    <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                    <input formControlName="firstName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="">
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('firstName')!.valid &&
+                      form.get('firstName')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                   <div class="w-full md:w-1/2 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                       Last Name
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+                    <input formControlName="lastName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('lastName')!.valid &&
+                      form.get('lastName')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
@@ -110,14 +121,25 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                       Email
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email" placeholder="">
-                    <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                    <input formControlName="email" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email" placeholder="">
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('email')!.valid &&
+                      form.get('email')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                   <div class="w-full md:w-1/2 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                       Phone Number
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+                    <input formControlName="phoneNumber" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="">
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('phoneNumber')!.valid &&
+                      form.get('phoneNumber')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
@@ -125,8 +147,13 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                       LinkedIn Url
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="text" placeholder="">
-                    <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+                    <input formControlName="linkedInUrl" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="text" placeholder="">
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('linkedInUrl')!.valid &&
+                      form.get('linkedInUrl')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
@@ -134,8 +161,8 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                       CV
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="file" placeholder="Attach CV">
-                    <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-linkedin" type="file" accept="application/pdf" (change)="onChange($event)" placeholder="Attach CV">
+                    
                   </div>
                 </div>
                 <div class="sm:col-span-2">
@@ -151,16 +178,24 @@
                   </div>
                   <div class="mt-1">
                     <textarea
+                      formControlName="coverLetter"
                       id="message"
                       name="message"
                       rows="4"
                       class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
                       aria-describedby="message-max"
                     ></textarea>
+                    <p class="text-red-500 text-xs"
+                      *ngIf="
+                      !form.get('coverLetter')!.valid &&
+                      form.get('coverLetter')!.touched
+                      ">Please fill out this field.
+                    </p>
                   </div>
                 </div>
                 <div class="sm:col-span-2 sm:flex sm:justify-end">
                   <button
+                    [disabled]=!form.valid
                     type="submit"
                     class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
                   >
