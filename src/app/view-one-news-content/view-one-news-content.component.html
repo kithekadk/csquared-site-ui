@@ -20,8 +20,13 @@
     <!-- MORE NEWS -->
     <h1 class="font-bold">More News</h1><br>
     <div class="more-news flex flex-wrap justify-center gap-2 mb-2">
-        <div *ngFor="let news of mergedArray | paginate: {itemsPerPage:4, currentPage:pageNumber};" class="shadow-2xl p-4 w-[18vw] min-w-[200px] hover:text-blue-500">
-            <h1 class="cursor-pointer text-[12px]" (click)="navigateToNewNews(news.slug)">{{news.title | titlecase}}</h1>
+        <div *ngFor="let news of mergedArray | paginate: {itemsPerPage:4, currentPage:pageNumber};" class="shadow-2xl w-[18vw] min-w-[200px]">
+            <img *ngIf="news.image.length !== 1"  src="{{news.image}} " alt="" class="h-28 w-full object-cover  mb-2">
+            <p *ngIf="news.image.length==1" class="flex justify-center items-center font-bold h-28 text-[60px] bg-amber-400 mb-2 p-2">{{news.image | titlecase}}</p>
+            <h1 class="cursor-pointer text-[12px] text-justify mb-2 p-2 hover:text-blue-500" (click)="navigateToNewNews(news.slug)">{{news.title | titlecase}}</h1>
+            <div class="flex space-x-1 text-sm text-gray-500">
+                <time datetime="2020-03-16" class="ml-2 mb-2"> {{ news.created_at }} </time>
+            </div>
         </div>
     </div>
     <div class="flex justify-center pt-16">
