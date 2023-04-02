@@ -23,11 +23,11 @@
         </div>
       </div>
       <div
-        class="w-[85vw] grid grid-cols-1 gap-1 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+        class="w-[85vw] grid grid-cols-1 gap-4 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
       >
         <div
           *ngFor="let service of services"
-          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent shadow-xl"
+          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent shadow-2xl"
         >
           <p class="flex justify-center h-20 pb-3">
             <img src="{{ service.logo }}" alt="" style="object-fit: contain" />
@@ -199,7 +199,7 @@
 
       <!-- embedding facebook post -->
       <div>
-        <h1 class="font-bold mb-2 text-[20px] flex justify-center">Facebook Posts</h1>
+        <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">Facebook Posts</h1>
         <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
         class=" w-[250px] h-[450px] md:w-[350px] md:h-[520px]"
@@ -213,7 +213,7 @@
       <!-- end of embedding facebook -->
 
       <div class="tweet  w-[250px] h-[450px] md:w-[350px] md:h-[550px] overflow-hidden">
-        <h1 class="font-bold mb-2 text-[20px] flex justify-center">Twitter Feed</h1>
+        <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">Twitter Feed</h1>
         <ng-twitter-timeline
           [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
           [opts]="{ tweetLimit: 1 }"
@@ -223,7 +223,7 @@
       <!-- embedding linked in post -->
       
       <div class="mt-[15vh] md:mt-[0]">
-        <h1 class="font-bold mb-2 text-[20px] flex justify-center">LinkedIn Feed</h1>
+        <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">LinkedIn Feed</h1>
         <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7046409016247246849"
         class=" w-[250px] h-[450px] md:w-[350px] md:h-[520px]"

@@ -18,6 +18,7 @@ export class ViewOneImpactComponent implements OnInit {
   impactSlugs:any[]=[]
   impactImages:any[]=[]
   impactUsers:any[]=[]
+  created_at:any[]=[]
   mergedArray:any[]=[]
 
   constructor(private apiService:ApiService, private router:Router) { }
@@ -42,24 +43,20 @@ export class ViewOneImpactComponent implements OnInit {
             this.impactImages.push(avatar)
           }else{
           this.impactImages.push(img)
-          }
-          console.log(this.impactImages);
-                  
+          }                  
         }
       
        for(let title of res['data']){
         let titles = title.name
         let slug = title.slug
-        // let user=title.user?.name
+        let time = title.created_at
         
-        // this.impactUsers.push(user)
-        // console.log(this.impactUsers);
-        
+        this.created_at.push(new Date(time).toDateString())
         this.impactTitles.push(titles)
         this.impactSlugs.push(slug)
 
         this.mergedArray = this.impactTitles.map((title, index) =>({
-          title:title, slug:this.impactSlugs[index], image: this.impactImages[index]
+          title:title, slug:this.impactSlugs[index], image: this.impactImages[index], created_at:this.created_at[index]
         }),this.spinneroff=false)
       }
     })

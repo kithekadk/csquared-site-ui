@@ -45,18 +45,28 @@ export class CountryLatestnewsComponent implements OnInit {
       for(let image of res['data']){
         
         let imageUrl=image.media?.pathUrls[0]
-        if (imageUrl == null){
+        if (imageUrl == null || undefined){
            let avatar = image.name[0]
            this.images.push(avatar)
         }else{
           this.images.push(imageUrl) 
         }
+        
       }
       // Returns users and post creation date
       for(let users of res['data']){
         
         let user=users.user?.name
         let creation_date=users.user?.created_at        
+        this.users.push(user)  
+        this.created_at.push(new Date(creation_date).toDateString())  
+      }
+
+      // Returns users and post creation date
+      for(let users of res['data']){
+        
+        let user=users.user?.name
+        let creation_date=users.created_at        
         this.users.push(user)  
         this.created_at.push(new Date(creation_date).toDateString())  
       }
@@ -81,7 +91,7 @@ export class CountryLatestnewsComponent implements OnInit {
       }
 
       this.mergedArray = this.images.map((img, index) =>({
-        image:img, title:this.titles[index], description: this.descriptions[index], country: this.countries[index], slug:this.newsSlugs[index]
+        image:img, title:this.titles[index], description: this.descriptions[index], country: this.countries[index], slug:this.newsSlugs[index], author:this.users[index], created_at:this.created_at[index]
       }))
       this.mergedArray2=this.mergedArray
       this.getNewsPerCountry()

@@ -305,9 +305,10 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allfiberservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-700 hover:bg-green-500 hover:cursor-pointer shadow-xl cursor-auto"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-500 hover:bg-green-600 hover:cursor-pointer shadow-xl cursor-auto"
       >
-        <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
+      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">  
+      <h1 class="text-white text-xl cursor-auto">{{ other.title }}</h1>
       </div>
     </div>
   </div>
@@ -621,13 +622,15 @@
     style="font-size: 22px; font-weight: bold"
   >
     All solutions
+    
   </h1>
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allcloudservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-700 cursor-auto hover:cursor-pointer hover:bg-green-500 hover:text-[700px]"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-500 cursor-auto hover:cursor-pointer hover:bg-green-600 hover:text-[700px]"
       >
-        <h1 class="text-white text-2xl cursor-auto">{{ other.title }}</h1>
+      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">   
+      <h1 class="text-white text-xl cursor-auto">{{ other.title }}</h1>
       </div>
     </div>
   </div>

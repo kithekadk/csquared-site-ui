@@ -38,16 +38,13 @@ newscomponent!:boolean
           this.images.push(avatar) 
         }else{
           this.images.push(imageUrl)
-        }
-         
-        console.log(this.images);
-         
+        }         
       }
       // Returns users and post creation date
       for(let users of res['data']){
         
         let user=users.user?.name
-        let creation_date=users.user?.created_at        
+        let creation_date=users.created_at        
         this.users.push(user)  
         this.created_at.push(new Date(creation_date).toDateString())  
       }

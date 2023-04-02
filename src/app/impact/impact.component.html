@@ -32,13 +32,13 @@
         </div>
          <!-- END OF SPINNER -->
 
-        <div class="w-[70vw] md:w-[21vw] p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
-            <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="h-48 w-full object-cover">
+        <div class="w-[70vw] md:w-[21vw] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
+            <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="mb-4 h-48 w-full object-cover">
             <p *ngIf="content.image.length==1" class="font-bold h-48 text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>
             <a (click)="getIndex(content.impactSlug)" routerLink="/impact/{{content.impactSlug}}">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white cursor-pointer">{{ content.title | titlecase}}</h5>
             </a>
-            <p  routerLink="/impact/{{content.impactSlug}}" class="font-normal text-gray-700 dark:text-gray-400 cursor-pointer" [innerHTML]="content.description | shorten" (click)="getIndex(content.impactSlug)"></p>
+            <p  routerLink="/impact/{{content.impactSlug}}" class="font-normal text-justify text-gray-700  p-6 dark:text-gray-400 cursor-pointer" [innerHTML]="content.description | shorten" (click)="getIndex(content.impactSlug)"></p>
 
         </div>
         

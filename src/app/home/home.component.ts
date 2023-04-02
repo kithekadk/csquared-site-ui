@@ -63,14 +63,15 @@ export class HomeComponent implements OnInit {
   ];
 
   logos: { title: string, image: string }[] = [
-    { title: "MTN", image: '/assets/images/logos/mtn_logo.png' },
+
     { title: 'Airtel', image: '/assets/images/logos/airtel_logo.png' },
     { title: 'Main One', image: '/assets/images/logos/mainone_logo.png' },
+    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },  
+    { title: "MTN", image: '/assets/images/logos/mtn_logo.png' },
     { title: 'Internet Solution', image: '/assets/images/logos/internets_logo.png' },
     { title: 'IWay Africa', image: '/assets/images/logos/iwayafrica_logo.jpg' },
-    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },
-    { title: 'Gilat', image: '/assets/images/logos/gilat_logo.png' },
     { title: 'Renu', image: '/assets/images/logos/renu_logo.png' },
+    { title: 'Gilat', image: '/assets/images/logos/gilat_logo.png' },
     { title: 'Google', image: '/assets/images/logos/google.png' },
     { title: 'Seacom', image: '/assets/images/logos/seacom_logo.jpg' },
     { title: 'Simbanet', image: '/assets/images/logos/simbanet_logo.png' },
