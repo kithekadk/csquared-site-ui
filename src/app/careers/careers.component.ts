@@ -39,7 +39,7 @@ careers:any[]=[]
   }
 
   SubmitCareer(){
-    console.log(this.form);
+    console.log(this.form.value);
     this.apiService.ApplyCareer(this.form.value).subscribe(res=>{
       console.log(res);
       
@@ -47,6 +47,17 @@ careers:any[]=[]
   }
 
   onChange(event: Event){
+    const target = event.target! as HTMLInputElement
+    const files =target.files
+    if (files){
+      console.log(files[0]);
+      this.form.get('cv')?.setValue(files[0])
+    }
+    
+    
+  }
+
+  onChangeWithCloudinary(event: Event){
     //Get the users selected Resume stores it on cloudinary and generates a url that can be used to acces this resume from cloudinary
     const target = event.target! as HTMLInputElement
     const files = target.files
