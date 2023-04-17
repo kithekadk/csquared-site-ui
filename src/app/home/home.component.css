@@ -118,10 +118,10 @@ element.style {
   margin: 0 10px;
 }
 
-.setUnderlines{
+/* .setUnderlines{
   border-top: solid 4px black;
   border-bottom : solid 4px black;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .home {

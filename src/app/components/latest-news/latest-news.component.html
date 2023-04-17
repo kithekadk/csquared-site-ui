@@ -23,13 +23,13 @@
       <!-- END OF SPINNER -->
 
       <div
-        class="mt-12 max-w-lg mx-auto grid justify-center gap-5 lg:grid-cols-3 lg:max-w-none latest-news"
+        class="mt-12 max-w-lg mx-auto grid justify-center flex-wrap gap-5 lg:grid-cols-3 lg:max-w-none latest-news"
       >
         <div
           class="flex flex-col min-w-[300px] rounded-lg shadow-lg overflow-hidden "
           *ngFor="
             let news of mergedArray
-              | paginate : { itemsPerPage: 3, currentPage: pageNumber };
+              | paginate : { itemsPerPage: 6, currentPage: pageNumber };
             let i = index
           "
         >

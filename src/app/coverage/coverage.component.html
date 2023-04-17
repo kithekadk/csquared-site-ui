@@ -79,7 +79,7 @@
     <div class="maps h-[90vh]">
       <div id="map" class="h-[90vh]">
         <!-- <app-map></app-map> -->
-        <google-map
+        <!-- <google-map
           width="100vw;"
           height="90vh"
           [center]="center"
@@ -95,10 +95,15 @@
           >
           </map-marker>
           <map-info-window>Info Window content</map-info-window>
-        </google-map>
+        </google-map> -->
   
         <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs&callback=initMap&v=weekly"
+        defer
+      ></script>
       </div>
+      <!-- <div id="capture"></div> -->
     </div>
   </div>
   

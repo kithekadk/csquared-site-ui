@@ -56,60 +56,82 @@
 
 <!-- Displays the team members and  -->
 <h1 *ngIf="managers" class="flex justify-center mb-4 font-bold text-[18px]">Our Officials</h1>
-<div class="team">   
-	<div class="members min-w-[250px]" *ngFor="let manager of managers; let i = index" >
-		<img src="{{manager.image}}" alt="Manager" width="130%" class="min-w-[250px] h-[45vh]" (click)="viewTeamMember(i)" data-aos="flip-left" data-bs-toggle="modal"
-        data-bs-target="#myModal" type="button">
-        
-        <!-- Modal -->
-        <div
-        class="modal fade"
-        id="myModal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header flex">
-              <h5 class="modal-title" id="staticBackdropLabel" style="color: black">
-                {{teamMember.name}}
-              </h5>
-              <button
-                class="btn-close d-flex"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="p-10" style="color: black; padding: 20px 10px">
-                <div class="flex justify-center gap-4 p-4 text-justify flex-wrap md:flex-nowrap md:w-[100%]">
-                    <img src="{{teamMember.image}}" class="hidden md:flex min-w-[250px] h-[45vh]" alt="Image">
-                    <p class="min-w-[250px] md:w-[25vw] text-[12px] flex-wrap md:flex-nowrap pt-2">{{teamMember.description}}</p>
-                    <div class="w-full flex justify-around">
-                        <a href="https://www.facebook.com/csquaredafricagroup/" target="_blank">
-                        <i class="bi bi-facebook text-blue-500 text-xl hover:text-blue-600"></i>
-                        </a>
-                
-                        <a href="https://www.youtube.com/@csquaredafrica" target="_blank">
-                        <i class="bi bi-youtube text-red-500 text-xl hover:text-red-600"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/csquaredafrica" target="_blank">
-                        <i class="bi bi-linkedin text-blue-500 text-xl hover:text-blue-600"></i>
-                        </a>
-                
-                        <a href="https://twitter.com/CSquared_Africa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"  target="_blank">
-                        <i class="bi bi-twitter text-blue-500 text-xl hover:text-blue-600"></i>
-                        </a>
+
+<div *ngIf="managers" class="flex flex-col sm:flex-col md:flex-row">   
+    <div class="flex flex-col w-full md:w-[20vw] p-2 italic">
+    
+        <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Founders and Partners</a> </p>
+        <hr>
+        <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Deal Team</a> </p>
+        <hr>
+        <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Finance and Operations</a> </p>
+        <hr>
+        <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Stakeholder</a> </p>
+        <hr>
+        <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Show all</a> </p>
+        <hr>
+    
+    </div><br>
+    <div class="w-[100vw] flex flex-wrap gap-[20px] justify-center">
+        <div class="members min-w-[250px]" *ngFor="let manager of managers; let i = index" >
+            <img src="{{manager.image}}" alt="Manager" width="130%" class="min-w-[250px] h-[30vh] md:h-[45vh]" (click)="viewTeamMember(i)" data-aos="flip-left" data-bs-toggle="modal"
+            data-bs-target="#myModal" type="button">
+            
+            <!-- Modal -->
+            <div
+            class="modal fade"
+            id="myModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header flex">
+                  <h5 class="modal-title" id="staticBackdropLabel" style="color: black">
+                    {{teamMember.name}}
+                  </h5>
+                  <button
+                    class="btn-close d-flex"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="p-10" style="color: black; padding: 20px 10px">
+                    <div class="flex justify-center gap-4 p-4 text-justify flex-wrap md:flex-nowrap md:w-[100%]">
+                        <img src="{{teamMember.image}}" class="hidden md:flex min-w-[250px] h-[45vh]" alt="Image">
+                        <p class="min-w-[250px] md:w-[25vw] text-[12px] flex-wrap md:flex-nowrap pt-2">{{teamMember.description}}</p>
+                        <div class="w-full flex justify-around">
+                            <a href="https://www.facebook.com/csquaredafricagroup/" target="_blank">
+                            <i class="bi bi-facebook text-blue-500 text-xl hover:text-blue-600"></i>
+                            </a>
+                    
+                            <a href="https://www.youtube.com/@csquaredafrica" target="_blank">
+                            <i class="bi bi-youtube text-red-500 text-xl hover:text-red-600"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/csquaredafrica" target="_blank">
+                            <i class="bi bi-linkedin text-blue-500 text-xl hover:text-blue-600"></i>
+                            </a>
+                    
+                            <a href="https://twitter.com/CSquared_Africa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"  target="_blank">
+                            <i class="bi bi-twitter text-blue-500 text-xl hover:text-blue-600"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="modal-footer" style="display: flex"></div>
+              </div>
             </div>
-            <div class="modal-footer" style="display: flex"></div>
           </div>
-        </div>
-      </div>
-	</div> 
+        </div> 
+    </div>
     
 
     <!-- Button trigger modal -->
