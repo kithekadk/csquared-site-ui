@@ -27,10 +27,10 @@
       >
         <div
           *ngFor="let service of services"
-          class="flex flex-col justify-between group p-8 space-y-3 border-2 border-green-400 bg-green-300 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent shadow-2xl"
+          class="flex flex-col justify-between group p-8 space-y-3 dark:border-green-300 rounded-xl hover:bg-green-900 hover:border-transparent shadow-2xl"
         >
           <p class="flex justify-center h-20 pb-3">
-            <img src="{{ service.logo }}" alt="" style="object-fit: contain" />
+            <img class="rounded p-2" src="{{ service.logo }}" alt="" style="object-fit: contain" />
           </p>
 
           <h1

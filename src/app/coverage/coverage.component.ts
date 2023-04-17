@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { Router } from '@angular/router';
@@ -94,7 +94,7 @@ export class CoverageComponent implements OnInit {
   products:any[]=[]
   product_id:any[]=[]
   view= false
-  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient, private countryservice: CountryService) { }
+  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient, private countryservice: CountryService, private elementRef:ElementRef) { }
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   errorContainer=false
@@ -103,6 +103,7 @@ export class CoverageComponent implements OnInit {
   ngOnInit(): void {
 
     Aos.init();
+    this.initMap();
     this.form= this.fb.group({
       country_id: [null, [Validators.required]],
       product_id: [null, [Validators.required]],
@@ -271,5 +272,31 @@ markerPositions: google.maps.LatLngLiteral[] = [
 
   openInfoWindow(marker: MapMarker) {
     if (this.infoWindow != undefined) this.infoWindow.open(marker);
+  }
+
+
+  //USING KML FILE -- THIS IS THE ONLY WORKING CODE HERE RIGHT NOW
+
+  initMap() {
+    const map = new google.maps.Map(
+      document.getElementById("map") as HTMLElement,
+      {
+        zoom: 1,
+        center: { lat: 0, lng: 22.2663 },
+      }
+    );
+  
+    let ctaLayer = new google.maps.KmlLayer({
+      url: "https://googlearchive.github.io/js-v2-samples/ggeoxml/cta.kml",
+      map: map,
+      suppressInfoWindows: true,
+      preserveViewport: false,
+    });
+
+    ctaLayer.addListener('click', function(event) {
+      var content = event.featureData.infoWindowHtml;
+      var testimonial = document.getElementById('capture');
+      testimonial!.innerHTML = content;
+    });
   }
 }
