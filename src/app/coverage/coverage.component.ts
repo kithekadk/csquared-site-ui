@@ -246,7 +246,7 @@ passCoordinatesToUrl(Longitude:number, Latitude:number){
   
 
 display: any;
-zoom = 3.0;
+// zoom = 3.0;
 center: google.maps.LatLngLiteral = {
   lat: 0,lng: 22.2663
 };
@@ -281,16 +281,17 @@ markerPositions: google.maps.LatLngLiteral[] = [
     const map = new google.maps.Map(
       document.getElementById("map") as HTMLElement,
       {
-        zoom: 1,
         center: { lat: 0, lng: 22.2663 },
+        zoom: 4.0,
+        // mapTypeId: 'terrain'
       }
     );
   
     let ctaLayer = new google.maps.KmlLayer({
-      url: "https://googlearchive.github.io/js-v2-samples/ggeoxml/cta.kml",
-      map: map,
+      url: "https://alphabet.nyc3.cdn.digitaloceanspaces.com/csquared/xi3j5je6ocd620j6.kml",
       suppressInfoWindows: true,
-      preserveViewport: false,
+      preserveViewport: true,
+      map: map,
     });
 
     ctaLayer.addListener('click', function(event) {
