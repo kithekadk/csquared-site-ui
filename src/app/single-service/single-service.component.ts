@@ -66,7 +66,6 @@ export class SingleServiceComponent implements OnInit {
   SubmitIssue() {
     if (this.form) {
       console.log(this.form.value);
-
       this.countryservice.contactCsquared(this.form.value).subscribe(res => {
         console.log(res);
         this.form.reset();
