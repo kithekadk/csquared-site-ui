@@ -1,0 +1,47 @@
+<h5 class="flex justify-center mt-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white" *ngIf="!imageLoadForImpacts">Products</h5>
+<div class="products">
+        <!-- TO DISPLAY IN IMPACT COMPONENT -->
+        <div *ngIf="imageLoadForImpacts">
+            <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of offers | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index">
+                <img src="{{content.image}}" alt="" *ngIf="imageLoadForImpacts" class="mb-4">
+                <a>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ content.title }}</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ content.content | shorten }}</p>
+            </div>
+        </div>
+        
+        <!-- TO DISPLAY IN COUNTRY SECTION -->
+        <!-- <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of offers; let i = index">
+            <img src="{{content.image}}" alt="" *ngIf="imageLoadForImpacts" class="mb-4">
+            <a>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ content.title }}</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ content.content | shorten }}</p> -->
+
+        <!-- </div> -->
+        <div class="flex justify-center pt-16" *ngIf="imageLoadForImpacts">
+            <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+        </div>
+</div>
+
+<div class="flex flex-wrap w-[100vw] justify-center gap-[30px] mb-[20px] mt-[20px]">
+    <a class="single-card"  *ngFor="let content of offers; let i = index">
+        <div class="card-info">
+            <div class="imgcontainer">
+            <img src="{{content.image}}" alt="service" class="w-[100%]"/>
+            <div class="centered">{{content.title}}</div>
+            </div>
+            <div class="hover-overlay">
+                <div class="overflow-text">
+                    <h3 class="text-[25px] font-bold">
+                        {{content.title}}
+                    </h3><br>
+                    <h3>
+                        {{content.content | shorten }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    .latest-news-btn{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .latest-news{
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,59 @@
+<h1 class="p-5">What We Offer</h1>
+
+<div class="offer-container footer p=5">
+  <div class="footer1" *ngFor="let content of offers; let i = index">
+    <div class="footer-div1">
+      <div class="imgcontainer">
+        <img src="{{content.image}}" alt="Nairobi" />
+        <div class="centered">{{ content.title }}</div>
+      </div>
+      <div class="overlay">
+        <p>
+          {{content.content}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="btn-learnmore">
+  <button
+    (click)="popModal(i)"
+    data-bs-toggle="modal"
+    data-bs-target="#myModal"
+  >
+    Learn More
+  </button>
+</div> -->
+<!-- <button>Learn More</button> -->
+<!-- Start of modal -->
+<div
+  class="modal fade"
+  id="myModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  *ngIf="selectedoffer"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header flex">
+        <h5 class="modal-title" id="staticBackdropLabel" style="color: black">
+          {{ selectedoffer.title }}
+        </h5>
+        <button
+          class="btn-close d-flex"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="body" style="color: black; padding: 40px 10px">
+        <p>{{ selectedoffer.content }}</p>
+      </div>
+      <div class="modal-footer" style="display: flex"></div>
+    </div>
+  </div>
+</div>
+
+<!-- End of modal -->

@@ -1,0 +1,70 @@
+<div class="body">
+  <app-hero-carousel></app-hero-carousel>
+  <!-- <div class="ch-container"> -->
+    
+    <!-- <app-country-header></app-country-header> -->
+    <!-- <img style="object-fit: cover" src="{{ countries.header.image }}" alt="" /> -->
+    <!-- <div class="ch-content">
+      <h1>{{ countries.header.title }}</h1>
+      <p>{{ countries.header.content }}</p>
+
+      <div *ngIf="countries.search" class="ch-input">
+        <input type="text" />
+        <button>Check</button>
+      </div>
+
+      <div *ngIf="countries.button" class="ch-input">
+        <button>Get Started</button>
+      </div>
+
+      <div *ngIf="countries.link" class="ch-input">
+        <a href="#">Read More...</a>
+      </div>
+    </div> -->
+
+    <!-- <div class="cv-container">
+      <div class="cv-content" *ngFor="let cnt of content">
+        <img style="object-fit: contain" src="{{ cnt.image }}" alt="" />
+        <div class="">
+          <h1>{{ cnt.title }}</h1>
+          <p>{{ cnt.content }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabout-container">
+      <div class="cabout-content">
+        <div class="cabout-text">
+          <h3 class="text-4xl">Csquared in Ghana</h3>
+          <p class="text-2xl">{{ text }}</p>
+          <button (click)="AboutUsClick()">Learn more</button>
+          <div class="cabout-learn-more">
+            <p id="learnmore" *ngIf="toggle">{{about_learn_more}}</p>
+          </div>
+        </div>
+
+        <div class="cabout-image">
+          <img src="{{ image }}" alt="country" />
+        </div>
+      </div>
+
+      <div class="overlay">
+      <img
+        src="https://uchealth-wp-uploads.s3.amazonaws.com/wp-content/uploads/sites/6/2018/02/06033645/cell-phones-1024x683.webp"
+        alt=""
+      />
+    </div> -->
+    <!-- </div> -->
+
+    <!-- <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex> -->
+    
+    <!-- </div> -->
+
+    <div class="">
+      <app-country-products [offers]="offer"></app-country-products>
+    </div>
+    <div *ngIf="countries">
+      <app-country-latestnews></app-country-latestnews>
+    </div>
+</div>
+<app-footer></app-footer>

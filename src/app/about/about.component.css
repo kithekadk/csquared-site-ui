@@ -4,17 +4,33 @@ section{
     align-items: center;
     overflow-x: hidden;
 }
-/* .about{
+.about{
+    max-height: 50vh;
+    margin-bottom: 5vh;
+}
+.about_img>img{
+    width:100vw;
+    object-fit: cover;
+    height: 50vh;
+}
+.about-bg{
     width: 100%;
-    height: 55vh;
-    background-image: url('');
+    /* height: 35vh; */
+    padding:20px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./../../assets/images/backgrounds/blog.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap:30px;
     align-items: center;
-} */
+    color: white;
+    font-size: 30px;
+    object-fit: cover;
+}
+
 .cards{
     display: flex;
     justify-content: space-around;
@@ -58,7 +74,7 @@ h2{
     flex-wrap: wrap;
 }
 .section-img{
-    width: 43%;
+    /* width: 43%; */
     display: flex;
     justify-content: center;
 }
@@ -82,20 +98,22 @@ h2{
     font-weight: bold;
 }
 
-.team{
+/* .team{
     display: flex;
     justify-content: center;
     gap:31px;
     flex-wrap: wrap;
-}
+    padding-left: 5vw;
+    padding-right: 5vw;
+} */
 
 .members{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 23vw;
 }
 .members > img{
     border-radius: 10px;
-    height: 55vh;
+    /* height: 55vh; */
     cursor: pointer;
 }
 
@@ -108,4 +126,16 @@ h2{
 h3{
     font-size: 20px;
     font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    .section-info, .section-info2{
+        width:80vw;
+    }
+    .section-info2{
+        margin-left: 0px;
+    }
+    .section-img{
+        display: none;
+    }
 }

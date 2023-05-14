@@ -1,0 +1,30 @@
+.body{
+    overflow-x: hidden;
+}
+.blog-bg{
+    width: 100%;
+    height: 45vh;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://media.istockphoto.com/id/483495276/photo/impact-success-silhouette.jpg?b=1&s=170667a&w=0&k=20&c=RcnWllC285E26X0Zdd7e01X9yrepiWf3panh1Bj-CEY="); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    object-fit: cover;
+}
+.impacts{
+    padding:30px;
+    width:80vw;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardsdiv{
+    width:20vw;
+}

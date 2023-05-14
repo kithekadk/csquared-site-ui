@@ -1,39 +1,645 @@
-<div class="body" *ngIf="fiberservices">
-    <div class="fiber-bg">
-        {{fiberservices.title}}
+<div class="body bg-white" *ngIf="fiberservices">
+  <div class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500">
+    <div class="flex flex-wrap justify-between items-center gap-10 w-[100vw]">
+      <div class="ml-[50px] pt-10 pb-10 w-[70vw] md:w-[40vw]">
+        <h1 class="mb-4 text-[18px] md:text-[42px] font-bold">
+          {{ fiberservices.title }}
+        </h1>
+        <h1 class="text-[14px] md:text-[20px]">{{ fiberservices.subtitle }}</h1>
+      </div>
+      <div class="md:w-[40vw]">
+        <img
+          class="hidden md:block"
+          style="object-fit: cover"
+          src="{{ fiberservices.image }}"
+          alt=""
+          style="border-radius: 0%"
+        />
+      </div>
     </div>
-    <div class="service-container">
-        <div class="single-service">
-            <div class="service-img">
-                <img src="{{fiberservices.image}}" alt="Specialist">
-            </div>
-            <div class="service-info">
-                <h2>{{fiberservices.title}}</h2><br>
-                {{fiberservices.description}}<br><br>
-                <button class="btn btn-warning">Learn More on Cloud Security</button>
-            </div>
+  </div>
+
+<!-- Read more about the product -->
+<div>
+      <div class="pt-4" *ngIf="fiberservices">
+        <!-- <h1
+          class="flex flex-row justify-center pb-10 text-amber-500"
+          style="font-size: 22px; font-weight: bold"
+        >
+          {{fiberservices.title}}
+        </h1> -->
+        <div class="flex flex-wrap justify-center gap-20 w-[100vw] pt-10">
+          <div class="w-[35vw] min-w-[250px] md:w-35vw">
+            <p class="text-justify">
+              {{fiberservices.description}}
+            </p>
+            <br />
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4">
+              Best fit for businesses looking for:
+            </h3>
+            <ol class="list-disc" *ngFor="let bestfit of bestfits">
+              <li class="ml-4">{{bestfit}}</li>
+            </ol>
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
+            <ol class="list-disc" *ngFor="let feature of features">
+              <li class="ml-4">{{feature}}</li>
+            </ol>
+          </div>
+          <div class="w-[35vw] min-w-[250px] md:w-35vw">
+            <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
+            <ol class="list-none" *ngFor="let benefit of benefits">
+              <li class="text-[14px]">
+                <b>{{benefit.heading}}</b> <br />
+                {{benefit.description}}
+              </li>
+            </ol>
+
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.support !== ''">Support</h3>
+            <p>
+              {{fiberservices.support}}
+            </p>
+            <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="fiberservices.contact !== ''">Contact Us</h3>
+            <p>
+              {{fiberservices.contact}}
+            </p>
+          </div>
         </div>
-    </div>
-    <app-footer></app-footer>
-    
+      </div>
 </div>
-<!-- Display cloud services if available -->
-<div class="body" *ngIf="cloudservices">
-    <div class="cloudservices-bg">
-        {{cloudservices.title}}
-    </div>
-    <div class="service-container">
-        <div class="single-service">
-            <div class="service-img">
-                <img src="{{cloudservices.image}}" alt="Specialist">
-            </div>
-            <div class="service-info">
-                <h2>{{cloudservices.title}}</h2><br>
-                {{cloudservices.description}}<br><br>
-                <button class="btn btn-warning">Learn More on Cloud Security</button>
-            </div>
+
+  <div class="service-container">
+    <div class="single-service">
+      <div class="service-info">
+        <div class="service-img">
+          <img
+            style="object-fit: cover"
+            src="{{ fiberservices.image }}"
+            alt="Specialist"
+          />
         </div>
+        <br />
+        <!-- <h2 class="flex justify-center">{{ fiberservices.title }}</h2> -->
+        <br />
+        <!-- {{ fiberservices.description }}<br /><br /> -->
+        <button
+          class="btn btn-warning hover:bg-amber-600 w-[90%] py-2"
+          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
+        >
+          <b>Read products brochure</b><i class="bi bi-download ml-4"></i>
+        </button>
+      </div>
+
+      <div>
+        <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
+          <div class="relative bg-white shadow-xl">
+            <!-- <h2 class="sr-only">Contact us</h2> -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <!-- Contact form -->
+              <form
+                [formGroup]="form"
+                (ngSubmit)="SubmitIssue()"
+                class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12"
+              >
+                <!-- Success message -->
+                <div
+                  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2 py-3 shadow-md"
+                  role="alert"
+                  *ngIf="view"
+                >
+                  <div class="flex">
+                    <div class="py-1">
+                      <svg
+                        class="fill-current h-6 w-6 text-teal-500 mr-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-bold">Success</p>
+                      <p class="text-sm">
+                        Thank you, message send successfully
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of success messsage -->
+                <h3 class="text-lg font-bold text-gray-900">Make an Enquiry</h3>
+                <div
+                  class="mt-3 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                >
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Country</label
+                    >
+                    <div class="mt-1">
+                      <select
+                        formControlName="country_id"
+                        type="text"
+                        name="country"
+                        id="country"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      >
+                        <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">
+                          Kenya
+                        </option>
+                        <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">
+                          Uganda
+                        </option>
+                        <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">
+                          Ghana
+                        </option>
+                        <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">
+                          DRC
+                        </option>
+                        <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">
+                          Liberia
+                        </option>
+                        <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">
+                          Togo
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="first-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >First name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="firstName"
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autocomplete="given-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="last-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >Last name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="lastName"
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        autocomplete="family-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-900"
+                      >Email</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="email"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-900"
+                        >Phone</label
+                      >
+                      <span id="phone-optional" class="text-sm text-gray-500"
+                        >Optional</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <input
+                        formControlName="phoneNumber"
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        autocomplete="tel"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                        aria-describedby="phone-optional"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Product</label
+                    >
+                    <div class="mt-1">
+                      <select formControlName="subject" type="text" id="" class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md">
+                        <option  *ngFor="let services of Allfiberservices;" value="{{services.title}}">{{services.title}}</option>
+                      </select>
+                      <!-- <input
+                        formControlName="subject"
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      /> -->
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <div class="flex justify-between">
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-900"
+                        >Message</label
+                      >
+                      <span id="message-max" class="text-sm text-gray-500"
+                        >Max. 500 characters</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <textarea
+                        formControlName="description"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
+                        aria-describedby="message-max"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2 sm:flex sm:justify-end">
+                    <button
+                      type="submit"
+                      class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <app-footer></app-footer>
+  </div>
+  <h1
+    class="flex flex-row justify-center pt-0 pb-10"
+    style="font-size: 22px; font-weight: bold"
+  >
+    All solutions
+  </h1>
+  <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
+    <div *ngFor="let other of Allfiberservices; let i = index">
+      <div (click)="NavigateByUrl(i)"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-500 hover:bg-green-600 hover:cursor-pointer shadow-xl cursor-auto"
+      >
+      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">  
+      <h1 class="text-white text-xl cursor-auto">{{ other.title }}</h1>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Display cloud services if available -->
+<div class="body bg-white" *ngIf="cloudservices">
+  <div class="cloudservices-bg bg-gradient-to-r from-green-500 to-blue-500">
+    <div class="flex flex-wrap justify-between items-center gap-10 w-[100vw]">
+      <div class="ml-[50px] pt-10 pb-10 w-[70vw] md:w-[40vw]">
+        <h1 class="mb-4 text-[18px] md:text-[42px] font-bold">
+          {{ cloudservices.title }}
+        </h1>
+        <h1 class="text-[14px] md:text-[20px]">{{ cloudservices.subtitle }}</h1>
+      </div>
+      <div>
+        <img
+          class="hidden md:block"
+          src="{{ cloudservices.image }}"
+          alt=""
+          style="border-radius: 0%"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+  id="accordion-flush-body-2"
+>
+  <div class="py-4" *ngIf="cloudservices">
+    <!-- <h1
+      class="flex flex-row justify-center pt-4 pb-10 text-amber-500"
+      style="font-size: 22px; font-weight: bold"
+    >
+      {{cloudservices.title}}
+    </h1> -->
+    <div class="flex flex-wrap justify-center gap-20 w-[100vw] mt-4">
+      <div class="w-[35vw] min-w-[250px] md:w-35vw">
+        <p class="text-justify">
+          {{cloudservices.description}}
+        </p>
+        <br />
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4">
+          Best fit for businesses looking for:
+        </h3>
+        <ol class="list-disc" *ngFor="let bestfit of bestfits">
+          <li class="ml-4">{{bestfit}}</li>
+        </ol>
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4">Features:</h3>
+        <ol class="list-disc" *ngFor="let feature of features">
+          <li class="ml-4">{{feature}}</li>
+        </ol>
+      </div>
+      <div class="w-[35vw] min-w-[250px] md:w-35vw">
+        <h3 class="font-bold text-[18px] mb-2">Benefits:</h3>
+        <ol class="list-none" *ngFor="let benefit of benefits">
+          <li class="text-[14px]">
+            <b>{{benefit.heading}}</b> <br />
+            {{benefit.description}}
+          </li>
+        </ol>
+
+        <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.support !== ''">Support</h3>
+        <p>
+          {{cloudservices.support}}
+        </p>
+        <h3 class="font-bold text-[18px] mb-2 mt-4" *ngIf="cloudservices.contact !== ''">Contact Us</h3>
+        <p>
+          {{cloudservices.contact}}
+        </p>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="service-container bg-gray-50">
+    <div class="single-service">
+      <div class="service-info">
+        <div class="service-img">
+          <img
+            style="object-fit: cover"
+            src="{{ cloudservices.image }}"
+            alt="Specialist"
+          />
+        </div>
+        <br />
+
+        <!-- <h2 class="flex justify-center">{{ cloudservices.title }}</h2> -->
+        <br />
+        <!-- {{ cloudservices.description }}<br /><br /> -->
+        <button
+          class="btn btn-warning pt-2 w-[90%]"
+          onclick=" window.open('./../../assets/csquared-brochure.pdf'); return true;"
+        >
+        <b>Read products brochure</b><i class="bi bi-download ml-4"></i>
+        </button>
+      </div>
+      <div>
+        <div class="max-w-7xl mx-auto !py-1 !px-2 !sm:py-24 !sm:px-6 !lg:px-8">
+          <div class="relative bg-white shadow-xl">
+            <!-- <h2 class="sr-only">Contact us</h2> -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <!-- Contact form -->
+              <form
+                [formGroup]="form"
+                (ngSubmit)="SubmitIssue()"
+                class="!py-10 !px-6 !sm:px-10 lg:col-span-2 !xl:p-12"
+              >
+                <!-- Success message -->
+                <div
+                  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2 py-3 shadow-md"
+                  role="alert"
+                  *ngIf="view"
+                >
+                  <div class="flex">
+                    <div class="py-1">
+                      <svg
+                        class="fill-current h-6 w-6 text-teal-500 mr-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-bold">Success</p>
+                      <p class="text-sm">
+                        Thank you, message send successfully
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of success messsage -->
+                <h3 class="text-lg font-bold text-gray-900">Make an Enquiry</h3>
+                <div
+                  class="mt-3 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                >
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Country</label
+                    >
+                    <div class="mt-1">
+                      <select
+                        formControlName="country_id"
+                        type="text"
+                        name="country"
+                        id="country"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      >
+                        <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">
+                          Kenya
+                        </option>
+                        <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">
+                          Uganda
+                        </option>
+                        <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">
+                          Ghana
+                        </option>
+                        <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">
+                          DRC
+                        </option>
+                        <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">
+                          Liberia
+                        </option>
+                        <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">
+                          Togo
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="first-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >First name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="firstName"
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autocomplete="given-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="last-name"
+                      class="block text-sm font-medium text-gray-900"
+                      >Last name</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="lastName"
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        autocomplete="family-name"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-900"
+                      >Email</label
+                    >
+                    <div class="mt-1">
+                      <input
+                        formControlName="email"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-900"
+                        >Phone</label
+                      >
+                      <span id="phone-optional" class="text-sm text-gray-500"
+                        >Optional</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <input
+                        formControlName="phoneNumber"
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        autocomplete="tel"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                        aria-describedby="phone-optional"
+                      />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-900"
+                      >Product</label
+                    >
+                    <div class="mt-1">
+                      <select formControlName="subject" type="text" id="" class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md">
+                        <option  *ngFor="let services of Allcloudservices;" value="{{services.title}}">{{services.title}}</option>
+                      </select>
+                      <!-- <input
+                        formControlName="subject"
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border-gray-300 rounded-md"
+                      /> -->
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <div class="flex justify-between">
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-900"
+                        >Message</label
+                      >
+                      <span id="message-max" class="text-sm text-gray-500"
+                        >Max. 500 characters</span
+                      >
+                    </div>
+                    <div class="mt-1">
+                      <textarea
+                        formControlName="description"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="py-1 px-2 block w-full shadow-sm text-gray-900 focus:ring-brand-green focus:border-brand-green border border-gray-300 rounded-md"
+                        aria-describedby="message-max"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2 sm:flex sm:justify-end">
+                    <button
+                      type="submit"
+                      class="mt-2 w-full inline-flex items-center justify-center !px-6 !py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-brand-green bg-brand-yellow hover:bg-brand-yellow/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:w-auto"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1
+    class="flex flex-row justify-center pt-10 pb-10"
+    style="font-size: 22px; font-weight: bold"
+  >
+    All solutions
     
+  </h1>
+  <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
+    <div *ngFor="let other of Allcloudservices; let i = index">
+      <div (click)="NavigateByUrl(i)"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 w-[19vw] min-w-[250px] h-[19vh] p-4 bg-green-500 cursor-auto hover:cursor-pointer hover:bg-green-600 hover:text-[700px]"
+      >
+      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">   
+      <h1 class="text-white text-xl cursor-auto">{{ other.title }}</h1>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>

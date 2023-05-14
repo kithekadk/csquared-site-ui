@@ -1,0 +1,28 @@
+.products{
+    padding:30px;
+    width:100vw;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.products div{
+    width:25vw;
+}
+
+/* COPY THIS FOR EVERY COMPONENT YOU USE IN */
+.centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+@media screen and (max-width:768px) {
+    .products div{
+        width:70vw;
+    }
+}

@@ -3,27 +3,27 @@
    margin: 0;
    overflow-x: hidden; 
 }
-.fiber-bg{
-    width: 100%;
-    height: 45vh;
-    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .cloudsolutions-bg{
     width: 100%;
-    height: 45vh;
-    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
+    height: 55vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./../../assets/Csquared/pexels-photo-6193563.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+.fiber-bg{
+    width: 100%;
+    height: 55vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./../../assets/Csquared/pexels-photo-6193563.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .service-container{
@@ -39,6 +39,9 @@
     gap: 30px;
     padding: 30px;
     flex-wrap: wrap;
+}
+.single-service:hover{
+    background-color: rgb(240, 239, 239);
 }
 .service-img{
     width: 43%;
@@ -63,4 +66,87 @@
 
 h2{
     font-weight: bold;
+}
+
+/* STYLING THE CARDS */ 
+  .card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .single-card{
+    width:25vw;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .card-info:hover .hover-overlay{
+    top: 0;  /* top and bottom can be used interchangably  */
+    height: 100%;
+    border: 10px;
+  }
+  .hover-overlay{
+    position: absolute;
+    top: 100%; /* top and bottom can be used interchangably  */
+    left: 0;
+    right: 0;
+    background-color: #2c755d;
+    overflow: hidden;
+    height:0;
+    transition: .5s ease;
+    width:100%;
+  }
+  .hover-overlay .overflow-text{
+    width:100%;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding:20px
+  }
+  .imgcontainer img{
+    height:100%;
+    border-radius: 0px;
+  }
+  
+  .imgcontainer{
+    height: 100%;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+@media screen and (max-width:668px) {
+    .single-service{
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       align-items: center;
+       gap: 10px;
+       padding: 10px;
+    }
+    .service-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .service-info{
+        width:85%;
+        text-align: justify;
+    }
 }

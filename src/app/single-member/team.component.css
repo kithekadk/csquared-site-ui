@@ -1,0 +1,94 @@
+.body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; 
+ }
+.member-bg{
+    width: 100%;
+    height: 55vh;
+    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.member-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.single-member{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.member-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:25%;
+}
+.member-img > img{
+    width: 150%;
+    border-radius: 10px;
+
+}
+
+.member-info{
+    width:45%;
+}
+
+h2{
+    font-weight: bold;
+}
+.rank{
+    margin-top: -100px;
+    margin-left: 10px;
+    color: white;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.m-carousel{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.m-carousel >div> div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.m-carousel >div> div> img{
+    border-radius: 50%;
+}
+.leftitem, .rightitem{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+@media screen and (max-width:768px){
+    .carousel-right, .carousel-left{
+        visibility: hidden;
+    }
+}

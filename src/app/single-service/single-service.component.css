@@ -1,12 +1,10 @@
 .body{
+    /* margin-top: 10vh; */
     padding: 0;
-    margin: 0;
     overflow-x: hidden; 
  }
 .fiber-bg{
     width: 100%;
-    height: 45vh;
-    background-image: url("https://images.pexels.com/photos/6189969/pexels-photo-6189969.jpeg?auto=compress&cs=tinysrgb&w=600");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,8 +17,7 @@
 }
 .cloudservices-bg{
     width: 100%;
-    height: 45vh;
-    background-image: url("https://media.istockphoto.com/id/1186955933/photo/sign-of-the-wireless-technology.jpg?s=612x612&w=0&k=20&c=j_ms9Ny6JddYQj6aHnwlSq1MAV1IeLuxiN2cdwuXGJE=");
+    /* height: 45vh; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -29,6 +26,7 @@
     align-items: center;
     color: white;
     font-size: 30px;
+    overflow: hidden;
 }
 
 .service-container{
@@ -36,8 +34,8 @@
     justify-content: center;
     width: 100vw;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-    margin-top: 70px;
+    padding-bottom: 40px;
+    padding-top: 70px;
 }
 .single-service{
     display: flex;
@@ -46,19 +44,44 @@
     padding: 30px;
     flex-wrap: wrap;
 }
+
 .service-img{
     display: flex;
     justify-content: center;
 }
 .service-img > img{
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
 }
-
+.service-img > img:hover{
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-bottom: 1.5%; */
+}
 .service-info{
     width:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
     font-weight: bold;
+}
+.description{
+    display:none;
+}
+/* .service-title:hover{
+    display:none
+}
+.service-title:hover + .description{
+    display:flex;
+    
+} */
+@media screen and (max-width:768px) {
+    .service-info{
+        width:80%;
+    }
 }

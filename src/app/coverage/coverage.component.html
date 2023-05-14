@@ -1,0 +1,197 @@
+<div class="body">
+  <div class="orderform">
+    <!-- Search location field -->
+    <div class="search-container">
+      <form class="form1" [formGroup]="form">
+        <!-- Alert message -->
+        <div class="errorContainer" *ngIf="errorContainer">
+          <div
+            class="flex p-4 mb-4 text-sm text-red-500 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-500 dark:border-red-800"
+            role="alert"
+          >
+            <svg
+              aria-hidden="true"
+              class="flex-shrink-0 inline w-5 h-5 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Info</span>
+            <div>
+              <span class="font-medium">Alert!</span> Location searched is not
+              yet in coverage
+            </div>
+          </div>
+        </div>
+        <!-- END of Alert message -->
+
+        <div class="search-location">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Location"
+            class="search-text"
+            formControlName="receiverLocation"
+            id="inputSmall"
+            ngx-google-places-autocomplete
+            (onAddressChange)="AddressChange($event)"
+          />
+          <button type="submit" class="bg-amber-300 p-2 px-4">
+            <span>Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- End of search field -->
+
+    <details class="border-2 mb-2">
+      <summary class="marker:content-[''] flex justify-around items-center">
+        <span
+          class="h-[40px] flex justify-center items-center gap-2 bg-green-700 py-1 px-4 font-medium text-left border-b border-black-200 dark:border-black-700 dark:text-black-400 text-[white]"
+        >
+          Make Order
+
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </span>
+      </summary>
+      <div>
+        <form class="form" [formGroup]="form" (ngSubmit)="makeOrder()">
+          
+          <div
+            class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+            role="alert"
+            *ngIf="view"
+          >
+            <div class="flex">
+              <div class="py-1">
+                <svg
+                  class="fill-current h-6 w-6 text-teal-500 mr-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold">Success</p>
+                <p class="text-sm">Order Placed successfully</p>
+              </div>
+            </div>
+          </div>
+          <!-- // end of success messsage  -->
+          <div>
+            <label for="country">Country</label><br />
+    
+            <select formControlName="country_id">
+              <option value="">Select Country</option>
+              <option value="78ba6f60-85ad-11eb-88f1-39b4763e914c">Kenya</option>
+              <option value="78c7d800-85ad-11eb-82e0-71c6f09a2bae">Uganda</option>
+              <option value="78b6b910-85ad-11eb-8c83-cd8b9be0f4f1">Ghana</option>
+              <option value="78b32a20-85ad-11eb-8ef6-a9906fd1e035">DRC</option>
+              <option value="78bb1f20-85ad-11eb-9ca4-dfa9c20bb376">Liberia</option>
+              <option value="78c68a50-85ad-11eb-813f-b19440c3cb6a">Togo</option>
+            </select>
+          </div>
+    
+          <div *ngIf="form.get('country_id')!.valid">
+            <label for="product">Product</label><br />
+            <select name="" formControlName="product_id">
+              <option
+                *ngFor="let product of products; let i = index"
+                value="{{ product_id[i] }}"
+              >
+                {{ product }}
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Input your Email"
+              formControlName="email"
+            />
+          </div>
+          <br />
+          <div>
+            <input type="submit" class="btn btn-success" value="Order" />
+          </div>
+        </form>
+      </div>
+    </details>
+
+  </div>
+  <div class="mapsection">
+    <div class="maps h-[90vh]">
+      <div id="map" class="h-[90vh]"></div>
+        <!-- <app-map></app-map> -->
+        <!-- <google-map
+          width="100vw;"
+          height="90vh"
+          [center]="center"
+          [zoom]="zoom"
+          (mapClick)="clickMap($event)"
+          (mapMousemove)="move($event)"
+        >
+          <map-marker
+            #marker="mapMarker"
+            *ngFor="let markerPosition of markerPositions"
+            [position]="markerPosition"
+            (mapClick)="openInfoWindow(marker)"
+          >
+          </map-marker>
+          <map-info-window>Info Window content</map-info-window>
+        </google-map> -->
+
+        <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs&callback=initMap&v=weekly"
+          defer
+        ></script>
+      
+      <!-- <div id="capture"></div> -->
+    </div>
+  </div>
+
+  <!-- <div class="title">
+    <h2 class="p-4">Our Featured Countries</h2>
+    <br />
+  </div> -->
+
+  <!-- <ng-image-slider
+    (click)="navigate($event)"
+    [images]="coverage"
+    [infinite]="true"
+    [autoSlide]="1"
+    [showArrow]="false"
+    [animationSpeed]="3"
+    [imageSize]="{ width: '300px', height: 180, space: 10 }"
+    class="p-2"
+    #nav
+  ></ng-image-slider -->
+  <!-- <br /><br /> -->
+
+  <app-footer></app-footer>
+</div>
