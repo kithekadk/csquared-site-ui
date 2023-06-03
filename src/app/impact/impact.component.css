@@ -16,3 +16,15 @@
     font-size: 30px;
     object-fit: cover;
 }
+.impacts{
+    padding:30px;
+    width:80vw;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardsdiv{
+    width:20vw;
+}

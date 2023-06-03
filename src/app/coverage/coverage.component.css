@@ -1,9 +1,18 @@
-
-form{
+.form{
   background-color: #073937;
-  padding: 25px;
+  padding: 20px;
   border-radius: 5px;
   z-index:5;
+  
+}
+
+.form1{
+  background-color: #073937;
+  /* min-width: 150px; */
+  padding: 10px;
+  border-radius: 5px;
+  z-index:5;
+  margin-left: 5vw;
 }
 label{
   color: white;
@@ -16,15 +25,22 @@ label{
 .mapsection{
   position: relative;
   /* margin-top: 10vh; */
-  height:65vh
+  height:90vh
 }
 
 .orderform{
+  height:25vh;
+  width:95vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:30px;
   position: absolute;
   top: 30%;
   bottom: 50%;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   z-index: 6;
+  padding: 20px;
 }
 
 
@@ -121,7 +137,7 @@ section{
     }
     .search-text{
         width:50vw;
-        height: 5vh;
+        /* height: 5vh; */
     }
     .countries{
         gap:0;
@@ -132,7 +148,15 @@ section{
     .orderform{
       position:absolute;
       top: 60vh;
-      margin-left: 10vw;
+      justify-content: center;
+      margin-left: 0vw;
+    }
+
+    .form1{
+      padding: 10px;
+      border-radius: 5px;
+      z-index:5;
+      margin-left: 0vw;
     }
 }
 

@@ -12,6 +12,7 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   hide=false
   targets: { title: string, image: string }[] = [
     { title: "MNO's", image: '/assets/images/home/MNO.jpg' },
@@ -62,14 +63,15 @@ export class HomeComponent implements OnInit {
   ];
 
   logos: { title: string, image: string }[] = [
-    { title: "MTN", image: '/assets/images/logos/mtn_logo.png' },
+
     { title: 'Airtel', image: '/assets/images/logos/airtel_logo.png' },
     { title: 'Main One', image: '/assets/images/logos/mainone_logo.png' },
+    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },  
+    { title: "MTN", image: '/assets/images/logos/mtn_logo.png' },
     { title: 'Internet Solution', image: '/assets/images/logos/internets_logo.png' },
     { title: 'IWay Africa', image: '/assets/images/logos/iwayafrica_logo.jpg' },
-    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },
-    { title: 'Gilat', image: '/assets/images/logos/gilat_logo.png' },
     { title: 'Renu', image: '/assets/images/logos/renu_logo.png' },
+    { title: 'Gilat', image: '/assets/images/logos/gilat_logo.png' },
     { title: 'Google', image: '/assets/images/logos/google.png' },
     { title: 'Seacom', image: '/assets/images/logos/seacom_logo.jpg' },
     { title: 'Simbanet', image: '/assets/images/logos/simbanet_logo.png' },
@@ -82,6 +84,12 @@ export class HomeComponent implements OnInit {
 
   form!: FormGroup;
   ngOnInit(): void {
+    // setInterval(function() {
+    //   let iframe = document.getElementById('linkedin-post') as HTMLIFrameElement;
+    //   iframe.src = iframe.src;
+    //   console.log('IFRAME'+iframe.src)
+    // }, 60000);
+
     this.form = this.fb.group({
       Userlat: [null, [Validators.required]],
       Userlng: [null, [Validators.required]],

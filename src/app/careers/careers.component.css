@@ -44,29 +44,29 @@
     color: #3B7360;
 }
 
-.position{
+/* .position{
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     width: 90%;
     margin-top: 20px;
-}
+} */
 
-.career{
+/* .career{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
      width: 90%;
      gap: 20px;
-}
-.career-row{
+} */
+/* .career-row{
     display: flex;
     gap: 20px;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 .career-div{
    
     display: flex;
@@ -75,13 +75,8 @@
     flex-wrap: wrap;
     
 }
-.career-div1{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.career-div1 hr{
+hr{
     color: black;
     width: 10%;
 }

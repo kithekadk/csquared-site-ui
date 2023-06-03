@@ -98,17 +98,17 @@ h2{
     font-weight: bold;
 }
 
-.team{
+/* .team{
     display: flex;
     justify-content: center;
     gap:31px;
     flex-wrap: wrap;
     padding-left: 5vw;
     padding-right: 5vw;
-}
+} */
 
 .members{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 23vw;
 }
 .members > img{

@@ -3,6 +3,7 @@ export interface services{
     title: string;
     subtitle: string;
     description: string;
+    logo:string
     bestfit:string[];
     features:string[];
     benefits:benefits[]

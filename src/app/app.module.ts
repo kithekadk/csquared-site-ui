@@ -54,7 +54,11 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { ShortenPipe } from './shorten.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ViewOneImpactComponent } from './view-one-impact/view-one-impact.component';
+import { ViewOneNewsContentComponent } from './view-one-news-content/view-one-news-content.component';
+import { CloudinaryModule } from '@cloudinary/ng';
 
 @NgModule({
   declarations: [
@@ -99,6 +103,8 @@ import { ShortenPipe } from './shorten.pipe';
     TermsOfServiceComponent,
     PrivacyPolicyComponent,
     ShortenPipe,
+    ViewOneImpactComponent,
+    ViewOneNewsContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -116,6 +122,8 @@ import { ShortenPipe } from './shorten.pipe';
     CarouselModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
+    NgxPaginationModule,
+    CloudinaryModule
   ],
   providers: [],
   bootstrap: [AppComponent],

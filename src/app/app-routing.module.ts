@@ -26,6 +26,8 @@ import { ImpactComponent } from './impact/impact.component';
 import { CountryMapComponent } from './country-map/country-map.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ViewOneImpactComponent } from './view-one-impact/view-one-impact.component';
+import { ViewOneNewsContentComponent } from './view-one-news-content/view-one-news-content.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -53,6 +55,8 @@ const routes: Routes = [
     {path:'career-description', component:CareerDescriptionComponent},
     {path:'partners', component:PartnersComponent},
     {path:'impact', component:ImpactComponent},
+    {path:'impact/:slug', component:ViewOneImpactComponent},
+    {path:'post/:slug', component:ViewOneNewsContentComponent},
     {path:'country-map/:key', component: CountryMapComponent},
     {path:'terms-of-service', component: TermsOfServiceComponent},
     {path:'privacy-policy', component: PrivacyPolicyComponent},

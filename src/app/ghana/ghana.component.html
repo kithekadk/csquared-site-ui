@@ -1,6 +1,7 @@
 <div class="body">
-  <div *ngIf="countries" class="ch-container">
-    <app-hero-carousel></app-hero-carousel>
+  <app-hero-carousel></app-hero-carousel>
+  <!-- <div class="ch-container"> -->
+    
     <!-- <app-country-header></app-country-header> -->
     <!-- <img style="object-fit: cover" src="{{ countries.header.image }}" alt="" /> -->
     <!-- <div class="ch-content">
@@ -56,9 +57,14 @@
     <!-- </div> -->
 
     <!-- <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex> -->
-    <app-country-products [offers]="offer"></app-country-products>
-    <!-- <app-country-latestnews></app-country-latestnews> -->
+    
+    <!-- </div> -->
 
-    <app-footer></app-footer>
-  <!-- </div> -->
+    <div class="">
+      <app-country-products [offers]="offer"></app-country-products>
+    </div>
+    <div *ngIf="countries">
+      <app-country-latestnews></app-country-latestnews>
+    </div>
 </div>
+<app-footer></app-footer>

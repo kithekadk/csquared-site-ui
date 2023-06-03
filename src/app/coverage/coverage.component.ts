@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { Router } from '@angular/router';
@@ -13,38 +13,38 @@ import { CountryService } from '../services/country.service';
 })
 export class CoverageComponent implements OnInit {
 
-  coverage:Array<object>=[{
-    image: '../../assets/Csquared/nairobi.jpg',
-    thumbImage: '../../assets/Csquared/nairobi.jpg',
-    alt: 'Kenya',
-    title: 'Kenya'
-  }, {
-    image: '../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
-    thumbImage: '../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
-    title: 'Uganda',
-    alt: 'Uganda'
-  }, {
-    image: '../../assets/Csquared/pexels-asiama-junior-6567674.jpg',
-    thumbImage: '../../assets/Csquared/pexels-asiama-junior-6567674.jpg',
-    title: 'Ghana',
-    alt: 'Ghana'
-  }, {
-    image: '../../assets/images/flags/drc_flag.jpg',
-    thumbImage: '../../assets/images/flags/drc_flag.jpg',
-    title: 'DRC',
-    alt: 'DRC'
-  }, {
-    image: '../../assets/images/flags/Flag_of_Liberia.svg',
-    thumbImage: '../../assets/images/flags/Flag_of_Liberia.svg',
-    title: 'Liberia',
-    alt: 'Liberia'
-  },
-  {
-    image: '../../assets/images/flags/Flag_of_Togo.svg.png',
-    thumbImage: '../../assets/images/flags/Flag_of_Togo.svg.png',
-    title: 'Togo',
-    alt: 'Togo'
-  }]
+  // coverage:Array<object>=[{
+  //   image: '../../assets/Csquared/nairobi.jpg',
+  //   thumbImage: '../../assets/Csquared/nairobi.jpg',
+  //   alt: 'Kenya',
+  //   title: 'Kenya'
+  // }, {
+  //   image: '../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
+  //   thumbImage: '../../assets/Csquared/pexels-timothy-nkwasibwe-8365399.jpg',
+  //   title: 'Uganda',
+  //   alt: 'Uganda'
+  // }, {
+  //   image: '../../assets/Csquared/pexels-asiama-junior-6567674.jpg',
+  //   thumbImage: '../../assets/Csquared/pexels-asiama-junior-6567674.jpg',
+  //   title: 'Ghana',
+  //   alt: 'Ghana'
+  // }, {
+  //   image: '../../assets/images/flags/drc_flag.jpg',
+  //   thumbImage: '../../assets/images/flags/drc_flag.jpg',
+  //   title: 'DRC',
+  //   alt: 'DRC'
+  // }, {
+  //   image: '../../assets/images/flags/Flag_of_Liberia.svg',
+  //   thumbImage: '../../assets/images/flags/Flag_of_Liberia.svg',
+  //   title: 'Liberia',
+  //   alt: 'Liberia'
+  // },
+  // {
+  //   image: '../../assets/images/flags/Flag_of_Togo.svg.png',
+  //   thumbImage: '../../assets/images/flags/Flag_of_Togo.svg.png',
+  //   title: 'Togo',
+  //   alt: 'Togo'
+  // }]
 
 
   countries:{name:string,code:string,id:string, flag:string}[]=[
@@ -94,17 +94,26 @@ export class CoverageComponent implements OnInit {
   products:any[]=[]
   product_id:any[]=[]
   view= false
-  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient, private countryservice: CountryService) { }
+  constructor(private router:Router, private fb:FormBuilder, private http:HttpClient, private countryservice: CountryService, private elementRef:ElementRef) { }
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
+  errorContainer=false
   form!:FormGroup;
+  searchform!:FormGroup
   ngOnInit(): void {
 
     Aos.init();
+    this.initMap();
     this.form= this.fb.group({
       country_id: [null, [Validators.required]],
       product_id: [null, [Validators.required]],
       email:[null, [Validators.required]]
+    })
+
+    // Search form logic
+    this.searchform = this.fb.group({
+      Userlat: [null, [Validators.required]],
+      Userlng: [null, [Validators.required]],
     })
     
 
@@ -167,28 +176,41 @@ export class CoverageComponent implements OnInit {
     this.receiverLatitude = address.geometry.location.lat();
     this.receiverLongitude = address.geometry.location.lng();
     console.log(this.receiverAddress.toLowerCase());
+    console.log(this.receiverLatitude);
+    console.log(this.receiverLongitude);
     
-    //Redirecting to searched location homepage if it exists else view global homepage
-    // if(this.receiverAddress.toLowerCase().includes('kenya')){
-    //   this.router.navigate(['country/','kenya'])
-    // }
-    // else if(this.receiverAddress.toLowerCase().includes('uganda')){
-    //   this.router.navigate(['country/','uganda'])
-    // }
-    // else if(this.receiverAddress.toLowerCase().includes('liberia')){
-    //   this.router.navigate(['country/','liberia'])
-    // }
-    // else if(this.receiverAddress.toLowerCase().includes('togo')){
-    //   this.router.navigate(['country/','togo'])
-    // }
-    // else if(this.receiverAddress.toLowerCase().includes('ghana')){
-    //   this.router.navigate(['country/','ghana'])
-    // }
-    // else if(this.receiverAddress.toLowerCase().includes('democratic republic of the congo')){
-    //   this.router.navigate(['country/','drc'])
-    // }else{
-    //   this.router.navigate(['country/','hybrid'])
-    // }
+    // Redirecting to searched location homepage if it exists else view global homepage
+    if(this.receiverAddress.toLowerCase().includes('kenya')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','kenya'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('uganda')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','uganda'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('liberia')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','liberia'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('togo')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','togo'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('ghana')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','ghana'])
+    }
+    else if(this.receiverAddress.toLowerCase().includes('democratic republic of the congo')){
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      // this.router.navigate(['country/','drc'])
+    }else{
+      // this.router.navigate(['country/','hybrid'])
+      this.errorContainer=true
+      this.markerPositions.push({lat: this.receiverLatitude, lng:this.receiverLongitude})
+      setTimeout(() => {
+        this.errorContainer=false
+      }, 3000);
+    }
     
   }
 
@@ -224,7 +246,7 @@ passCoordinatesToUrl(Longitude:number, Latitude:number){
   
 
 display: any;
-zoom = 3.0;
+// zoom = 3.0;
 center: google.maps.LatLngLiteral = {
   lat: 0,lng: 22.2663
 };
@@ -244,10 +266,38 @@ markerPositions: google.maps.LatLngLiteral[] = [
   {lat: -4.4419,lng: 22.2663},
   {lat: 5.6037,lng: 0.1870},
   {lat: 6.4281,lng: -9.4295},
-  {lat: 8.6195,lng: 0.8248}];
+  {lat: 8.6195,lng: 0.8248},
+];
 
 
   openInfoWindow(marker: MapMarker) {
     if (this.infoWindow != undefined) this.infoWindow.open(marker);
+  }
+
+
+  //USING KML FILE -- THIS IS THE ONLY WORKING CODE HERE RIGHT NOW
+
+  initMap() {
+    const map = new google.maps.Map(
+      document.getElementById("map") as HTMLElement,
+      {
+        center: { lat: 0, lng: 22.2663 },
+        zoom: 4.0,
+        // mapTypeId: 'terrain'
+      }
+    );
+  
+    let ctaLayer = new google.maps.KmlLayer({
+      url: "https://alphabet.nyc3.cdn.digitaloceanspaces.com/csquared/xi3j5je6ocd620j6.kml",
+      suppressInfoWindows: true,
+      preserveViewport: true,
+      map: map,
+    });
+
+    ctaLayer.addListener('click', function(event) {
+      var content = event.featureData.infoWindowHtml;
+      var testimonial = document.getElementById('capture');
+      testimonial!.innerHTML = content;
+    });
   }
 }

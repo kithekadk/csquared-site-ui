@@ -1,5 +1,38 @@
 <div class="body">
   <div class="orderform">
+      <!-- Search location field -->
+  <div class="search-container">
+    <form class="form1" [formGroup]="form">
+      <!-- Alert message -->
+      <div class="errorContainer" *ngIf="errorContainer">
+        <div class="flex p-4 mb-4 text-sm text-red-500 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-500 dark:border-red-800" role="alert">
+          <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Info</span>
+          <div>
+            <span class="font-medium">Alert!</span> Location searched is not yet in coverage
+          </div>
+        </div>
+      </div>
+      <!-- END of Alert message -->
+
+      <div class="search-location">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search Location"
+          class="search-text"
+          formControlName="receiverLocation"
+          id="inputSmall"
+          ngx-google-places-autocomplete
+          (onAddressChange)="AddressChange($event)"
+        />
+        <button type="submit" class="bg-amber-300 p-2 px-4">
+          <span>Search</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- End of search field -->
     <form class="form" [formGroup]="form" (ngSubmit)="makeOrder()">
       <!-- Success message -->
       <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert" *ngIf="view">
@@ -43,11 +76,12 @@
     </form>
   </div>
   <div class="mapsection">
-    <!-- <div class="maps">
-      <div id="map"> -->
-        <app-map></app-map>
+    <div class="maps h-[90vh]">
+      <div id="map" class="h-[90vh]">
+        <!-- <app-map></app-map> -->
         <!-- <google-map
           width="100vw;"
+          height="90vh"
           [center]="center"
           [zoom]="zoom"
           (mapClick)="clickMap($event)"
@@ -64,15 +98,21 @@
         </google-map> -->
   
         <!-- <div>Latitude: {{ display?.lat }} Longitude: {{ display?.lng }}</div> -->
-      <!-- </div>
-    </div> -->
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8imo0O1irRbd6qHLex5Q6UP4HwGzuzs&callback=initMap&v=weekly"
+        defer
+      ></script>
+      </div>
+      <!-- <div id="capture"></div> -->
+    </div>
   </div>
   
-  <div class="title">
+  <!-- <div class="title">
     <h2 class="p-4">Our Featured Countries</h2>
     <br />
-  </div>
-  <ng-image-slider
+  </div> -->
+
+  <!-- <ng-image-slider
     (click)="navigate($event)"
     [images]="coverage"
     [infinite]="true"
@@ -82,8 +122,8 @@
     [imageSize]="{ width: '300px', height: 180, space: 10 }"
     class="p-2"
     #nav
-  ></ng-image-slider
-  ><br /><br />
+  ></ng-image-slider -->
+<!-- <br /><br /> -->
 
   <app-footer></app-footer>
 </div>
