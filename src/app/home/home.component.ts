@@ -4,6 +4,7 @@ import * as AOS from 'aos';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountryService } from '../services/country.service';
+import { ApiService } from '../services/api.service';
 
 
 @Component({
@@ -12,7 +13,20 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+  pageNumber:number=1
+  spinneroff=true
+  impactImages:any[]=[]
+  impactTitle:any[]=[]
+  impactDescription:any[]=[]
+  impactCategory:any[]=[]
+  impactCategoryID:any[]=[]
+  impactnames:any[]=[]
+  impactCategoryName:any[]=[]
+  impactSlug:any[]=[]
+  mergedArray:any[]=[]
+  mergedArray2:any[]=[]
+
+
   hide=false
   targets: { title: string, image: string }[] = [
     { title: "MNO's", image: '/assets/images/home/MNO.jpg' },
@@ -25,7 +39,7 @@ export class HomeComponent implements OnInit {
 
   services: any[] = [
     {
-      'name': 'Cloud Services',
+      'name': 'Cloud Security',
       'logo': '/assets/services/service-images/Cloudconnectivity(1).jpg',
       'link':'/services/cloud-solutions',
       'description': "Our cloud solutions offer an enabling environment for digital transformation across Africa. CSquared Cloud offers simplified access to multi-cloud services for corporates and SMEs."
@@ -39,25 +53,25 @@ export class HomeComponent implements OnInit {
     {
       'name': 'FTTX',
       'logo': '/assets/services/service-images/Fiberopticnetwork.jpg',
-      'link':'/services/wholesale-fiber/view/3',
+      'link':'/services/wholesale-fiber',
       'description': 'CSquared FTTX offering provides a wide range of last mile connectivity solutions for different consumer needs ranging from home to business connectivity across cities in Africa e.g. FFTH, FTTB, FTTT, e.t.c.'
-    }, 
+    },
     {
       'name': 'Backbone Network',
       'logo': 'https://media.istockphoto.com/id/1313415001/photo/a-black-male-server-room-technician-working-at-business-reopening.jpg?b=1&s=170667a&w=0&k=20&c=zK_Uh9Z6bSbRB1bgN7_gEpH9U8j3O6FuDbhO5HnWWqM=',
-      'link':'/services/wholesale-fiber/view/6',
+      'link':'/services/wholesale-fiber',
       'description': 'CSquared backbone solutions offer high-capacity open access network infrastructure interconnecting cities and countries across Africa.'
     },
     {
       'name': 'IP Transit',
       'logo': '/assets/services/service-images/IPTransit.jpg',
-      'link':'/services/wholesale-fiber/view/5',
+      'link':'/services/wholesale-fiber',
       'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },
     {
       'name': 'Wi-Fi',
       'logo': '/assets/services/service-images/Wi-Fi.jpg',
-      'link':'/services/wholesale-fiber/view/7',
+      'link':'/services/cloud-solutions',
       'description': 'Our public Wi-Fi infrastructure is set up to serve users on the go through a Multi-ISP platform.'
     }
   ];
@@ -66,7 +80,7 @@ export class HomeComponent implements OnInit {
 
     { title: 'Airtel', image: '/assets/images/logos/airtel_logo.png' },
     { title: 'Main One', image: '/assets/images/logos/mainone_logo.png' },
-    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },  
+    { title: 'Orange', image: '/assets/images/logos/orange_logo.png' },
     { title: "MTN", image: '/assets/images/logos/mtn_logo.png' },
     { title: 'Internet Solution', image: '/assets/images/logos/internets_logo.png' },
     { title: 'IWay Africa', image: '/assets/images/logos/iwayafrica_logo.jpg' },
@@ -77,18 +91,64 @@ export class HomeComponent implements OnInit {
     { title: 'Simbanet', image: '/assets/images/logos/simbanet_logo.png' },
 
   ]
+  partners: { title: string, image: string, rootdomain:string }[] = [
+
+    { title: 'Google', image: '/assets/Csquared/google.png', rootdomain: 'https://workspace.google.com/products/sites/'},
+    { title: 'Convergence', image: '/assets/Csquared/convergence.png', rootdomain: 'https://www.convergencepartners.com/' },
+    { title: 'IFC', image: '/assets/Csquared/ifc.png', rootdomain: 'https://www.ifc.org/wps/wcm/connect/corp_ext_content/ifc_external_corporate_site/home' },
+    { title: "Mitsui", image: '/assets/Csquared/mitsui.png', rootdomain: 'https://www.mitsui.com/jp/en/index.html' }
+  ]
 
 
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private countryService: CountryService) { }
+  constructor(private apiservice:ApiService, private http: HttpClient, private fb: FormBuilder, private router: Router, private countryService: CountryService) { }
 
   form!: FormGroup;
   ngOnInit(): void {
-    // setInterval(function() {
-    //   let iframe = document.getElementById('linkedin-post') as HTMLIFrameElement;
-    //   iframe.src = iframe.src;
-    //   console.log('IFRAME'+iframe.src)
-    // }, 60000);
+    this.apiservice.getFeaturedNews().subscribe(res=>{
+      console.log(res['data']);
+
+      // GETTING IMPACT IMAGES
+      for(let image of res['data']){
+        let img = image.media?.pathUrls[0]
+        let avatar = image.name[0]
+        if(img == null || undefined){
+          this.impactImages.push(avatar)
+        }else{
+        this.impactImages.push(img)
+        }  
+              
+      }
+
+      // GETTING IMPACT TITLES
+      for(let title of res['data']){
+        let titles = title.name
+        // console.log(titles);
+        this.impactTitle.push(titles)
+      }
+
+      // GETTING IMPACT DESCRIPTION
+      for(let desc of res['data']){
+        let descriptions = desc.description
+        // console.log(descriptions);
+        this.impactDescription.push(descriptions)
+       
+      }
+
+      // News ID
+      for(let id of res['data']){
+        let slug = id.slug
+        this.impactCategoryID.push(slug)
+        // this.impactCategoryID = [... new Set(this.impactCategory)]
+        // console.log(this.impactCategoryID);
+      }
+      
+      this.mergedArray = this.impactImages.map((img, index) =>({
+        image:img, title:this.impactTitle[index], description: this.impactDescription[index], newsSlug: this.impactCategoryID[index]
+      }), this.spinneroff=false)
+      this.mergedArray2 = this.mergedArray
+      // console.log(this.mergedArray2);
+    })
 
     this.form = this.fb.group({
       Userlat: [null, [Validators.required]],
@@ -101,9 +161,9 @@ export class HomeComponent implements OnInit {
     window.onresize=()=>{
       this.hide=window.innerWidth<500
       // console.log(this.hide);
-      
+
     }
-    
+
   }
 
   userslocationName: string = '';

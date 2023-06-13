@@ -15,9 +15,7 @@
               What We Offer
             </h2>
             <p class="text-base text-body-color">
-              CSquared enables MNOs and ISPs to provide high-quality broadband
-              at lower costs through open access shared infrastructure such as metro fiber
-              and Wi-Fi networks
+              CSquared enables MNOs, ISPs and Enterprises to to access and provide high-quality broadband and associated services cost effectively through open access infrastructure and shared platforms.
             </p>
           </div>
         </div>
@@ -55,7 +53,7 @@
             <div class="card-info">
                 <div class="imgcontainer">
                   <img src="{{service.logo}}" alt="service" class="w-[100%] h-[50%]"/>
-                  <div class="centered">{{service.name}}</div>
+                  <div class="centered drop-shadow-lg shadow-black">{{service.name}}</div>
                 </div>
                 <div class="hover-overlay">
                     <div class="overflow-text">
@@ -176,14 +174,14 @@
     </div>
     <!-- end Map section -->
 
-    <!-- Start of logo section -->
+    <!-- Start of partners section -->
 
     <div class="row mt-20 p-8 ">
       <h3
           class="mx-auto text-center font-bold text-black pb-12"
           style="font-size: 26px;"
         >
-          Who We Work With
+          Customers
         </h3>
         <!-- For desktop view -->
       <ngx-slick-carousel class="md:carousel md:flex md:flex-row md:items-center md:p-[5px]" *ngIf="!hide"            
@@ -207,19 +205,84 @@
         </div>
       </ngx-slick-carousel>
     </div>
+    <!-- END OF CUSTOMERS SECTION -->
 
-    <!-- End of logo section -->
+    <div class="row mt-20 p-8 ">
+      <h3
+          class="mx-auto text-center font-bold text-black pb-12"
+          style="font-size: 26px;"
+        >
+          Partners
+        </h3>
+        <!-- For desktop view -->
+      <ngx-slick-carousel class="md:carousel md:flex md:flex-row md:items-center md:p-[5px]" *ngIf="!hide"            
+      [config]="{slidesToShow: 4, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
+      arrows: false,
+      dots: false}" 
+                        >
+        <div ngxSlickItem *ngFor="let slide of partners" class="slide">
+              <a href="{{slide.rootdomain}}"><img src="{{ slide.image }}" alt="" width="80%"></a> 
+        </div>
+
+        <!-- For mobile view -->
+      </ngx-slick-carousel>
+      <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" *ngIf="hide"             
+      [config]="{slidesToShow: 2, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
+      arrows: false,
+      dots: false}" 
+                        >
+        <div ngxSlickItem *ngFor="let slide of logos" class="slide">
+              <img src="{{ slide.image }}" alt="" width="80%">
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+    <!-- End of partners section -->
+
+    <!-- FEATURED NEWS -->
     <h1
-      class="flex flex-row justify-center pt-10 pb-2 bg-green-100 font-extrabold"
+      class="flex flex-row justify-center pt-10 bg-green-100 font-extrabold pb-8"
       style="font-size: 26px; font-weight: bold"
     >
-      Our Socials
+      Featured News
     </h1>
-    <div class="flex flex-wrap gap-8 news bg-green-100 p-12">
+
+    <div class="body bg-green-100 ">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+          <div class="impacts flex justify-center">      
+          <!-- SPINNER -->
+          <div class="w-[80vw] text-center mt-10" *ngIf="spinneroff">
+              <div role="status">
+                  <svg aria-hidden="true" class="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                      <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                  </svg>
+                  <span class="sr-only">Loading...</span>
+              </div>
+          </div>
+           <!-- END OF SPINNER -->
+  
+          <div class="flex flex-row gap-8 flex-wrap justify-center mb-8">
+            <div class="w-[70vw] md:w-[21vw] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
+                <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="mb-4 h-48 w-full object-cover">
+                <p *ngIf="content.image.length==1" class="font-bold h-48 text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>
+                <a routerLink="/post/{{content.newsSlug}}">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white cursor-pointer">{{ content.title | titlecase}}</h5>
+                </a>
+                <p  routerLink="/post/{{content.newsSlug}}" class="font-normal text-justify text-gray-700  p-6 dark:text-gray-400 cursor-pointer" [innerHTML]="content.description | shorten"></p>
+  
+            </div>
+          </div>
+          
+      </div>
+      </div>  
+  </div>
+
+    <!-- <div class="flex flex-wrap gap-8 news bg-green-100 p-12"> -->
       
 
       <!-- embedding facebook post -->
-      <div>
+      <!-- <div>
         <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">Facebook Posts</h1>
         <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fcsquaredafricagroup&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=577650384082483"
@@ -230,20 +293,20 @@
         allowfullscreen="true"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
-      </div>
+      </div> -->
       <!-- end of embedding facebook -->
 
-      <div class="tweet  w-[250px] h-[450px] md:w-[350px] md:h-[550px] overflow-hidden">
+      <!-- <div class="tweet  w-[250px] h-[450px] md:w-[350px] md:h-[550px] overflow-hidden">
         <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">Twitter Feed</h1>
         <ng-twitter-timeline
           [dataSrc]="{ sourceType: 'profile', screenName: 'CSquared_Africa' }"
           [opts]="{ tweetLimit: 1 }"
         ></ng-twitter-timeline>
-      </div>
+      </div> -->
 
       <!-- embedding linked in post -->
       
-      <div class="mt-[15vh] md:mt-[0]">
+      <!-- <div class="mt-[15vh] md:mt-[0]">
         <h1 class="setUnderlines p-2 font-bold mb-2 text-[20px] flex justify-center">LinkedIn Feed</h1>
         <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7046409016247246849"
@@ -253,9 +316,9 @@
         title="Embedded post"
         id="linkedin-post"
       ></iframe>
-      </div>
+      </div> -->
       <!-- end of embedding linked inpost -->
-    </div>
+    <!-- </div> -->
 
     <app-footer></app-footer>
   </div>

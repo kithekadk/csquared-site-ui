@@ -38,13 +38,13 @@ cloudservices!:services[];
   }
 
   NavigateByUrl(index: number) {
-    if (this.router.url.includes('/services/wholesale-fiber')) {
+    if (this.router.url.includes('/services/infrastructure-solutions')) {
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['services/wholesale-fiber/view', index])
+        this.router.navigate(['services/infrastructure-solutions/view', index])
       })
-    } else if (this.router.url.includes('/services/cloud-solutions')) {
+    } else if (this.router.url.includes('/services/digital-solutions')) {
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['services/cloud-solutions/view', index])
+        this.router.navigate(['services/digital-solutions/view', index])
       })
     }
   }

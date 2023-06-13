@@ -1,4 +1,3 @@
-
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -60,6 +59,7 @@ import { ViewOneImpactComponent } from './view-one-impact/view-one-impact.compon
 import { ViewOneNewsContentComponent } from './view-one-news-content/view-one-news-content.component';
 import { CloudinaryModule } from '@cloudinary/ng';
 import { SearchnewsPipe } from './pipes/searchnews.pipe';
+import { CloudServicesComponent } from './cloud-services/cloud-services.component';
 
 @NgModule({
   declarations: [
@@ -107,6 +107,7 @@ import { SearchnewsPipe } from './pipes/searchnews.pipe';
     ViewOneImpactComponent,
     ViewOneNewsContentComponent,
     SearchnewsPipe,
+    CloudServicesComponent,
   ],
   imports: [
     BrowserModule,

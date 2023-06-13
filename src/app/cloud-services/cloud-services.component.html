@@ -1,0 +1,64 @@
+<!-- <div class="body" *ngIf ="categoryRoute == '/services/cloud-security'">
+
+    <div class="fiber-bg flex flex-col text-white">
+        <h1 class="p-4 text-extrabold md:pl-28 md:ml-[10vw] text-[40px] md:mb-2">Infrastructure Solutions</h1>
+        <p class="w-[100vw] text-bold p-4 md:pl-28 md:ml-[10vw] text-[16px] md:text-[22px]  md:w-[65vw]">Connecting Africa</p>
+    </div>
+    <div class="service-container">
+        <div class="shadow-2xl m-[30px] p-[20px]">
+            <h2>Cloud Security</h2><br>
+            <p>The Zscaler Zero Trust Exchange is helping IT leaders embrace a cloud-delivered approach to enabling zero 
+                trust and delivering fast, seamless, and secure access across their entire business ecosystem—no matter where 
+                people are working. By providing policy-based access to external and internal applications, users can work securely from anywhere, on any device, and from any location by connecting to any of Zscaler’s 150 global data center locations.</p>
+        </div>
+
+         CARDS 
+        <div>
+            <div class="flex flex-wrap w-[100vw] justify-center gap-[30px] mb-[20px] mt-[20px]">
+                <a class="single-card"  *ngFor="let service of fiberservices; let i = index">
+                    <div class="card-info " (click)="NavigateByUrl(i)">
+                        <div class="imgcontainer">
+                        <img src="{{service.image}}" alt="service" class="w-[100%]"/>
+                        <div class="centered  cursor-pointer">{{service.title}}</div>
+                        </div>
+                        <div class="hover-overlay cursor-pointer" (click)="NavigateByUrl(i)">
+                            <div class="overflow-text">
+                                <h3 class="text-[25px] font-bold">
+                                    {{service.title}}
+                                </h3><br>
+                                <h3>
+                                    {{service.subtitle}}
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="single-service" *ngFor="let service of fiberservices; let i = index">
+            <div class="service-img" *ngIf="(i%2==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+            <div class="service-info" *ngIf="(i%2==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
+            </div>
+
+            <div class="service-info2" *ngIf="(i%2!==0)" data-aos="fade-down">
+                <h2>{{service.title}}</h2><br>
+                {{service.description}}<br><br>
+                <button class="btn btn-warning" (click)="viewFiberProduct(i)" routerLink='/services/wholesale-fiber/view/{{i}}'>Explore More</button>
+            </div>
+            <div class="service-img" *ngIf="(i%2!==0)" data-aos="fade-down">
+                <img src="{{service.image}}" alt="Specialist">
+            </div>
+        </div> 
+     <button class="btn btn-warning pl-10 pr-10 m-10"><b>More Services</b></button>
+    </div>
+    
+</div>
+<app-footer></app-footer>
+
+ -->

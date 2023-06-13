@@ -1,45 +1,58 @@
 <div class="body">
   <app-hero-carousel></app-hero-carousel>
+  
+  <app-country-about [content]="content" [image]="image"> </app-country-about>
 
 <div class="kenya-container" data-aos="flip-left">
-  <div class="kenya-content">
-    <div class="kenya-image">
-      <img style="object-fit: cover;" src="{{ div1img }}" alt="country" />
+  <div class="kenya-content ">
+    <div class="kenya-text">
+      <h1>Secure your users and business with Zscaler</h1>
+      <br>
+      <h3 class="font-medium text-lg">Access from anywhere, security that’s everywhere</h3>
+      <p>{{ div1text }}</p>
+      <button routerLink="/services/digital-solutions/view/0">Learn more</button>
     </div>
 
-    <div class="kenya-text">
-      <h1>Build connections faster</h1>
-      <p>{{ div1text }}</p>
-      <button>Learn more</button>
+    <div class="kenya-image">
+      <div class=" p-2">
+        <img style="object-fit: cover;" src="{{ div1img }}" alt="cloud" />
+      </div>
+      <!-- <div class=" p-2">
+        <img style="object-fit: cover;" src="../kenya/cloud.png" alt="cloud" />
+      </div> -->
     </div>
   </div>
 </div>
 
 <div class="kenya-container" data-aos="flip-left">
   <div class="kenya-content reverse-col">
+    <div class="kenya-image">
+      <img src="{{ div2img }}" alt="country"/>
+    </div>
+    
     <div class="kenya-text">
-      <h1>Move data further</h1>
+      <h1>SD-WAN</h1>
       <p>{{ div2text }}</p>
-      <button>Learn more</button>
+
+      <button routerLink="/services/digital-solutions/view/1">Learn more</button>
     </div>
 
-    <div class="kenya-image">
-      <img src="{{ div2img }}" alt="country" />
-    </div>
   </div>
 </div>
 
 <div class="kenya-container" data-aos="flip-left">
   <div class="kenya-content">
+
+    <div class="kenya-text">
+      <h1>Direct On ramp to Cloud</h1>
+      <p>{{ div3text }}</p>
+      <button routerLink="/services/digital-solutions/view/2">Learn more</button>
+    </div>
+
     <div class="kenya-image">
       <img src="{{ div3img }}" alt="country" />
     </div>
 
-    <div class="kenya-text">
-      <h1>Build connections faster</h1>
-      <p>{{ div3text }}</p>
-      <button>Learn more</button>
-    </div>
   </div>
 </div>
 <!-- 

@@ -128,7 +128,7 @@ h2{
     transform: translate(-50%, -50%);
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
   }
 
 @media screen and (max-width:668px) {

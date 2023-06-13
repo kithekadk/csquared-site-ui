@@ -68,11 +68,11 @@ countries:{name:string,code:string,id:string, flag:string}[]=[
 ]
 
 
-products:{name:string, code:string}[]=[{name:'Infrastructure',code:'-'},{name:'Fiber', code:'wholesale-fiber'},
-{name:'Cloud Solutions', code: 'cloud-solutions'}]; 
+products:{name:string, code:string}[]=[{name:'Infrastructure',code:'-'},{name:'Fiber', code:'infrastructure-solutions'},
+{name:'Digital Solutions', code: 'digital-solutions'}]; 
 
-services:{name:string, code:string}[]=[{name:'WholeSale Fiber', code:'wholesale-fiber'},
-{name:'Cloud Solutions', code: 'cloud-solutions'}];
+services:{name:string, code:string}[]=[{name:'WholeSale Fiber', code:'infrastructure-solutions'},
+{name:'Digital Solutions', code: 'digital-solutions'}];
 
 Aboutsubmenus:{name:string, code:string}[]=[{name: 'About',code:'about'},{name: 'Team',code:'team'},{name: 'Careers',code:'career'}];
   constructor(private router:Router, private elementRef:ElementRef) { }
@@ -85,14 +85,14 @@ navbarPosition= this.elementRef.nativeElement.querySelector('.navbar')
 
   viewProduct(index:number){
     this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
-      this.router.navigate(['services/wholesale-fiber/view',index])
+      this.router.navigate(['services/infrastructure-solutions/view',index])
     })
   }
   viewService(index:number){
     const div2 = document.getElementById('mega-menu-dropdown2') as HTMLDivElement
     // div2.style.display="visible"
     this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
-      this.router.navigate(['services/cloud-solutions/view/',index])
+      this.router.navigate(['services/digital-solutions/view/',index])
     })
     // div2.style.display="none"
   }

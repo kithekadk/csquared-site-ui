@@ -33,18 +33,18 @@ export class SingleServiceComponent implements OnInit {
       subject: [null, [Validators.required]],
       description: [null, [Validators.required]],
     })
-    if (this.router.url.includes('/services/wholesale-fiber/view/')) {
+    if (this.router.url.includes('/services/infrastructure-solutions/view/')) {
       this.getFiberServiceIndex();
       this.Allfiberservices = this.apiService.getFiberServices()
 
-    } else if (this.router.url.includes('/services/cloud-solutions/view/')) {
+    } else if (this.router.url.includes('/services/digital-solutions/view/')) {
       this.getCloudServiceIndex();
       this.Allcloudservices = this.apiService.getCloudServices();
     }
   }
 
   getFiberServiceIndex() {
-    this.index = (Number(this.id.replace('/services/wholesale-fiber/view/', '')));
+    this.index = (Number(this.id.replace('/services/infrastructure-solutions/view/', '')));
     this.fiberservices = this.apiService.getOneFiberItem(this.index);
     this.image = this.fiberservices.image
     this.benefits = this.fiberservices.benefits
@@ -52,7 +52,7 @@ export class SingleServiceComponent implements OnInit {
     this.features = this.fiberservices.features
   }
   getCloudServiceIndex() {
-    this.index = (Number(this.id.replace('/services/cloud-solutions/view/', '')));
+    this.index = (Number(this.id.replace('/services/digital-solutions/view/', '')));
     this.cloudservices = this.apiService.getOneCloudItem(this.index);
     this.image = this.cloudservices.image
     this.benefits = this.cloudservices.benefits
@@ -66,6 +66,7 @@ export class SingleServiceComponent implements OnInit {
   SubmitIssue() {
     if (this.form) {
       console.log(this.form.value);
+
       this.countryservice.contactCsquared(this.form.value).subscribe(res => {
         console.log(res);
         this.form.reset();
@@ -78,14 +79,18 @@ export class SingleServiceComponent implements OnInit {
   }
 
   NavigateByUrl(index: number) {
-    if (this.router.url.includes('/services/wholesale-fiber/view/')) {
+    if (this.router.url.includes('/services/infrastructure-solutions/view/')) {
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['services/wholesale-fiber/view', index])
+        this.router.navigate(['services/infrastructure-solutions/view', index])
       })
-    } else if (this.router.url.includes('/services/cloud-solutions/view/')) {
+    } else if (this.router.url.includes('/services/digital-solutions/view/')) {
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['services/cloud-solutions/view', index])
+        this.router.navigate(['services/digital-solutions/view', index])
       })
     }
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 }

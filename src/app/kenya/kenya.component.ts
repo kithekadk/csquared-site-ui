@@ -8,38 +8,29 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./kenya.component.css']
 })
 export class KenyaComponent implements OnInit {
-    div1img='https://www.highspeedinternet.com/app/uploads/2020/08/fiber-optic-internet.jpg'
-    div1text=`
-CSquared Cloud: Work securely anywhere and anytime through an efficient cloud network
-Business Models are changing. Work dynamics are shifting. Future proof your business with Cloud and Cloud security.
-Digital transformation is happening. People are increasingly doing remote work and working across geographies.
-Intelligent technologies + cloud best practices= growth and productivity.
-CSquared Cloud provides solid infrastructure that enables your digital transformation journey by providing a user journey that ensures fast and safe access to devices, apps and data across the organization.
-Our Zero Trust model proactively covers security risks by verifying and protecting an organization’s entire digital infrastructure in real time.
-Partner with us to enhance your digital transformation through efficient and secure cloud solutions.
+  content=`
+  Kenya’s internet penetration rate was at 29.1% in January 2022. As the country undergoes rapid digitization, efficient internet access will be a key enabler for increased socioeconomic growth. CSquared’s broadband network is helping increase internet access in Kenya.
+CSquared in Kenya was launched in 2013 and has since set up more than 1000 KM Fiber network in Greater Kampala, connecting over 1300 base stations and buildings.
 
-    `
-div2img='http://www.unionconnecticut.org/wp-content/uploads/2022/08/internet-1.jpg'
+Partner with us to enhance your internet access and accelerate your productivity and growth. We understand the market dynamics and have the right products and solutions for your internet needs.
+  `
+
+image="https://cdn.pixabay.com/photo/2020/02/22/23/03/lion-4871786_640.jpg"
+
+div1img='/assets/services/service-images/Cloudconnectivity(1).jpg'
+// div11img='/kenya/cloud.png'
+div1text=`
+Take advantage of the Zero Trust Exchange platform and the largest security cloud on the planet, to make doing business and navigating change a simpler, faster, and more productive experience
+`
+div2img='/assets/services/service-images/SD-WAN.jpg'
 
 div2text=`
-CSquared Cloud: Work securely anywhere and anytime through an efficient cloud network
-Business Models are changing. Work dynamics are shifting. Future proof your business with Cloud and Cloud security.
-Digital transformation is happening. People are increasingly doing remote work and working across geographies.
-Intelligent technologies + cloud best practices= growth and productivity.
-CSquared Cloud provides solid infrastructure that enables your digital transformation journey by providing a user journey that ensures fast and safe access to devices, apps and data across the organization.
-Our Zero Trust model proactively covers security risks by verifying and protecting an organization’s entire digital infrastructure in real time.
-Partner with us to enhance your digital transformation through efficient and secure cloud solutions.
+Simplify management of your multisite WAN while enhancing user experience and optimising costs. Leverage broadband internet connectivity to reduce unnecessary MPLS traffic
 `
 
-div3img='https://cioafrica.co/wp-content/uploads/2022/03/servers.jpg'
+div3img='https://media.istockphoto.com/id/1173891823/photo/fiber-optics-abstract-background-purple-blue-data-internet-technology-cable.jpg?b=1&s=170667a&w=0&k=20&c=k4xwqnkP0X-VxdBtx3HT8hadLwq2wybHrWtijHqUAjg='
 div3text=`
-CSquared Cloud: Work securely anywhere and anytime through an efficient cloud network
-Business Models are changing. Work dynamics are shifting. Future proof your business with Cloud and Cloud security.
-Digital transformation is happening. People are increasingly doing remote work and working across geographies.
-Intelligent technologies + cloud best practices= growth and productivity.
-CSquared Cloud provides solid infrastructure that enables your digital transformation journey by providing a user journey that ensures fast and safe access to devices, apps and data across the organization.
-Our Zero Trust model proactively covers security risks by verifying and protecting an organization’s entire digital infrastructure in real time.
-Partner with us to enhance your digital transformation through efficient and secure cloud solutions.
+Connect your digital ecosystem securely and on your own terms, using Csquared and one of the world’s leading Network-as-a-Service platforms
 `
   constructor(private countryService:CountryService) { }
 
