@@ -87,7 +87,7 @@ body{
 }
 .btn-learnmore{
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #345c5a;
@@ -106,6 +106,7 @@ body{
 
 .single-card{
   width:25vw;
+  min-width: 300px;
   display: flex;
   flex-direction: row;
   gap: 30px;

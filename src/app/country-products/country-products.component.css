@@ -20,9 +20,24 @@
     color: white;
     font-weight: bold;
     font-size: 30px;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    /* background:red; */
   }
 @media screen and (max-width:768px) {
     .products div{
         width:70vw;
+    }
+    .centered {
+        top: 50%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1052px) {
+    .centered {
+        top: 50%;
+        font-size: 30px;
     }
 }
