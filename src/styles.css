@@ -154,10 +154,20 @@ body{
 /* COPY THIS FOR EVERY COMPONENT YOU USE IN */
 .centered {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
   font-size: 20px;
+  /* font-size: 24px; */
+  width:20vw;
+  text-align: center;
+}
+
+
+@media screen and (max-width:768px){
+  .centered {
+    width:80vw;
+  }
 }

@@ -28,7 +28,7 @@ newscomponent!:boolean
         // GETTING NEWS
     this.apiService.getNews().subscribe(res=>{
       res['data']
-      console.log(typeof(res['data']));
+      // console.log((res['data']));
       
       this.news=res['data']      
       
@@ -93,6 +93,6 @@ newscomponent!:boolean
   }
 
   getSlug(slug:string){
-    console.log(slug);
+    // console.log(slug);
   }
 }

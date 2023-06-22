@@ -48,9 +48,6 @@
 
           <div class="flex-1 bg-white p-6 flex flex-col justify-between">
             <div class="flex-1">
-              <!-- <p class="text-sm font-medium text-indigo-600">
-                <a class="hover:underline"> Article </a>
-              </p> -->
               <a class="block mt-2" (click)="getSlug(news.slug)" routerLink="/post/{{news.slug}}">
                 <p class="text-xl font-semibold text-gray-900">
                   {{ news.title | shorten}}
@@ -60,15 +57,11 @@
                 </div>
               </a>
             </div>
+            <!-- This handles the user avatar -->
             <div class="mt-6 flex items-center">
               <div class="flex-shrink-0">
                 <a>
-                  <span class="sr-only">Roel Aufderehar</span>
-                  <img
-                    class="h-10 w-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
+                  <p class="text-[40px] w-[60px] h-[60px] flex justify-center items-center font-bold md:text-[40px] bg-amber-400 rounded-full">{{users[i][0] | titlecase}}</p>
                 </a>
               </div>
               <div class="ml-3">
@@ -78,7 +71,6 @@
                 <div class="flex space-x-1 text-sm text-gray-500">
                   <time datetime="2020-03-16"> {{ created_at[i] }} </time>
                   <span aria-hidden="true"> &middot; </span>
-                  <!-- <span> 6 min read </span> -->
                 </div>
               </div>
             </div>

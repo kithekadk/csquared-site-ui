@@ -84,7 +84,7 @@
       <section
         class="pt-24 md:pt-18 grid grid-cols-1 lg:grid-cols-12 gap-5 map-africa-container"
       >
-        <div class="map-africa col-span-7 relative mr-20 top-32 md:top-0">
+        <div class="map-africa col-span-5 relative mr-20 top-32 md:top-0">
           <svg
             class="h-28 md:h-32 opacity-30 absolute ml-10 z-[-1]"
             viewBox="0 0 77 123"
@@ -128,21 +128,23 @@
             <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-[#4489f1]"></div> &nbsp; Planning establishment</div>
           </div>
         </div>
-        <div class="col-span-5 relative mx-auto">
+        <div class="col-span-7 relative mx-auto">
           <span
             class="hidden md:block absolute h-20 w-20 md:h-64 md:w-64 bg-emerald-400/20 opacity-100 md:-top-32 right-4 rounded-full z-[-1]"
           ></span>
 
           <div class="container mx-auto about-us mt-56 md:mt-0 px-5">
-            <h4 class="text-md text-green-900 font-bold">#FibeRisingAfrica</h4>
+            <h4 class="text-md text-green-900 font-bold">#ADigitallyConnectedAfrica</h4>
             <!-- <h5 class="text-3xl font-medium text-green-900">GROWTH</h5> -->
 
             <p class="text-md text-slate-600 mt-4 pr-20 font-bold">
-              We are <b>‘Fiberising’</b> Africa through affordable broadband
-              internet connectivity. We are making the internet accessible to
-              everyone across Africa. We are harnessing the power of
-              Public-Private Partnerships to build value through data
-              delocalization.
+              CSquared, a leading fiber infrastructure and cloud provider, empowers Mobile Network Operators (MNOs) and Internet Service Providers (ISPs) to deliver exceptional broadband services at reduced costs through shared infrastructure such as metro fiber and Wi-Fi networks. Our collaborative approach involves working closely with our partners to establish robust networks  that enable them to offer enhanced services to end-users.
+            </p>
+            <p class="text-md text-slate-600 mt-4 pr-20 font-bold">
+              Witness the transformative impact of our work as we connect metropolitan areas across Africa to  long-distance fiber lines, laying the foundation for exponential growth and increased internet accessibility. 
+            </p>
+            <p class="text-md text-slate-600 mt-4 pr-20 font-bold">
+              Our enthusiasm knows no bounds as we strive to expedite this progress throughout the entirety of Africa. Together, let's bridge the digital divide and unlock limitless opportunities for the continent.
             </p>
 
             <button
@@ -181,7 +183,7 @@
           class="mx-auto text-center font-bold text-black pb-12"
           style="font-size: 26px;"
         >
-          Customers
+         Our Customers
         </h3>
         <!-- For desktop view -->
       <ngx-slick-carousel class="md:carousel md:flex md:flex-row md:items-center md:p-[5px]" *ngIf="!hide"            
@@ -190,7 +192,9 @@
       dots: false}" 
                         >
         <div ngxSlickItem *ngFor="let slide of logos" class="slide">
-              <img src="{{ slide.image }}" alt="" width="80%">
+          <div class="flex justify-center items-center h-[150px] w-[15vw] relative overflow-hidden">
+            <img src="{{ slide.image }}" alt="" class="absolute" style="width: 100%; object-fit: contain; height: 100%;">
+          </div>
         </div>
 
         <!-- For mobile view -->
@@ -198,8 +202,7 @@
       <ngx-slick-carousel class="carousel flex flex-row items-center p-[5px]" *ngIf="hide"             
       [config]="{slidesToShow: 2, slidesToScroll: 1, autoplay: true, centerMode: true, centerPadding: '10px',
       arrows: false,
-      dots: false}" 
-                        >
+      dots: false}">
         <div ngxSlickItem *ngFor="let slide of logos" class="slide">
               <img src="{{ slide.image }}" alt="" width="80%">
         </div>
@@ -212,7 +215,7 @@
           class="mx-auto text-center font-bold text-black pb-12"
           style="font-size: 26px;"
         >
-          Partners
+         Our Partners
         </h3>
         <!-- For desktop view -->
       <ngx-slick-carousel class="md:carousel md:flex md:flex-row md:items-center md:p-[5px]" *ngIf="!hide"            
@@ -221,7 +224,11 @@
       dots: false}" 
                         >
         <div ngxSlickItem *ngFor="let slide of partners" class="slide">
-              <a href="{{slide.rootdomain}}"><img src="{{ slide.image }}" alt="" width="80%"></a> 
+              <a href="{{slide.rootdomain}}">
+                <div class="flex justify-center items-center h-[200px] w-[15vw] relative overflow-hidden">
+                  <img src="{{ slide.image }}" alt="" class="absolute" style="width: 100%; object-fit: contain; height: 100%;">
+                </div>
+              </a> 
         </div>
 
         <!-- For mobile view -->
@@ -231,8 +238,8 @@
       arrows: false,
       dots: false}" 
                         >
-        <div ngxSlickItem *ngFor="let slide of logos" class="slide">
-              <img src="{{ slide.image }}" alt="" width="80%">
+        <div ngxSlickItem *ngFor="let slide of partners" class="slide">
+          <img src="{{ slide.image }}" alt="" width="80%">
         </div>
       </ngx-slick-carousel>
     </div>
@@ -240,10 +247,7 @@
     <!-- End of partners section -->
 
     <!-- FEATURED NEWS -->
-    <h1
-      class="flex flex-row justify-center pt-10 bg-green-100 font-extrabold pb-8"
-      style="font-size: 26px; font-weight: bold"
-    >
+    <h1 class="flex flex-row justify-center pt-10 bg-green-100 font-extrabold pb-8" style="font-size: 26px; font-weight: bold">
       Featured News
     </h1>
 
@@ -263,14 +267,38 @@
            <!-- END OF SPINNER -->
   
           <div class="flex flex-row gap-8 flex-wrap justify-center mb-8">
-            <div class="w-[70vw] md:w-[21vw] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
-                <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="mb-4 h-48 w-full object-cover">
-                <p *ngIf="content.image.length==1" class="font-bold h-48 text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>
-                <a routerLink="/post/{{content.newsSlug}}">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white cursor-pointer">{{ content.title | titlecase}}</h5>
-                </a>
-                <p  routerLink="/post/{{content.newsSlug}}" class="font-normal text-justify text-gray-700  p-6 dark:text-gray-400 cursor-pointer" [innerHTML]="content.description | shorten"></p>
-  
+            <div class="flex flex-col justify-between w-[80vw] md:max-w-[400px]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
+                <div>
+                  <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="mb-4 h-48 w-full object-cover rounded">
+                  <p *ngIf="content.image.length==1" class="font-bold h-48 text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>
+
+                  <div class="flex-1 px-4 text-left">
+                    <a class="block mt-2" routerLink="/post/{{content.newsSlug}}">
+                      <p class="text-xl font-semibold text-gray-900">
+                        {{ content.title | shorten}}
+                      </p>
+                      <div class="flex flex-wrap mt-3 text-base text-gray-500">
+                        <span [innerHTML]="content.description | shorten"></span>
+                      </div>
+                    </a>
+                  </div>  
+                </div>
+                <div class="mb-6 flex items-center pl-6">
+                  <div class="flex-shrink-0">
+                    <a>
+                      <p class="text-[40px] w-[60px] h-[60px] flex justify-center items-center font-bold md:text-[30px] bg-amber-400 rounded-full">{{users[i][0] | titlecase}}</p>
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      <a class="hover:no-underline">{{ users[i] }}</a>
+                    </p>
+                    <div class="flex space-x-1 text-sm text-gray-500">
+                      <time datetime="2020-03-16"> {{ created_at[i] }} </time>
+                      <span aria-hidden="true"> &middot; </span>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
           

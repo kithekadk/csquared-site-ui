@@ -9,6 +9,7 @@ export interface services{
     benefits:benefits[]
     support:string;
     contact:string;
+    brochure:string
 }
 
 export interface about_info{

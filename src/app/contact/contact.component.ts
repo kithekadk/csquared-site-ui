@@ -22,6 +22,8 @@ export class ContactComponent implements OnInit {
       phoneNumber: [null, [Validators.required]],
       subject: [null, [Validators.required]],
       description: [null, [Validators.required]],
+      jobTitle: [null, [Validators.required]],
+      company: [null, [Validators.required]],
     })
   }
 

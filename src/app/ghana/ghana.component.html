@@ -1,5 +1,15 @@
 <div class="body">
   <app-hero-carousel></app-hero-carousel>
+
+  <!-- <div class="cabout">
+    <button class="cabout-button" (click)="AboutUsClick()">
+      {{ learnMoreBtntext }}
+    </button>
+  </div>
+  <div class="cabout-learn-more" *ngIf="toggle">
+    <p id="learnmore" >{{ about_learn_more }}</p>
+  </div> -->
+
   <!-- <div class="ch-container"> -->
     
     <!-- <app-country-header></app-country-header> -->
@@ -30,31 +40,29 @@
           <p>{{ cnt.content }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="cabout-container">
       <div class="cabout-content">
-        <div class="cabout-text">
-          <h3 class="text-4xl">Csquared in Ghana</h3>
-          <p class="text-2xl">{{ text }}</p>
-          <button (click)="AboutUsClick()">Learn more</button>
-          <div class="cabout-learn-more">
-            <p id="learnmore" *ngIf="toggle">{{about_learn_more}}</p>
-          </div>
-        </div>
-
         <div class="cabout-image">
           <img src="{{ image }}" alt="country" />
+        </div>
+        <div class="cabout-text">
+          <h3 class="text-4xl">Csquared in Ghana</h3>
+          <div>
+            <p class="text-[18px]">{{ about_learn_more }}</p>
+            <!-- <button (click)="AboutUsClick()">Learn more</button> -->
+          </div>
         </div>
       </div>
 
       <div class="overlay">
-      <img
+        <img
         src="https://uchealth-wp-uploads.s3.amazonaws.com/wp-content/uploads/sites/6/2018/02/06033645/cell-phones-1024x683.webp"
         alt=""
-      />
-    </div> -->
-    <!-- </div> -->
+        />
+      </div>
+    </div>
 
     <!-- <app-what-we-offer-flex [offers]="offer"></app-what-we-offer-flex> -->
     
@@ -63,6 +71,7 @@
     <div class="">
       <app-country-products [offers]="offer"></app-country-products>
     </div>
+    
     <div *ngIf="countries">
       <app-country-latestnews></app-country-latestnews>
     </div>

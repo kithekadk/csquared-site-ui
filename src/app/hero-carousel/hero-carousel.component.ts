@@ -15,6 +15,7 @@ export class HeroCarouselComponent implements OnInit {
   country_name: string = ''//introduced to store the country name
   countries!: any
   combinedArray: any[] = []
+  spinneroff = true
 
   //  The first 3 titles, descriptions and slug point to the global homepage
 
@@ -80,10 +81,11 @@ export class HeroCarouselComponent implements OnInit {
 
 
         this.filteredArray = this.combinedArray.filter((el) => el.country == this.country_name)
+        this.spinneroff = false
       }
 
       this.globalPageImages.push(this.combinedArray[this.randomIndex1]?.image, this.combinedArray[this.randomIndex2]?.image, this.combinedArray[this.randomIndex3]?.image)
-      console.log(this.globalPageImages);
+      // console.log(this.globalPageImages);
 
     })
 

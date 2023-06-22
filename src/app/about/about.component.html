@@ -78,10 +78,13 @@
     
     </div><br>
     <div class="w-[100vw] flex flex-wrap gap-[20px] justify-center">
-        <div class="members min-w-[250px]" *ngFor="let manager of managers; let i = index" >
+        <div class="members min-w-[250px] relative" *ngFor="let manager of managers; let i = index" >
             <img src="{{manager.image}}" alt="Manager" width="130%" class="min-w-[250px] h-[30vh] md:h-[45vh]" (click)="viewTeamMember(i)" data-aos="flip-left" data-bs-toggle="modal"
             data-bs-target="#myModal" type="button">
-            
+            <div class="text-white text-[20px] font-bold absolute bottom-[50px] left-[30px]">
+                <h1>{{manager.name}}</h1>
+                <h1>{{manager.rank}}</h1>
+            </div>
             <!-- Modal -->
             <div
             class="modal fade"

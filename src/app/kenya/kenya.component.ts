@@ -17,7 +17,7 @@ Partner with us to enhance your internet access and accelerate your productivity
 
 image="https://cdn.pixabay.com/photo/2020/02/22/23/03/lion-4871786_640.jpg"
 
-div1img='/assets/services/service-images/Cloudconnectivity(1).jpg'
+div1img='https://media.istockphoto.com/id/1254718662/photo/cloud-computing-technology-and-online-data-storage-for-business-network-concept.jpg?b=1&s=170667a&w=0&k=20&c=Xha8yvsBiYzgRHIG5wrtvGP9nbmqllxh-dFtdXr9pvc='
 // div11img='/kenya/cloud.png'
 div1text=`
 Take advantage of the Zero Trust Exchange platform and the largest security cloud on the planet, to make doing business and navigating change a simpler, faster, and more productive experience

@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   impactSlug:any[]=[]
   mergedArray:any[]=[]
   mergedArray2:any[]=[]
+  users:any[]=[]
+  created_at:any[]=[]
 
 
   hide=false
@@ -41,38 +43,56 @@ export class HomeComponent implements OnInit {
     {
       'name': 'Cloud Security',
       'logo': '/assets/services/service-images/Cloudconnectivity(1).jpg',
-      'link':'/services/cloud-solutions',
+      'link':'/services/digital-solutions',
       'description': "Our cloud solutions offer an enabling environment for digital transformation across Africa. CSquared Cloud offers simplified access to multi-cloud services for corporates and SMEs."
     },
     {
       'name': 'Metro Fiber',
       'logo': '/assets/services/service-images/Portfiber.jpg',
-      'link':'/services/wholesale-fiber',
+      'link':'/services/infrastructure-solutions',
       'description': 'Our metro fiber is a secure and scalable solution that offers high availability unlimited bandwidth.'
     },
     {
       'name': 'FTTX',
       'logo': '/assets/services/service-images/Fiberopticnetwork.jpg',
-      'link':'/services/wholesale-fiber',
+      'link':'/services/infrastructure-solutions',
       'description': 'CSquared FTTX offering provides a wide range of last mile connectivity solutions for different consumer needs ranging from home to business connectivity across cities in Africa e.g. FFTH, FTTB, FTTT, e.t.c.'
     },
     {
       'name': 'Backbone Network',
       'logo': 'https://media.istockphoto.com/id/1313415001/photo/a-black-male-server-room-technician-working-at-business-reopening.jpg?b=1&s=170667a&w=0&k=20&c=zK_Uh9Z6bSbRB1bgN7_gEpH9U8j3O6FuDbhO5HnWWqM=',
-      'link':'/services/wholesale-fiber',
+      'link':'/services/infrastructure-solutions',
       'description': 'CSquared backbone solutions offer high-capacity open access network infrastructure interconnecting cities and countries across Africa.'
     },
     {
       'name': 'IP Transit',
       'logo': '/assets/services/service-images/IPTransit.jpg',
-      'link':'/services/wholesale-fiber',
+      'link':'/services/infrastructure-solutions',
       'description': 'CSquared offers IP Transit connectivity on our international Equiano Cable into other IXPs and other destinations across the world from Portugal bringing onward connectivity across the world.'
     },
     {
       'name': 'Wi-Fi',
       'logo': '/assets/services/service-images/Wi-Fi.jpg',
-      'link':'/services/cloud-solutions',
+      'link':'/services/digital-solutions',
       'description': 'Our public Wi-Fi infrastructure is set up to serve users on the go through a Multi-ISP platform.'
+    },
+    {
+      'name': 'SD-WAN',
+      'logo': '/assets/services/service-images/SD-WAN.jpg',
+      'link':'/services/digital-solutions',
+      'description': 'Simplify management of your multisite WAN while enhancing user experience and optimising costs.'
+    },
+    {
+      'name': 'Direct On Ramp',
+      'logo': 'https://media.istockphoto.com/id/1173891823/photo/fiber-optics-abstract-background-purple-blue-data-internet-technology-cable.jpg?b=1&s=170667a&w=0&k=20&c=k4xwqnkP0X-VxdBtx3HT8hadLwq2wybHrWtijHqUAjg=',
+      'link':'/services/digital-solutions',
+      'description': 'Seamlessly navigate between public and private cloud environments with a low-latency and dependable connection.'
+    },
+    {
+      'name': 'More',
+      'logo': './assets/images/c_squared_vertical_.png',
+      'link':'/services/infrastructure-solutions',
+      'description': 'Click to view more ...'
     }
   ];
 
@@ -93,10 +113,10 @@ export class HomeComponent implements OnInit {
   ]
   partners: { title: string, image: string, rootdomain:string }[] = [
 
-    { title: 'Google', image: '/assets/Csquared/google.png', rootdomain: 'https://workspace.google.com/products/sites/'},
-    { title: 'Convergence', image: '/assets/Csquared/convergence.png', rootdomain: 'https://www.convergencepartners.com/' },
-    { title: 'IFC', image: '/assets/Csquared/ifc.png', rootdomain: 'https://www.ifc.org/wps/wcm/connect/corp_ext_content/ifc_external_corporate_site/home' },
-    { title: "Mitsui", image: '/assets/Csquared/mitsui.png', rootdomain: 'https://www.mitsui.com/jp/en/index.html' }
+    { title: 'Console connect', image: './assets/images/logos/partners/console-connect.png', rootdomain: 'https://www.consoleconnect.com/'},
+    { title: 'Google cloud', image: './assets/images/logos/partners/google-cloud.png', rootdomain: 'https://cloud.google.com/' },
+    { title: 'Pccwglobal', image: './assets/images/logos/partners/pccwglobal_dark.png', rootdomain: 'https://www.pccwglobal.com/' },
+    { title: "Zscaler", image: './assets/images/logos/partners/Zscaler-logo.svg', rootdomain: 'https://www.zscaler.com/' }
   ]
 
 
@@ -126,6 +146,15 @@ export class HomeComponent implements OnInit {
         // console.log(titles);
         this.impactTitle.push(titles)
       }
+      
+      // Getting news creators and creation date
+      for(let users of res['data']){
+        
+        let user=users.user?.name
+        let creation_date=users.created_at        
+        this.users.push(user)  
+        this.created_at.push(new Date(creation_date).toDateString())  
+      }
 
       // GETTING IMPACT DESCRIPTION
       for(let desc of res['data']){
@@ -139,8 +168,6 @@ export class HomeComponent implements OnInit {
       for(let id of res['data']){
         let slug = id.slug
         this.impactCategoryID.push(slug)
-        // this.impactCategoryID = [... new Set(this.impactCategory)]
-        // console.log(this.impactCategoryID);
       }
       
       this.mergedArray = this.impactImages.map((img, index) =>({

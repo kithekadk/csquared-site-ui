@@ -40,7 +40,7 @@
 .single-service{
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 5vw;
     padding: 30px;
     flex-wrap: wrap;
 }
@@ -73,6 +73,29 @@ h2{
 .description{
     display:none;
 }
+
+/* COPY THIS FOR EVERY COMPONENT YOU USE IN */
+.centered {
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    width:20vw;
+    text-align: center;
+  }
+  
+  .single-cardhere{
+    /* width:25vw; */
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: relative;
+  }
+
 /* .service-title:hover{
     display:none
 }
@@ -83,5 +106,9 @@ h2{
 @media screen and (max-width:768px) {
     .service-info{
         width:80%;
+    }
+
+    .centered {
+        width:80vw;
     }
 }

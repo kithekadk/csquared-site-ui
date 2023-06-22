@@ -8,8 +8,7 @@ import { contactus, Countries, order } from '../interfaces/interfaces';
 })
 export class CountryService {
 
-  baseUrl = "https://cms.shiftechafrica.com/";
-
+  baseUrl = "https://csquared-cms-api-32sagkwj6q-uc.a.run.app/";
 
   constructor(private http:HttpClient) { }
   countrypageTitle:string[]=[];

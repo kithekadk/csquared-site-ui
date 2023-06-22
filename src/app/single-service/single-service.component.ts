@@ -18,6 +18,7 @@ export class SingleServiceComponent implements OnInit {
   benefits!: any
   bestfits!: any
   features!: any
+  brochure!: string
   form!: FormGroup
   constructor(private apiService: ApiService, private router: Router, private fb: FormBuilder, private countryservice: CountryService) { }
 
@@ -32,6 +33,8 @@ export class SingleServiceComponent implements OnInit {
       phoneNumber: [null, [Validators.required]],
       subject: [null, [Validators.required]],
       description: [null, [Validators.required]],
+      jobTitle: [null, [Validators.required]],
+      company: [null, [Validators.required]],
     })
     if (this.router.url.includes('/services/infrastructure-solutions/view/')) {
       this.getFiberServiceIndex();
@@ -50,6 +53,7 @@ export class SingleServiceComponent implements OnInit {
     this.benefits = this.fiberservices.benefits
     this.bestfits = this.fiberservices.bestfit
     this.features = this.fiberservices.features
+    this.brochure = this.fiberservices.brochure
   }
   getCloudServiceIndex() {
     this.index = (Number(this.id.replace('/services/digital-solutions/view/', '')));
@@ -92,5 +96,9 @@ export class SingleServiceComponent implements OnInit {
 
   scroll(el: HTMLElement) {
     el.scrollIntoView();
+  }
+
+  openBrochure(){
+    window.open(this.brochure)
   }
 }
