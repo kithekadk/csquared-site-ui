@@ -11,6 +11,18 @@
   top: 0;
   z-index: 9;
 }
+.megamenus, .mainmenu>li>a{
+  color:white;
+  transition: transform 0.5s ease;
+}
+.megamenus:hover, .mainmenu>li>a:hover {
+  background-color: white;
+  color: black !important;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  transform: translateY(0.5rem) ;
+  text-decoration: none !important;
+}
 
 @media screen and (max-width:1282px) {
   .justify-around{

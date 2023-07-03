@@ -44,7 +44,7 @@
   <div class="w-[80vw] h-[35vh] single-cardhere bg-brand-green shadow-2xl md:w-[25vw] "  *ngFor="let service of benefits; let i = index">
       <div class="card-info">
           <div class="imgcontainer">
-            <img src="{{ fiberservices.image }}" alt="service" class="w-[100%] h-[50%]"/>
+            <img src="{{ service.image }}" alt="service" class="w-[100%] h-[50%]"/>
             <div class="centered drop-shadow-lg shadow-black">{{service.heading}}</div>
           </div>
           <div class="hover-overlay">
@@ -340,10 +340,10 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allfiberservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 text-center h-[25vh]  w-[19vw] min-w-[250px] md:h-[19vh] p-4 bg-green-500 hover:bg-green-600 hover:cursor-pointer shadow-xl cursor-auto"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 text-center h-[25vh]  w-[15vw] min-w-[250px] md:h-[19vh] p-4 bg-white hover:bg-white hover:cursor-pointer shadow-xl cursor-auto"
       >
       <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">  
-      <h1 class="text-white text-xl cursor-auto">{{ other.title }}</h1>
+      <h1 class="flex flex-wrap text-black text-[20px] cursor-auto ">{{ other.title }}</h1>
       </div>
     </div>
   </div>
@@ -412,7 +412,7 @@
   <div class="w-[80vw] h-[35vh] single-cardhere bg-brand-green shadow-2xl md:w-[25vw] "  *ngFor="let service of benefits; let i = index">
       <div class="card-info">
           <div class="imgcontainer">
-            <img src="{{ cloudservices.image }}" alt="service" class="w-[100%] h-[50%]"/>
+            <img src="{{ service.image }}" alt="service" class="w-[100%] h-[50%]"/>
             <div class="centered drop-shadow-lg shadow-black">{{service.heading}}</div>
           </div>
           <div class="hover-overlay">
@@ -708,10 +708,10 @@
   <div class="flex flex-wrap justify-center items-center gap-10 pb-10">
     <div *ngFor="let other of Allcloudservices; let i = index">
       <div (click)="NavigateByUrl(i)"
-        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 text-center h-[25vh] w-[19vw] min-w-[250px] md:h-[19vh] p-4 bg-green-500 cursor-auto hover:cursor-pointer hover:bg-green-600 hover:text-[700px]"
+        class="service-title flex flex-col flex-wrap justify-center items-center rounded-4 text-center h-[25vh]  w-[15vw] min-w-[250px] md:h-[19vh] p-4 bg-white hover:bg-white hover:cursor-pointer shadow-xl cursor-auto"
       >
-      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">   
-      <h1 class="text-white text-xl cursor-auto text-[30px]">{{ other.title }}</h1>
+      <img src="{{other.logo}}" alt="" class="w-[4vw] mb-2">  
+      <h1 class="flex flex-wrap text-black text-[20px] cursor-auto ">{{ other.title }}</h1>
       </div>
     </div>
   </div>

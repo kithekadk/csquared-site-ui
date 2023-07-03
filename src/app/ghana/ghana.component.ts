@@ -34,7 +34,7 @@ export class GhanaComponent implements OnInit {
   servers and mobile cellular subscriptions.
   `
 
-  image='https://www.newframe.com/wp-content/uploads/2019/10/12Oct_Ghana_WIRES.jpg'
+  image='./assets/images/CountryImages/GhanaSkyline.jpg'
   content:CoverageContent[]=[
         {
           image:'../../assets/images/country/wifi.png',

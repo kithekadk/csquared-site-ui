@@ -24,7 +24,7 @@ export class LiberiaComponent implements OnInit {
   cities and reaching over one million Liberians.
   `
 
-  image='https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg'
+  image='./assets/images/CountryImages/LiberiaFlag.jpg'
 
    content:CoverageContent[]=[
         {

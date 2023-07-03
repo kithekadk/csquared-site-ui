@@ -28,7 +28,7 @@ export class TogoComponent implements OnInit {
             than 13 cities and reaching over one million Liberians.
   `
 
-  image='https://media-cldnry.s-nbcnews.com/image/upload/msnbc/2015_36/384421/ap_972523734581.jpg'
+  image='./assets/images/CountryImages/TogoMonument.jpg'
 
    content:CoverageContent[]=[
         {

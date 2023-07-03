@@ -12,6 +12,7 @@ import { ApiService } from '../services/api.service';
 export class AboutComponent implements OnInit {
 sections!: about_info[];
 managers!: authorities[];
+filteredmanagers!: authorities[];
 active:boolean=false;
   constructor(private apiService:ApiService, private router:Router) { }
 
@@ -35,6 +36,17 @@ active:boolean=false;
 
   getManagers(){
     this.managers = this.apiService.getManagement();
+    this.filteredmanagers = this.managers
+  }
+
+  filterManagement(position:string){
+    this.filteredmanagers = this.managers.filter(el=>{
+      if (position== ''){
+        return el
+      }else{
+        return el.position == position
+      }
+    })
   }
 
   teamMember= this.apiService.getTeamMember(0);

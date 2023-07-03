@@ -3,12 +3,14 @@
         <div class="md:w-[40vw] min-w-[250px]">
             <div class="mission m-10" *ngIf="sections">
                 <h1 class="font-bold mb-4">Mission</h1>
-                <p class="text-[14px] md:text-[18px]">To enable greater access to high quality broadband access across Africa’s major cities by investing in internet infrastructure and availing it to local Internet Service Providers (ISPs) and mobile network operators (MNOs).</p>
+                <p class="text-[14px] md:text-[18px]">
+                    CSquared is a technology company, committed to a digitally connected Africa by making impactful investments into open-access broadband enabling infrastructure throughout Africa.
+                </p>
             </div>
             <div class="vision m-10" *ngIf="sections">
                 <h1 class="font-bold mb-4">Vision</h1>
                 <p class="text-[14px] md:text-[18px]">
-                    To provide high-speed reliable internet access across all African countries, connecting people and enterprises through working with local providers.
+                    A Digitally Connected Africa.
                 </p>
             </div>
             <div class="vision m-10" *ngIf="managers">
@@ -61,29 +63,21 @@
     <div class="flex flex-col w-full md:w-[20vw] p-2 italic">
     
         <hr>
-        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Founders and Partners</a> </p>
+        <p class="p-2 cursor-pointer hover:text-blue-500" (click)="filterManagement('top-management')"> <a>Board Company Representatives</a> </p>
         <hr>
+        <p class="p-2 cursor-pointer hover:text-blue-500" (click)="filterManagement('executives')"> <a>Executives</a> </p>
         <hr>
-        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Deal Team</a> </p>
-        <hr>
-        <hr>
-        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Finance and Operations</a> </p>
-        <hr>
-        <hr>
-        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Stakeholder</a> </p>
-        <hr>
-        <hr>
-        <p class="p-2 cursor-pointer hover:text-blue-500"> <a>Show all</a> </p>
+        <p class="p-2 cursor-pointer hover:text-blue-500" (click)="filterManagement('')"> <a>Show all</a> </p>
         <hr>
     
     </div><br>
     <div class="w-[100vw] flex flex-wrap gap-[20px] justify-center">
-        <div class="members min-w-[250px] relative" *ngFor="let manager of managers; let i = index" >
+        <div class="members min-w-[250px] relative" *ngFor="let manager of filteredmanagers; let i = index" >
             <img src="{{manager.image}}" alt="Manager" width="130%" class="min-w-[250px] h-[30vh] md:h-[45vh]" (click)="viewTeamMember(i)" data-aos="flip-left" data-bs-toggle="modal"
             data-bs-target="#myModal" type="button">
             <div class="text-white text-[20px] font-bold absolute bottom-[50px] left-[30px]">
-                <h1>{{manager.name}}</h1>
-                <h1>{{manager.rank}}</h1>
+                <h1 class="text-[18px]">{{manager.name}}</h1>
+                <h1 class="text-[18px]">{{manager.rank}}</h1>
             </div>
             <!-- Modal -->
             <div
@@ -137,10 +131,7 @@
     </div>
     
 
-    <!-- Button trigger modal -->
-  
-  
-  
+    <!-- Button trigger modal --> 
 </div>
 
 <app-footer></app-footer>

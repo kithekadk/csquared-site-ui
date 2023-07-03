@@ -130,17 +130,23 @@ element.style {
 }
 
 .single-cardhere{
-  /* width:25vw; */
   display: flex;
   flex-direction: row;
   gap: 30px;
   position: relative;
 }
-/* .setUnderlines{
-  border-top: solid 4px black;
-  border-bottom : solid 4px black;
-} */
 
+.imgcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.imgcontainer img{
+  height:100%;
+  width: 100%;
+
+}
 @media screen and (max-width: 768px) {
   .home {
     display: flex;

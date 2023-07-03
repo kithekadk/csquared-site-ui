@@ -50,9 +50,10 @@
 
       <div class="flex flex-col items-center flex-wrap w-[100vw] justify-center gap-[20px] md:flex md:flex-row">
         <a routerLink="{{service.link}}" class="w-[80vw] h-[35vh] single-cardhere bg-brand-green shadow-2xl md:w-[25vw] "  *ngFor="let service of services; let i = index">
+          
             <div class="card-info">
                 <div class="imgcontainer">
-                  <img src="{{service.logo}}" alt="service" class="w-[100%] h-[50%]"/>
+                    <img src="{{service.logo}}" alt="service" class="w-[100%] h-[100%]"/>
                   <div class="centered drop-shadow-lg shadow-black">{{service.name}}</div>
                 </div>
                 <div class="hover-overlay">
@@ -70,6 +71,7 @@
     </div>
     </div>
   </section>
+  
   <!-- end What we provide section -->
 
   <!-- Map section -->
@@ -81,9 +83,7 @@
   </h1>
   <div data-aos="fade-up" data-aos-duration="500">
     <div>
-      <section
-        class="pt-24 md:pt-18 grid grid-cols-1 lg:grid-cols-12 gap-5 map-africa-container"
-      >
+      <section class="pt-24 md:pt-18 grid grid-cols-1 lg:grid-cols-12 gap-2 map-africa-container">
         <div class="map-africa col-span-5 relative mr-20 top-32 md:top-0">
           <svg
             class="h-28 md:h-32 opacity-30 absolute ml-10 z-[-1]"
@@ -118,15 +118,10 @@
           </svg>
 
           <img
-            src="/assets/images/africa.svg"
+            src="/assets/images/african-svg.svg"
             class="mx-auto"
             alt="africa-map"
           />
-
-          <div class="ml-20 mb-20 absolute ">
-            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-[#f2b426]"></div> &nbsp; Already established</div>
-            <div class="flex text-[14px]"><div class="h-2 p-2 w-2 bg-[#4489f1]"></div> &nbsp; Planning establishment</div>
-          </div>
         </div>
         <div class="col-span-7 relative mx-auto">
           <span
@@ -267,7 +262,7 @@
            <!-- END OF SPINNER -->
   
           <div class="flex flex-row gap-8 flex-wrap justify-center mb-8">
-            <div class="flex flex-col justify-between w-[80vw] md:max-w-[400px]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
+            <div class="flex flex-col justify-between w-[80vw] md:max-w-[350px]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center" *ngFor="let content of mergedArray | paginate: {itemsPerPage:3, currentPage:pageNumber}; let i = index;">
                 <div>
                   <img *ngIf="content.image.length !== 1"  src="{{content.image}} " alt="" class="mb-4 h-48 w-full object-cover rounded">
                   <p *ngIf="content.image.length==1" class="font-bold h-48 text-[60px] bg-amber-400 p-8 mb-4">{{content.image | titlecase}}</p>

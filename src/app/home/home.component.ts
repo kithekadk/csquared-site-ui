@@ -89,10 +89,10 @@ export class HomeComponent implements OnInit {
       'description': 'Seamlessly navigate between public and private cloud environments with a low-latency and dependable connection.'
     },
     {
-      'name': 'More',
-      'logo': './assets/images/c_squared_vertical_.png',
-      'link':'/services/infrastructure-solutions',
-      'description': 'Click to view more ...'
+      'name': '',
+      'logo': './assets/images/c_squared_horizontal_logo.v1.png',
+      'link':'/about',
+      'description': ''
     }
   ];
 

@@ -1,8 +1,8 @@
-.findus{
+/* .findus{
   width:20vw;
-}
+} */
 .tweet{
-  width:30vw
+  width:32vw
 }
 @media only screen and (max-width: 600px) {
   .cs-footer h3{
@@ -31,7 +31,8 @@
     width:80vw;
   }
   .tweet{
-    display: none;
+    width: 80vw;
+    /* display: none; */
   }
   .footer-icons{
     width:50vw;

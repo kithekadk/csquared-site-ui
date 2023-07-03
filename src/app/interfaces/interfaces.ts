@@ -20,8 +20,9 @@ export interface about_info{
 }
 
 export interface benefits{
-    heading:string;
-    description:string
+    heading: string;
+    description: string;
+    image: string;
 }
  export interface CoverageContent{ 
           image:string
@@ -60,6 +61,7 @@ export interface authorities{
     image:string;
     rank: string;
     description: string;
+    position:string
 }
 
 export interface order{
